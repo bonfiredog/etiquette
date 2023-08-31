@@ -1,0 +1,231 @@
+{
+  "1": {
+    "stationName": "Penzance",
+    "distanceToNextStation": 1000000,
+    "minStationStay": 10000,
+    "maxStationStay": 70000,
+    "stationSize": 6,
+    "altitude": 50,
+    "nextUrbanDensity":  30,
+    "ongoingTerrain": "coast",
+    "longitude": -5.5
+  },
+
+  "2": {
+    "stationName": "St. Erth"
+  },
+  "3": {
+    "stationName": "Hayle"
+  },
+  "4": {
+    "stationName": "Camborne"
+  },
+  "5": {
+    "stationName": "Redruth"
+  },
+  "6": {
+    "stationName": "Truro"
+  },
+  "7": {
+    "stationName": "Grampound Road"
+  },
+  "8": {
+    "stationName": "St. Austell"
+  },
+  "9": {
+    "stationName": "Par"
+  },
+  "10": {
+    "stationName": "Lostwithiel"
+  },
+  "11": {
+    "stationName": "Bodmin Parkway"
+  },
+  "12": {
+    "stationName": "Doublebois"
+  },
+  "13": {
+    "stationName": "Liskeard"
+  },
+  "14": {
+    "stationName": "Menheniot"
+  },
+  "15": {
+    "stationName": "St. Germans"
+  },
+  "16": {
+    "stationName": "Saltash"
+  },
+  "17": {
+    "stationName": "Devonport"
+  },
+  "18": {
+    "stationName": "Millbay"
+  },
+  "19": {
+    "stationName": "Mutley"
+  },
+  "20": {
+    "stationName": "Plympton"
+  },
+  "21": {
+    "stationName": "Cornwood"
+  },
+  "22": {
+    "stationName": "Ivybridge"
+  },
+  "23": {
+    "stationName": "Wrangaton"
+  },
+  "24": {
+    "stationName": "Brent"
+  },
+  "25": {
+    "stationName": "Totnes"
+  },
+  "26": {
+    "stationName": "Newton"
+  },
+  "27": {
+    "stationName": "Teignmouth"
+  },
+
+  "28": {
+    "stationName": "Dawlish"
+  },
+  "29": {
+    "stationName": "Starcross"
+  },
+  "30": {
+    "stationName": "Exminster"
+  },
+  "31": {
+    "stationName": "Exeter St. Davids"
+  },
+  "32": {
+    "stationName": "Stoke Canon"
+  },
+  "33": {
+    "stationName": "Hele"
+  },
+
+  "34": {
+    "stationName": "Cullompton"
+  },
+  "35": {
+    "stationName": "Tiverton Junction"
+  },
+  "36": {
+    "stationName": "Wellington"
+  },
+  "37": {
+    "stationName": "Norton Fitzwarren"
+  },
+  "38": {
+    "stationName": "Taunton"
+  },
+  "39": {
+    "stationName": "Bridgwater"
+  },
+  "40": {
+    "stationName": "Weston Junction"
+  },
+  "41": {
+    "stationName": "Banwell"
+  },
+  "42": {
+    "stationName": "Yatton"
+  },
+  "43": {
+    "stationName": "Nailsea & Backwell"
+  },
+  "44": {
+    "stationName": "Flax Bourton"
+  },
+  "45": {
+    "stationName": "Bristol Temple Mead"
+  },
+  "46": {
+    "stationName": "Keynsham"
+  },
+  "47": {
+    "stationName": "Saltford"
+  },
+  "48": {
+    "stationName": "Twerton-On-Avon"
+  },
+  "49": {
+    "stationName": "Bath"
+  },
+  "50": {
+    "stationName": "Hampton Road Halt"
+  },
+  "51": {
+    "stationName": "Bathhampton"
+  },
+  "52": {
+    "stationName": "Box"
+  },
+  "53": {
+    "stationName": "Corsham"
+  },
+  "54": {
+    "stationName": "Chippenham"
+  },
+  "55": {
+    "stationName": "Swindon"
+  },
+  "56": {
+    "stationName": "Uffington"
+  },
+  "57": {
+    "stationName": "Faringdon Road"
+  },
+  "58": {
+    "stationName": "Wantage Road"
+  },
+  "59": {
+    "stationName": "Steventon"
+  },
+  "60": {
+    "stationName": "Didcot Parkway"
+  },
+  "61": {
+    "stationName": "Moulsford"
+  },
+  "62": {
+    "stationName": "Goring"
+  },
+  "63": {
+    "stationName": "Pangbourne"
+  },
+  "64": {
+    "stationName": "Reading"
+  },
+  "65": {
+    "stationName": "Twyford"
+  },
+  "66": {
+    "stationName": "Maidenhead & Taplow"
+  },
+  "67": {
+    "stationName": "Langley"
+  },
+  "68": {
+    "stationName": "West Drayton"
+  },
+  "69": {
+    "stationName": "Southall"
+  },
+  "70": {
+    "stationName": "Hanwell"
+  },
+  "71": {
+    "stationName": "Ealing"
+  },
+  "72": {
+    "stationName": "London Paddington"
+  }
+}
+
+ 

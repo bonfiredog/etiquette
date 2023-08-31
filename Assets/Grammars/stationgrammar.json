@@ -1,0 +1,107 @@
+{
+  "direct_word":["Direct From", "Arising From", "Delivered Via", "Dreamt Of In"],
+  
+  "advert":[
+  "#titles.capitalize# #surname.capitalize#'s  #adjectives_positive.capitalize# #materials.capitalize# #medicine.capitalize.s# <br> #directword# #imperial_locations.capitalize# <br> For Any #illness.capitalize# Or #verbs_movement.capitalize#ing Of The #body_parts_outer.capitalize#",  
+  "Drink #drinks.capitalize# <br> For #abstract_nouns.capitalize# And #abstract_nouns.capitalize#",
+  "Eat #ingredients.capitalize# <br> For All Complaints Of The #body_parts_inner.capitalize#",
+  "#names_men.capitalize# #surname.capitalize# <br> #appropriate_person#.capitalise Wanted! <br> Enquire At #placenames.capitalize# #town_buildings.capitalize#",
+  "The Miraculous Oddity: A Journey To #celestial_body.capitalize# by Electrick #vehicle.capitalize#", 
+  "The '#abstract_nouns.capitalize# Of The County <br> By #vehicles.capitalize# or #coast_vehicles#"
+  ],
+  
+  "news_opener":["TODAY!", "SHOCKING DEVELOPMENT!",  "THE VERY LATEST NEWS", "By Telegraph From #imperial_locations.capitalize#", "The #placenames.capitalize# #newspaper_type#"],
+  
+  "newspaper_type":["Reporter", "Intelligencer", "Times", "Enquirer", "Arbitrator", "Telegraph", "Loquator", "Circumlocutor", "Networker", "Wiring", "Scapegoater", "Hysteriad"],
+  
+  "news_headline":[
+  "#news_opener# <br> #actual_headline#"
+  ],
+  
+  "actual_headline":[
+  "#abstract_noun.capitalize# At #locations_all.capitalize#",
+  "#events_general.capitalize# At #locations_all.capitalize#",
+  "#famous_person.capitalize# In #events_general# With #surname.capitalize#",
+  "#surname.capitalize# Guilty!",
+  "#surname.capitalize# Innocent!",
+  "The #counties# #events_general.capitalize# : '#appropriate_person.capitalize#' Become Involved, Local Authorities '#emotions.capitalize#'",
+  "#imperial_locations.capitalize# Latest: #events_general.capitalize# By #public_holidays.capitalize#"  
+  ],
+  
+  "quickword":["lively","quick now", "quickly", "sharp", "double it", "force yourself", "any time now"],
+  
+  "heard_phrase":[
+  "'#male_name.capitalize#!'",
+  "'#female_name.capitalize#!'",
+  "'#surname.capitalize#, #verbs_interaction# to the next #railway_furniture#, #quickword#'",
+  "'I'll meet you by the #buildings_all# and don't #verbs_noise# about it'",
+  "'#abstract_noun# and #cooked_food# is all it takes, #endearment#'",
+  "'If you had stayed quite quiet about the #objects_indoor_small#, he wouldn't have come on so #emotions#'",
+  "'Where's #firstnames_all#'",
+  "'Where's #firstnames_all# with that utter #appropriate_person#'",
+  "'See it there, just on his #body_part_outer#, that #colour#ness'",
+  "'Stop #verbs_noise#ing'",
+  "'Is there a #vehicle# to #placenames.capitalize#?'",
+  "'#heshe# #verbs_all#.ed that #objects_all# not #number# #time.s# ago'",
+  "'Did you say #words_any#'",
+  "'#number.capitalize# #money#!'",
+  "'recreation_outdoor.capitalize# by #mealtimes# please'",
+  "'#heshe.capitalize# said #heshe# would #verbs_interaction# him like a #mythicalbeast#'",
+  "'#swearwords.capitalize#'", "'#swearwords.capitalize#'", "'#swearwords.capitalize#'", "'#swearwords.capitalize#'",
+  "'#swearwords.capitalize# him'",
+  "'#swearwords.capitalize# her'",
+  "'#swearwords.capitalize# them'"
+  ],
+  
+  "signage": [
+  "No #verbs_all.capitalize#ing",
+  "Passengers Are Forbidden From<br>All #railway_furnitures.capitalize#<br>At All Times",
+  "For #placenames.capitalize# ->",
+  "For #placenames.capitalize# ->",
+  "No Trains On<br> #public_holidays.capitalize#",
+  "No #recreation_outdoor.capitalize# #positional.capitalize# The #appropriate_locations.capitalize#",
+  "Only #number.capitalize# #people.capitalize.s# In The #stationroom.capitalize# At Any Time"
+  ],
+  
+  "person_on_platform": ["#stationposition# #traveller#", "#stationroom# #employee#"],
+  
+  "traveller": [
+  "A #people# and their #relation#s, #verbs_interaction#ing",
+  "A #people#  with a #body_parts_outer# like a #buildings_all#",
+  "#appropriate_persons#s.capitalize on their way to a #events_specific# in #placenames.capitalize#",
+  "#number.capitalize# #people# with #body_parts_outer#s like #appropriate_person#s   #verb_interaction#ing",
+  "A #appropriate_person#, #hedging_words#, mouthing a word at a #people# onboard: '#mouthed_word#'",
+  "A #people# as #adjectives_all# as a #comparison#",
+  "A #people# #verbs_all#ing",
+  " A #people# #verbs_all#ing with a #objects_indoor_small#",
+  "A hand from the #stationroom# window, in the shape of a #shapes_all#"
+  ],
+  
+  "employee": [
+  "#railway_staff.a.capitalize# carrying a #objects_indoor_large# through the #stationroom#",
+  "#railway_staff.a.capitalize# sharing a #cooked_food#", 
+  "#railway_staff.a.capitalize# pointing #compass_points#",
+  "A #adjectives_all# #railway_staff# #verbs_movement#ing",  
+  "A #railway_staff# with a #colours#ness in his #body_parts_inner#"
+  ],
+  
+
+  "object_on_platform": [
+  "#containers.a.capitalize# full of #objects_all#, #hedging_words",
+  "A door open on a #carriage_types#: #objects_all#, #hedging_words#",
+  "A lost #objects_indoor_small#",
+  "A dropped #objects_outdoor_small#",
+  "A #plants# #verbs_extreme#ing through",
+  "A #container# of '#adjectives_all #food_all#",
+  "Through a window, rows of #objects_all#" 
+  ],
+  
+  "origin":[
+  "#person_on_platform#",
+  "#advert#",
+  "#news_headline#",
+  "#signage#",
+  "#object_on_platform#",
+  "#heard_phrase#"
+  ]
+}

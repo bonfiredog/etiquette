@@ -1,0 +1,52 @@
+{
+    "cropsorfood":["#crops#","#ingredients#","#cooked_food#"],
+    
+    "origin":[
+    "#people.a.capitalize# #verbs_noise.s# #mouthed_word#",
+    "A #piece_word# of #outdoor_objects_small# #verbs_movement#ing",
+    "#flowers.capitalize# #verbs_gentle#ing in the #railway_furniture#",
+    "#adjectives_all.capitalize# #railway_furniture#",
+    "A #people# #verbs_all.s# at the train",
+    "#fraction.capitalize# a #appropriate_buildings#",  
+    "#closepositional# #events_all.a#",
+    "A plant from #imperial_locations.capitalize# with #colours# #plantparts# and a #plantparts# shaped like a #shapes_all#",  
+    "#hedging_words.capitalize# a #objects_all#",
+    "#appropriate_person.a.capitalize# #verbs_all#ing",
+    "#adjectives_all.a.capitalize# #appropriate_buildings#",
+    "A #hintword# of #hint#",
+    "#colours.capitalize# #appropriate_locations#",
+    "#closepositional# #adjectives_negative.a# #mealtimes# is served",
+    "A #people# pulls #downup# their #clothes#: #colours# #body_part_outer#", 
+    "A #people# and a #people# #verbs_interaction#",
+    "#appropriate_locations.a.capitalize# #verbs_all#ing its #body_parts_inner#",  
+    "#colours.capitalize# and #colours# like a #comparison#", 
+    "#number.capitalize# #animals.s# #verbs_all# in the shape of a #objects_all#",
+    "Some sort of #adjectives_all# #events_all#",
+    "A #train_types# #verbs_all#ing",
+    "A lost #railway_staff#",
+    "#events_all.a.capitalize# #positional# #railway_furniture.a#",  
+    "#railwaysobjects.capitalize.s# #positional# #appropriate_locations.a#",
+    "#adjectives_all# #fruits#",
+    "#materials.capitalize#",
+    "Fields of #cropsorfood#",
+    "#animals_small.capitalize# #verbs_extreme#ing",
+    "#closepositional# #objects_all#",
+    "#closepositional# #people_indistinct# #verbs_all.s#",
+    "#closepositional# #people_indistinct# is #emotions#",
+    "#closepositional# #appropriate_person.a# is #adjectives_rare#",
+    "#closepositional# #closepeople# #verbs_interaction#ing",
+    "#objects_all# #positional# #rooms.a#",
+    "#closepositional# #symbol.a# on a #objects_indoor_large#" 
+    
+    ],
+
+    "closepositional": [
+        "Between #appropriate_buildings.a# and  #appropriate_locations.a#,",
+        "#positional.capitalize# a #appropriate_buildings#,", 
+        "#positional.capitalize# a #appropriate_buildings# #positional# a #appropriate_buildings#,",
+        "#positional.capitalize# a #appropriate_locations#,",
+        "#In a #adjectives_all# #rooms#,",
+        "#positional.capitalize# #private_places.a#",
+        "#fraction.capitalize# a #measurements# away,"
+        ]
+}

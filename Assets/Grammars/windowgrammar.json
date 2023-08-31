@@ -1,0 +1,56 @@
+{
+  "speech":[
+  "#relative_time# #heshe# was utterly #adjectives_all.ed#...",
+  "Did you see that #animals_air#? I could swear...",
+  "Was it #placenames.capitalize# she lived, #firstnames_all#?",
+  "That #railway_staff# at #station_last!# Absolutely #adjectives_negative#...",
+  "#firstnames_all#'s #relation#... You know, the one #verbs_gentle#ing in #imperial_locations...",
+  "Pass me that #objects_indoor_small#",
+  "#cooked_food.capitalize on #public_holidays.capitalize#!",
+  "I want you to #swearwords# me, #hedging_words#",
+  "A #body_parts_outer# like a #mythicalbeast#'s",
+  "It was a #rooms# affair, if you see, #firstnames_all#",
+  "Until the #illness#, she was quite #adjectives_positive#", 
+  "Where first, #firstnames_all#? The #city_buildings# is very #adjectives_neutral#..." ,
+  "#relative_location#, #firstnames_all#! By the #appropriate_buildings#! I swear I saw...",
+  "Isn't it #adjectives_all#?",
+  "Such #nouns_positive#....",
+  "Such #nouns_negative#...",
+  "#heshe#'s #verbs_movement# from #counties#...",
+  "Is that #compass_points#?",
+  "Is England only ever #current_terrain#?",
+  "It'll be #weather_type# in #placenames.capitalize#", 
+  "I will not be #adjective_positive#, #firstnames_all.capitalize#! He #verb_interaction.ed# her in the #private_places#!",
+  "What will he do with the #indoor_objects_small#?",
+  "By #coast_vehicles#, #hedging_words#",
+  "The #drinks#, please. And #fraction# of a #cooked_food#",
+  "No need to be #adjectives_negative#, #honorific#",
+  "#ingredients.capitalize# in a #cooked_food#!",
+  "#heshe.capitalize#'s as #adjectives_all# as a #comparison#",
+  "#swearwords#, #swearwords#, #swearwords#!",
+  "It'll be an #animals_large#, #firstnames_all.capitalize#",
+  "Where is that #railway_staff# #verbs_movement#ing?",
+  "We #verbs_stopping.ed# every #timespan# in #imperial_locations.capitalize#...",
+  "Do you have the #objects_indoor_small#?",
+  "#hedging_words.capitalize#, #hedging_words#...",
+  "#command_words.capitalize#, #firstnames_all#...",
+  "#honorific.capitalize# #surname.capitalize# , from #counties#", 
+  "What a #adjectives_all# question!", 
+  "I won't #verbs_interaction#  #herhim#, #firstnames_all#...",
+  "I'll #verbs_interaction# #herhim#",
+  "I'm #emotions#, #affectionterm#",
+  "Always #verbs_noise#ing on...", 
+  "We won't be in #placenames.capitalize# until #tod#",
+  "Stop #verbs_movement#ing, #firstnames_all.capitalize#!",
+  "Stop #verbs_interaction#ing me, #firstnames_all.capitalize", 
+  "Wasn't there a #buildings_all# here, #firstnames_all.capitalize#?",
+  "#verbs_all.capitalize# the #objects_all#",
+  "#consonant.capitalize##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant##consonant#"
+  
+  
+  ],
+  
+  
+  "origin":["\"#speech#\""]
+  
+}

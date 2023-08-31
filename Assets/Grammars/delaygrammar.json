@@ -1,0 +1,76 @@
+{
+
+	"train_accident":[
+	"#train_types.a.capitalize# #carriage_word# #verbs_extreme.ed# through a #railway_furniture#",
+	"#railway_objects.capitalize# #verbs_movement.ed# across the #railway_furniture#",
+	"The smell of #materials#",
+	"#railway_staff.a.capitalize# #verbs_noise#ing #positional# the #railway_furniture#",  
+	"#train_parts.a.capitalize# #positional# #outdoor_objects_large.a#",
+	"#train_types.a.capitalize# #verbs_extreme#ing",
+	"#railway_furniture.a.capitalize# #colours# and #colours#",
+	"Something #adjectives_negative# has been #verbs_movement.ed# away",
+	"#liquid.capitalize# on the #railway_furniture#",
+	"Scattered #outdoor_objects_small#, #indoor_objects_small#, #outdoor_objects_small# ",
+	"#vehicles.a.capitalize# #verbs_extreme#ing on a #crossing_place#",
+	"#train_types.a.capitalize# #carriage_word# #verbs_gentle#ing #positional# the #railway_furniture#"
+	
+	],
+	
+	
+	"person_accident":[
+	"#verbs_noise.a.capitalize#ing #relation# by the #railway_furniture#",
+	"#colours.a.capitalize#, #adjective_neutral# sheet",
+	"#railway_staff.a.capitalize# #verbs_interaction#ing with #people_indistinct#",
+	"#appropriate_person.a.capitalize# #verbs_movement#ing", 
+	"#numbers.capitalize# #railway_staff# #verbs_position.ed# in the shape of a #shapes_all#",
+	"#bodypart#",
+	"#people_indistinct# #verbs_extreme.ed# #positional# the #crossing_place#",
+	"Something #adjectives_all# beneath a sheet",
+	"#railway_staff.a.capitalize# #verbs_noise.s# '#swearwords#'",
+	"#hintword.a.capitalize# of something #adjectives_all#",
+	"Somebody is calling '#mouthed_word.capitalize#!'",
+	"#animals_large.a# #verbs_noise#ing like a #comparison#",
+	"#colours.capitalize# #body_parts_outer# on #animals_large.a#",  
+	"A #people# #verbs_position#ing like #materials#, #verbs_all#ing"  
+	
+	],
+	
+	"body_part":[
+	"#adjective_neutral.a.capitalize# #body_part_outer",
+	"#body_part_inner.a.capitalize# #verbs_position#ing #positional# the #railway_furniture#",
+	"#body_part_inner.a.capitalize# #verbs_position#ing #positional# the #train_part#",
+	"#body_part_outer.a.capitalize# #verbs_position#ing #positional# the #railway_furniture#",
+	"#body_part_outer.a.capitalize# #verbs_position#ing #positional# the #train_part#",
+	"#body_part_outer.a.capitalize# #verbs_gentle#ing #positional# the #natural_things_general#",
+	"#body_parts_all.a.capitalize# in the #flowers.s#"
+	
+	],
+	
+	"noone":[
+	"Nothing.",
+	"Nobody."
+	
+	],
+	
+	"malfunction":[
+	"#train_types.a.capitalize# train #verbs_position.s# #verbs_noise#ing",
+	"#railway_staff.a.capitalize# #verbs_interaction.s# with a #railway_furniture#",
+	"#crossing_place.a.capitalize# full of #vehicle.s#",
+	"#appropriate_person.a.capitalize# and #appropriate_person.a# #verbs_interaction# at #crossing_place.a#",
+	"#railway_staff.a.capitalize# #tools.s# at a #railway_furniture#"
+	
+	],
+	
+	
+	"origin":[
+	"#train_accident#",
+	"#person_accident#",
+	"#noone# ",
+	"#malfunction#",
+	"#noone# ",
+	"#malfunction#",
+	"#malfunction#",
+	"#malfunction#"
+	
+	]
+}
