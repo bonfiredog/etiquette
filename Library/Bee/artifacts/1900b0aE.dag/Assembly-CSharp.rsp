@@ -396,6 +396,7 @@
 "Assets/Scripts & Behaviours/generateStation.cs"
 "Assets/Scripts & Behaviours/generateTrainTunnel.cs"
 "Assets/Scripts & Behaviours/rockingController.cs"
+"Assets/Scripts & Behaviours/sideTextAlpha.cs"
 "Assets/Scripts & Behaviours/startEndController.cs"
 "Assets/Scripts & Behaviours/startingStation.cs"
 "Assets/Scripts & Behaviours/stationArchGenerate.cs"

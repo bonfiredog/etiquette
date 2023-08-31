@@ -3477,6 +3477,7 @@ MonoBehaviour:
   gcScript: {fileID: 0}
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
+  grammarParse: 
 --- !u!114 &399954066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7739,6 +7740,16 @@ MonoBehaviour:
   nextStationSpeedMod: 0
   lastStationName: Penzance
   ending: 0
+  currentterrain: coast
+  stationlast: Penzance
+  currentseason: spring
+  currentmonth: May
+  nextmonth: june
+  appropriatelocs: '#rural_locations#'
+  currenttod: dusk
+  currentmealtime: supper
+  appropriateperson: '#person_roles_rural#'
+  appropriatebuildings: '#rural_buildings#'
 --- !u!4 &861740473
 Transform:
   m_ObjectHideFlags: 0
@@ -17398,15 +17409,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6be00b31effea44b3efed82c2ad889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  udLower: 500
-  udHigher: 1000
-  lrLower: 50
-  lrHigher: 200
-  upBound: 100
+  udLower: 400
+  udHigher: 2000
+  bfLower: 1200
+  bfHigher: 3000
+  lrLower: 500
+  lrHigher: 1000
+  upBound: 50
+  bfBound: 30
   lrBound: 2
-  upSpeed: 7
+  upSpeed: 1
+  bfSpeed: 0.3
   lrSpeed: 0.2
   upDownTimer: 0
+  backForthTimer: 0
   leftRightTimer: 0
   gravity: 7
 --- !u!4 &1916571814
@@ -19547,6 +19563,7 @@ MonoBehaviour:
   gcScript: {fileID: 0}
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
+  grammarParse: 
 --- !u!114 &2128009708
 MonoBehaviour:
   m_ObjectHideFlags: 0

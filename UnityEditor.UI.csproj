@@ -62,6 +62,7 @@
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\EventSystem\Physics2DRaycasterEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\InputFieldEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\EventSystem\EventSystemEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\CanvasScalerEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PrefabLayoutRebuilder.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\SelectableEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\ImageEditor.cs" />

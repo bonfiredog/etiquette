@@ -30,6 +30,7 @@ public class timeControl : MonoBehaviour
         tc = GameObject.Find("trainController").GetComponent<TrainControl>();
         updateLocalAndNationalTime();
         updateClock();
+        Debug.Log("Time: " + currentHour + ":" + currentMinute + " (+" + currentlocalMinute+")");
     }
 
     // Update is called once per frame
@@ -53,7 +54,7 @@ public class timeControl : MonoBehaviour
     {
             var timePercent = (timeScratch / 60) * 100;
 
-            var currentRotation = 3.6f * timePercent;
+            var currentRotation = 90 + (3.6f * timePercent);
 
         Quaternion targetTotalRotation = Quaternion.Euler(0f, currentRotation, 0f);
         minHandPivot.transform.localRotation = targetTotalRotation;
@@ -63,7 +64,7 @@ public class timeControl : MonoBehaviour
     public void SetHourHand(float timeScratch)
     {
         var timePercent = (timeScratch / 12) * 100;
-        var currentRotation = 3.6f * timePercent;
+        var currentRotation = 90 + (3.6f * timePercent);
 
         Quaternion targetTotalRotation = Quaternion.Euler(0f, currentRotation, 0f);
         hourHandPivot.transform.localRotation = targetTotalRotation;
@@ -73,7 +74,7 @@ public class timeControl : MonoBehaviour
     public void SetLocalMinHand(float timeScratch)
     {
         var timePercent = (timeScratch / 60) * 100;
-        var currentRotation = 3.6f * timePercent;
+        var currentRotation = 90 + (3.6f * timePercent);
 
         Quaternion targetTotalRotation = Quaternion.Euler(0f, currentRotation, 0f);
         localminHandPivot.transform.localRotation = targetTotalRotation;

@@ -371,6 +371,7 @@
 "Assets/Admin/JSON/Editor/JSONObjectVectorTemplateTests.cs"
 "Assets/Admin/TotalJSON/Internal/Editor/JSONRuntimeDebug.cs"
 "Assets/Admin/TotalJSON/Internal/Editor/JSONValidator.cs"
+"Assets/Admin/Tracery/JSON/Editor/JSONChecker.cs"
 -langversion:9.0
 
 /deterministic

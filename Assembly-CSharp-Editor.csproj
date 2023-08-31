@@ -60,6 +60,7 @@
     <Compile Include="Assets\Admin\TotalJSON\Internal\Editor\JSONValidator.cs" />
     <Compile Include="Assets\Admin\JSON\Editor\JSONObjectTestStrings.cs" />
     <Compile Include="Assets\Admin\JSON\Editor\JSONObjectAsyncTests.cs" />
+    <Compile Include="Assets\Admin\Tracery\JSON\Editor\JSONChecker.cs" />
     <Compile Include="Assets\Admin\JSON\Editor\JSONObjectVectorTemplateTests.cs" />
     <Compile Include="Assets\Admin\JSON\Editor\JSONObjectTests.cs" />
     <Compile Include="Assets\Admin\JSON\Editor\JSONObjectEnumeratorTests.cs" />

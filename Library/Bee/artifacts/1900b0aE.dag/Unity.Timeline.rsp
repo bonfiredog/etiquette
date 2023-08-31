@@ -393,6 +393,7 @@
 "Library/PackageCache/com.unity.timeline@1.6.4/Runtime/Playables/ParticleControlPlayable.cs"
 "Library/PackageCache/com.unity.timeline@1.6.4/Runtime/Playables/PrefabControlPlayable.cs"
 "Library/PackageCache/com.unity.timeline@1.6.4/Runtime/Playables/TimeControlPlayable.cs"
+"Library/PackageCache/com.unity.timeline@1.6.4/Runtime/Playables/TimeNotificationBehaviour.cs"
 "Library/PackageCache/com.unity.timeline@1.6.4/Runtime/Properties/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.timeline@1.6.4/Runtime/Scripting/PlayableTrack.cs"
 "Library/PackageCache/com.unity.timeline@1.6.4/Runtime/Timeline.deprecated.cs"

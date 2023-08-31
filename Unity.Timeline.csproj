@@ -88,6 +88,7 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Runtime\Animation\AnimationOutputWeightProcessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Runtime\Events\Marker.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Runtime\DiscreteTime.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Runtime\Playables\TimeNotificationBehaviour.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Runtime\Attributes\TrackColorAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Runtime\AssetUpgrade\TimelineUpgrade.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Runtime\AssetUpgrade\ClipUpgrade.cs" />

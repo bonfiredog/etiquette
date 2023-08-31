@@ -7,18 +7,26 @@ public class rockingController : MonoBehaviour
 
     public float udLower = 50;
     public float udHigher = 200;
+    public float bfLower = 1200;
+    public float bfHigher = 2000;
+
     public float lrLower = 50;
     public float lrHigher = 200;
     public float upBound = 20;
+    public float bfBound = 7;
     public float lrBound = 2;
     public float upSpeed = 20;
+    public float bfSpeed = 3;
     public float lrSpeed = 20;
     public float upDownTimer;
+    public float backForthTimer;
     public float leftRightTimer;
     public float gravity = 10;
 
     private float jumpInAirAmount;
     private float jumpInAirSpeed;
+    private float bfAmount;
+
     private Vector3 originalPos;
     private Quaternion originalRot;
 
@@ -27,6 +35,7 @@ public class rockingController : MonoBehaviour
     private bool movingLR;
     private float LRAmount;
     private float LRSpeed;
+    private float originalBFPosition;
     private float zDir;
 
     private Vector3 minRotation;
@@ -41,9 +50,11 @@ public class rockingController : MonoBehaviour
         cc = GameObject.Find("Main Camera").GetComponent<cameraControl>();
         originalPos = transform.position;
        originalRot = transform.rotation;
+        originalBFPosition = transform.position.z;
 
         upDownTimer = Random.Range(udLower, udHigher);
         leftRightTimer = Random.Range(lrLower, lrHigher);
+        backForthTimer = Random.Range(bfLower, bfHigher);
         movingLR = false;
         minRotation = new Vector3(0, 0, -lrBound);
         maxRotation = new Vector3(0, 0, lrBound);
@@ -53,25 +64,84 @@ public class rockingController : MonoBehaviour
     void Update()
     {
 
+
+        //Back & Forth  
+        //Count down the timer.
+
+        if (cc.outAmount > 0 && tc.trainCurrentSpeed > (tc.trainTopSpeed * 0.25))
+        {
+            if (backForthTimer > 0)
+            {
+                backForthTimer -= 1;
+            }
+            else
+
+            {
+                bfAmount = Random.Range(bfBound * 0.25f, bfBound);
+
+                //Reset the timer.
+                backForthTimer = Random.Range(bfLower, bfHigher);
+            }
+
+            //Actual Jumping
+            if (bfAmount > 0)
+            {
+                bfAmount -= bfSpeed;
+                transform.position += new Vector3(0, 0, bfSpeed);
+            }
+            else
+            {
+                if (transform.position.z > originalBFPosition)
+                {
+                    transform.position -= new Vector3(0, 0, bfSpeed);
+                }
+            }
+
+
+        }
+        else
+        {
+            if (transform.position.z > originalBFPosition)
+            {
+                transform.position -= new Vector3(0, 0, bfSpeed);
+            }
+        }
+
+
         //Up & Down
         //Count down the timer.
 
-     if (upDownTimer > 0) {
-            upDownTimer -= 1;
-        } else
+        if (cc.outAmount > 0 && tc.trainCurrentSpeed > (tc.trainTopSpeed * 0.25))
         {
-            //Jump in the air a random amount, at a random speed, according to the train's speed (and the out of the cab amount).
-            jumpInAirAmount = ((Random.Range(0, upBound) / 100) * ((tc.trainCurrentSpeed / tc.trainTopSpeed) * 100)) / 100 * cc.outAmount;
-            jumpInAirSpeed = (Random.Range(upSpeed * 0.25f, upSpeed) / 100) * ((tc.trainCurrentSpeed / tc.trainTopSpeed) * 100);
+            if (upDownTimer > 0)
+            {
+                upDownTimer -= 1;
+            }
+            else
 
-            //Reset the timer.
-            upDownTimer = Random.Range(udLower, udHigher);
-        }
-        
-     //Actual Jumping
-     if (jumpInAirAmount > 0) {
-            jumpInAirAmount -= jumpInAirSpeed;
-            transform.position += new Vector3(0, jumpInAirSpeed, 0);
+            {
+                jumpInAirAmount = upBound;
+                jumpInAirSpeed = upSpeed;
+
+                //Reset the timer.
+                upDownTimer = Random.Range(udLower, udHigher);
+            }
+
+            //Actual Jumping
+            if (jumpInAirAmount > 0)
+            {
+                jumpInAirAmount -= jumpInAirSpeed;
+                transform.position += new Vector3(0, jumpInAirSpeed, 0);
+            }
+            else
+            {
+                if (transform.position.y > originalPos.y)
+                {
+                    transform.position -= new Vector3(0, gravity, 0);
+                }
+            }
+
+
         } else
         {
             if (transform.position.y > originalPos.y)
@@ -79,79 +149,6 @@ public class rockingController : MonoBehaviour
                 transform.position -= new Vector3(0, gravity, 0);
             }
         }
-
-        //Left & Right
-        //Count down the timer, if not currently moving.
-
-        //If out at all...
-        if (cc.outAmount > 0)
-        {
-            if (movingLR == false)
-            {
-                if (leftRightTimer > 0)
-                {
-                    leftRightTimer -= 1;
-                }
-                else
-                {
-                    if (transform.rotation.z == 0)
-                    {
-                        var leftOrRight = Random.Range(0, 2);
-                        if (leftOrRight == 0)
-                        {
-                            zDir = 1;
-                        }
-                        else if (leftOrRight == 1)
-                        {
-                            zDir = -1;
-                        }
-
-                        LRAmount = (((Random.Range(0, lrBound))) / 100) * (((tc.trainCurrentSpeed / tc.trainTopSpeed) * 100) / 100 * cc.outAmount);
-                        LRSpeed = (Random.Range(lrSpeed * 0.25f, lrSpeed) / 100) * ((tc.trainCurrentSpeed / tc.trainTopSpeed) * 100);
-                        leftRightTimer = Random.Range(lrLower, lrHigher);
-                        movingLR = true;
-                    } else
-                    {
-                        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 20 * Time.deltaTime);
-                        willReset = true;
-                    }
-                 
-                    if (willReset == true && transform.rotation.z == 0)
-                    {
-                        leftRightTimer = Random.Range(lrLower, lrHigher);
-                        willReset = false;
-                    }
-                }
-            }
-
-            if (movingLR == true)
-            {
-                if (LRAmount > 0)
-                {
-                    LRAmount -= LRSpeed;
-                    transform.Rotate(transform.rotation.x, transform.rotation.y, transform.rotation.z + (LRSpeed * zDir));
-                }
-                else
-                {
-                    movingLR = false;
-                }
-            }
-
-        } else
-        {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 20 * Time.deltaTime);
-        }
-
-
-     //Clamping Rotation
-        // Get the current Euler angles of the object
-        Vector3 currentRotation = transform.rotation.eulerAngles;
-
-        float clampedZ = Mathf.Clamp(currentRotation.z, minRotation.z, maxRotation.z);
-
-        // Set the clamped Euler angles back to the transform rotation
-        transform.rotation = Quaternion.Euler(0, 0, clampedZ);
-
 
 
     }

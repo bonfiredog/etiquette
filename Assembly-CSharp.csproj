@@ -124,6 +124,7 @@
     <Compile Include="Assets\Admin\TotalJSON\Scripts\Exceptions\UnknownObjectTypeException.cs" />
     <Compile Include="Assets\Admin\Tracery\Scripts\JSONObjectExtensions.cs" />
     <Compile Include="Assets\Scripts &amp; Behaviours\startingStation.cs" />
+    <Compile Include="Assets\Scripts &amp; Behaviours\sideTextAlpha.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Prefabs\NewSurfaceShader.shader" />

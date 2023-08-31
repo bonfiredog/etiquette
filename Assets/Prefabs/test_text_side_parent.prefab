@@ -236,6 +236,25 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 139666857301694440}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6430866287851725384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6399391411232519584, guid: 80b61acb2d2f785469f61c846ac4acf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 139666857301694440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5716213143413707951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6430866287851725384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8303c897e24a4f4dbb8281d79b4cacc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalColor: {r: 0.43529412, g: 0.105882354, b: 0.1882353, a: 1}
 --- !u!1001 &5824375198177327177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -415,6 +434,11 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
+        type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519599, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -429,3 +453,22 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5824375198177327177}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &584169389684116969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6399391411232519584, guid: 80b61acb2d2f785469f61c846ac4acf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5824375198177327177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2340024532725074965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584169389684116969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8303c897e24a4f4dbb8281d79b4cacc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalColor: {r: 0.43529412, g: 0.105882354, b: 0.1882353, a: 1}

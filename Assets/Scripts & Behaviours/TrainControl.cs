@@ -40,6 +40,7 @@ public class TrainControl : MonoBehaviour
     private StationScheduler ss;
     private float delayTime;
     private float brakeSpeed;
+    generateTrainTunnel ttg;
    
 
    
@@ -52,6 +53,7 @@ public class TrainControl : MonoBehaviour
         minLong = 0f; //Greenwich
         trainTopSpeedOriginal = trainTopSpeed; //For when the train's top speed is affected by weather or gradient, good to know what we originally set it to!
         ss = scheduler.GetComponent<StationScheduler>();
+        ttg = GameObject.Find("generator_passingtrain").GetComponent<generateTrainTunnel>();
     }
 
     // Update is called once per frame
@@ -124,14 +126,26 @@ public class TrainControl : MonoBehaviour
                             {
                                 //When it's finished, create a delay object some random distance from the camera, with randomly generated text from the special delay grammar.
                                 delaying = false;
-                                var thisDelay = Instantiate(ss.delayObject);
-                                var textc = thisDelay.GetComponent<textController>();
-                                textc.topspeed = 50;
-                                ss.delayObject.transform.position = new Vector3(750, -57f, Random.Range(-1000, -2000));
-                                var textgen = ss.delayObject.GetComponent<textGenerationControl>();
-                                textgen.gcScript = GameObject.Find("grammarController").GetComponent<traceGrammarControl>();
-                                textgen.setGrammarForObject("delaygrammar");
-                                textgen.generateTextFromGrammar(thisDelay.GetComponent<TextMeshPro>());
+                                var trainOrNot = Random.Range(0, 100) + ((30 / Mathf.Abs(maxLong)) * Mathf.Abs(currentLong));
+                                if (trainOrNot > 50)
+                                {
+                                    ttg.generateTT("train");
+                                } else
+                                {
+                                    var thisDelay = Instantiate(ss.delayObject);
+                                    var textc = thisDelay.GetComponent<textController>();
+                                    textc.topspeed = 50;
+                                    ss.delayObject.transform.position = new Vector3(750, -57f, Random.Range(-1000, -2000));
+                                    var textgen = ss.delayObject.GetComponent<textGenerationControl>();
+                                    textgen.gcScript = GameObject.Find("grammarController").GetComponent<traceGrammarControl>();
+                                    textgen.setGrammarForObject("delaygrammar");
+                                    textgen.generateTextFromGrammar(thisDelay.GetComponent<TextMeshPro>());
+                                }
+
+
+
+
+                               
 
                                 //Reset the delay timer.
                                 ss.nextStationDelayTimer = Random.Range(ss.milesToNextStation * 0.25f, ss.milesToNextStation * 0.75f);

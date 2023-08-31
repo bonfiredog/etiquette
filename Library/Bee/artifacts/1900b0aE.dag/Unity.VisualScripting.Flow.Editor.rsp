@@ -358,6 +358,7 @@
 "Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Flow/Connections/UnitConnectionStyles.cs"
 "Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Flow/Connections/UnitConnectionWidget.cs"
 "Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Flow/Connections/ValueConnectionWidget.cs"
+"Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Flow/Description/FlowGraphDescriptor.cs"
 "Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Flow/Description/FlowMachineDescriptor.cs"
 "Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Flow/Description/FlowMacroDescriptor.cs"
 "Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Flow/Description/IUnitDescriptor.cs"

@@ -355,6 +355,7 @@
 "Library/PackageCache/com.unity.ugui@1.0.0/Editor/Properties/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/AspectRatioFitterEditor.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/ButtonEditor.cs"
+"Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/CanvasScalerEditor.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/ContentSizeFitterEditor.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/DropdownEditor.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/GraphicEditor.cs"

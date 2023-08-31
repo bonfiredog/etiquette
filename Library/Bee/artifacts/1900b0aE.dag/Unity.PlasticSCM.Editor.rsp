@@ -410,6 +410,7 @@
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/Developer/UpdateReport/UpdateReportListHeaderState.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/Developer/UpdateReport/UpdateReportListView.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/DrawGuiModeSwitcher.cs"
+"Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/EnumExtensions.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/FindWorkspace.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/GetRelativePath.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/Gluon/CheckinProgress.cs"
@@ -444,6 +445,7 @@
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/PlasticWindow/PlasticSCMWindow.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/ProjectWindow.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/SceneView/DrawSceneOperations.cs"
+"Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/SetupCloudProjectId.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/SwitchModeConfirmationDialog.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/Tool/BringWindowToFront.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/Tool/FindTool.cs"
@@ -630,6 +632,7 @@
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/WebApi/IsCollabProjectMigratedResponse.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/WebApi/OrganizationCredentials.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/WebApi/TokenExchangeResponse.cs"
+"Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/WebApi/WebRestApiClient.cs"
 "Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/WorkspaceWindow.cs"
 -langversion:9.0
 
