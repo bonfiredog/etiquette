@@ -1,6 +1,6 @@
 {
   "origin": [
-  "#adjectives_all.a.capitalize# pole, #verbs_movement#ing",
+  "A #adjectives_all# pole, #verbs_movement#ing",
   "A track #verbs_movement#ing  #compass_points# into #adjectives_all# #appropriate_locations#", 
   "#cross_open# a #people# #verbs_all#ing #adjectives_all#ly",
   "#cross_open# two #appropriate_person.s# #verb_interaction#ing",  
@@ -21,7 +21,6 @@
   "A #adjectives_all# #animals_air# #verbs_movement# through the #air_name#",     
   "A #appropriate_person# shouts from a #crossing_place#, their #body_parts_outer# #verbs_all#ing",    
   "A #animals_small# #verbs_movement.s#"  
-  
   ],
   "cross_open": ["On a #adjectives_all# #crossing_place#:"]
 }

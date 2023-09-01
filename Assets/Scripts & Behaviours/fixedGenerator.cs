@@ -57,6 +57,7 @@ public class fixedGenerator : MonoBehaviour
                 {
                     stopped = false;
                     timer = Random.Range(timerMin, timerMax);
+                    myText.text = "";
                 }
             }
            

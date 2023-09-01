@@ -1,4 +1,6 @@
 {
+"test":[""],
+
   "origin":[
   "#hedging_words.capitalize# a #appropriate_buildings# with a #colours# roof",
   "A #colour# #shape# #verbs_movement#ing",
@@ -12,10 +14,15 @@
   "A sign on a #appropriate_buildings#: #symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol##symbol#",
   "A single #adjectives_all#  #animals#, #hedging_words#",
   "A #events_specific# in a #appropriate_locations#",
+  "The '#colours# #body_part_outer# of #animals_air.a#",
+  "#animals_all.capitalize.s# #recreation_outdoor#",
   "#number.capitalize# #people# in #colours#",
   "Is that something #adjectives_all#?", 
   "#currentterrain.capitalize#",
+  "A #vehicles# full of #adjective_positive# #people.s#",
+  "Millions of #animals_small#",
+  "#number# #animals_large# in the shape of a #shapes_all#",
   "(#currentterrain.capitalize#)"
-  
   ]
+
   }

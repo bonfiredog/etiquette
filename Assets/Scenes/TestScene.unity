@@ -14,12 +14,12 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_Fog: 1
+  m_FogColor: {r: 0.9843137, g: 0.90588236, b: 0.67058825, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.01
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogStart: 2000
+  m_LinearFogEnd: 5000
   m_AmbientSkyColor: {r: 0.9843137, g: 0.90588236, b: 0.67058825, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -1096,8 +1096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745d7a5e52c06b54ca3a724f15247b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerMin: 70
-  timerMax: 200
+  timerMin: 300
+  timerMax: 700
   myTag: backgen
   textgen: {fileID: 2056372327}
   assignedSpeed: 50
@@ -1105,7 +1105,7 @@ MonoBehaviour:
   text: {fileID: 6399391411232519584, guid: 07841c89f07908c4581917aecc8c9bbc, type: 3}
   grammarNameFront: fargrammar
   grammarNameBack: fargrammar
-  distanceOfGeneratorFromWindow: -6000
+  distanceOfGeneratorFromWindow: -9000
   fontSizeLowerBound: 2000
   fontSizeUpperBound: 6000
   yPosLowerBound: 763
@@ -1113,6 +1113,7 @@ MonoBehaviour:
   fc: {fileID: 2083337607}
   timer: 0
   timerMulti: 6
+  showGrammar: 0
 --- !u!65 &97292452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1803,7 +1804,7 @@ MonoBehaviour:
   text: {fileID: 6399391411232519584, guid: 88bfd17626aa60e4db8658263f06a3fe, type: 3}
   grammarNameFront: backgrammar
   grammarNameBack: backgrammar
-  distanceOfGeneratorFromWindow: -6000
+  distanceOfGeneratorFromWindow: -9000
   fontSizeLowerBound: 200
   fontSizeUpperBound: 800
   yPosLowerBound: 460
@@ -1811,6 +1812,7 @@ MonoBehaviour:
   fc: {fileID: 2083337607}
   timer: 0
   timerMulti: 12
+  showGrammar: 0
 --- !u!65 &206698221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2585,7 +2587,7 @@ MonoBehaviour:
   text: {fileID: 1970912136155602586, guid: 252386897cd216f49ba766347fb18534, type: 3}
   grammarNameFront: sidemovegrammar
   grammarNameBack: sidemovegrammar
-  distanceOfGeneratorFromWindow: -6000
+  distanceOfGeneratorFromWindow: -9000
   fontSizeLowerBound: 120
   fontSizeUpperBound: 250
   yPosLowerBound: -450
@@ -2593,6 +2595,7 @@ MonoBehaviour:
   fc: {fileID: 2083337607}
   timer: 0
   timerMulti: 25
+  showGrammar: 0
 --- !u!65 &312134481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3453,7 +3456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -99.29999, y: 0}
+  m_AnchoredPosition: {x: -320.6, y: 0}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &399954065
@@ -6891,7 +6894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerMin: 30
-  timerMax: 120
+  timerMax: 90
   myTag: frontgen
   textgen: {fileID: 2056372327}
   assignedSpeed: 700
@@ -6899,7 +6902,7 @@ MonoBehaviour:
   text: {fileID: 6399391411232519584, guid: 135ba884840cbd048a0048fd7604011b, type: 3}
   grammarNameFront: closegrammar
   grammarNameBack: closegrammar
-  distanceOfGeneratorFromWindow: -6000
+  distanceOfGeneratorFromWindow: -9000
   fontSizeLowerBound: 700
   fontSizeUpperBound: 1035
   yPosLowerBound: -250
@@ -6907,6 +6910,7 @@ MonoBehaviour:
   fc: {fileID: 2083337607}
   timer: 0
   timerMulti: 30
+  showGrammar: 0
 --- !u!65 &781830828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8665,7 +8669,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948393141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1053, y: -154, z: -6000}
+  m_LocalPosition: {x: 1053, y: -154, z: -10000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8836,20 +8840,20 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 10000
+  far clip plane: 20000
   field of view: 75
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 2147483647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -9147,7 +9151,7 @@ MonoBehaviour:
   text: {fileID: 6399391411232519584, guid: 38790fbb5cfc42243937e17ab09e127c, type: 3}
   grammarNameFront: middlegrammar
   grammarNameBack: middlegrammar
-  distanceOfGeneratorFromWindow: -6000
+  distanceOfGeneratorFromWindow: -9000
   fontSizeLowerBound: 750
   fontSizeUpperBound: 1000
   yPosLowerBound: -60
@@ -9155,6 +9159,7 @@ MonoBehaviour:
   fc: {fileID: 2083337607}
   timer: 0
   timerMulti: 22
+  showGrammar: 0
 --- !u!65 &1014510714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9642,6 +9647,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: endCredits
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977002408187321887, guid: 5d2ac8ea75a623e40a1790e7bd4177ff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d2ac8ea75a623e40a1790e7bd4177ff, type: 3}
@@ -10705,8 +10715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745d7a5e52c06b54ca3a724f15247b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerMin: 10
-  timerMax: 10
+  timerMin: 30
+  timerMax: 30
   myTag: trackgen
   textgen: {fileID: 2056372327}
   assignedSpeed: 500
@@ -10714,7 +10724,7 @@ MonoBehaviour:
   text: {fileID: 6399391411232519584, guid: bb2bc663cef00ad4cbd1dd1220f2a09f, type: 3}
   grammarNameFront: trackgrammar
   grammarNameBack: trackgrammar
-  distanceOfGeneratorFromWindow: -6000
+  distanceOfGeneratorFromWindow: -9000
   fontSizeLowerBound: 450
   fontSizeUpperBound: 450
   yPosLowerBound: -2000
@@ -10722,6 +10732,7 @@ MonoBehaviour:
   fc: {fileID: 2083337607}
   timer: 0
   timerMulti: 50
+  showGrammar: 0
 --- !u!65 &1213622034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13936,7 +13947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerMin: 30
-  timerMax: 120
+  timerMax: 90
   myTag: frontgen
   textgen: {fileID: 2056372327}
   assignedSpeed: 800
@@ -13944,7 +13955,7 @@ MonoBehaviour:
   text: {fileID: 6399391411232519584, guid: 80b61acb2d2f785469f61c846ac4acf3, type: 3}
   grammarNameFront: closegrammar
   grammarNameBack: closegrammar
-  distanceOfGeneratorFromWindow: -6000
+  distanceOfGeneratorFromWindow: -9000
   fontSizeLowerBound: 300
   fontSizeUpperBound: 630
   yPosLowerBound: -300
@@ -13952,6 +13963,7 @@ MonoBehaviour:
   fc: {fileID: 2083337607}
   timer: 0
   timerMulti: 35
+  showGrammar: 0
 --- !u!1 &1631286293
 GameObject:
   m_ObjectHideFlags: 0
@@ -16360,8 +16372,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myText: {fileID: 399954066}
-  timerMin: 30
-  timerMax: 60
+  timerMin: 10
+  timerMax: 100
   myTag: window
   grammarName: windowgrammar
   timerMulti: 10
@@ -19539,7 +19551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 86.29999, y: 0}
+  m_AnchoredPosition: {x: 171, y: 0}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2128009707

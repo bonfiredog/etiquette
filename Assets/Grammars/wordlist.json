@@ -19,7 +19,7 @@
 
 "counties": [ "Aberdeenshire", "Angus", "Antrim", "Argyll", "Armagh", "Ayrshire", "Banffshire", "Bedfordshire", "Berkshire", "Berwickshire", "Berwickshire", "Bristol", "Buckinghamshire", "Bute", "Caithness", "Cambridgeshire", "Cheshire", "Clackmannanshire", "Cornwall", "Cumbria", "Derbyshire", "Devon", "Dorset", "Down", "Dunbartonshire", "Durham", "East Lothian", "East Riding of Yorkshire", "East Sussex", "Essex", "Fermanagh", "Fife", "Gloucestershire", "Greater Manchester", "Gwynedd", "Hampshire", "Herefordshire", "Hertfordshire", "Inverness-shire", "Isle of Wight", "Kent", "Kincardineshire", "Kinross-shire", "Kirkcudbrightshire", "Lanarkshire", "Lancashire", "Leicestershire", "Lincolnshire", "Londonderry", "Merseyside", "Mid Glamorgan", "Midlothian", "Moray", "Nairnshire", "Norfolk", "North Yorkshire", "Northamptonshire", "Northumberland", "Nottinghamshire", "Orkney", "Oxfordshire", "Peeblesshire", "Perthshire", "Powys", "Renfrewshire", "Ross and Cromarty", "Roxburghshire", "Rutland", "Selkirkshire", "Shetland", "Shropshire", "Somerset", "South Glamorgan", "South Yorkshire", "Staffordshire", "Stirlingshire", "Suffolk", "Surrey", "Sutherland", "Tyne and Wear", "Tyrone", "Warwickshire", "West Glamorgan", "West Lothian", "West Midlands", "West Sussex", "West Yorkshire", "Wigtownshire", "Wiltshire", "Worcestershire" ],
 
-"containers":["suitcase", "crate", "barrel", "sack", "bag", "chest", "box", "cupboard", "drawer", "pocket", "tray", "shelf", "nook", "cranny", "niche", "recess", "case", "satchel", "pack", "packet", "bundle", "purse", "collection", "bucket", "canister", "capsule", "jar", "pail", "pouch", "tank", "silo", "bin", "bunker", "cask", "hopper"],
+"containers":["suitcase", "crate", "barrel", "sack", "bag", "chest", "box", "cupboard", "drawer", "pocket", "tray", "shelf", "nook", "cranny", "niche", "recess", "case", "satchel", "pack", "packet", "bundle", "purse", "collection", "bucket", "canister", "capsule", "jar", "pail", "pouch", "tank", "basket", "silo", "bin", "bunker", "cask", "hopper"],
 
 "hedging_words": [ "perhaps", "maybe", "somehow", "possibly", "perchance", "concievably", "feasibly"],
 
@@ -31,7 +31,7 @@
 
 "abstract_nouns": [ "soul", "love", "faith", "hope", "charity", "spirit", "glory", "mortality", "pride", "grace", "envy", "lust", "anger", "rage", "wrath", "faith", "health", "peace", "calm", "grief", "sorrow", "pain", "hurt", "loss", "sin", "pity", "joy", "thrill", "hate", "wrath", "greed", "bravery", "calm", "evil", "good", "loyalty", "weakness", "wisdom", "trust" ],
 
-"endearment":["love", "heart", "loveheart", "dearest", "dear", "darling", "sweetness", "sweetheart", "fondheart", "trifle", "angel", "baby", "beloved", "honey", "lover", "precious", "treasure", "pussy", "pussycat", "weakheart", "pet", "doggy", "woofs", "dearlove", "wonder", "desire"],
+"endearment":["love", "heart", "loveheart", "dearest", "dear", "darling", "sweetness", "sweetheart", "fondheart", "trifle", "angel", "baby", "beloved", "honey", "lover", "precious", "treasure", "pussy", "pussycat", "weakheart", "pet", "doggy", "dearlove", "wonder", "desire"],
 
 "carriage_types":["carriage", "first classer", "second classer", "third classer", "guardvan", "brakevan", "coach", "wagon"],
 
@@ -39,7 +39,7 @@
 
 "compass_points": ["north", "northeast", "east", "southeast", "south", "southwest", "west", "northwest"],
 
-"vehicles":[ "wagon", "coach", "truck", "haywagon", "landau", "charabanc", "cab", "carriage", "van", "cart", "cabriolet",  "wheelbarrow", "gig", "wheelchair"], 
+"vehicles":[ "wagon", "coach", "truck", "haywagon", "landau", "charabanc", "cab", "carriage", "van", "cart", "cabriolet",  "wheelbarrow", "gig", "wheelchair", "haywagon"], 
 
 "coast_vehicles": [ "boat", "steamboat", "packet", "rowboat", "trawler", "warship", "fishingboat", "ferry", "wherry", "frigate", "sloop", "ketch", "yacht", "boat",  "steamer",  "battleship", "dreadnought", "gunboat"],
 
@@ -47,7 +47,7 @@
 
 "seasons": ["spring", "summer", "autumn", "winter"],
 
-"weather_types": ["rain", "thunderbank", "cloudfront", "hail", "snow", "wind", "clear", "stormcloud", "high cloud", "low cloud", "sleet", "shower", "sun", "breeze", "gale", "snow"],
+"weather_types": ["rain", "thunderbank", "cloudfront", "hail", "lightning", "snow", "wind", "clear", "stormcloud", "high cloud", "low cloud", "sleet", "shower", "sun", "breeze", "gale", "snow"],
 
 "public_holidays": ["Good Friday", "Christmas Day", "Sunday", "New Year's Day", "Plough Monday", "St. Valentine's Day", "Resurrection Sunday", "George's Day", "May Day", "Oak Apple Day", "Lammas", "Harvest Day", "St. Clement's Day", "Guy Fawkes Night", "Allhallowtide", "Saint Sylvester's Day", "Twelfth Night", "Feast Of The Innocents", "Feast Of St. John", "Maundy Thursday"], 
 
@@ -80,7 +80,7 @@
   
 "names_women": [ "mary", "julia", "sarah", "constance", "agnes", "nelly", "ada", "alexandra", "alice", "audrey", "beatrice", "beryl", "caroline", "cora", "climentine", "edith", "margaret", "eleanor", "eliza", "elsie", "emmeline", "evie", "fannie", "florence", "hattie", "hazel", "henrietta", "helena", "ida", "irene", "isabella", "josephine", "josie", "kate", "kitty", "katherine", "lucy", "mabel", "maida", "marjorie", "millie", "nellie", "nora", "rosie", "pearl", "victoria", "viola", "winnie", "ivy", "holly", "chloe", "daisy", "evelyn", "emily", "olivia", "charlotte"],
 
-"swearwords":["bl__dy", "b_gger", "f__k", "s__t", "p_ss", "bl__t", "d_mn", "t_ffer", "#letters#_#letters#___#letters#__"], 
+"swearwords":["bl__dy", "b_gger", "f__k", "s__t", "p_ss", "bl__t", "d_mn", "#letters#_#letters#___#letters#__", "God", "god d_mn"], 
 
 "money":["penny", "shilling", "crown", "half crown", "tuppeny", "bit", "thruppeny", "thicker"],
 
@@ -102,7 +102,7 @@
 
 "fraction":["a fifteenth", "a fourteenth", "a thirteenth", "a twelfth", "an eleventh", "a tenth", "a ninth", "an eighth", "a seventh", "a sixth", "a fifth", "a quarter", "a third", "half"],
 
-"positional":["out", "in", "on", "under", "over", "through", "about", "above", "across", "after", "against", "among", "around", "before", "behind", "beneath", "beside", "between", "beyond", "by", "inside", "near", "opposite", "outside", "underneat", "upon"],
+"positional":["out", "in", "on", "under", "over", "through", "about", "above", "across", "after", "against", "among", "around", "before", "behind", "beneath", "beside", "between", "beyond", "by", "inside", "near", "opposite", "outside", "underneath", "upon"],
 
 "materials": ["sand", "clag", "smoke", "iron", "coal", "chalk", "flint", "brick", "sand", "bronze", "brass", "gold", "silver", "shadow", "wicker", "tartan", "linen", "wool", "woollen", "mahogany", "teak", "oak", "cotton", "granite", "limestone", "leather", "tweed", "herringbone", "marble", "crossstitch", "amethyst", "topaz", "garnet", "coal", "cobalt", "emerald", "titanium", "feldspar", "velvet", "brass", "copper", "pine", "castiron", "tar", "silk", "silken", "walnut", "jewelled", "wooden", "obsidian", "rubber", "steam", "foam", "air", "salt", "water", "mud", "gas", "gutta-percha", "antimony", "isinglass"],
 
@@ -115,29 +115,37 @@
   
 "adjectives_negative": [ "putrid", "bleak", "blind", "burnt", "hungry", "cold", "lone", "aching", "evil", "haunted",  "gauche", "parlous", "broken", "rotten", "failed", "shrill", "piercing", "bloated",  "dreary", "terrible", "queasy", "quailing", "gross", "stubborn", "petty", "greedy", "lusting", "battered", "burning", "haggard", "harried", "dull", "stupid", "chaotic", "torn", "rent"],
 
-"adjectives_neutral": [ "tall", "short", "fat", "thick", "thin", "slow", "fast", "wide", "narrow", "cool", "hot",  "busy", "brief", "open", "closed", "enormous", "quick", "unspeaking", "silent", "#ordinal#", "first", "last",  "heavy", "light", "burnt", "loud", "quiet", "raw", "empty", "full", "oily", "waggish", "lingering", "full", "empty", "fiery", "fluttering", "forking", "firm", "loose", "hoarse", "#colours#", "stormy", "wet", "slick", "rasping", "rattling", "#materials#"], 
+"adjectives_neutral": [ "tall", "short", "fat",  "bare", "thick", "thin", "slow", "fast", "wide", "narrow", "cool", "hot",  "busy", "brief", "open", "closed", "enormous", "quick", "unspeaking", "silent", "#ordinal#", "first", "last",  "heavy", "light", "burnt", "loud", "quiet", "raw", "empty", "full", "oily", "waggish", "lingering", "full", "empty", "fiery", "fluttering", "forking", "firm", "loose", "hoarse", "#colours#", "stormy", "wet", "slick", "rasping", "rattling", "#materials#"], 
 
 "adjectives_rare": ["devastated", "pregnant", "murdered", "birthing", "mutilated", "ruined", "raped", "hypnotised", "dying", "dead", "howling", "wrecked", "exploded", "drugged", "disembowelled", "unbearable"], 
 
 
+"closepositional": [
+  "Between #appropriate_buildings.a# and #appropriate_locations.a#,",
+  "#positional.capitalize# a #appropriate_buildings#,", 
+  "#positional.capitalize# a #appropriate_buildings# #positional# a #appropriate_locations#,",
+  "#positional.capitalize# a #appropriate_locations#,",
+  "#In #adjectives_all.a# #rooms#,",
+  "#positional.capitalize# #private_places.a#",
+  "#fraction.capitalize# of a #measurements# away,"
+  ],
 
 
-
-
+  "cropsorfood":["#crops#","#ingredients#","#cooked_food#"],
 
  "verbs_all":["#verbs_noise#", "#verbs_movement#", "#verbs_interaction#", "#verbs_extreme#", "#verbs_gentle#", "#verbs_position#"],
 
  "verbs_position":["seat", "stand", "lie", "crouch", "bend", "crawl", "jump", "sit", ""],
 
- "verbs_noise": [ "puff", "hiss", "groan", "cry", "whinny", "grunt", "whitter", "tweet", "chirp", "grumble", "cry", "whisper", "moan", "churr", "whistle", "shout", "holler", "mutter", "chitter", "trill", "sing", "talk", "chat", "chatter", "bellow", "belch", "cough", "sneeze", "burp", "jingle", "jangle", "tap", "skitter", "rattle", "buzz", "grind", "rasp", "clatter", "groan", "gibber", "flutter", "coo", "roar", "titter", "yap", "drawl"],
+ "verbs_noise": [ "puff", "hiss", "groan", "cry", "whinny", "grunt", "whitter", "tweet", "chirp", "grumble", "cry", "whisper", "moan", "churr", "whistle", "shout", "holler", "mutter", "chitter", "trill", "sing", "talk", "chat", "chatter", "blip", "beep", "bellow", "belch", "cough", "sneeze", "burp", "jingle", "jangle", "tap", "skitter", "rattle", "buzz", "grind", "rasp", "clatter", "groan", "gibber", "flutter", "coo", "roar", "titter", "yap", "drawl"],
 
- "verbs_movement": [ "boil", "lurch", "canter", "trot", "creep", "leap", "march", "flutter", "lope", "saunter", "trip", "fall", "sway", "sashay", "crawl", "beat", "loiter", "run", "walk", "haunt", "gallop", "step", "dither", "trudge", "slither", "pad", "ooze", "drag", "shunt", "chug", "meander", "flow", "drip", "run", "sprint", "skip", "jump", "hop"], 
+ "verbs_movement": [ "boil", "avoid", "dodge", "lurch", "canter", "trot", "creep", "leap", "march", "flutter", "lope", "saunter", "trip", "fall", "sway", "sashay", "crawl", "beat", "loiter", "run", "walk", "haunt", "gallop", "step", "dither", "trudge", "slither", "pad", "turntable", "ooze", "drag", "shunt", "chug", "meander", "flow", "drip", "run", "sprint", "skip", "jump", "hop"], 
  
  "verbs_interaction": [ "grope", "finger", "touch", "smell", "sniff", "eat", "chew", "drink", "suck", "savour", "talk", "shout", "wave", "spit", "wink", "lap", "lick", "mark", "scratch", "couple", "complain", "beg", "flick", "embellish", "alter", "rip", "tear", "break", "bash", "fix", "repair", "embrace", "talk"], 
  
- "verbs_extreme": [ "die", "kill", "weep", "scream", "destroy", "delete", "grope", "wail", "steal", "collapse", "rape", "devour", "rut", "cannibalise", "ravish", "murder", "kick", "punch", "fuck"], 
+ "verbs_extreme": [ "toil at", "kill", "weep at", "scream at", "destroy", "delete", "grope", "wail at", "steal", "collapse", "rape", "devour", "rut with", "cannibalise", "ravish", "murder", "kick", "punch", "fuck"], 
  
- "verbs_gentle": [ "sun", "gurgle", "stroke", "rest", "nuzzle", "cuddle", "lie", "settle"],
+ "verbs_gentle": [ "sun", "gurgle", "stroke", "rest", "nuzzle", "cuddle", "lie", "settle", "sag"],
 
 
 
@@ -148,7 +156,7 @@
 
  "town_buildings": [ "church", "bank", "shop", "house",  "shop", "house", "shop", "house" ,"shop", "house", "brewery", "smeltingworks",  "hotel", "workhouse", "chapel", "schoolhouse", "town hall", "gasworks", "hospital", "factory", "mill"], 
 
- "city_buildings": [ "bank", "street", "street", "street", "street", "church", "hospital", "mill",  "road", "road", "road",  "mfactory", "shop", "shop", "shop", "hotel", "workhouse", "chapel","schoolhouse", "concert hall", "gasworks", "park", "cathedral", "prison" ], 
+ "city_buildings": [ "bank", "street", "street", "street", "street", "church", "hospital", "mill",  "road", "road", "road",  "mfactory", "shop", "shop", "shop", "hotel", "workhouse", "chapel","schoolhouse", "concert hall", "gasworks", "park", "cathedral", "prison", "tomb" ], 
 
  "coastal_buildings": [ "dock", "harbour", "pier", "harbourmouth", "lighthouse", "gun battery", "beacon", "telegraph station", "sea wall"],
 
@@ -208,11 +216,11 @@
 
  "day_of_week":["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
 
- "people": [ "man", "woman", "girl", "boy", "child", "person"],
+ "people": [ "man", "woman", "girl", "boy", "child"],
 
  "people_indistinct":["someone", "somebody", "something"],
 
- "relation": ["father", "mother", "brother", "daughter", "son", "sister", "uncle", "aunt", "grandfather", "grandmother", "niece", "nephew", "grandson", "granddaughter"],
+ "relation": ["father", "mother", "brother", "fiancé", "daughter", "son", "sister", "uncle", "aunt", "grandfather", "grandmother", "niece", "nephew", "grandson", "granddaughter"],
 
  "titles": [ "Sir", "Mr", "Mrs", "Miss", "Ms", "Revd", "The Honourable" ],
 
@@ -255,7 +263,7 @@
 
 "crossing_place":["bridge", "road", "highway", "canal", "path", "track", "crossing", "tunnel", "underpass", "overpass"],
 
-"symbol":["cross", "saltire", "spiral", "crescent", "star", "hexagon", "crossbuck", "circle", "bullseye", "lightning bolt", "finger", "crown", "sceptre", "eye", "hand", "diamond", "heart", "fleur-de-lys", "octagon"],
+"symbol":["cross", "saltire", "spiral", "crescent", "star", "hexagon", "crossbuck", "circle", "bullseye", "horseshoe", "lightning bolt", "finger", "crown", "sceptre", "eye", "hand", "diamond", "heart", "fleur-de-lys", "octagon"],
 
 
 
@@ -274,7 +282,7 @@
 
 "shapes_all":["#shape#", "#symbol#", "#fruits#", "#body_part_outer#", "#celestial_body#", "#railway_furniture#"],
 
-"illness": ["cough", "ague", "complaint", "fever", "disquiet", "dispepsia", "ailment", "condition", "cancer", "madness", "lunacy", "quinsy", "dropsy", "lockjaw", "consumption", "ache", "pain", "gout", "goitre", "mania", "otiosity", "swivet", "complication", "eventuality", "gripe", "allergy", "flu", ""],
+"illness": ["cough", "ague", "complaint", "fever", "disquiet", "dispepsia", "ailment", "condition", "cancer", "madness", "lunacy", "quinsy", "dropsy", "lockjaw", "consumption", "ache", "pain", "gout", "goitre", "mania", "tumour", "growth", "otiosity", "swivet", "complication", "eventuality", "gripe", "allergy", "flu"],
 
 "heshe":["he", "she", "they"],
 
@@ -285,9 +293,9 @@
 
 
 
-"objects_all":["#clothes#", "#instruments#", "#money", "#food_all#", "#tools#", "#weapon#", "#precious_stones#", "#indoor_objects_large#", "#document#", "#indoor_objects_small#", "#outdoor_objects_large#", "#outdoor_objects_small#", "#objects_bits#", "#railway_objects#"],
+"objects_all":["#clothes#", "#instruments#", "#money", "#animals_all#", "#food_all#", "#tools#", "#weapon#", "#precious_stones#", "#indoor_objects_large#", "#document#", "#indoor_objects_small#", "#outdoor_objects_large#", "#outdoor_objects_small#", "#objects_bits#", "#railway_objects#"],
 
-"clothes" : ["skirt", "shirt", "trousers", "shoes", "hat", "socks", "stocking", "petticoat", "jacket", "spectacles", "scarf", "bonnet", "corset", "glove", "crinoline", "bodice", "waistcoat", "pocket watch", "collar", "chemisette", "bowler", "top hat", "frock coat", "necktie", "uniform", "ribbon", "dress", "boater", "shawl"],
+"clothes" : ["skirt", "shirt", "trousers", "shoes", "hem", "hat", "socks", "stocking", "petticoat", "jacket", "spectacles", "scarf", "bonnet", "corset", "glove", "crinoline", "bodice", "waistcoat", "pocket watch", "collar", "chemisette", "bowler", "top hat", "frock coat", "necktie", "uniform", "ribbon", "dress", "boater", "shawl"],
 
 "tools": ["hammer", "mallet", "scythe", "axe", "adze", "drill", "file", "punch", "awl", "brush", "pincers", "sledge", "saw"],
 
@@ -313,9 +321,9 @@
 
   "events_all":["#events_general#", "#events_specific#", "#events_general#", "#events_specific#", "#events_general#", "#events_specific#", "#events_general#", "#events_specific#", "#events_rare#"],
 
-  "events_general": [ "scandal", "discovery", "revelation", "end", "victory", "respite", "disaster", "secret", "reckoning", "accident", "escape", "intervention", "argument", "falling-out", "reunion", "parting", "farewell", "celebration", "commemoration", "remembrance", "observance", "gathering", "meeting"],
+  "events_general": [ "scandal", "discovery", "revelation", "end", "victory", "respite", "disaster", "secret", "reckoning", "accident", "escape", "intervention", "argument", "falling-out", "reunion", "parting", "farewell", "celebration", "commemoration", "remembrance", "observance", "gathering", "meeting", "betrayal"],
 
-  "events_specific": ["birthday", "party", "wake", "holiday", "excursion", "anniversary",  "birth", "marriage", "hunt", "funeral"],
+  "events_specific": ["birthday", "party", "wake", "holiday", "excursion", "anniversary",  "birth", "marriage", "hunt", "funeral", "war", "battle", "fight"],
 
   "events_rare":["murder", "rape", "assault", "death", "wounding", "torture", "bullying"],
 
@@ -336,9 +344,9 @@
 
 "person_role_city":["nun", "priest", "beggar", "butcher", "baker", "monger", "gipsy", "maid", "sailor", "thief", "cryer", "seller", "hawker", "stevedore", "navvy", "parson", "keeper", "leafleter", "agitator", "prophet", "judge", "policeman", "labourer", "official", "pickpocket", "prisoner", "commuter", "musician", "jailer",  "widow", "veteran", "miner", "docker"],
 
+"numbers":["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty" ],
 
-
-"stationposition":["On platform #numbers#,", "By the ticket office,", "Under the awning,", "#verbs_position.capitalize#ing on the platform"],
+"stationposition":["On platform #numbers#,", "By the ticket office,", "Under the awning,", "#verbs_position.capitalize#ing on the platform,"],
 
 "two_num":["#number# and #number#"],
 
@@ -356,15 +364,15 @@
 
 "animals_air":["gull", "bird", "robin", "crow", "rook", "owl", "wasp", "fly", "bee", "buzzard", "moth", "butterfly", "something", "duck", "swan", "goose", "siskin", "swan", "goose", "moorhen", "coot", "hen", "hoverfly"],
 
-"animals_exotic":["tiger", "camel", "peacock", "eagle", "lion", "hippopotamus", "giraffe", "zebra", "ox", "buffalo", "" ],
+"animals_exotic":["tiger", "camel", "peacock", "eagle", "lion", "hippopotamus", "giraffe", "zebra", "ox", "buffalo", "python", "crocodile", "jaguar"],
 
-"famous_people": ["#firstnames_all.capitalize# #surnames.capitalize#"], 
+"famous_people": ["#firstnames_all.capitalize# #surnames.capitalize#", "Chaucer", "Shakespeare", "Stevenson", "Jefferson", "Lincoln", "Victoria", "Gladstone"], 
+  
+"track_maker":["#names_men.capitalize# #surnames.capitalize#"],
 
+"words_any":["#mouthed_word#", "#animals_all#", "#emotions#", "#numbers#", "#verbs_extreme#", "#placenames.capitalize#", "#events_rare#", "#day_of_week#" ],
 
-
-
-
-"mouthed_word":["the #railway furniture#", "#endearment#", "#abstract_nouns#", "#compass_points#", "#placenames_all#", "#names_men.capitalize#", "#names_men.capitalize#", "#surnames.capitalize#", "#swearwords#", "#celestial_body#", "#adjectives_all#", "please", "no", "yes", "maybe", "soon", "never", "yet"],
+"mouthed_word":["the #railway furniture#", "#endearment#", "#abstract_nouns#", "#compass_points#", "#placenames.capitalize#", "#names_women.capitalize#!", "#names_men.capitalize#!", "#surnames.capitalize#", "#swearwords#", "#celestial_body#", "#adjectives_all#", "please", "no", "yes", "maybe", "soon", "never", "yet"],
 
 "comparison":["#railway_staff.a#", "#train_parts.a#", "#railway_furniture.a#", "#weapon.a#", "#counties#", "#containers.a#", "#private_places.a#", "#vehicles.a#", "#coast_vehicles.a#", "#mythical_beast.a#", "#weather_types.a#", "#seasons#", "#public_holidays#", "#objects_all.a#", "#celestial_body.a#", "#materials#", "#buildings_all.a#", "#locations_all.a#", "#body_part_inner.a#", "#body_part_outer.a#", "#rooms.a#", "#fruits.a#", "#crops#", "#cooked_food#", "#ingredients#", "#drinks#", "#fish#", "#measurements.a#", "#months#", "#symbol.a#", "#events_all.a#", "#person_roles_all.a#", "#animals_all.a#"]
 }

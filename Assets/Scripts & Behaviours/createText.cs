@@ -22,6 +22,7 @@ public class createText : MonoBehaviour
     public GameObject fc;
     public float timer;
     public float timerMulti;
+    public bool showGrammar;
 
     private Vector3 mypos;
     private TrainControl tc;
@@ -43,6 +44,9 @@ public class createText : MonoBehaviour
         ss = GameObject.Find("stationScheduleController").GetComponent<StationScheduler>();
         shouldgenerate = true;
 
+     
+        
+
         timerMaxOriginal = timerMax;
         timerMinOriginal = timerMin;
 
@@ -56,7 +60,7 @@ public class createText : MonoBehaviour
 
 
         //Start the timer with a random total (limits set manually for the generator).
-        timer = Random.Range(timerMin, timerMax);
+        timer = 10;
     }
 
     // Update is called once per frame

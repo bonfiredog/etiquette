@@ -36,6 +36,7 @@ public class textGenerationControl : MonoBehaviour
 
 
     private StationScheduler ss;
+    private timeControl tc;
 
 
      // Start is called before the first frame update
@@ -48,6 +49,7 @@ public class textGenerationControl : MonoBehaviour
             gcScript = gc.GetComponent<traceGrammarControl>();
             myText = gameObject.GetComponent<TextMeshPro>();
             ss = GameObject.Find("stationScheduleController").GetComponent<StationScheduler>();
+            
 
             //Setting Grammar To Parse ========================================|
 
@@ -60,6 +62,10 @@ public class textGenerationControl : MonoBehaviour
                 wordListToParse = removeCurlyBraces(gcScript.wordListString);
                 var grammarToParse = removeCurlyBraces(currentGrammarJSON);
                 var finalGrammarString = "{" + wordListToParse + ", " + grammarToParse + "}";
+
+
+                Debug.Log(finalGrammarString);
+
 
                 currentGrammar = new TraceryGrammar(finalGrammarString);
 

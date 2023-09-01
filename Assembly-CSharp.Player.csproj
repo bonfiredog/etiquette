@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.17</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.18</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2021.3.21f1</UnityVersion>
@@ -121,13 +121,12 @@
     <Compile Include="Assets\Admin\TotalJSON\Internal\StringPointer.cs" />
     <Compile Include="Assets\Scripts &amp; Behaviours\tunnelController.cs" />
     <Compile Include="Assets\Admin\TotalJSON\Scripts\Exceptions\SerializeException.cs" />
+    <Compile Include="Assets\Scripts &amp; Behaviours\sideTextAlpha.cs" />
     <Compile Include="Assets\Admin\TotalJSON\Scripts\Exceptions\UnknownObjectTypeException.cs" />
     <Compile Include="Assets\Admin\Tracery\Scripts\JSONObjectExtensions.cs" />
     <Compile Include="Assets\Scripts &amp; Behaviours\startingStation.cs" />
-    <Compile Include="Assets\Scripts &amp; Behaviours\sideTextAlpha.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Prefabs\NewSurfaceShader.shader" />
     <None Include="Assets\Admin\Plugins\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Admin\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Admin\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -145,7 +144,6 @@
     <None Include="Assets\Admin\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Admin\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Admin\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\Materials\VolumetricGradientShader.shader" />
     <None Include="Assets\Admin\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Admin\Plugins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Admin\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -376,7 +374,7 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -753,6 +751,10 @@
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
       <Project>{4593C832-6D04-CCAF-5C39-01AD26B14A49}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AI.Navigation.Player.csproj">
+      <Project>{9EDAC9D8-7B9F-84D4-F5CE-51CDC2330A26}</Project>
+      <Name>Unity.AI.Navigation.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
       <Project>{4E4FA6BA-867A-871A-E14D-1B5BF8B35ADB}</Project>

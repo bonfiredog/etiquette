@@ -29,7 +29,7 @@ public class textControllerSide : MonoBehaviour
         transform.position += new Vector3(0, 0, 1) * speed * Time.deltaTime;
 
         //If beyond a certain z value, destroy.
-        if (transform.position.z > 2500)
+        if (transform.position.z > 6000)
         {
             Destroy(gameObject);
         }
