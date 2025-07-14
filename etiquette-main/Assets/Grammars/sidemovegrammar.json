@@ -1,0 +1,26 @@
+{
+  "origin": [
+  "A #adjectives_all# pole, #verbs_movement#ing",
+  "A track #verbs_movement#ing  #compass_points# into #adjectives_all# #appropriate_locations#", 
+  "#cross_open# a #people# #verbs_all#ing #adjectives_all#ly",
+  "#cross_open# two #appropriate_person.s# #verb_interaction#ing",  
+  "#cross_open# a #adjectives_all# #vehicles# #verbs_movement#ing full of #objects_all.s#",
+  "A #events_specific# on a #adjectives_all# #crossing_place#",
+  "#cross_open# a #people# #verbs_all#s like a #comparison#",
+  "#cross_open# a #people# #verbs_interaction# at the train",
+  "Two #people# throw a #objects_outdoor_small# across the track", 
+  "#two_nums#",
+  "A light #verbs_noise# #colours#, #colours#",
+  "#cross_open# two #people.s# #verbs_interaction#ing like #comparison.s#",
+  "#cross_open# a #people# making a #shapes_all# with their hand",
+  "#cross_open# somebody dressed as a #mythicalbeast#, #verbs_all#ing",
+  "A junction: #compass_points#, #placenames.capitalize#", 
+  "#cross_open# a #people# holding a sign: '#verbs_all.capitalize# #imperial_locations.capitalize#'",
+  "#cross_open# a #people# holding a sign: '#objects_all.s.capitalize# for my #relation.capitalize#'",
+  "#cross_open# a #people# holding a sign: '#command_word.capitalize# The #materials.capitalize# #mythicalbeast.capitalize.s#'",
+  "A #adjectives_all# #animals_air# #verbs_movement# through the #air_name#",     
+  "A #appropriate_person# shouts from a #crossing_place#, their #body_parts_outer# #verbs_all#ing",    
+  "A #animals_small# #verbs_movement.s#"  
+  ],
+  "cross_open": ["On a #adjectives_all# #crossing_place#:"]
+}

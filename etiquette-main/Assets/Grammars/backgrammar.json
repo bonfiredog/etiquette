@@ -1,0 +1,35 @@
+{ 
+"test":[""],
+
+    "origin": [
+    "Far-off #appropriate_locations.s#",
+    "#adjectives_all# #shapes.s#",
+    "A #train_parts# of hills #verbs_gentle#.ing",
+    "An #adjectives_all# #appropriate_buildings#", 
+    "#number# #measurements.s#",
+    "A #hintword# of #counties#",
+    "#colours.capitalize# #appropriate_locations# in the #air_name#",
+    "A #hintword# of #imperial_locations.capitalize#",
+    "A #materials# skyline",
+    "#adjectives_all.capitalize# #shapes_all# on the horizon",
+    "#adjectives_all.capitalize# #general_landscape#",
+    "A #rural_building# through a #appropriate_locations#",
+    "#compass_points.capitalize #verbs_all#",
+    "Rumours of a #animals_exotic# #verbs_all#ing",
+    "#verbs_all.capitalize#ing #general_landscape#",
+    "A view with a #illness#",
+    "(#people_indistinct.capitalize#)",
+    "The #body_part_outer# of #appropriate_locations.a#",
+    "A view like #comparison.a#",
+    "#adjectives_all.capitalize# #appropriate_locations#",
+    "#appropriate_locations.s.capitalize# #verbs_movement#ing" ,
+    "A #adjectives_all.capitalize# view",
+    "#number.capitalize# #colour# #shapes_all.s#", 
+    "#measurements.capitalize# of #adjectives_all# #crops#",  
+    "#appropriate_locations.capitalize# like #adjectives_all# #cooked_food#", 
+    "Clouds #recreation_all#",
+    "A #private_places# of a sky",
+    "#railway_furniture.capitalize# #verbs_all.ed# #colour# and #materials#",
+    "#adjectives_all.capitalize# #current_terrain#"
+    ]
+    }
