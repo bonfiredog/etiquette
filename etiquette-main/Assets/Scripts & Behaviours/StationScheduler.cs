@@ -32,8 +32,6 @@ public class StationScheduler : MonoBehaviour
     public int currentUrbanDensity;
     public string currentTerrain = "coast";
     public int secondsSlowDown;
-    public List<string> waypoints;
-    public int currentWaypointIndex;
     public float currentMilePoint;
     public int nextStationSpeedMod;
     public string lastStationName = "Penzance";
@@ -49,7 +47,7 @@ public class StationScheduler : MonoBehaviour
     public string appropriateperson = "#person_roles_rural#";
     public string appropriatebuildings = "#rural_buildings#";
     private float weatherTimer = 10000;
-    private string currentweather = "clear";
+    public string currentweather = "clear";
 
 
     TrainControl tc;
@@ -120,6 +118,7 @@ public class StationScheduler : MonoBehaviour
                 getStationData(nextStation);
 
                 tc.docked = false;
+                Debug.Log("Leaving station...");
           
             }
         }
@@ -135,24 +134,7 @@ public class StationScheduler : MonoBehaviour
                     //Count down the miles to the next station based on the train's current speed.
                     milesToNextStation -= tc.trainCurrentSpeed * Time.deltaTime;
 
-                    //Trigger waypoints at appropriate points.
-                    //If there are waypoints...
-                    if (waypoints.Count > 0)
-                    {
-                        //If we aren't yet at the last waypoint...
-                        if (currentWaypointIndex < waypoints.Count - 1)
-                        {
-                            //If we pass the current milepoint...
-                            if (milesToNextStation <= currentMilePoint)
-                            {
-                                setWayPointData();
-                                currentWaypointIndex += 1;
-                                currentMilePoint = data.stationData.GetJSON(waypoints[currentWaypointIndex]).GetFloat("milePoint");
-                            }
-                           
-                        }
-                    }
-                   
+                          
 
                         //Check whether, at current speed, in this frame, it would take slowdownTime to reach 0 miles.
                         if (tc.docking == false)
@@ -161,6 +143,7 @@ public class StationScheduler : MonoBehaviour
                             {
                                 tc.trainSlowDownStartSpeed = tc.trainCurrentSpeed;
                                 tc.docking = true;
+                                Debug.Log("Slowing down for the station...");
                                 tc.decelerationStartTime = Time.time;
                                 tc.decelerationTime = (2 * tc.secondsToSlowGentle) / tc.trainSlowDownStartSpeed;
                                 //Generate a station.
@@ -174,6 +157,7 @@ public class StationScheduler : MonoBehaviour
                     //If we are at mile 0 (i.e. we are at the station, make sure we are docked, and start the station timer.
                     tc.docked = true;
                     tc.docking = false;
+                    Debug.Log($"We are at {nextStationName}!");
                     currentStationTimer = UnityEngine.Random.Range(nextStationMinStay, nextStationMaxStay);
                 }
             } else if (nextStationStop == 0)
@@ -184,23 +168,6 @@ public class StationScheduler : MonoBehaviour
                     //Count down the miles to the next station based on the train's current speed.
                     milesToNextStation -= tc.trainCurrentSpeed * Time.deltaTime;
 
-                    //Trigger waypoints at appropriate points.
-                    //If there are waypoints...
-                    if (waypoints.Count > 0)
-                    {
-                        //If we aren't yet at the last waypoint...
-                        if (currentWaypointIndex < waypoints.Count - 1)
-                        {
-                            //If we pass the current milepoint...
-                            if (milesToNextStation <= currentMilePoint)
-                            {
-                                setWayPointData();
-                                currentWaypointIndex += 1;
-                                currentMilePoint = data.stationData.GetJSON(waypoints[currentWaypointIndex]).GetFloat("milePoint");
-                            }
-
-                        }
-                    }
 
                     if (milesToNextStation <= tc.secondsToSlowGentle && hasGenNonStopStation == false)
                     {                   
@@ -253,18 +220,12 @@ public class StationScheduler : MonoBehaviour
     //Note that different data types need different methods. String and int should be enough.
 private void getStationData(int station)
     {
-        nextStationName = getStationDataPointString(station, "stationName");
-        
-        Debug.Log("station: " + nextStationName);
+        nextStationName = getStationDataPointString(station, "stationName");       
         milesToNextStation = getStationDataPointInt(station, "distanceFromLastStation");
         nextStationMilesTotal = milesToNextStation;
-        Debug.Log(milesToNextStation);
         nextStationMinStay = getStationDataPointInt(station, "minStationStay");
-        Debug.Log(nextStationMinStay);
         nextStationMaxStay = getStationDataPointInt(station, "maxStationStay");
-        Debug.Log(nextStationMaxStay);
         nextStationSize = getStationDataPointInt(station, "stationSize");
-        Debug.Log(nextStationSize);
         nextStationLong = float.Parse(getStationDataPointString(station, "longitude"));
         nextStationStop = getStationDataPointInt(station, "willStop");
         nextStationSpeedMod = getStationDataPointInt(station, "speedMod");
@@ -275,25 +236,7 @@ private void getStationData(int station)
         nextStationDelayChance = getStationDataPointInt(station, "delayChance");
         nextStationDelayTimer = UnityEngine.Random.Range(milesToNextStation * 0.25f, milesToNextStation * 0.75f);
 
-        //Waypoints
-            //Reset the waypoints.
-        waypoints.Clear();
-
-        //Check everything in the JSON for corresponding waypoints, and add them to a list.
-        foreach (string key in data.stationData.Keys)
-        {
-        if (key.Contains("waypoint"+nextStation.ToString())) {
-                waypoints.Add(key);
-            }
-        }
-
-        //Set the first milepoint, if necessary.
-        if (waypoints.Count > 0)
-        {
-            currentMilePoint = data.stationData.GetJSON(waypoints[0]).GetFloat("milePoint");
-        }
-        currentWaypointIndex = 0;
-
+       
     }
 
 public string getStationDataPointString(int station, string keyname)
@@ -305,17 +248,6 @@ public string getStationDataPointString(int station, string keyname)
     public int getStationDataPointInt(int station, string keyname)
     {
         return data.stationData.GetJSON(station.ToString()).GetInt(keyname);
-    }
-
-    public void setWayPointData()
-    {
-        currentTerrain = data.stationData.GetJSON(waypoints[currentWaypointIndex]).GetString("terrain");
-        currentUrbanDensity = data.stationData.GetJSON(waypoints[currentWaypointIndex]).GetInt("urbanDensity");
-        nextStationSpeedMod = data.stationData.GetJSON(waypoints[currentWaypointIndex]).GetInt("speedMod");
-        tc.trainTopSpeed = (tc.trainTopSpeedOriginal / 100) * nextStationSpeedMod;
-        nextStationDelayChance = data.stationData.GetJSON(waypoints[currentWaypointIndex]).GetInt("delayChance");
-        currentTerrain = data.stationData.GetJSON(waypoints[currentWaypointIndex]).GetString("terrain");
-        currentUrbanDensity = data.stationData.GetJSON(waypoints[currentWaypointIndex]).GetInt("urbanDensity");
     }
 
     public void updateGrammarVariables()

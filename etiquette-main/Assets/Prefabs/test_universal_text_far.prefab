@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8859368040679308609}
   m_Layer: 0
   m_Name: test_universal_text_far
-  m_TagString: Untagged
+  m_TagString: fartext
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample text
+  m_text: Sample text Sample text Sample text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e7e25b82a0d354d408ed7b1cd02e0213, type: 2}
   m_sharedMaterial: {fileID: -7001293819406952286, guid: e7e25b82a0d354d408ed7b1cd02e0213,
@@ -130,15 +130,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30000
+  m_fontSizeBase: 30000
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -3.7899609, y: -8.153917, z: -38.260124, w: 0}
+  m_margin: {x: -3.7899609, y: -8.153917, z: -8187.284, w: -1066.4922}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -196,6 +196,7 @@ MonoBehaviour:
   gcScript: {fileID: 0}
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
+  grammarParse: 
 --- !u!114 &-8859368040679308609
 MonoBehaviour:
   m_ObjectHideFlags: 0

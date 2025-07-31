@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8859368040679308609}
   m_Layer: 0
   m_Name: test_universal_text_track
-  m_TagString: Untagged
+  m_TagString: track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,6 +196,7 @@ MonoBehaviour:
   gcScript: {fileID: 0}
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
+  grammarParse: 
 --- !u!114 &-8859368040679308609
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,6 +25,7 @@ public class dataTest : MonoBehaviour
         stationData = JSON.ParseString(theString);
         stationData.SetProtected();
         stationData.DebugInEditor("stationData");
+        Debug.Log("Station JSON Data loaded from folder.");
     }
 
 }

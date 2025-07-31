@@ -23,15 +23,22 @@ public class createText : MonoBehaviour
     public float timer;
     public float timerMulti;
     public bool showGrammar;
+    public bool generateAtStart;
+    public int numbertoGenerate;
+    public float generateGap;
 
-    private Vector3 mypos;
+
+    public Vector3 mypos;
     private TrainControl tc;
     private GameObject[] currentmembers;
     private bool shouldgenerate;
     private float timerMaxOriginal;
     private float timerMinOriginal;
     private StationScheduler ss;
+    public float xBuffer = 50f;
+    public string textType;
 
+    private float modifier = 250;
     
     // Start is called before the first frame update
     void Start()
@@ -43,7 +50,7 @@ public class createText : MonoBehaviour
         tc = GameObject.Find("trainController").GetComponent<TrainControl>();
         ss = GameObject.Find("stationScheduleController").GetComponent<StationScheduler>();
         shouldgenerate = true;
-
+        assignedSpeed = (assignedSpeed / 100) * modifier;
      
         
 
@@ -59,8 +66,25 @@ public class createText : MonoBehaviour
         }
 
 
-        //Start the timer with a random total (limits set manually for the generator).
-        timer = 10;
+
+        //At the start...
+        if (generateAtStart) {
+            for (int i = 1; i < numbertoGenerate; i++) {
+                var NZ = mypos.z + (generateGap * i);
+                generateMyText(NZ);
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
     }
 
     // Update is called once per frame
@@ -98,6 +122,24 @@ public class createText : MonoBehaviour
             //If we're fine to continue...
             if (shouldgenerate == true)                
             {
+                    generateMyText(mypos.z);
+
+
+
+         //Finally, reset the timer to a random total.
+          timer = Random.Range(timerMin, timerMax);
+            } else {
+                  //Try again in a second.     
+              timer = 2;
+            }
+        }
+    }
+
+    public void generateMyText(float zvalue) {
+        
+                //First of all, check if we're overlapping a station or another text of the same type.
+
+            if (HasOverlappingObjectStandard("station") == false && HasOverlappingObjectStandard("arch") == false && HasOverlappingObjectWithTextMeshPro(textType) == false) { 
                 //Set the y position of the generator to a random position, within its prescribed bounds.
                 transform.position = new Vector3(transform.position.x, Random.Range(yPosLowerBound, yPosUpperBound), transform.position.z);
                 mypos = transform.position;
@@ -153,25 +195,19 @@ public class createText : MonoBehaviour
                     thistextscript.topspeed = assignedSpeed;
                     thistextmesh.fontSize = Random.Range(fontSizeLowerBound, fontSizeUpperBound);
                    
-                    thistextmesh.alignment = TextAlignmentOptions.Center;
+              
 
                     //Set its position to the generator.
                     var thistextrect = thistext.GetComponent<RectTransform>();
-                    setWidthOfBox(thistextrect, thistextmesh.preferredWidth, thistextmesh.preferredHeight);
-                    thistextrect.anchoredPosition3D = mypos;
+                    thistextrect.anchoredPosition3D = new Vector3(mypos.x, mypos.y, zvalue);
 
                 
 
                 }
             }
-            //Finally, reset the timer to a random total.
-            timer = Random.Range(timerMin, timerMax);
-        }
-
-
     }
 
-    private void setWidthOfBox(RectTransform myRect, float textWidth, float textHeight)
+    public void setWidthOfBox(RectTransform myRect, float textWidth, float textHeight)
     {
         myRect.sizeDelta = new Vector2(textWidth, textHeight);
     }
@@ -184,5 +220,134 @@ public class createText : MonoBehaviour
         float textWidth = renderedBounds.size.z;
 
         return textWidth;
+    }
+ private bool HasOverlappingObjectStandard(string tag)
+    {
+        // Find all objects with the specified tag
+        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
+        
+        // Get generator's x position
+        float generatorX = transform.position.x;
+        
+        // Define the check area bounds
+        float leftBound = generatorX - xBuffer;
+        float rightBound = generatorX + xBuffer;
+        
+        foreach (GameObject obj in taggedObjects)
+        {
+            // Check if object's Y position is within our prescribed range
+            float objY = obj.transform.position.y;
+            if (objY >= yPosLowerBound && yPosUpperBound <= yPosUpperBound)
+            {
+                // Check if object's X position is within our buffer zone
+                float objX = obj.transform.position.x;
+                if (objX >= leftBound && objX <= rightBound)
+                {
+                    return true; // Found overlapping object
+                }
+            }
+        }
+        
+        return false; // No overlapping objects found
+    }
+    
+    // Enhanced method that properly handles TextMeshPro objects
+    private bool HasOverlappingObjectWithTextMeshPro(string tag)
+    {
+        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
+        
+        float generatorX = transform.position.x;
+        float leftBound = generatorX - xBuffer;
+        float rightBound = generatorX + xBuffer;
+        
+        foreach (GameObject obj in taggedObjects)
+        {
+            // Check for TextMeshPro components
+            TextMeshPro tmp = obj.GetComponent<TextMeshPro>();
+            TextMeshProUGUI tmpUI = obj.GetComponent<TextMeshProUGUI>();
+            
+            if (tmp != null)
+            {
+                // Use TextMeshPro's text bounds
+                Bounds textBounds = tmp.textBounds;
+                Vector3 worldCenter = obj.transform.TransformPoint(textBounds.center);
+                Vector3 worldSize = Vector3.Scale(textBounds.size, obj.transform.lossyScale);
+                
+                // Check Y-axis overlap
+                float textMinY = worldCenter.y - worldSize.y / 2f;
+                float textMaxY = worldCenter.y + worldSize.y / 2f;
+                
+                if (textMinY <= yPosLowerBound && textMaxY >= yPosUpperBound)
+                {
+                    // Check X-axis overlap
+                    float textMinX = worldCenter.x - worldSize.x / 2f;
+                    float textMaxX = worldCenter.x + worldSize.x / 2f;
+                    
+                    if (textMinX <= rightBound && textMaxX >= leftBound)
+                    {
+                        return true;
+                    }
+                }
+            }
+            else if (tmpUI != null)
+            {
+                // For UI TextMeshPro, use RectTransform bounds
+                RectTransform rectTransform = obj.GetComponent<RectTransform>();
+                if (rectTransform != null)
+                {
+                    Bounds uiBounds = RectTransformUtility.CalculateRelativeRectTransformBounds(rectTransform);
+                    Vector3 worldCenter = rectTransform.TransformPoint(uiBounds.center);
+                    Vector3 worldSize = Vector3.Scale(uiBounds.size, rectTransform.lossyScale);
+                    
+                    // Check Y-axis overlap
+                    float textMinY = worldCenter.y - worldSize.y / 2f;
+                    float textMaxY = worldCenter.y + worldSize.y / 2f;
+                    
+                    if (textMinY <= yPosUpperBound && textMaxY >= yPosLowerBound)
+                    {
+                        // Check X-axis overlap
+                        float textMinX = worldCenter.x - worldSize.x / 2f;
+                        float textMaxX = worldCenter.x + worldSize.x / 2f;
+                        
+                        if (textMinX <= rightBound && textMaxX >= leftBound)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                // Regular collider check for non-TextMeshPro objects
+                Collider objCollider = obj.GetComponent<Collider>();
+                if (objCollider != null)
+                {
+                    Bounds bounds = objCollider.bounds;
+                    
+                    // Check Y-axis overlap
+                    if (bounds.min.y <= yPosUpperBound && bounds.max.y >= yPosLowerBound)
+                    {
+                        // Check X-axis overlap
+                        if (bounds.min.x <= rightBound && bounds.max.x >= leftBound)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                else
+                {
+                    // Fallback to transform position
+                    float objY = obj.transform.position.y;
+                    float objX = obj.transform.position.x;
+                    
+                    if (objY >= yPosLowerBound && objY <= yPosUpperBound && objX >= leftBound && objX <= rightBound)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        
+        return false;
     }
 }

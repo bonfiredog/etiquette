@@ -47,6 +47,8 @@ public class TrainControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("ETIQUETTE ====================================|");
+
         //Initial Values
         trainCurrentSpeed = 0;
         maxLong = -5.7f; //Land's End

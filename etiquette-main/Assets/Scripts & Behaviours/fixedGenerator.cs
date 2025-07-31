@@ -36,7 +36,7 @@ public class fixedGenerator : MonoBehaviour
         {
             if (stopped == false)
             {
-                if (tc.trainCurrentSpeed < 5)
+                if (tc.trainCurrentSpeed < 2)
                 {
                     if (timer > 0)
                     {
@@ -53,7 +53,7 @@ public class fixedGenerator : MonoBehaviour
                 }
             } else
             {
-                if (tc.trainCurrentSpeed > 10)
+                if (tc.trainCurrentSpeed > 3)
                 {
                     stopped = false;
                     timer = Random.Range(timerMin, timerMax);

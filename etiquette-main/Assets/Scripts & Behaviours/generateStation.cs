@@ -15,6 +15,8 @@ public class generateStation : MonoBehaviour
     private dataTest data;
     private TrainControl tc;
     private float finalsize;
+    private string[] typesOfAwn =  {"W", "U", "I", "H", "M", "V"};
+    private float modifier = 250;
     
 
 
@@ -24,6 +26,7 @@ public class generateStation : MonoBehaviour
         //Initial Values
         data = dataObject.GetComponent<dataTest>();
         tc = GameObject.Find("trainController").GetComponent<TrainControl>();
+        stationTopSpeed = (stationTopSpeed / 100) * modifier;
 
         //Make sure that the generator is positioned the distance at which the train starts slowing down, + double the z value of the starting station, to make sure that it ends up in the centre.
         distanceToSpeedMultiplier = (stationTopSpeed / tc.trainTopSpeed);
@@ -37,16 +40,33 @@ public class generateStation : MonoBehaviour
     {
         //Create a station from the prefab.
         var thisStation = GameObject.Instantiate(stationPrefab);
+        var myflagging = thisStation.transform.Find("stationflagging").GetComponent<TextMeshPro>();
+        var myawning = thisStation.transform.Find("stationawning").GetComponent<TextMeshPro>();
+
+        //Set its awning type & generate.
+
+        string myAwn = typesOfAwn[Random.Range(0, typesOfAwn.Length)];
+        myflagging.text = "";
+        myawning.text = "";
+        for (var i = 0; i < 400; i++) {
+            myflagging.text += myAwn;
+            myawning.text += myAwn;
+        }
+    
+
+
 
         //Set the station to my position.
         thisStation.transform.position = transform.position;
-        thisStation.transform.position = new Vector3(transform.position.x, -212.658f, transform.position.z);
+        thisStation.transform.position = new Vector3(transform.position.x, -412.658f, transform.position.z);
      
 
         //Set the station's name, and its speed.
         var thisStationText = thisStation.transform.Find("station_name_text").GetComponent<TextMeshPro>();
         var thisStationMove = thisStation.GetComponent<stationMove>();
-        thisStationMove.topspeed = topspeed;
+        thisStationMove.topspeed = stationTopSpeed;
+        //The line below is not triggering... an object isn't being 'got'.
+        Debug.Log($"Object Check: {data}");
         thisStationText.text = data.stationData.GetJSON(stationArrayNumber.ToString()).GetString("stationName");
 
         //Set its number of arches, and size of its line, based on the size.
@@ -61,16 +81,27 @@ public class generateStation : MonoBehaviour
 
         //Set the line's x scale as a multiplier of the size.
         var linequad = thisStation.transform.Find("Quad");
+        var awnline = thisStation.transform.Find("AWN");
+        
+        var flagging = thisStation.transform.Find("stationflagging").GetComponent<RectTransform>();
+         
+        var awning = thisStation.transform.Find("stationawning").GetComponent<RectTransform>();
         var yscale = thisStation.transform.localScale.y;
         var zscale = thisStation.transform.localScale.z;
         var xscale = thisStation.transform.localScale.x;
 
-        //Set the background 'cube' size as a multiplier of its size.
-        var cube = thisStation.transform.Find("Cube");
-        cube.transform.localScale = new Vector3(cube.transform.localScale.x, cube.transform.localScale.y, (cube.transform.localScale.z * size)*1.2f);
+
 
 
         linequad.transform.localScale = new Vector3(200 * size, 5, 20);
+        awnline.transform.localScale = new Vector3(200 * size, 5, 20);
+        if (size > 1) {
+        flagging.sizeDelta = new Vector2(170 * size, 5);
+        awning.sizeDelta = new Vector2(170 * size, 5);
+        } else {
+        flagging.sizeDelta = new Vector2(20,5);
+        awning.sizeDelta = new Vector2(20,5);
+        }
 
         //Add the number of arches corresponding to the size.
         //Firstly, make sure we are adding an even number.
@@ -92,13 +123,14 @@ public class generateStation : MonoBehaviour
 
             //Firstly, work out how many to create on each side.
             var sideCount = finalsize / 2;
-            Debug.Log(sideCount);
+        
 
             //Firstly, create all the arches on the left side.
             for (int k = 1; k < sideCount; k++ )
             {
                 //Firstly, create a new arch, make it a child of the station and place it in the 'default' position.
                 GameObject thisArch = Instantiate(archObject);
+                      
                 
                 thisArch.transform.SetParent(thisStation.transform);
                 thisArch.transform.localPosition = new Vector3(0, 84.8f, 0);

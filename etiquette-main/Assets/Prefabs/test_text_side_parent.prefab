@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4406581385852080895}
   m_Layer: 0
   m_Name: test_text_side_parent
-  m_TagString: Untagged
+  m_TagString: sidetext
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519596, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.4
+      value: 29.2
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
@@ -167,6 +167,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
+      propertyPath: m_text
+      value: Sample text that I am writing here together and it's not
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
+        type: 3}
       propertyPath: m_fontSize
       value: 250
       objectReference: {fileID: 0}
@@ -174,6 +179,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_margin.x
       value: -118.304955
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -30.531128
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
@@ -199,7 +209,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
       propertyPath: m_lineSpacing
-      value: 40
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
@@ -220,7 +230,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519599, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
@@ -325,7 +335,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519596, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
@@ -350,7 +360,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519596, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.9
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
@@ -371,6 +381,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
+        type: 3}
+      propertyPath: m_text
+      value: Sample text that I am writing here together and it's not
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
@@ -411,7 +426,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
       propertyPath: m_lineSpacing
-      value: 40
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
@@ -432,7 +447,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 80b61acb2d2f785469f61c846ac4acf3,
         type: 3}

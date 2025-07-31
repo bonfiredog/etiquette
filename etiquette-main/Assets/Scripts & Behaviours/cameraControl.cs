@@ -7,10 +7,16 @@ public class cameraControl : MonoBehaviour
 
     public Vector3 mousePos;
     public float moveTimerMax;
+    public GameObject commandconsole;
     public GameObject window;
+    public GameObject windowcollider;
+    public GameObject paper;
     public float windowOpenSpeed;
     public float windowCloseSpeed;
     public float cameraRotateBackRate;
+    public GameObject profilers;
+    
+   
 
     [HideInInspector]
     public float xRot;
@@ -28,11 +34,12 @@ public class cameraControl : MonoBehaviour
     public float originalX;
     [HideInInspector]
     public float originalY;
-    [HideInInspector]
-    public float outSpeed;
+    
+   
     [HideInInspector]
     private float moveRange;
 
+ public float outSpeed;
     private float mpxPer;
     private float mpyPer;
     public float outAmount;
@@ -40,6 +47,7 @@ public class cameraControl : MonoBehaviour
     private Vector3 previousMousePosition;
     private bool rotating;
     private windowPosition wp;
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,10 +63,31 @@ public class cameraControl : MonoBehaviour
        previousMousePosition = Input.mousePosition;
        rotating = false;
        wp = window.GetComponent<windowPosition>();
+
     }
 
     void Update()
     {
+        //OPEN & CLOSE THE COMMAND CONSOLE w/ SHIFt+C
+
+    if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && Input.GetKeyDown(KeyCode.C))
+    {
+        if (commandconsole.activeSelf == false) {
+
+        commandconsole.SetActive(true);
+        profilers.SetActive(true);
+
+        } else {
+            commandconsole.SetActive(false);
+            profilers.SetActive(false);
+        }
+
+    }
+
+
+
+
+
 
         //If the mouse is not being moved, lower the moveTimer.
         Vector3 currentMousePosition = Input.mousePosition;
@@ -94,7 +123,7 @@ public class cameraControl : MonoBehaviour
         previousMousePosition = currentMousePosition;
 
 
-        //Move camera out of the train window gradually if pressing the mouse; if not, return to original position.
+        //Move camera out of the train window gradually if pressing the mouse; if not, return to original position. But only if pointing at window!
         if (Input.GetMouseButton(0))
         {
             pressing = true;
@@ -159,4 +188,5 @@ public class cameraControl : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, cameraRotateBackRate * Time.deltaTime);
         }
         }
+
 }

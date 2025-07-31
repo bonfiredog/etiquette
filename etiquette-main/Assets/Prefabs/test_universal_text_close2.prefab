@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8859368040679308609}
   m_Layer: 0
   m_Name: test_universal_text_close2
-  m_TagString: Untagged
+  m_TagString: close2text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample text
+  m_text: Sample text Sample text Sa mple text Sam ple text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 756026f78de9dcc4f966cc2789ab6177, type: 2}
   m_sharedMaterial: {fileID: 5534914477589377168, guid: 756026f78de9dcc4f966cc2789ab6177,
@@ -130,19 +130,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 1000
+  m_fontSizeBase: 1000
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 40
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -3.7899609, y: -8.153917, z: -38.260124, w: 0}
+  m_margin: {x: -3.7899609, y: -8.153917, z: -982.3694, w: -183.81522}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -196,6 +196,7 @@ MonoBehaviour:
   gcScript: {fileID: 0}
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
+  grammarParse: 
 --- !u!114 &-8859368040679308609
 MonoBehaviour:
   m_ObjectHideFlags: 0

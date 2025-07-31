@@ -63,10 +63,6 @@ public class textGenerationControl : MonoBehaviour
                 var grammarToParse = removeCurlyBraces(currentGrammarJSON);
                 var finalGrammarString = "{" + wordListToParse + ", " + grammarToParse + "}";
 
-
-                Debug.Log(finalGrammarString);
-
-
                 currentGrammar = new TraceryGrammar(finalGrammarString);
 
             }
@@ -157,7 +153,11 @@ void Update()
    
     public string removeCurlyBraces(string originalString)
     {
+        if (originalString.Length > 0) {
         return originalString.Substring(1, originalString.Length - 2);
+        } else {
+            return "";
+        }
     }
 
 

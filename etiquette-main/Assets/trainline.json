@@ -27,50 +27,12 @@
     "speedMod": 50
   },
 
-  "waypoint2a": {
-    "parent": "1",
-    "milePoint": 8800,
-    "urbanDensity": 0,
-    "terrain": "coast",
-    "speedMod": 100,
-    "delayChance": 0
-  },
-
-
-  "waypoint2b": {
-    "parent": "1",
-    "milePoint": 6200,
-    "urbanDensity": 0,
-    "terrain": "marsh",
-    "speedMod": 100,
-    "delayChance": 0
-  },
-
-  "waypoint2c": {
-    "parent": "1",
-    "milePoint": 5200,
-    "urbanDensity": 0,
-    "terrain": "fields",
-    "speedMod": 100,
-    "delayChance": 0
-  },
-
-
-  "waypoint2d": {
-    "parent": "1",
-    "milePoint": 300,
-    "urbanDensity": 0,
-    "terrain": "woods",
-    "speedMod": 100,
-    "delayChance": 0
-  },
-
   "2": {
     "stationName": "St. Erth",
-    "distanceFromLastStation": 9100,
+    "distanceFromLastStation": 1500,
     "minStationStay": 20,
     "maxStationStay": 30,
-    "stationSize": 1,
+    "stationSize": 3,
     "urbanDensity": 5,
     "terrain": "woods",
     "longitude": "-5.44",
@@ -78,25 +40,6 @@
     "delayChance": 5,
     "speedMod": 100
   },
-
-  "waypoint3a": {
-    "parent": "2",
-    "milePoint": 2500,
-    "urbanDensity": 0,
-    "terrain": "fields",
-    "speedMod": 100,
-    "delayChance": 5
-  },
-
-  "waypoint3b": {
-    "parent": "2",
-    "milePoint": 1800,
-    "urbanDensity": 0,
-    "terrain": "estuary",
-    "speedMod": 100,
-    "delayChance": 5
-  },
-
   "3": {
     "stationName": "Hayle",
     "distanceFromLastStation": 2600,
@@ -132,7 +75,7 @@
     "urbanDensity": 45,
     "terrain": "fields",
     "longitude": "-5.22",
-    "willStop": 1,
+    "willStop": 0,
     "delayChance": 70,
     "speedMod": 90
   },
@@ -158,7 +101,7 @@
     "urbanDensity": 50,
     "terrain": "fields",
     "longitude": "-5.0",
-    "willStop": 1,
+    "willStop": 0,
     "delayChance": 50,
     "speedMod": 100
   },
@@ -223,7 +166,7 @@
     "urbanDensity": 0,
     "terrain": "fields",
     "longitude": "-4.53",
-    "willStop": 0,
+    "willStop": 1,
     "delayChance": 50,
     "speedMod": 90
   },
@@ -447,7 +390,7 @@
     "urbanDensity": 5,
     "terrain": "coast",
     "longitude": "-3.44",
-    "willStop": 1,
+    "willStop": 0,
     "delayChance": 40,
     "speedMod": 100
   },
@@ -539,7 +482,7 @@
     "urbanDensity": 0,
     "terrain": "fields",
     "longitude": "-3.24",
-    "willStop": 1,
+    "willStop": 0,
     "delayChance": 35,
     "speedMod": 100
   },

@@ -116,6 +116,7 @@
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/MiniProfilerFree/MiniProfiler.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.21f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.21f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.21f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -342,6 +343,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Admin/flockaroo/ColoredPencils/ColoredPencilsEffect.cs"
+"Assets/Admin/flockaroo/ColoredPencils/ColoredPencilsEffectHDRP.cs"
+"Assets/Admin/flockaroo/ColoredPencils/ColoredPencilsEffectURP.cs"
+"Assets/Admin/flockaroo/ColoredPencils/DemoScene/youSpinMeRiseRound_ColoredPencils.cs"
 "Assets/Admin/JSON/JSONObject.cs"
 "Assets/Admin/JSON/VectorTemplates.cs"
 "Assets/Admin/TotalJSON/Examples/CreateAndModifyJSON.cs"
@@ -388,7 +393,9 @@
 "Assets/Admin/Tracery/Scripts/JSONObjectExtensions.cs"
 "Assets/Admin/Tracery/Scripts/Modifiers.cs"
 "Assets/Admin/Tracery/Scripts/TraceryGrammar.cs"
+"Assets/Scripts & Behaviours/buttonFunctions.cs"
 "Assets/Scripts & Behaviours/cameraControl.cs"
+"Assets/Scripts & Behaviours/commandConsole.cs"
 "Assets/Scripts & Behaviours/createText.cs"
 "Assets/Scripts & Behaviours/dataTest.cs"
 "Assets/Scripts & Behaviours/fixedGenerator.cs"
@@ -411,6 +418,13 @@
 "Assets/Scripts & Behaviours/tunnelController.cs"
 "Assets/Scripts & Behaviours/VerticalCam.cs"
 "Assets/Scripts & Behaviours/windowPosition.cs"
+"Assets/Yuetility-Studios/YueSoftbodyPhysics/Scripts/PDController.cs"
+"Assets/Yuetility-Studios/YueSoftbodyPhysics/Scripts/PDTuning.cs"
+"Assets/Yuetility-Studios/YueSoftbodyPhysics/Scripts/PositionTracker.cs"
+"Assets/Yuetility-Studios/YueSoftbodyPhysics/Scripts/ShootingBalls.cs"
+"Assets/Yuetility-Studios/YueSoftbodyPhysics/Scripts/SimpleController.cs"
+"Assets/Yuetility-Studios/YueSoftbodyPhysics/Scripts/SoftbodyEditor.cs"
+"Assets/Yuetility-Studios/YueSoftbodyPhysics/Scripts/YueSoftbodyPhysics.cs"
 -langversion:9.0
 
 /deterministic

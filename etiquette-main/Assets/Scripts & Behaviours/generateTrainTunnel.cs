@@ -31,6 +31,7 @@ public class generateTrainTunnel : MonoBehaviour
         textgen = GameObject.Find("grammarController").GetComponent<traceGrammarControl>();
         tc = GameObject.Find("trainController").GetComponent<TrainControl>();
         ss = GameObject.Find("stationScheduleController").GetComponent<StationScheduler>();
+        
         //Start the timer with a random total (limits set manually for the generator).
         timer = Random.Range(timerMin, timerMax);
     }
@@ -76,7 +77,7 @@ public class generateTrainTunnel : MonoBehaviour
     public void generateTT(string type)
     {
         
-
+        Debug.Log("Generating a tunnel! ================================|");
         var thisTT = Instantiate(genObject);
         var correctGrammar = type + "grammar";
 

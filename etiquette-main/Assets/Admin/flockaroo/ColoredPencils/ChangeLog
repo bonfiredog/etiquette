@@ -1,0 +1,37 @@
+v 1.7
+* URP reinit fix
+* new linear2Gamma parameter
+
+v 1.6
+* URP fix: wasnt able to render to color fmt (at least in play node) 
+  ...render 1st float buffer then copy to final
+  also possible in 6000 (compat mode)
+* effect mask tex (0 effect 1 no effect)
+  
+v 1.5
+* added URP support (some minor features missing)
+
+v 1.4
+* init Fade to 1.0 in HDRP
+* adjustible outline color
+
+v 1.3
+* 3 modes: mode 0 -> best quality .. 2 -> lowest quality, fastest
+* precaculated gradieents (mode 2)
+* HDRP support (disabled by _rename_me suffix due to backwards compatibility)
+* HDRP gamma correct (linear colorspace)
+* fixed resize bug when "Mip Level" > 0
+
+v 1.2
+* fixed to work with OSX-metal
+* input feature: texture as input instead of cam
+* output feature: render to texture instead of screen
+
+v 1.1
+* optimized some code in coloredpencil.cginc
+* added define "FASTER" for faster version (less quality) in coloredpencil.cginc
+* added define "LESS_LOOPS" for less loops (maybe some platforms dont support 3 nested loops?) in coloredpencil.cginc
+  - unfortunately reverts some optimizations from above
+* renamed youSpinMeRiseRound to youSpinMeRiseRound_ColoredPencils.cs
+  (so no conflicts with other effects)
+  
