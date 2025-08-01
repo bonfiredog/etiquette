@@ -116,8 +116,8 @@
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"Assets/MiniProfilerFree/Editor/MiniProfilerEditor.dll"
--r:"Assets/MiniProfilerFree/MiniProfiler.dll"
+-r:"Assets/Admin/MiniProfilerFree/Editor/MiniProfilerEditor.dll"
+-r:"Assets/Admin/MiniProfilerFree/MiniProfiler.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.21f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.21f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.21f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
@@ -342,6 +342,8 @@
 -r:"C:/Users/Owner/Desktop/etiquette/etiquette-main/Library/PackageCache/com.unity.visualscripting@1.9.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+-analyzer:"Assets/Admin/MiniProfilerFree/Editor/MiniProfilerEditor.dll"
+-analyzer:"Assets/Admin/MiniProfilerFree/MiniProfiler.dll"
 "Library/PackageCache/com.unity.textmeshpro@3.0.9/Scripts/Runtime/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.textmeshpro@3.0.9/Scripts/Runtime/FastAction.cs"
 "Library/PackageCache/com.unity.textmeshpro@3.0.9/Scripts/Runtime/ITextPreProcessor.cs"

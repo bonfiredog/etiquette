@@ -30,8 +30,8 @@
   "2": {
     "stationName": "St. Erth",
     "distanceFromLastStation": 1500,
-    "minStationStay": 20,
-    "maxStationStay": 30,
+    "minStationStay": 10,
+    "maxStationStay": 20,
     "stationSize": 3,
     "urbanDensity": 5,
     "terrain": "woods",
@@ -199,8 +199,8 @@
   "15": {
     "stationName": "St. Germans",
     "distanceFromLastStation": 9000,
-    "minStationStay": 40,
-    "maxStationStay": 60,
+    "minStationStay": 5,
+    "maxStationStay": 10,
     "stationSize": 1,
     "urbanDensity": 50,
     "terrain": "estuary",

@@ -336,6 +336,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+-analyzer:"Assets/Admin/MiniProfilerFree/Editor/MiniProfilerEditor.dll"
+-analyzer:"Assets/Admin/MiniProfilerFree/MiniProfiler.dll"
 "Library/PackageCache/com.unity.ide.visualstudio@2.0.18/Editor/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.ide.visualstudio@2.0.18/Editor/AsyncOperation.cs"
 "Library/PackageCache/com.unity.ide.visualstudio@2.0.18/Editor/Cli.cs"

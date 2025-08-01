@@ -5,151 +5,236 @@ using UnityEngine;
 public class rockingController : MonoBehaviour
 {
 
-    public float udLower = 50;
-    public float udHigher = 200;
-    public float bfLower = 1200;
-    public float bfHigher = 2000;
+     
 
-    public float lrLower = 50;
-    public float lrHigher = 200;
-    public float upBound = 20;
-    public float bfBound = 7;
-    public float lrBound = 2;
-    public float upSpeed = 20;
-    public float bfSpeed = 3;
-    public float lrSpeed = 20;
-    public float upDownTimer;
-    public float backForthTimer;
-    public float leftRightTimer;
-    public float gravity = 10;
 
-    private float jumpInAirAmount;
-    private float jumpInAirSpeed;
-    private float bfAmount;
+    
+    [Header("Speed-Based Swaying Motion")]
+    [SerializeField] private float baseSwayAmount = 2f;      // Max degrees of Z-axis rotation at full speed
+    [SerializeField] private float minSwayAmount = 0.2f;     // Min degrees when stationary/slow
+    [SerializeField] private float baseSwaySpeed = 0.8f;     // Speed of swaying motion at full speed
+    [SerializeField] private float minSwaySpeed = 0.1f;      // Min sway speed when stationary/slow
+    [SerializeField] private bool enableSway = true;
+    
+    [Header("Speed-Based Random Jolts")]
+    [SerializeField] private bool enableJolts = true;
+    [SerializeField] private float baseJoltMinInterval = 1f;     // Minimum time between jolts at full speed
+    [SerializeField] private float baseJoltMaxInterval = 4f;     // Maximum time between jolts at full speed
+    [SerializeField] private float slowJoltMinInterval = 8f;     // Minimum time between jolts when slow
+    [SerializeField] private float slowJoltMaxInterval = 20f;    // Maximum time between jolts when slow
+    
+    [Header("Speed-Based Jolt Strength")]
+    [SerializeField] private Vector2 baseForwardBackwardRange = new Vector2(-0.4f, 0.3f);  // X-axis movement at full speed
+    [SerializeField] private Vector2 baseUpDownRange = new Vector2(-0.2f, 0.5f);           // Y-axis movement at full speed
+    [SerializeField] private Vector2 baseLeftRightRange = new Vector2(-0.3f, 0.3f);        // Z-axis movement at full speed
+    [SerializeField] private float minJoltMultiplier = 0.1f;                              // Minimum jolt strength when slow
+    
+    [Header("Jolt Timing")]
+    [SerializeField] private float joltDuration = 0.3f;      // How long each jolt lasts
+    [SerializeField] private AnimationCurve joltCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
-    private Vector3 originalPos;
-    private Quaternion originalRot;
-
+    public GameObject tcObj;
+    public GameObject cameraObj;
     private TrainControl tc;
     private cameraControl cc;
-    private bool movingLR;
-    private float LRAmount;
-    private float LRSpeed;
-    private float originalBFPosition;
-    private float zDir;
-
-    private Vector3 minRotation;
-    private Vector3 maxRotation;
-    private bool willReset = false;
-
-
-    // Start is called before the first frame update
-    void Start()
+    
+    // Private variables
+    private Vector3 originalPosition;
+    private Vector3 originalRotation;
+    private float swayOffset;
+    private float nextJoltTime;
+    private bool isJolting = false;
+    private float joltStartTime;
+    private Vector3 joltTargetOffset;
+    private Vector3 currentJoltOffset;
+    
+    // Speed-based calculation cache
+    private float currentSpeedPercentage;
+    private float currentSwayAmount;
+    private float currentSwaySpeed;
+    
+    void Start() 
     {
-        tc = GameObject.Find("trainController").GetComponent<TrainControl>();
-        cc = GameObject.Find("Main Camera").GetComponent<cameraControl>();
-        originalPos = transform.position;
-       originalRot = transform.rotation;
-        originalBFPosition = transform.position.z;
-
-        upDownTimer = Random.Range(udLower, udHigher);
-        leftRightTimer = Random.Range(lrLower, lrHigher);
-        backForthTimer = Random.Range(bfLower, bfHigher);
-        movingLR = false;
-        minRotation = new Vector3(0, 0, -lrBound);
-        maxRotation = new Vector3(0, 0, lrBound);
+        cc = cameraObj.GetComponent<cameraControl>();
+        tc = tcObj.GetComponent<TrainControl>();
+        
+        // Store original transform values
+        originalPosition = transform.localPosition;
+        originalRotation = transform.localEulerAngles;
+        
+        // Random starting phase for sway to make multiple carriages look different
+        swayOffset = Random.Range(0f, Mathf.PI * 2);
+        
+        // Schedule first jolt
+        ScheduleNextJolt();
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    void Update() 
     {
-
-
-        //Back & Forth  
-        //Count down the timer.
-
-        if (cc.outAmount > 0 && tc.trainCurrentSpeed > (tc.trainTopSpeed * 0.25))
+         if (cc.outAmount > 0 && tc.trainCurrentSpeed > 2) {
+        // Calculate current speed percentage
+        UpdateSpeedPercentage();
+        
+        // Handle swaying motion
+        if (enableSway)
         {
-            if (backForthTimer > 0)
-            {
-                backForthTimer -= 1;
-            }
-            else
-
-            {
-                bfAmount = Random.Range(bfBound * 0.25f, bfBound);
-
-                //Reset the timer.
-                backForthTimer = Random.Range(bfLower, bfHigher);
-            }
-
-            //Actual Jumping
-            if (bfAmount > 0)
-            {
-                bfAmount -= bfSpeed;
-                transform.position += new Vector3(0, 0, bfSpeed);
-            }
-            else
-            {
-                if (transform.position.z > originalBFPosition)
-                {
-                    transform.position -= new Vector3(0, 0, bfSpeed);
-                }
-            }
-
-
+            UpdateSway();
+        }
+        
+        // Handle random jolts
+        if (enableJolts)
+        {
+            UpdateJolts();
+        }
+        
+        // Apply combined motion
+        ApplyMotion();
+         }
+    }
+    
+    private void UpdateSpeedPercentage()
+    {
+        if (tc != null && tc.trainTopSpeed > 0)
+        {
+            currentSpeedPercentage = Mathf.Clamp01(tc.trainCurrentSpeed / tc.trainTopSpeed);
         }
         else
         {
-            if (transform.position.z > originalBFPosition)
-            {
-                transform.position -= new Vector3(0, 0, bfSpeed);
-            }
+            // Fallback if no train controller
+            currentSpeedPercentage = 0.5f; // Default to 50% for testing
         }
-
-
-        //Up & Down
-        //Count down the timer.
-
-        if (cc.outAmount > 0 && tc.trainCurrentSpeed > (tc.trainTopSpeed * 0.25))
+        
+        // Calculate speed-based motion values
+        currentSwayAmount = Mathf.Lerp(minSwayAmount, baseSwayAmount, currentSpeedPercentage);
+        currentSwaySpeed = Mathf.Lerp(minSwaySpeed, baseSwaySpeed, currentSpeedPercentage);
+    }
+    
+    private void UpdateSway()
+    {
+        // Create natural swaying with multiple sine waves using current speed-based values
+        float primarySway = Mathf.Sin((Time.time + swayOffset) * currentSwaySpeed) * currentSwayAmount;
+        float secondarySway = Mathf.Sin((Time.time + swayOffset) * currentSwaySpeed * 1.7f) * (currentSwayAmount * 0.3f);
+        
+        float totalSway = primarySway + secondarySway;
+        transform.localRotation = Quaternion.Euler(
+            originalRotation.x, 
+            originalRotation.y, 
+            originalRotation.z + totalSway
+        );
+    }
+    
+    private void UpdateJolts()
+    {
+        // Check if it's time for a new jolt
+        if (!isJolting && Time.time >= nextJoltTime)
         {
-            if (upDownTimer > 0)
+            StartJolt();
+        }
+        
+        // Update current jolt
+        if (isJolting)
+        {
+            float joltProgress = (Time.time - joltStartTime) / joltDuration;
+            
+            if (joltProgress >= 1f)
             {
-                upDownTimer -= 1;
-            }
-            else
-
-            {
-                jumpInAirAmount = upBound;
-                jumpInAirSpeed = upSpeed;
-
-                //Reset the timer.
-                upDownTimer = Random.Range(udLower, udHigher);
-            }
-
-            //Actual Jumping
-            if (jumpInAirAmount > 0)
-            {
-                jumpInAirAmount -= jumpInAirSpeed;
-                transform.position += new Vector3(0, jumpInAirSpeed, 0);
+                // Jolt finished
+                isJolting = false;
+                currentJoltOffset = Vector3.zero;
+                ScheduleNextJolt();
             }
             else
             {
-                if (transform.position.y > originalPos.y)
+                // Interpolate jolt motion using curve
+                float curveValue = joltCurve.Evaluate(joltProgress);
+                currentJoltOffset = Vector3.Lerp(Vector3.zero, joltTargetOffset, curveValue);
+                
+                // Add return motion in second half
+                if (joltProgress > 0.5f)
                 {
-                    transform.position -= new Vector3(0, gravity, 0);
+                    float returnProgress = (joltProgress - 0.5f) * 2f;
+                    currentJoltOffset = Vector3.Lerp(joltTargetOffset, Vector3.zero, returnProgress);
                 }
             }
-
-
-        } else
-        {
-            if (transform.position.y > originalPos.y)
-            {
-                transform.position -= new Vector3(0, gravity, 0);
-            }
         }
+    }
+    
+    private void StartJolt()
+    {
+        isJolting = true;
+        joltStartTime = Time.time;
+        
+        // Calculate speed-based jolt strength
+        float joltMultiplier = Mathf.Lerp(minJoltMultiplier, 1f, currentSpeedPercentage);
+        
+        // Generate random jolt direction and strength based on current speed
+        joltTargetOffset = new Vector3(
+            Random.Range(baseForwardBackwardRange.x, baseForwardBackwardRange.y) * joltMultiplier,  // Forward/Backward
+            Random.Range(baseUpDownRange.x, baseUpDownRange.y) * joltMultiplier,                    // Up/Down
+            Random.Range(baseLeftRightRange.x, baseLeftRightRange.y) * joltMultiplier               // Left/Right
+        );
+    }
+    
+    private void ScheduleNextJolt()
+    {
+        // Calculate speed-based jolt intervals
+        float minInterval = Mathf.Lerp(slowJoltMinInterval, baseJoltMinInterval, currentSpeedPercentage);
+        float maxInterval = Mathf.Lerp(slowJoltMaxInterval, baseJoltMaxInterval, currentSpeedPercentage);
+        
+        nextJoltTime = Time.time + Random.Range(minInterval, maxInterval);
+    }
+    
+    private void ApplyMotion()
+    {
+        // Apply position offset from jolts
+        transform.localPosition = originalPosition + currentJoltOffset;
+    }
+    
+    // Public methods for runtime control
+    public void SetSwayEnabled(bool enabled)
+    {
+        enableSway = enabled;
+        if (!enabled)
+        {
+            transform.localRotation = Quaternion.Euler(originalRotation);
+        }
+    }
+    
+    public void SetJoltsEnabled(bool enabled)
+    {
+        enableJolts = enabled;
+        if (!enabled)
+        {
+            isJolting = false;
+            currentJoltOffset = Vector3.zero;
+            transform.localPosition = originalPosition;
+        }
+    }
+    
+    public void TriggerManualJolt()
+    {
+        if (enableJolts && !isJolting)
+        {
+            StartJolt();
+        }
+    }
+    
 
-
+    
+    // Debug info
+    public float GetCurrentSpeedPercentage()
+    {
+        return currentSpeedPercentage;
+    }
+    
+    // Reset to original state
+    public void ResetMotion()
+    {
+        transform.localPosition = originalPosition;
+        transform.localRotation = Quaternion.Euler(originalRotation);
+        isJolting = false;
+        currentJoltOffset = Vector3.zero;
+        ScheduleNextJolt();
     }
 }
+      

@@ -26,6 +26,7 @@ public class createText : MonoBehaviour
     public bool generateAtStart;
     public int numbertoGenerate;
     public float generateGap;
+    private float generateBound;
 
 
     public Vector3 mypos;
@@ -51,7 +52,7 @@ public class createText : MonoBehaviour
         ss = GameObject.Find("stationScheduleController").GetComponent<StationScheduler>();
         shouldgenerate = true;
         assignedSpeed = (assignedSpeed / 100) * modifier;
-     
+        generateBound = (generateGap / 10);
         
 
         timerMaxOriginal = timerMax;
@@ -70,11 +71,21 @@ public class createText : MonoBehaviour
         //At the start...
         if (generateAtStart) {
             for (int i = 1; i < numbertoGenerate; i++) {
-                var NZ = mypos.z + (generateGap * i);
-                generateMyText(NZ);
+                float NZ = 0;
+                if (myTag != "trackgen") {
+                var newBound = Random.Range(-generateBound, generateBound);
+                var thisGap = generateGap + newBound;
+                NZ = mypos.z + (thisGap * i);
+                } else {
+                NZ = mypos.z + (generateGap * i);
+                }
+                var thistrack = generateMyText(NZ);
+                if (myTag == "trackgen") {
+                    var thistextrect = thistrack.GetComponent<RectTransform>();
+                    Vector2 currentSize = thistextrect.sizeDelta;
+                    thistextrect.sizeDelta = new Vector2(20000f, currentSize.y);
+                }
             }
-
-
         }
 
 
@@ -135,11 +146,13 @@ public class createText : MonoBehaviour
         }
     }
 
-    public void generateMyText(float zvalue) {
-        
-                //First of all, check if we're overlapping a station or another text of the same type.
+    public GameObject generateMyText(float zvalue) {
 
-            if (HasOverlappingObjectStandard("station") == false && HasOverlappingObjectStandard("arch") == false && HasOverlappingObjectWithTextMeshPro(textType) == false) { 
+
+        
+              
+
+          
                 //Set the y position of the generator to a random position, within its prescribed bounds.
                 transform.position = new Vector3(transform.position.x, Random.Range(yPosLowerBound, yPosUpperBound), transform.position.z);
                 mypos = transform.position;
@@ -204,7 +217,7 @@ public class createText : MonoBehaviour
                 
 
                 }
-            }
+            return thistext;
     }
 
     public void setWidthOfBox(RectTransform myRect, float textWidth, float textHeight)
