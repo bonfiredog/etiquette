@@ -343,8 +343,6 @@
 -r:"C:/Users/Owner/Desktop/etiquette/etiquette-main/Library/PackageCache/com.unity.visualscripting@1.9.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Admin/MiniProfilerFree/Editor/MiniProfilerEditor.dll"
--analyzer:"Assets/Admin/MiniProfilerFree/MiniProfiler.dll"
 "Library/PackageCache/com.unity.timeline@1.7.5/Runtime/Activation/ActivationMixerPlayable.cs"
 "Library/PackageCache/com.unity.timeline@1.7.5/Runtime/Activation/ActivationPlayableAsset.cs"
 "Library/PackageCache/com.unity.timeline@1.7.5/Runtime/Activation/ActivationTrack.cs"

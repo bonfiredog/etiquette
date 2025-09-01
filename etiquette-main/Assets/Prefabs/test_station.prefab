@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8101073500899712268}
   m_Layer: 0
   m_Name: Quad
-  m_TagString: Untagged
+  m_TagString: station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 7812985074213074906}
   m_Layer: 0
   m_Name: stationflagging
-  m_TagString: Untagged
+  m_TagString: station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 6089702824679508824}
   m_Layer: 0
   m_Name: stationawning
-  m_TagString: Untagged
+  m_TagString: station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 4536508230680044608}
   m_Layer: 0
   m_Name: AWN
-  m_TagString: Untagged
+  m_TagString: station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -43,7 +43,9 @@ public class generateTrainTunnel : MonoBehaviour
     //Run the timer.
     if (timer > 0)
         {
-            timer -= 1 * Time.deltaTime;
+
+        timer -= ((1 / tc.trainTopSpeed) * tc.trainCurrentSpeed) * timerMulti * Time.deltaTime;
+   
         }
     else
         {
@@ -52,7 +54,7 @@ public class generateTrainTunnel : MonoBehaviour
             if (chance <= overallChance)
             {
                 //Generate something. If we are still far from the station, generate a tunnel or train. If not, just a train.
-                if (ss.milesToNextStation > 400)
+                if (ss.milesToNextStation > 300)
                 {
                     var ttchance = Random.Range(0, 1);
                     if (ttchance <= 0.5)
@@ -87,7 +89,6 @@ public class generateTrainTunnel : MonoBehaviour
 
         if (type == "train")
         {
-
             //Make sure the grammars are correct for each one, and generate some text. 
             thisTextGenerator.setGrammarForObject(correctGrammar);
             thisTextGenerator.generateTextFromGrammar(thistextmesh);
@@ -123,11 +124,12 @@ public class generateTrainTunnel : MonoBehaviour
         var thisCube = thisTT.transform.Find("trainmass");
         float tmpWidth = thistextrect.sizeDelta.x;
         Vector3 cubeScale = thisCube.localScale;
-        cubeScale.z = tmpWidth;
+        cubeScale.z = tmpWidth + (tmpWidth / 3);
         thisCube.localScale = cubeScale;
 
         //Set its position to the generator.
         thisTT.transform.position = mypos;
+        thisTT.transform.position = new Vector3(914, mypos.y, mypos.x);
     }
 
     private void setWidthOfBox(RectTransform myRect, float textWidth, float textHeight)

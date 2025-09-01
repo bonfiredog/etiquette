@@ -932,6 +932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 68817735}
   - component: {fileID: 68817734}
+  - component: {fileID: 68817736}
   m_Layer: 0
   m_Name: trainController
   m_TagString: Untagged
@@ -984,6 +985,26 @@ Transform:
   m_Father: {fileID: 1677876990}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &68817736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68817733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450065921433e0a489bdaaeb1d04afe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monitoredTags:
+  - frontgen
+  - sidegen
+  - middlegen
+  - backgen
+  stationTag: station
+  updateInterval: 1
+  fadeDurationMs: 250
 --- !u!1 &75779317
 GameObject:
   m_ObjectHideFlags: 0
@@ -9027,7 +9048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948393141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1053, y: -154, z: -10000}
+  m_LocalPosition: {x: 485, y: -154, z: -10000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9303,31 +9324,31 @@ MonoBehaviour:
   outputTexture: {fileID: 0}
   outputMipmap: 0
   effectMaskTexture: {fileID: 0}
-  effectMaskFade: 0
-  fade: 0.113
-  panFade: 0.703
-  brightness: 0.863
-  contrast: 0.963
-  color: 1.283
+  effectMaskFade: 0.877
+  fade: 0.636
+  panFade: 0.683
+  brightness: 0.744
+  contrast: 1.199
+  color: 2
   linear2Gamma: 1
   shaderMethod: 2
-  outlines: 1.03
-  outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  hatches: 1.1
-  outlineError: 1.402
-  flicker: 0.62
-  flickerFreq: 56.1
-  fixedHatchDir: 0.63
-  precalcGradient: 0
+  outlines: 2
+  outlineColor: {r: 0.3773585, g: 0.14427331, b: 0, a: 1}
+  hatches: 0.63
+  outlineError: 0.704
+  flicker: 0.582
+  flickerFreq: 22.4
+  fixedHatchDir: 0.648
+  precalcGradient: 1
   precalcGradientFlipY: 0
-  hatchScale: 1.124
-  hatchAngle: 2.92
-  hatchLength: 6.2
+  hatchScale: 1.373
+  hatchAngle: 2.75
+  hatchLength: 189.3
   mipLevel: 0
-  vignetting: 1
-  contentVignetting: 0.528
+  vignetting: 0.506
+  contentVignetting: 0.586
   paperTint: {r: 0.9056604, g: 0.82734555, b: 0.5502314, a: 1}
-  paperRoughness: 1.715
+  paperRoughness: 1.204
   paperTex: {fileID: 0}
   flipY: 0
 --- !u!1 &965639844

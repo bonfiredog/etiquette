@@ -333,8 +333,6 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.21f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll"
 -r:"C:/Users/Owner/Desktop/etiquette/etiquette-main/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
--analyzer:"Assets/Admin/MiniProfilerFree/Editor/MiniProfilerEditor.dll"
--analyzer:"Assets/Admin/MiniProfilerFree/MiniProfiler.dll"
 "Library/PackageCache/com.unity.test-framework@1.1.31/UnityEditor.TestRunner/Api/Analytics/AnalyticsReporter.cs"
 "Library/PackageCache/com.unity.test-framework@1.1.31/UnityEditor.TestRunner/Api/Analytics/AnalyticsTestCallback.cs"
 "Library/PackageCache/com.unity.test-framework@1.1.31/UnityEditor.TestRunner/Api/Analytics/RunFinishedData.cs"

@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 9027366373429767768}
   m_Layer: 0
   m_Name: Poster
-  m_TagString: Untagged
+  m_TagString: station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
