@@ -6,6 +6,7 @@ public class cameraControl : MonoBehaviour
 {
 
     public Vector3 mousePos;
+    private GameObject sec;
     public float moveTimerMax;
     public GameObject commandconsole;
     public GameObject window;
@@ -15,6 +16,8 @@ public class cameraControl : MonoBehaviour
     public float windowCloseSpeed;
     public float cameraRotateBackRate;
     public GameObject profilers;
+  
+    private startEndController startcontrol;
     
    
 
@@ -55,6 +58,8 @@ public class cameraControl : MonoBehaviour
         //Set the initial position of the camera, for 'snapping back'.
        originalX = transform.localPosition.x;
        originalY = transform.localPosition.y;
+       sec = GameObject.Find("startEndController");
+       startcontrol = sec.GetComponent<startEndController>();
        
        //Other Initial Values
        pressing = false;
@@ -85,7 +90,7 @@ public class cameraControl : MonoBehaviour
     }
 
 
-
+if (startcontrol.isStarted == true) {
 
 
 
@@ -188,5 +193,6 @@ public class cameraControl : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, cameraRotateBackRate * Time.deltaTime);
         }
         }
+    }
 
 }

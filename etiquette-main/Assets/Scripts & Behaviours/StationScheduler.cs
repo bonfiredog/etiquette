@@ -48,6 +48,8 @@ public class StationScheduler : MonoBehaviour
     public string appropriatebuildings = "#rural_buildings#";
     private float weatherTimer = 10000;
     public string currentweather = "clear";
+    private GameObject sec;
+     private startEndController startcontrol;
 
 
     TrainControl tc;
@@ -66,6 +68,8 @@ public class StationScheduler : MonoBehaviour
         data = dataObject.GetComponent<dataTest>();
         genscript = stationgen.GetComponent<generateStation>();
         updateGrammarVariables();
+               sec = GameObject.Find("startEndController");
+       startcontrol = sec.GetComponent<startEndController>();
 
     }
 
@@ -98,7 +102,7 @@ public class StationScheduler : MonoBehaviour
 
         //DOCKED AT STATION
         //When docked, count down the station timer. When it's at 0, removed the docked status.
-        if (tc.docked == true && ending == false)
+        if (tc.docked == true && startcontrol.isStarted == true)
         {
             if (currentStationTimer > 0)
             {

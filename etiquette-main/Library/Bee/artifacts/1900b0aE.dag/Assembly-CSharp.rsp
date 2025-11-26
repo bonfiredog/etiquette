@@ -393,6 +393,7 @@
 "Assets/Admin/Tracery/Scripts/JSONObjectExtensions.cs"
 "Assets/Admin/Tracery/Scripts/Modifiers.cs"
 "Assets/Admin/Tracery/Scripts/TraceryGrammar.cs"
+"Assets/QuitButton.cs"
 "Assets/Scripts & Behaviours/buttonFunctions.cs"
 "Assets/Scripts & Behaviours/cameraControl.cs"
 "Assets/Scripts & Behaviours/commandConsole.cs"
@@ -419,6 +420,7 @@
 "Assets/Scripts & Behaviours/tunnelController.cs"
 "Assets/Scripts & Behaviours/VerticalCam.cs"
 "Assets/Scripts & Behaviours/windowPosition.cs"
+"Assets/StartButton.cs"
 -langversion:9.0
 
 /deterministic
