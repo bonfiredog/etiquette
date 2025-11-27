@@ -12,7 +12,8 @@ public class generateTrainTunnel : MonoBehaviour
     public traceGrammarControl textgen;
     public float assignedSpeed;
     public int assignedSize;
-    public GameObject genObject;
+    public GameObject genObjectTunnel;
+    public GameObject genObjectTrain;
     public float fontSizeLowerBound;
     public float fontSizeUpperBound;
     public float timer;
@@ -53,23 +54,10 @@ public class generateTrainTunnel : MonoBehaviour
             var chance = Random.Range(0, 100);
             if (chance <= overallChance)
             {
-                //Generate something. If we are still far from the station, generate a tunnel or train. If not, just a train.
-                if (ss.milesToNextStation > 300)
-                {
-                    var ttchance = Random.Range(0, 1);
-                    if (ttchance <= 0.5)
-                    {
-                        toGen = "train";
-                    } else
-                    {
-                        toGen = "tunnel";
-                    }
-                } else
-                {
-                    toGen = "train";
+                //Generate a tunnel.
+                if (ss.milesToNextStation > 5) {
+                generateTT("tunnel");
                 }
-
-                generateTT(toGen);
             }
             timer = Random.Range(timerMin, timerMax);
         }
@@ -79,13 +67,20 @@ public class generateTrainTunnel : MonoBehaviour
     public void generateTT(string type)
     {
         
-        Debug.Log("Generating a tunnel! ================================|");
-        var thisTT = Instantiate(genObject);
+        Debug.Log("Generating a" + type + "! ================================|");
+        if (type == "train") {
+        var thisTT = Instantiate(genObjectTrain);
+        } else {
+        var thisTT = Instantiate(genObjectTunnel);
+        }
+        
         var correctGrammar = type + "grammar";
+        var correctGrammarTunnelName = "tunnelnamegrammar";
 
         //Generate the text randomly based on a Tracery grammar.
         var thistextmesh = thisTT.transform.Find("text").GetComponent<TextMeshPro>();
         var thisTextGenerator = thisTT.transform.Find("text").GetComponent<textGenerationControl>();
+        var thisTextGeneratorName = thisTT.transform.Find("tunnel name").GetComponent<textGenerationControl>();
 
         if (type == "train")
         {
@@ -94,6 +89,13 @@ public class generateTrainTunnel : MonoBehaviour
             thisTextGenerator.generateTextFromGrammar(thistextmesh);
         } else
         {
+
+            thisTextGenerator.setGrammarForObject(correctGrammar);
+            thisTextGeneratorName.setGrammarForObject(correctGrammarTunnelName);
+            thisTextGenerator.generateTextFromGrammar(thistextmesh);
+
+
+            /*
             //Special generation for tunnel.
             var numofvowels = Random.Range(5, 50);
             string[] vowels = { "A", "E", "I", "O", "U" };
@@ -107,6 +109,7 @@ public class generateTrainTunnel : MonoBehaviour
             }
 
             thistextmesh.text = genword;
+            */
 
         }
 

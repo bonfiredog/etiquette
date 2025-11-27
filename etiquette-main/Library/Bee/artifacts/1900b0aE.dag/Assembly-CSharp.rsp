@@ -393,6 +393,8 @@
 "Assets/Admin/Tracery/Scripts/JSONObjectExtensions.cs"
 "Assets/Admin/Tracery/Scripts/Modifiers.cs"
 "Assets/Admin/Tracery/Scripts/TraceryGrammar.cs"
+"Assets/CursorManager.cs"
+"Assets/Interactable.cs"
 "Assets/QuitButton.cs"
 "Assets/Scripts & Behaviours/buttonFunctions.cs"
 "Assets/Scripts & Behaviours/cameraControl.cs"

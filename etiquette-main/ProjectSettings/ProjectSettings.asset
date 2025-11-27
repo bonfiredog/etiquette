@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Treecreeper Studios
   productName: Bradshaw's Etiquette For Minor Time Travel
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: cd6d12e88eaaf3b47871f3200066e7a5, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1

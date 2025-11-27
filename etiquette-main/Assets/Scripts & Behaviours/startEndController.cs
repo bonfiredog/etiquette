@@ -11,12 +11,11 @@ public class startEndController : MonoBehaviour
 
     private StationScheduler ss;
     private TrainControl tc;
-    private float endTimer1 = 15;
+    private float endTimer1 = 180;
     private float endTimer2 = 15;
     public bool isStarted = false;
     private GameObject ttstart;
     private GameObject ttquit;
-    
 
 
     // Start is called before the first frame update
@@ -37,7 +36,14 @@ public class startEndController : MonoBehaviour
     void Update()
     {
 
-
+        if (ss.nextStationName == "London Paddington" && tc.docked == true && ss.milesToNextStation <= 1) {
+            if (ss.ending == false){ss.ending = true;}
+            if (endTimer1 > 0 ){
+                endTimer1 -= 1 * Time.deltaTime;
+            } else {
+                SceneManager.LoadScene(0);
+            }
+        }
        
 
     }
