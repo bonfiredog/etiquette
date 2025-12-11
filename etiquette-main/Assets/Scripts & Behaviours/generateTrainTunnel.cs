@@ -24,6 +24,8 @@ public class generateTrainTunnel : MonoBehaviour
     private TrainControl tc;
     private StationScheduler ss;
     private string toGen;
+    GameObject thisTT;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,8 @@ public class generateTrainTunnel : MonoBehaviour
         
         //Start the timer with a random total (limits set manually for the generator).
         timer = Random.Range(timerMin, timerMax);
+
+      
     }
 
 
@@ -69,9 +73,9 @@ public class generateTrainTunnel : MonoBehaviour
         
         Debug.Log("Generating a" + type + "! ================================|");
         if (type == "train") {
-        var thisTT = Instantiate(genObjectTrain);
+         thisTT = Instantiate(genObjectTrain);
         } else {
-        var thisTT = Instantiate(genObjectTunnel);
+         thisTT = Instantiate(genObjectTunnel);
         }
         
         var correctGrammar = type + "grammar";

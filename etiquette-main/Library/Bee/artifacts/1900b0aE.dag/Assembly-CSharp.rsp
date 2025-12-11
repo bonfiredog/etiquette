@@ -394,6 +394,8 @@
 "Assets/Admin/Tracery/Scripts/Modifiers.cs"
 "Assets/Admin/Tracery/Scripts/TraceryGrammar.cs"
 "Assets/CursorManager.cs"
+"Assets/CurvedText.cs"
+"Assets/CurveText.cs"
 "Assets/Interactable.cs"
 "Assets/QuitButton.cs"
 "Assets/Scripts & Behaviours/buttonFunctions.cs"
