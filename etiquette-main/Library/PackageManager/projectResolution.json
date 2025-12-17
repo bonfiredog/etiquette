@@ -1,0 +1,395 @@
+{
+  "context": {
+    "projectPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Packages",
+    "unityVersion": "6000.2.5f1"
+  },
+  "inputs": [
+    "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Packages/manifest.json",
+    "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Packages/packages-lock.json",
+    "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/BuiltInPackagesCombined.sha1"
+  ],
+  "outputs": {
+    "com.unity.ai.navigation@2.0.9": {
+      "name": "com.unity.ai.navigation",
+      "displayName": "AI Navigation",
+      "resolvedPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Library/PackageCache/com.unity.ai.navigation@5218e4bf7edc",
+      "fingerprint": "5218e4bf7edc04fcad4ed3836c1c41aef334b996",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "2.0.9",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.collab-proxy@2.9.3": {
+      "name": "com.unity.collab-proxy",
+      "displayName": "Unity Version Control",
+      "resolvedPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Library/PackageCache/com.unity.collab-proxy@ab839cc7d2ad",
+      "fingerprint": "ab839cc7d2adf143e5378baf46edc31cbc5d84f7",
+      "editorCompatibility": "2021.3.0f1",
+      "version": "2.9.3",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.ide.rider@3.0.37": {
+      "name": "com.unity.ide.rider",
+      "displayName": "JetBrains Rider Editor",
+      "resolvedPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Library/PackageCache/com.unity.ide.rider@0baf0f91edc0",
+      "fingerprint": "0baf0f91edc004d6f71bbd74a38e2503a5f1228b",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "3.0.37",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.ide.visualstudio@2.0.23": {
+      "name": "com.unity.ide.visualstudio",
+      "displayName": "Visual Studio Editor",
+      "resolvedPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Library/PackageCache/com.unity.ide.visualstudio@198cdf337d13",
+      "fingerprint": "198cdf337d13c83ca953581515630d66b779e92b",
+      "editorCompatibility": "2019.4.25f1",
+      "version": "2.0.23",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.ide.vscode@1.2.5": {
+      "name": "com.unity.ide.vscode",
+      "displayName": "Visual Studio Code Editor",
+      "resolvedPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Library/PackageCache/com.unity.ide.vscode@82e68656b7bd",
+      "fingerprint": "82e68656b7bdc5da8beb1fbaf1bb4ecf13456d51",
+      "editorCompatibility": "2019.2.0a12",
+      "version": "1.2.5",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.multiplayer.center@1.0.0": {
+      "name": "com.unity.multiplayer.center",
+      "displayName": "Multiplayer Center",
+      "resolvedPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Library/PackageCache/com.unity.multiplayer.center@f5e57a8bed06",
+      "fingerprint": "f5e57a8bed0637672c58142b1bfd7e6fea03746c",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.test-framework@1.5.1": {
+      "name": "com.unity.test-framework",
+      "displayName": "Test Framework",
+      "resolvedPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Library/PackageCache/com.unity.test-framework@177914a6b4ae",
+      "fingerprint": "177914a6b4aef51b0ea557ab19565c9fed17d83c",
+      "editorCompatibility": "6000.0.44f1",
+      "version": "1.5.1",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.timeline@1.8.9": {
+      "name": "com.unity.timeline",
+      "displayName": "Timeline",
+      "resolvedPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Library/PackageCache/com.unity.timeline@6b9e48457ddb",
+      "fingerprint": "6b9e48457ddb4f64813d77fd77efc79a8f3102ae",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "1.8.9",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.ugui@2.0.0": {
+      "name": "com.unity.ugui",
+      "displayName": "Unity UI",
+      "resolvedPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Library/PackageCache/com.unity.ugui@6a1086bb4240",
+      "fingerprint": "6a1086bb424017906bb5c168aa942f5c411bd944",
+      "editorCompatibility": "2019.2.0a1",
+      "version": "2.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.visualscripting@1.9.7": {
+      "name": "com.unity.visualscripting",
+      "displayName": "Visual Scripting",
+      "resolvedPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Library/PackageCache/com.unity.visualscripting@6279e2b7c485",
+      "fingerprint": "6279e2b7c4858e56cca7f367cd38c49ef66778c9",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "1.9.7",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.modules.accessibility@1.0.0": {
+      "name": "com.unity.modules.accessibility",
+      "displayName": "Accessibility",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.accessibility",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.ai@1.0.0": {
+      "name": "com.unity.modules.ai",
+      "displayName": "AI",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ai",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.androidjni@1.0.0": {
+      "name": "com.unity.modules.androidjni",
+      "displayName": "Android JNI",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.androidjni",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.animation@1.0.0": {
+      "name": "com.unity.modules.animation",
+      "displayName": "Animation",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.animation",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.assetbundle@1.0.0": {
+      "name": "com.unity.modules.assetbundle",
+      "displayName": "Asset Bundle",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.assetbundle",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.audio@1.0.0": {
+      "name": "com.unity.modules.audio",
+      "displayName": "Audio",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.audio",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.cloth@1.0.0": {
+      "name": "com.unity.modules.cloth",
+      "displayName": "Cloth",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.cloth",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.director@1.0.0": {
+      "name": "com.unity.modules.director",
+      "displayName": "Director",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.director",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.imageconversion@1.0.0": {
+      "name": "com.unity.modules.imageconversion",
+      "displayName": "Image Conversion",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.imageconversion",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.imgui@1.0.0": {
+      "name": "com.unity.modules.imgui",
+      "displayName": "IMGUI",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.imgui",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.jsonserialize@1.0.0": {
+      "name": "com.unity.modules.jsonserialize",
+      "displayName": "JSONSerialize",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.jsonserialize",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.particlesystem@1.0.0": {
+      "name": "com.unity.modules.particlesystem",
+      "displayName": "Particle System",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.particlesystem",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.physics@1.0.0": {
+      "name": "com.unity.modules.physics",
+      "displayName": "Physics",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.physics2d@1.0.0": {
+      "name": "com.unity.modules.physics2d",
+      "displayName": "Physics 2D",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics2d",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.screencapture@1.0.0": {
+      "name": "com.unity.modules.screencapture",
+      "displayName": "Screen Capture",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.screencapture",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.terrain@1.0.0": {
+      "name": "com.unity.modules.terrain",
+      "displayName": "Terrain",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrain",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.terrainphysics@1.0.0": {
+      "name": "com.unity.modules.terrainphysics",
+      "displayName": "Terrain Physics",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrainphysics",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.tilemap@1.0.0": {
+      "name": "com.unity.modules.tilemap",
+      "displayName": "Tilemap",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.tilemap",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.ui@1.0.0": {
+      "name": "com.unity.modules.ui",
+      "displayName": "UI",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ui",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.uielements@1.0.0": {
+      "name": "com.unity.modules.uielements",
+      "displayName": "UIElements",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.uielements",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.umbra@1.0.0": {
+      "name": "com.unity.modules.umbra",
+      "displayName": "Umbra",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.umbra",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.unityanalytics@1.0.0": {
+      "name": "com.unity.modules.unityanalytics",
+      "displayName": "Unity Analytics",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unityanalytics",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.unitywebrequest@1.0.0": {
+      "name": "com.unity.modules.unitywebrequest",
+      "displayName": "Unity Web Request",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequest",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.unitywebrequestassetbundle@1.0.0": {
+      "name": "com.unity.modules.unitywebrequestassetbundle",
+      "displayName": "Unity Web Request Asset Bundle",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestassetbundle",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.unitywebrequestaudio@1.0.0": {
+      "name": "com.unity.modules.unitywebrequestaudio",
+      "displayName": "Unity Web Request Audio",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestaudio",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.unitywebrequesttexture@1.0.0": {
+      "name": "com.unity.modules.unitywebrequesttexture",
+      "displayName": "Unity Web Request Texture",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequesttexture",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.unitywebrequestwww@1.0.0": {
+      "name": "com.unity.modules.unitywebrequestwww",
+      "displayName": "Unity Web Request WWW",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestwww",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.vehicles@1.0.0": {
+      "name": "com.unity.modules.vehicles",
+      "displayName": "Vehicles",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.vehicles",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.video@1.0.0": {
+      "name": "com.unity.modules.video",
+      "displayName": "Video",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.video",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.vr@1.0.0": {
+      "name": "com.unity.modules.vr",
+      "displayName": "VR",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.vr",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.wind@1.0.0": {
+      "name": "com.unity.modules.wind",
+      "displayName": "Wind",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.wind",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.xr@1.0.0": {
+      "name": "com.unity.modules.xr",
+      "displayName": "XR",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.xr",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.subsystems@1.0.0": {
+      "name": "com.unity.modules.subsystems",
+      "displayName": "Subsystems",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.subsystems",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.hierarchycore@1.0.0": {
+      "name": "com.unity.modules.hierarchycore",
+      "displayName": "Hierarchy Core",
+      "resolvedPath": "/home/rob/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.hierarchycore",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.ext.nunit@2.0.5": {
+      "name": "com.unity.ext.nunit",
+      "displayName": "Custom NUnit",
+      "resolvedPath": "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/Library/PackageCache/com.unity.ext.nunit@b16e6d09cd93",
+      "fingerprint": "b16e6d09cd93f527249a1f05a86ef45695dc934b",
+      "editorCompatibility": "2019.4.0a1",
+      "version": "2.0.5",
+      "source": "builtin",
+      "testable": false
+    }
+  }
+}

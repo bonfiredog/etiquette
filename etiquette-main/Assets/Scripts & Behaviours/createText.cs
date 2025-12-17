@@ -250,7 +250,7 @@ public class createText : MonoBehaviour
         {
             // Check if object's Y position is within our prescribed range
             float objY = obj.transform.position.y;
-            if (objY >= yPosLowerBound && yPosUpperBound <= yPosUpperBound)
+            if (objY >= yPosLowerBound && objY <= yPosUpperBound)
             {
                 // Check if object's X position is within our buffer zone
                 float objX = obj.transform.position.x;
