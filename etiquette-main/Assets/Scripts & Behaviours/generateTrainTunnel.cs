@@ -59,7 +59,7 @@ public class generateTrainTunnel : MonoBehaviour
             if (chance <= overallChance)
             {
                 //Generate a tunnel.
-                if (ss.milesToNextStation > 5) {
+                if (ss.milesToNextStation > 3) {
                 generateTT("tunnel");
                 }
             }
@@ -70,54 +70,42 @@ public class generateTrainTunnel : MonoBehaviour
 
     public void generateTT(string type)
     {
-        
+        TextMeshPro thistextmesh = null; 
+        textGenerationControl thisTextGenerator = null; 
+        textGenerationControl thisTextGeneratorName = null;
+
         Debug.Log("Generating a" + type + "! ================================|");
         if (type == "train") {
          thisTT = Instantiate(genObjectTrain);
+        var correctGrammar = type + "grammar";
+        //Generate the text randomly based on a Tracery grammar.
+        thistextmesh = thisTT.transform.Find("text").GetComponent<TextMeshPro>();
+        thisTextGenerator = thisTT.transform.Find("text").GetComponent<textGenerationControl>();
+        thisTextGeneratorName = thisTT.transform.Find("tunnel name").GetComponent<textGenerationControl>();
+        //Make sure the grammars are correct for each one, and generate some text. 
+        thisTextGenerator.setGrammarForObject(correctGrammar);
+        thisTextGenerator.generateTextFromGrammar(thistextmesh);
+
         } else {
          thisTT = Instantiate(genObjectTunnel);
-        }
-        
         var correctGrammar = type + "grammar";
         var correctGrammarTunnelName = "tunnelnamegrammar";
-
-        //Generate the text randomly based on a Tracery grammar.
-        var thistextmesh = thisTT.transform.Find("text").GetComponent<TextMeshPro>();
-        var thisTextGenerator = thisTT.transform.Find("text").GetComponent<textGenerationControl>();
-        var thisTextGeneratorName = thisTT.transform.Find("tunnel name").GetComponent<textGenerationControl>();
-
-        if (type == "train")
-        {
-            //Make sure the grammars are correct for each one, and generate some text. 
-            thisTextGenerator.setGrammarForObject(correctGrammar);
-            thisTextGenerator.generateTextFromGrammar(thistextmesh);
-        } else
-        {
-
-            thisTextGenerator.setGrammarForObject(correctGrammar);
-            thisTextGeneratorName.setGrammarForObject(correctGrammarTunnelName);
-            thisTextGenerator.generateTextFromGrammar(thistextmesh);
+        
+        thistextmesh = thisTT.transform.Find("text").GetComponent<TextMeshPro>();
+        thisTextGenerator = thisTT.transform.Find("text").GetComponent<textGenerationControl>();
 
 
-            /*
-            //Special generation for tunnel.
-            var numofvowels = Random.Range(5, 50);
-            string[] vowels = { "A", "E", "I", "O", "U" };
-            int randomIndex = Random.Range(0, vowels.Length);
-            string voweltouse = vowels[randomIndex];
-            var genword = "";
-            
-            for (var i = 0; i < numofvowels; i++)
-            {
-                genword = genword + voweltouse;
-            }
+        var thistextmeshname = thisTT.transform.Find("tunnel name").GetComponent<TextMeshPro>();
+        thisTextGeneratorName = thisTT.transform.Find("tunnel name").GetComponent<textGenerationControl>();
 
-            thistextmesh.text = genword;
-            */
+        thisTextGenerator.setGrammarForObject(correctGrammar);
+        thisTextGeneratorName.setGrammarForObject(correctGrammarTunnelName);
+        thisTextGenerator.generateTextFromGrammar(thistextmesh);
+        thisTextGeneratorName.generateTextFromGrammar(thistextmeshname);
 
-        }
+        }                  
 
-        //Assign a speed and fontSize, based on the geneator, to the text object.
+        //Assign a speed and fontSize, based on the generator, to the text object.
         var thistextscript = thisTT.gameObject.GetComponent<tunnelController>();
         thistextscript.speed = assignedSpeed;
         thistextscript.topspeed = assignedSpeed;

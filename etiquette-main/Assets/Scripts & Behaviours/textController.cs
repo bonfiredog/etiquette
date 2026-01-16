@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class textController : MonoBehaviour
 {
-    [HideInInspector]
+    
     public float speed;
-    [HideInInspector]
+   
     public float topspeed;
 
     RectTransform myPos;
@@ -34,7 +34,7 @@ public class textController : MonoBehaviour
         
 
         //If beyond a certain z value, destroy.
-        if (myPos.anchoredPosition3D.z > 6000)
+        if (myPos.anchoredPosition3D.z > 10000)
         {
             Destroy(gameObject);
         }

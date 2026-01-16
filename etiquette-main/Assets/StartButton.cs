@@ -7,6 +7,7 @@ public class StartButton : MonoBehaviour
 private GameObject sec;
 private startEndController startControl;
 private GameObject tt;
+public bool clicked = false;
     public float moveSpeed = 5f;
     public float moveDistance = 10f; // How far down to move
 
@@ -31,6 +32,7 @@ private GameObject tt;
                 if (hit.collider.gameObject == gameObject)
                 {
                      Debug.Log("Start button clicked!");
+                     clicked = true;
                    
                     StartCoroutine(MoveDownAndDestroy(tt));
                 }

@@ -12,7 +12,6 @@ public class startEndController : MonoBehaviour
     private StationScheduler ss;
     private TrainControl tc;
     private float endTimer1 = 180;
-    private float endTimer2 = 15;
     public bool isStarted = false;
     private GameObject ttstart;
     private GameObject ttquit;

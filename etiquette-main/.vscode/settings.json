@@ -51,5 +51,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "etiquette-main.sln"
+    "dotnet.defaultSolution": "etiquette-main.sln",
+    "dotrush.roslyn.projectOrSolutionFiles": [
+        "/home/rob/The Pith/Personal Projects/Etiquette/Unity Project/etiquette/etiquette-main/etiquette-main.sln"
+    ]
 }

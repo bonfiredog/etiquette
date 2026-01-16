@@ -12,7 +12,6 @@
     "delayChance": 0,
     "speedMod": 50
   },
-
   "1": {
     "stationName": "Penzance",
     "distanceFromLastStation": 0,
@@ -26,7 +25,6 @@
     "delayChance": 0,
     "speedMod": 50
   },
-
   "2": {
     "stationName": "St. Erth",
     "distanceFromLastStation": 1500,
@@ -300,7 +298,6 @@
     "delayChance": 45,
     "speedMod": 100
   },
-
   "23": {
     "stationName": "Brent",
     "distanceFromLastStation": 8000,
@@ -327,7 +324,6 @@
     "delayChance": 45,
     "speedMod": 100
   },
-
   "25": {
     "stationName": "Totnes",
     "distanceFromLastStation": 10000,
@@ -367,7 +363,6 @@
     "delayChance": 40,
     "speedMod": 100
   },
-
   "28": {
     "stationName": "Dawlish",
     "distanceFromLastStation": 4300,
@@ -446,7 +441,6 @@
     "delayChance": 35,
     "speedMod": 100
   },
-
   "34": {
     "stationName": "Cullompton",
     "distanceFromLastStation": 8000,
@@ -525,7 +519,6 @@
     "delayChance": 35,
     "speedMod": 100
   },
-  
   "40": {
     "stationName": "Yatton Junction",
     "distanceFromLastStation": 26000,
@@ -630,7 +623,6 @@
     "delayChance": 30,
     "speedMod": 80
   },
-
   "48": {
     "stationName": "Box",
     "distanceFromLastStation": 6000,
@@ -905,5 +897,3 @@
     "speedMod": 100
   }
 }
-
- 
