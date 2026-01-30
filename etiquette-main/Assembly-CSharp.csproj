@@ -73,6 +73,7 @@
     <Compile Include="Assets/Admin/Tracery/Scripts/JSONObjectExtensions.cs" />
     <Compile Include="Assets/Admin/flockaroo/ColoredPencils/DemoScene/youSpinMeRiseRound_ColoredPencils.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/fixedGenerator.cs" />
+    <Compile Include="Assets/Scripts &amp; Behaviours/TMPBoundsFixWorld.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Scripts/Exceptions/JArgumentException.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/sideTextAlpha.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Scripts/Settings/SerializeSettings.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets/Interactable.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/DynamicCursor.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/CursorManager.cs" />
+    <Compile Include="Assets/Scripts &amp; Behaviours/TMPBoundsFix.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Scripts/Exceptions/JArgumentNullException.cs" />
     <Compile Include="Assets/Admin/Tracery/JSON/JSONTemplates.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/textController.cs" />
@@ -122,6 +124,7 @@
     <Compile Include="Assets/Scripts &amp; Behaviours/VerticalCam.cs" />
     <Compile Include="Assets/Admin/JSON/VectorTemplates.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Scripts/JArray.cs" />
+    <Compile Include="Assets/Scripts &amp; Behaviours/textGenOneShot.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Scripts/Settings/ParseStringSettings.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Internal/InternalTools.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Scripts/Exceptions/JNumberFormatException.cs" />

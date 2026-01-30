@@ -20,6 +20,8 @@ TagManager:
   - fartext
   - track
   - inter
+  - below
+  - belowgen
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - Water
   - UI
   - UI_NOEFFECT
-  - 
+  - OCCUL
   - 
   - 
   - 

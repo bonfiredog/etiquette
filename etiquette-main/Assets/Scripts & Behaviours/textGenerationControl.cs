@@ -15,6 +15,7 @@ public class textGenerationControl : MonoBehaviour
     public float timedTextTimerTotal;
     public string[] timedTextGrammars;
     public bool generated;
+    public bool oneShotText;
 
     [HideInInspector]
     public GameObject gc;
@@ -76,6 +77,12 @@ public class textGenerationControl : MonoBehaviour
             }
         }
 
+           if (oneShotText == true) {
+                setGrammarForObject(startingGrammarName);
+                generateTextFromGrammar(myText);
+                Debug.Log("DONE");
+             }
+
     }
 
 void Update()
@@ -102,6 +109,8 @@ void Update()
             }
         }
     }
+
+ 
 }
     //Use this to initial set or change the current grammar.
     public void setGrammarForObject(string grammarName)

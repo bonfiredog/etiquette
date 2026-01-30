@@ -56,7 +56,7 @@ public class startingStation : MonoBehaviour
 
             //Set a speed and topSpeed (as it won't be created by the generator).
             myMove.speed = 0;
-            myMove.topspeed = 650;
+            myMove.topspeed = (800 / 100) * 250;
             hasSet = true;
 
             //Set the size of arches and line (as this won't be done by the generator)

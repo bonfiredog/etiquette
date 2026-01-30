@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 5467688121873351224}
   - component: {fileID: 2890867518430085600}
   - component: {fileID: 5374284977250902878}
-  - component: {fileID: 1690625233412277326}
+  - component: {fileID: 1508280449505995146}
   m_Layer: 0
   m_Name: crate_name
   m_TagString: Untagged
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2890867518430085600}
   m_maskType: 0
---- !u!114 &1690625233412277326
+--- !u!114 &1508280449505995146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -422,13 +422,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1112989509854339897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ae173171a5ba74793ea7d15809b561, type: 3}
+  m_Script: {fileID: 11500000, guid: ed0fb69d71a16e57490ab38405ca9288, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::textGenerationControl
-  startingGrammarName: 
-  IsTimedText: 0
-  timedTextTimerTotal: 0
-  timedTextGrammars: []
+  m_EditorClassIdentifier: Assembly-CSharp::textGenOneShot
+  startingGrammarName: crategrammar
   generated: 0
   gc: {fileID: 0}
   gcScript: {fileID: 0}
@@ -446,7 +443,7 @@ GameObject:
   - component: {fileID: 2117065000873710825}
   - component: {fileID: 1301933050425709833}
   - component: {fileID: 619966171170822164}
-  - component: {fileID: 3827028217690887957}
+  - component: {fileID: 1007075284080812080}
   m_Layer: 0
   m_Name: crate_name
   m_TagString: Untagged
@@ -617,7 +614,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1301933050425709833}
   m_maskType: 0
---- !u!114 &3827028217690887957
+--- !u!114 &1007075284080812080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -626,13 +623,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2285666049709877620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ae173171a5ba74793ea7d15809b561, type: 3}
+  m_Script: {fileID: 11500000, guid: ed0fb69d71a16e57490ab38405ca9288, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::textGenerationControl
-  startingGrammarName: 
-  IsTimedText: 0
-  timedTextTimerTotal: 0
-  timedTextGrammars: []
+  m_EditorClassIdentifier: Assembly-CSharp::textGenOneShot
+  startingGrammarName: crategrammar
   generated: 0
   gc: {fileID: 0}
   gcScript: {fileID: 0}
@@ -763,7 +757,7 @@ GameObject:
   - component: {fileID: 9047809371657439541}
   - component: {fileID: 73181060883643079}
   - component: {fileID: 9051092991188439481}
-  - component: {fileID: 1809843104953215274}
+  - component: {fileID: 209600051291504798}
   m_Layer: 0
   m_Name: crate_name
   m_TagString: Untagged
@@ -933,7 +927,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 73181060883643079}
   m_maskType: 0
---- !u!114 &1809843104953215274
+--- !u!114 &209600051291504798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -942,13 +936,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3030998981182625528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ae173171a5ba74793ea7d15809b561, type: 3}
+  m_Script: {fileID: 11500000, guid: ed0fb69d71a16e57490ab38405ca9288, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::textGenerationControl
-  startingGrammarName: 
-  IsTimedText: 0
-  timedTextTimerTotal: 0
-  timedTextGrammars: []
+  m_EditorClassIdentifier: Assembly-CSharp::textGenOneShot
+  startingGrammarName: crategrammar
   generated: 0
   gc: {fileID: 0}
   gcScript: {fileID: 0}
@@ -1415,7 +1406,7 @@ GameObject:
   - component: {fileID: 1267156480791281836}
   - component: {fileID: 6611743413440344570}
   - component: {fileID: 2254527588872659136}
-  - component: {fileID: 4997418585395774773}
+  - component: {fileID: 7762496715447947717}
   m_Layer: 0
   m_Name: crate_name
   m_TagString: Untagged
@@ -1585,7 +1576,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6611743413440344570}
   m_maskType: 0
---- !u!114 &4997418585395774773
+--- !u!114 &7762496715447947717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1594,13 +1585,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5644036100261380810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ae173171a5ba74793ea7d15809b561, type: 3}
+  m_Script: {fileID: 11500000, guid: ed0fb69d71a16e57490ab38405ca9288, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::textGenerationControl
-  startingGrammarName: 
-  IsTimedText: 0
-  timedTextTimerTotal: 0
-  timedTextGrammars: []
+  m_EditorClassIdentifier: Assembly-CSharp::textGenOneShot
+  startingGrammarName: crategrammar
   generated: 0
   gc: {fileID: 0}
   gcScript: {fileID: 0}

@@ -43,29 +43,29 @@ public class generateTrainTunnel : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+void Update()
+{
+    if (timer > 0f)
     {
-    //Run the timer.
-    if (timer > 0)
-        {
+        float speedRatio = tc.trainTopSpeed > 0f
+            ? tc.trainCurrentSpeed / tc.trainTopSpeed
+            : 0f;
 
-        timer -= ((1 / tc.trainTopSpeed) * tc.trainCurrentSpeed) * timerMulti * Time.deltaTime;
-   
-        }
-    else
-        {
-            //Calculate the chance to generate something.
-            var chance = Random.Range(0, 100);
-            if (chance <= overallChance)
-            {
-                //Generate a tunnel.
-                if (ss.milesToNextStation > 3) {
-                generateTT("tunnel");
-                }
-            }
-            timer = Random.Range(timerMin, timerMax);
-        }
-   }
+        timer -= speedRatio * timerMulti * Time.deltaTime;
+        return;
+    }
+
+    // timer expired — fire ONCE
+    var chance = Random.Range(0, 100);
+    if (chance <= overallChance && ss.milesToNextStation > 3)
+    {
+        generateTT("tunnel");
+    }
+
+    // reset and EXIT
+    timer = Random.Range(timerMin, timerMax);
+    Debug.Log($"Timer reset to: {timer}");
+}
 
 
     public void generateTT(string type)
@@ -87,10 +87,10 @@ public class generateTrainTunnel : MonoBehaviour
         thisTextGenerator.generateTextFromGrammar(thistextmesh);
 
         } else {
-         thisTT = Instantiate(genObjectTunnel);
+        thisTT = Instantiate(genObjectTunnel);
         var correctGrammar = type + "grammar";
         var correctGrammarTunnelName = "tunnelnamegrammar";
-        
+                
         thistextmesh = thisTT.transform.Find("text").GetComponent<TextMeshPro>();
         thisTextGenerator = thisTT.transform.Find("text").GetComponent<textGenerationControl>();
 
@@ -112,6 +112,16 @@ public class generateTrainTunnel : MonoBehaviour
         thistextscript.type = type;
         thistextmesh.fontSize = Random.Range(fontSizeLowerBound, fontSizeUpperBound);
 
+        if (type == "tunnel") {
+            //Set the width of the tunnel randomly.
+        float length = Random.Range(1, 10);
+        thisTT.transform.localScale = new Vector3(1,1,length);
+
+        }
+
+
+
+        if (type == "train") {
         var thistextrect = thisTT.transform.Find("text").GetComponent<RectTransform>();
         setWidthOfBox(thistextrect, thistextmesh.preferredWidth, thistextmesh.preferredHeight);
 
@@ -121,10 +131,11 @@ public class generateTrainTunnel : MonoBehaviour
         Vector3 cubeScale = thisCube.localScale;
         cubeScale.z = tmpWidth + (tmpWidth / 3);
         thisCube.localScale = cubeScale;
+        }
 
         //Set its position to the generator.
-        thisTT.transform.position = mypos;
-        thisTT.transform.position = new Vector3(914, mypos.y, mypos.x);
+        thisTT.transform.position = new Vector3(-600f, -5.91f, -9955f);
+        //thisTT.transform.position = new Vector3(914, mypos.y, mypos.x);
     }
 
     private void setWidthOfBox(RectTransform myRect, float textWidth, float textHeight)

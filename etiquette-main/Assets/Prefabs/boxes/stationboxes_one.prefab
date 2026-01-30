@@ -132,6 +132,7 @@ MonoBehaviour:
   timedTextTimerTotal: 0
   timedTextGrammars: []
   generated: 0
+  oneShotText: 0
   gc: {fileID: 0}
   gcScript: {fileID: 0}
   myText: {fileID: 0}
@@ -148,6 +149,7 @@ GameObject:
   - component: {fileID: 5467688121873351224}
   - component: {fileID: 2890867518430085600}
   - component: {fileID: 5374284977250902878}
+  - component: {fileID: 5608672073608061696}
   m_Layer: 0
   m_Name: crate_name
   m_TagString: Untagged
@@ -317,6 +319,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2890867518430085600}
   m_maskType: 0
+--- !u!114 &5608672073608061696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112989509854339897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0fb69d71a16e57490ab38405ca9288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::textGenOneShot
+  startingGrammarName: crategrammar
+  generated: 0
+  gc: {fileID: 0}
+  gcScript: {fileID: 0}
+  myText: {fileID: 0}
+  currentGrammarJSON: {fileID: 0}
+  grammarParse: 
 --- !u!1 &4391638350647702272
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +649,7 @@ MonoBehaviour:
   timedTextTimerTotal: 0
   timedTextGrammars: []
   generated: 0
+  oneShotText: 0
   gc: {fileID: 0}
   gcScript: {fileID: 0}
   myText: {fileID: 0}

@@ -82,6 +82,7 @@ public class generateStation : MonoBehaviour
         //Set the line's x scale as a multiplier of the size.
         var linequad = thisStation.transform.Find("Quad");
         var awnline = thisStation.transform.Find("AWN");
+        var backcube = thisStation.transform.Find("Cube");
         
         var flagging = thisStation.transform.Find("stationflagging").GetComponent<RectTransform>();
          
@@ -92,7 +93,7 @@ public class generateStation : MonoBehaviour
 
 
 
-
+        backcube.transform.localScale = new Vector3 (backcube.transform.localScale.x, backcube.transform.localScale.y, backcube.transform.localScale.z * size);
         linequad.transform.localScale = new Vector3(200 * size, 5, 20);
         awnline.transform.localScale = new Vector3(200 * size, 5, 20);
         if (size > 1) {

@@ -435,14 +435,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -9466126922233593, guid: a29bc921a0026ef96910d1452c9beeba,
         type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6399391411232519585, guid: 873c2936ae846154e80c1b10586184ab, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6399391411232519584, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8325899022377753537}
+      addedObject: {fileID: 5320086576046715525}
   m_SourcePrefab: {fileID: 100100000, guid: 873c2936ae846154e80c1b10586184ab, type: 3}
 --- !u!224 &3909443860880700656 stripped
 RectTransform:
@@ -456,7 +457,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7966330007424532828}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8325899022377753537
+--- !u!114 &5320086576046715525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -465,6 +466,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3909443860880700668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bf47c1718dc858439a740df083de6dc, type: 3}
+  m_Script: {fileID: 11500000, guid: ed0fb69d71a16e57490ab38405ca9288, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::textGenOneShot
+  startingGrammarName: newsgrammar
+  generated: 0
+  gc: {fileID: 0}
+  gcScript: {fileID: 0}
+  myText: {fileID: 0}
+  currentGrammarJSON: {fileID: 0}
+  grammarParse: 
