@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aa27b368bf93a104585160b830fed08a
+timeCreated: 1546619418
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/DemoScene/New Material.mat
+  uploadId: 760240

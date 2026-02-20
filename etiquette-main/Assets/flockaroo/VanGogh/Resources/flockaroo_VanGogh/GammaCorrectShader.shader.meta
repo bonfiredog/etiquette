@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8071216bfde8da7c1b6c345253beb2b1
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174199
+  packageName: Van Gogh
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/VanGogh/Resources/flockaroo_VanGogh/GammaCorrectShader.shader
+  uploadId: 760244

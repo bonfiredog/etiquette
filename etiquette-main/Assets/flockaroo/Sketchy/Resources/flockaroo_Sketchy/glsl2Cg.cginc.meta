@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e1f822b1aaa5fd2dd9081342305ab0e6
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/Resources/flockaroo_Sketchy/glsl2Cg.cginc
+  uploadId: 760243

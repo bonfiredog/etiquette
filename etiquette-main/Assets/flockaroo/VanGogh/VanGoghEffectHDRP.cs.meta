@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b3419bba0ff6dd88b8f8cb41bb12b8c7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174199
+  packageName: Van Gogh
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/VanGogh/VanGoghEffectHDRP.cs
+  uploadId: 760244

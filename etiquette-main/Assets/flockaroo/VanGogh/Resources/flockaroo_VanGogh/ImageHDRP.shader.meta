@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fd9d0080aa28463d28d1705b9ee3918a
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174199
+  packageName: Van Gogh
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/VanGogh/Resources/flockaroo_VanGogh/ImageHDRP.shader
+  uploadId: 760244

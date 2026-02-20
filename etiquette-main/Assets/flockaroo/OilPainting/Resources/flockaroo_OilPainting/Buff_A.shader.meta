@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f31706c430832401a9e64ab6c5790804
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/Resources/flockaroo_OilPainting/Buff_A.shader
+  uploadId: 760240

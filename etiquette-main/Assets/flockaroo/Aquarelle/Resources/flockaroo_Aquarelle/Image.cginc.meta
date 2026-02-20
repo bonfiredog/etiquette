@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cf7d289d35bde0e84be933a0ea85c01b
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 173209
+  packageName: Aquarelle
+  packageVersion: 1.6
+  assetPath: Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/Image.cginc
+  uploadId: 760246

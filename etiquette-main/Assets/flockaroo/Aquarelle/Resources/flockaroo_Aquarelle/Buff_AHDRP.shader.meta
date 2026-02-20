@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e238402b764b80186bdba8dda1232602
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 173209
+  packageName: Aquarelle
+  packageVersion: 1.6
+  assetPath: Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/Buff_AHDRP.shader
+  uploadId: 760246

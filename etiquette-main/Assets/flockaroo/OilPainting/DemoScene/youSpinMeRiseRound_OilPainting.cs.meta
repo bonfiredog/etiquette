@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e8778bdd87f1849938600bd5f8b2fe0b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/DemoScene/youSpinMeRiseRound_OilPainting.cs
+  uploadId: 760240

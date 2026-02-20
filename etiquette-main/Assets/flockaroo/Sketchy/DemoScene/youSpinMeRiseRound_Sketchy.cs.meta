@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a70a1538ecc1da82ca2cd14f54318628
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/DemoScene/youSpinMeRiseRound_Sketchy.cs
+  uploadId: 760243

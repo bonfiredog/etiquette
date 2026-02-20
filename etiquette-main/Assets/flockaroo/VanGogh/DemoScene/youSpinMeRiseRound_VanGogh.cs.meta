@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fb0288f4ce82d219da01c64288c63434
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174199
+  packageName: Van Gogh
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/VanGogh/DemoScene/youSpinMeRiseRound_VanGogh.cs
+  uploadId: 760244

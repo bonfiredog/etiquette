@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 545123970bf628386bcc3bd31314a262
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/OilPaintingEffectURP.cs
+  uploadId: 760240

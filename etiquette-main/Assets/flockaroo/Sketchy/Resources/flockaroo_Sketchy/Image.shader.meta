@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d83ef472223c9c6c3898dc394c2a6f23
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/Resources/flockaroo_Sketchy/Image.shader
+  uploadId: 760243

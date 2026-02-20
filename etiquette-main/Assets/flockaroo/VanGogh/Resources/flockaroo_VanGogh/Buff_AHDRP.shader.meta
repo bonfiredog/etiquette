@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cea307e5451e4c657846c218397ea696
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174199
+  packageName: Van Gogh
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/VanGogh/Resources/flockaroo_VanGogh/Buff_AHDRP.shader
+  uploadId: 760244

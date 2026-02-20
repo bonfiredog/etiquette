@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8c2c0f30f9b31345f8fa210c092e158e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/SketchyEffectHDRP.cs
+  uploadId: 760243

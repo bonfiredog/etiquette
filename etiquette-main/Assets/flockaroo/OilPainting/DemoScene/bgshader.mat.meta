@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aa69b6245802d4faebe678fc8c3d705a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/DemoScene/bgshader.mat
+  uploadId: 760240

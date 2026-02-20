@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c5044174e0f3cb296a9714db967be1f2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 173209
+  packageName: Aquarelle
+  packageVersion: 1.6
+  assetPath: Assets/flockaroo/Aquarelle/AquarelleEffect.cs
+  uploadId: 760246

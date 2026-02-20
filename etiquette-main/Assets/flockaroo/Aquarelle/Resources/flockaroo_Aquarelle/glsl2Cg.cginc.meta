@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9e144977bfe643e7488c5897c623eb66
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 173209
+  packageName: Aquarelle
+  packageVersion: 1.6
+  assetPath: Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/glsl2Cg.cginc
+  uploadId: 760246

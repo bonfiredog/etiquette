@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d539d1b2b118948ae9062c680b7a72d9
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/Resources/flockaroo_OilPainting/Buff_A.cginc
+  uploadId: 760240

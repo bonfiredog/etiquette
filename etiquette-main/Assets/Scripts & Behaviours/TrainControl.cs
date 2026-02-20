@@ -41,7 +41,10 @@ public class TrainControl : MonoBehaviour
     private float delayTime;
     private float brakeSpeed;
     generateTrainTunnel ttg;
-   
+    public float currentMiles;
+    public string delaytype;
+    public int delayTimer;
+    
 
    
     // Start is called before the first frame update
@@ -56,6 +59,7 @@ public class TrainControl : MonoBehaviour
         trainTopSpeedOriginal = trainTopSpeed; //For when the train's top speed is affected by weather or gradient, good to know what we originally set it to!
         ss = scheduler.GetComponent<StationScheduler>();
         ttg = GameObject.Find("generator_passingtrain").GetComponent<generateTrainTunnel>();
+        currentMiles = 0;
     }
 
     // Update is called once per frame
@@ -144,10 +148,6 @@ public class TrainControl : MonoBehaviour
                                     textgen.generateTextFromGrammar(thisDelay.GetComponent<TextMeshPro>());
                                 }
 
-
-
-
-                               
 
                                 //Reset the delay timer.
                                 ss.nextStationDelayTimer = Random.Range(ss.milesToNextStation * 0.25f, ss.milesToNextStation * 0.75f);

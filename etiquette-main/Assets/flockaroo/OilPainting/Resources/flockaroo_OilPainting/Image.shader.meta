@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5ce624c6dda054e5ebc566562bf05751
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/Resources/flockaroo_OilPainting/Image.shader
+  uploadId: 760240

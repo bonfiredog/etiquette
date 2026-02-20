@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4a6f5a5cd836e3433859ae197ea73563
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 173209
+  packageName: Aquarelle
+  packageVersion: 1.6
+  assetPath: Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/Geom_A.cginc
+  uploadId: 760246

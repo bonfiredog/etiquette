@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6bea802e354597d9b85b3191f9bb85e7
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 173209
+  packageName: Aquarelle
+  packageVersion: 1.6
+  assetPath: Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/Geom_AHDRP.shader
+  uploadId: 760246

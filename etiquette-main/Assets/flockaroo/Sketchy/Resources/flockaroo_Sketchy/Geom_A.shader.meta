@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e2fdc27df3b0cedfa9fdef3dadd99b58
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/Resources/flockaroo_Sketchy/Geom_A.shader
+  uploadId: 760243

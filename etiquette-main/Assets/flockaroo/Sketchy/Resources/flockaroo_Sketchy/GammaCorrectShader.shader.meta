@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3824ce2fe97eb0240a6e3f2dd843e82c
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/Resources/flockaroo_Sketchy/GammaCorrectShader.shader
+  uploadId: 760243

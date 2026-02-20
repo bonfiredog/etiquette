@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a2c852431fdc94af693307c96c9731a1
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/Resources/flockaroo_OilPainting/glsl2Cg.cginc
+  uploadId: 760240

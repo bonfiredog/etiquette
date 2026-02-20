@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f0517ad321fb7d697b39c9da237baa9e
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174199
+  packageName: Van Gogh
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/VanGogh/Resources/flockaroo_VanGogh/glsl2Cg.cginc
+  uploadId: 760244

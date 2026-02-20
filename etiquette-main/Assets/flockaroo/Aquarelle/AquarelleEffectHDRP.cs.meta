@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 98d830ad324ba6cf688b652e7079b79a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 173209
+  packageName: Aquarelle
+  packageVersion: 1.6
+  assetPath: Assets/flockaroo/Aquarelle/AquarelleEffectHDRP.cs
+  uploadId: 760246

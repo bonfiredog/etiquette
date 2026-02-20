@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 55cdbeb74e6bd2bffb823ce1d28884d8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174199
+  packageName: Van Gogh
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/VanGogh/VanGoghEffectURP.cs
+  uploadId: 760244

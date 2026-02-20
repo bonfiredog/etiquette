@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 77d7b60ee171428aeb89c0be73f2e293
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/DemoScene/bgshader.mat
+  uploadId: 760243

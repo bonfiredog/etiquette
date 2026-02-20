@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c9c7dfa623275a2e4b87ddd19491aba9
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/Resources/flockaroo_Sketchy/ImageHDRP.shader
+  uploadId: 760243

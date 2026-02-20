@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5b3b8c5af58452de7bfd3e844cf181f5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174199
+  packageName: Van Gogh
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/VanGogh/DemoScene/bgshader.mat
+  uploadId: 760244

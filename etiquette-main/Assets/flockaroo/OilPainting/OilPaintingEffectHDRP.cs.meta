@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d6c9c16136b0cf37ba46ccc5e29d3bdc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/OilPaintingEffectHDRP.cs
+  uploadId: 760240

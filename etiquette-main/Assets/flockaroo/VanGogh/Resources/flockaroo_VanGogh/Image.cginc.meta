@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1e5c848d19163a934826b90cb1a97ecf
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174199
+  packageName: Van Gogh
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/VanGogh/Resources/flockaroo_VanGogh/Image.cginc
+  uploadId: 760244

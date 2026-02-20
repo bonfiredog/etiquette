@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.IO;
 using TMPro;
 
 public class timetableproperties : MonoBehaviour
@@ -18,11 +19,27 @@ private int workingHour;
 private int workingMinute;
 private string workingHourString;
 private string workingMinuteString;
+public DateTime starttime;
+public DateTime endtime;
+
+    [System.Serializable]
+    public class ScheduleEntry
+    {
+        public string arrive;
+        public string leave;
+    }
+
+    [System.Serializable]
+    public class ScheduleData
+    {
+        public ScheduleEntry[] entries;
+    }
 
 
 void Start() {
     data = dataObject.GetComponent<dataTest>();
     ss = stationObj.GetComponent<StationScheduler>();
+    starttime = DateTime.Now;
 }
 
     void Update()
@@ -30,10 +47,14 @@ void Start() {
          if (startButton.clicked && thisrun == false) {
             DateTime now = DateTime.Now;
 
-string dayOrdinal = DayToOrdinal(now.Day);
-dayOrdinal = char.ToUpper(dayOrdinal[0]) + dayOrdinal.Substring(1);
+    string dayOrdinal = DayToOrdinal(now.Day);
+    dayOrdinal = char.ToUpper(dayOrdinal[0]) + dayOrdinal.Substring(1);
 string monthName = MonthToName(now.Month);
 string time24 = now.ToString("HH.mm");
+
+
+
+
 int currentHour = DateTime.Now.Hour;
 workingHour = currentHour;
 int currentMinute = DateTime.Now.Minute;
@@ -64,6 +85,7 @@ Debug.Log($"AS:{averageSpeed}");
 //Special Cases: London Paddington and Penzance
 if (x == 1) {
 thislinetext.text = $"            {time24}                     {stationRegress}";
+//UpdateScheduleEntry(x, "leave", time24);
 } else if (x != 1) {
 //Get the time of arrival.
 int timeminutes = Mathf.RoundToInt((distance / averageSpeed) / 60);
@@ -88,6 +110,8 @@ if (workingMinute < 10) {
 
 
 string arrivalTime = $"{workingHourString}.{workingMinuteString}";
+//UpdateScheduleEntry(x, "arrive", arrivalTime);
+
 
 Debug.Log($"AT:{arrivalTime}");
 
@@ -116,13 +140,22 @@ if (workingMinute < 10) {
 
 
 string leaveTime = $"{workingHourString}.{workingMinuteString}";
-
-
+//UpdateScheduleEntry(x, "leave", leaveTime);
 
 if (x != 68) {
 thislinetext.text = $"{arrivalTime} / {leaveTime}                    {stationRegress}";
 } else {
   thislinetext.text = $"{arrivalTime}                      0";  
+  //Save the finish time
+  int endhour = int.Parse(workingHourString);
+    int endminute = int.Parse(workingMinuteString);
+  endtime = DateTime.Today.AddHours(endhour).AddMinutes(endminute);
+
+// If the time has already passed today, you might want it for tomorrow:
+if (endtime < DateTime.Now)
+{
+    endtime = endtime.AddDays(1);
+}
 }
 } 
 }
@@ -131,13 +164,6 @@ thisrun = true;
          }
     }
 
-
-
-
-
-
- 
-        
 
     string DayToOrdinal(int day)
 {
@@ -169,4 +195,43 @@ string MonthToName(int month)
         // Average speed formula
         return distance / (2f * tAccel + (distance - 2f * dAccel) / vMax);
     }
+
+
+/*public void UpdateScheduleEntry(int entryNumber, string arriveOrLeave, string value)
+    {
+        // Path to the JSON file in Assets folder
+        string path = Application.dataPath + "/schedule.json";
+
+        // Check if file exists
+        if (!File.Exists(path))
+        {
+            Debug.LogError("schedule.json not found in Assets folder!");
+            return;
+        }
+
+        // Read the JSON file
+        string json = File.ReadAllText(path);
+        ScheduleData scheduleData = JsonUtility.FromJson<ScheduleData>(json);
+
+
+
+        // Update the appropriate field
+        if (arriveOrLeave == "arrive")
+        {
+            scheduleData.entries[entryNumber].arrive = value;
+        }
+        else // "leave"
+        {
+            scheduleData.entries[entryNumber].leave = value;
+        }
+
+        // Write back to the JSON file
+        string updatedJson = JsonUtility.ToJson(scheduleData, true); // true = pretty print
+        File.WriteAllText(path, updatedJson);
+
+        Debug.Log($"Updated entry {entryNumber}, {arriveOrLeave} = {value}");
+    }
+*/
+
+
 }

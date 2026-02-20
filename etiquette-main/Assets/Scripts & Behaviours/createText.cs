@@ -110,7 +110,7 @@ public class createText : MonoBehaviour
 
 
         //Count down this generator's timer, based on the train's current speed. So if the train's speed is 0, the timer won't go down.
-        if (timer > 0)
+        if (timer > 0 && tc.delaying == false)
         {
             timer -= ((1 / tc.trainTopSpeed) * tc.trainCurrentSpeed) * timerMulti * Time.deltaTime;
             

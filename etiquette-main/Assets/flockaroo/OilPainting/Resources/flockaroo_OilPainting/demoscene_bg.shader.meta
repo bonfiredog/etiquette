@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1c792aec6dc1940f694c50efe6436f13
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/Resources/flockaroo_OilPainting/demoscene_bg.shader
+  uploadId: 760240

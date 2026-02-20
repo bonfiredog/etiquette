@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ce7fdd43bb7b5f9a099a4dc8dd2aac5c
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/Resources/flockaroo_Sketchy/Geom_AHDRP.shader
+  uploadId: 760243

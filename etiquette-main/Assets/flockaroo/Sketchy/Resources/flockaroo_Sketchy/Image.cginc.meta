@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f1f437e150b6f3a1bbbdc833d5b40c3a
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/Resources/flockaroo_Sketchy/Image.cginc
+  uploadId: 760243

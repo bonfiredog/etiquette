@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 10bcebf36887a8ca08abe539c2b7770c
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/Resources/flockaroo_OilPainting/Geom_AHDRP.shader
+  uploadId: 760240

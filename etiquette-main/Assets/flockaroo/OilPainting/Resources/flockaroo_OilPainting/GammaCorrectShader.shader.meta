@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b385ca34658f807e285bc71119b269dd
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/Resources/flockaroo_OilPainting/GammaCorrectShader.shader
+  uploadId: 760240

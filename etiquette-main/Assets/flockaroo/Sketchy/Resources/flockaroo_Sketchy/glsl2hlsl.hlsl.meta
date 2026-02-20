@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3ad8e5168218c7942b5d1e1e07751f2d
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/Resources/flockaroo_Sketchy/glsl2hlsl.hlsl
+  uploadId: 760243

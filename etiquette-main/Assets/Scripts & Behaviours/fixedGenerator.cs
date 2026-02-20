@@ -11,10 +11,15 @@ public class fixedGenerator : MonoBehaviour
     public string myTag;
     public string grammarName;
     public float timerMulti;
+    public GameObject mytext;
 
     private float timer;
     private TrainControl tc;
     private bool stopped = false; 
+    private BendyTextPath bend;
+    private BendyTextAnimator animate;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +31,8 @@ public class fixedGenerator : MonoBehaviour
         if (myTag == "window")
         {
              tc = GameObject.Find("trainController").GetComponent<TrainControl>();
+             bend = mytext.GetComponent<BendyTextPath>();
+             animate = mytext.GetComponent<BendyTextAnimator>();
         }
     }
 
@@ -34,34 +41,44 @@ public class fixedGenerator : MonoBehaviour
     {
       if (myTag == "window")
         {
-            if (stopped == false)
+           
+                 if (stopped == false)
             {
-                if (tc.trainCurrentSpeed < 2)
-                {
-                    if (timer > 0)
+                 if (tc.trainCurrentSpeed < 1 && tc.docked == true) {
+             if (timer > 0)
                     {
                         timer -= 1 * Time.deltaTime * timerMulti;
-                    }
-                    else
+                    }  else
                     {
-                        //Generate
+                        //Regenerate the text, path bend, and animate
                         var thisTextGen = myText.GetComponent<textGenerationControl>();
                         thisTextGen.setGrammarForObject(grammarName);
                         thisTextGen.generateTextFromGrammar(myText);
+                        bend.RandomizePath();
+                        bend.ApplyBend();
+                        animate.Activate();
                         stopped = true;
                     }
-                }
-            } else
-            {
-                if (tc.trainCurrentSpeed > 3)
-                {
+            } 
+            } else if (stopped == true) {
+                if (tc.docked == false) {
+                    //Retract the text, set the "".
+                    animate.ReverseActivate();
+
+                    Invoke("resetText", 3);
                     stopped = false;
-                    timer = Random.Range(timerMin, timerMax);
-                    myText.text = "";
+                     timer = Random.Range(timerMin, timerMax);
                 }
-            }
-           
+            }  
         }
-        
+        }
+
+        void resetText() {
+            myText.text = "";
+        }
     }
-}
+
+
+                  
+                   
+           

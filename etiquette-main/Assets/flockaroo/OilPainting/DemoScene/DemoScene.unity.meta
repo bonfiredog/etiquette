@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 011dbb86a988d9440ba31725043d8a19
+timeCreated: 1546619418
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136385
+  packageName: Oil Painting
+  packageVersion: 1.4
+  assetPath: Assets/flockaroo/OilPainting/DemoScene/DemoScene.unity
+  uploadId: 760240

@@ -33,6 +33,13 @@ public class rockingController : MonoBehaviour
     [SerializeField] private float joltDuration = 0.3f;      // How long each jolt lasts
     [SerializeField] private AnimationCurve joltCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
+    [Header("Sudden Jolt")]
+    [SerializeField] private float suddenJoltDuration = 0.3f;
+    [SerializeField] private Vector2 suddenJoltForwardBackward = new Vector2(-0.5f, 0.5f);
+    [SerializeField] private Vector2 suddenJoltUpDown = new Vector2(-0.3f, 0.6f);
+    [SerializeField] private Vector2 suddenJoltLeftRight = new Vector2(-0.4f, 0.4f);
+    [SerializeField] private float suddenJoltStrength = 1f;
+
     public GameObject tcObj;
     public GameObject cameraObj;
     private TrainControl tc;
@@ -236,5 +243,36 @@ public class rockingController : MonoBehaviour
         currentJoltOffset = Vector3.zero;
         ScheduleNextJolt();
     }
+
+public void SuddenJolt(float strengthOverride = -1f, float durationOverride = -1f)
+{
+    float strength = strengthOverride >= 0 ? strengthOverride : suddenJoltStrength;
+    float duration = durationOverride >= 0 ? durationOverride : suddenJoltDuration;
+
+    joltTargetOffset = new Vector3(
+        Random.Range(suddenJoltForwardBackward.x, suddenJoltForwardBackward.y) * strength,
+        Random.Range(suddenJoltUpDown.x, suddenJoltUpDown.y) * strength,
+        Random.Range(suddenJoltLeftRight.x, suddenJoltLeftRight.y) * strength
+    );
+
+    // Override duration temporarily and start the jolt
+    StartCoroutine(SuddenJoltCoroutine(duration));
+}
+
+private IEnumerator SuddenJoltCoroutine(float duration)
+{
+    isJolting = true;
+    joltStartTime = Time.time;
+    float originalDuration = joltDuration;
+    joltDuration = duration;
+
+    yield return new WaitUntil(() => !isJolting || (Time.time - joltStartTime) >= duration);
+
+    // Restore original jolt duration and clean up
+    joltDuration = originalDuration;
+    isJolting = false;
+    currentJoltOffset = Vector3.zero;
+}
+
 }
       

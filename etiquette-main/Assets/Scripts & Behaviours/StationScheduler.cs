@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.IO;
 
 public class StationScheduler : MonoBehaviour
 {
@@ -50,12 +51,44 @@ public class StationScheduler : MonoBehaviour
     public string currentweather = "clear";
     private GameObject sec;
      private startEndController startcontrol;
+     private float timediscrepMod;
+     public GameObject timetable;
+     private timetableproperties ttp;
+     private float currentMiles;
+     private float idealMiles;
+     private float metragediscrep;
+     private bool chancepassingtrain = false;
+     private bool chanceaccident = false;
+     public GameObject timecontroller;
+     
 
 
     TrainControl tc;
     private dataTest data;
     private bool loadInitialData = false;
     private generateStation genscript;
+
+    public class ClosestTimeResult
+    {
+        public int entryNumber;
+        public string timeType; // "arrive" or "leave"
+        public string timeValue;
+        public TimeSpan difference;
+    }
+
+        [System.Serializable]
+    public class ScheduleEntry
+    {
+        public string arrive;
+        public string leave;
+        public int miles;
+    }
+
+    [System.Serializable]
+    public class ScheduleData
+    {
+        public ScheduleEntry[] entries;
+    }
 
 
     //===============================================================================================
@@ -70,6 +103,9 @@ public class StationScheduler : MonoBehaviour
         updateGrammarVariables();
                sec = GameObject.Find("startEndController");
        startcontrol = sec.GetComponent<startEndController>();
+        ttp = timetable.GetComponent<timetableproperties>();
+        currentMiles = 0;
+        nextStationDelayTimer = 50;
 
     }
 
@@ -79,7 +115,10 @@ public class StationScheduler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        updateGrammarVariables();
+       // updateGrammarVariables();
+
+        //Keep track of the miles covered 
+        currentMiles += tc.trainCurrentSpeed * Time.deltaTime;
 
         //Load in the data for the first time from the JSON, to get the initial station data.
         if (loadInitialData == false)
@@ -197,28 +236,75 @@ public class StationScheduler : MonoBehaviour
 
 
 
+//======================================================================================
         //DELAYING
+        //Keep track of the current time discrepancy (between 'local' and 'railway') - between 1 & 100.
+        timediscrepMod = ((System.Math.Abs(tc.currentLong * 4)) / 25) * 100;
 
-        //If we are able to delay and not get in the way of any other functionality...
-        if (milesToNextStation > (milesToNextStation * 0.25f) && tc.docked == false && tc.docking == false && tc.delaying == false)
+        //We can only TRY to delay the train if it is between stations (with a good buffer), and it is not already delaying.
+
+         if (milesToNextStation > (milesToNextStation * 0.1f) && tc.docked == false && tc.docking == false && tc.delaying == false)
         {
-            //The timer goes down...
+        //Reduce the timer.
             if (nextStationDelayTimer > 0) {
                 nextStationDelayTimer -= 1 * Time.deltaTime;
-            } else
-            {
-            //We check for a random chance of a delay occurring. If it does, start delaying.
-                var delayChance = UnityEngine.Random.Range(0, 100);
-                if (delayChance <= nextStationDelayChance)
-                {
-                    tc.delaying = true;
-                    delayTimer = UnityEngine.Random.Range(60, 2000);
-                }
-            }
-        }
- 
+            } else {
+            // When the timer reaches zero...
+            //Chance Of A Train?
+             int diceroll = UnityEngine.Random.Range(1, 101);
+                  if (diceroll <= 10) {
+             
+                chancepassingtrain = true;
+                  } else {
+                    chancepassingtrain = false;
+                  }
 
-    }
+            //Chance Of An Accident
+
+            //Youll need to work out the discerpancy of current miles vs. ideal miles. 
+            //To get ideal miles, find which station from schedule.json is closest to the current time (which was the last station...)
+            int entryNumber = FindClosestPastTime();
+            int nextStationentryNumber = entryNumber + 1;
+            DateTime lastStationLeave = ParseTimeString(GetEntry(entryNumber).leave);
+            DateTime nextStationArrive = ParseTimeString(GetEntry(nextStationentryNumber).arrive);
+            TimeSpan minuteDifference = nextStationArrive - lastStationLeave;
+            TimeSpan sinceLastStation = DateTime.Now - lastStationLeave;
+            //Find out how many miles past last station you SHOULD be, based on the time...
+            float percentBetweenStations = (float)(sinceLastStation.TotalMinutes / minuteDifference.TotalMinutes) * 100f;
+            idealMiles = GetEntry(entryNumber).miles + (((GetEntry(nextStationentryNumber).miles - GetEntry(entryNumber).miles) / 100) * percentBetweenStations);
+
+            metragediscrep = idealMiles - currentMiles;
+
+
+            //Randomly choose a number of sentences from sentences.json (a percentage of the total);
+            //Add more for:
+            //Time Discrep Mod
+            //Metrage discrepancy
+            //TOD (darkness is higher chance).
+            //Weather (certain weathers have higher chance).
+
+            //From those sentences... are trains mentioned anywhere? If so, we have an accident (and turn off chancepassingtrain)
+
+            if (chanceaccident == true || chancepassingtrain == true) {
+                    tc.delaying = true;
+                    if (chanceaccident == true) {
+                    tc.delaytype = "accident";
+                    } else {
+                     tc.delaytype = "train";
+                    }
+
+                    //Create texts at the appropriate distance to be perfectly aligned with window when the train stops.
+            }
+            //Reset Tmer
+            chancepassingtrain = false;
+            chanceaccident = false;
+            nextStationDelayTimer = UnityEngine.Random.Range(20, 50);
+            }
+                    
+                }
+}
+
+
 
     //================================ GETTING NEXT STATION DATA FROM JSON
     //Note that different data types need different methods. String and int should be enough.
@@ -238,8 +324,6 @@ private void getStationData(int station)
         currentTerrain = getStationDataPointString(nextStation, "terrain");
         currentUrbanDensity = getStationDataPointInt(nextStation, "urbanDensity");
         nextStationDelayChance = getStationDataPointInt(station, "delayChance");
-        nextStationDelayTimer = UnityEngine.Random.Range(milesToNextStation * 0.25f, milesToNextStation * 0.75f);
-
        
     }
 
@@ -439,4 +523,118 @@ public string getStationDataPointString(int station, string keyname)
         }
     }
 
+
+public int FindClosestPastTime()
+{
+    // Path to the JSON file
+    string path = Application.dataPath + "/schedule.json";
+
+    if (!File.Exists(path))
+    {
+        Debug.LogError("schedule.json not found!");
+        return -1;
+    }
+
+    // Read the JSON file
+    string json = File.ReadAllText(path);
+    ScheduleData scheduleData = JsonUtility.FromJson<ScheduleData>(json);
+
+    DateTime now = DateTime.Now;
+    TimeSpan smallestDifference = TimeSpan.MaxValue;
+    int closestEntryNumber = -1;
+
+    // Go through each entry
+    for (int i = 0; i < scheduleData.entries.Length; i++)
+    {
+        ScheduleEntry entry = scheduleData.entries[i];
+
+        // Check arrive time
+        if (!string.IsNullOrEmpty(entry.arrive))
+        {
+            DateTime arriveTime = ParseTimeString(entry.arrive);
+            TimeSpan difference = now - arriveTime;
+
+            // Only consider if it's in the past (positive difference)
+            if (difference.TotalSeconds > 0 && difference < smallestDifference)
+            {
+                smallestDifference = difference;
+                closestEntryNumber = i;
+            }
+        }
+
+        // Check leave time
+        if (!string.IsNullOrEmpty(entry.leave))
+        {
+            DateTime leaveTime = ParseTimeString(entry.leave);
+            TimeSpan difference = now - leaveTime;
+
+            // Only consider if it's in the past (positive difference)
+            if (difference.TotalSeconds > 0 && difference < smallestDifference)
+            {
+                smallestDifference = difference;
+                closestEntryNumber = i;
+            }
+        }
+    }
+
+    if (closestEntryNumber == -1)
+    {
+        Debug.LogWarning("No past times found in schedule!");
+        return -1;
+    }
+
+    Debug.Log($"Closest past time is in entry {closestEntryNumber} " +
+              $"({smallestDifference.TotalMinutes:F1} minutes ago)");
+
+    return closestEntryNumber;
+}
+
+private DateTime ParseTimeString(string timeString)
+{
+    // Expected format: "HH:mm" or "H:mm" (e.g., "09:30" or "9:30")
+    string[] parts = timeString.Split(':');
+    
+    if (parts.Length != 2)
+    {
+        Debug.LogWarning($"Invalid time format: {timeString}");
+        return DateTime.MinValue;
+    }
+
+    int hour, minute;
+    if (int.TryParse(parts[0], out hour) && int.TryParse(parts[1], out minute))
+    {
+        if (hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59)
+        {
+            return DateTime.Today.AddHours(hour).AddMinutes(minute);
+        }
+    }
+
+    Debug.LogWarning($"Invalid time values: {timeString}");
+    return DateTime.MinValue;
+}
+
+public ScheduleEntry GetEntry(int entryNumber)
+{
+    // Path to the JSON file
+    string path = Application.dataPath + "/schedule.json";
+
+    if (!File.Exists(path))
+    {
+        Debug.LogError("schedule.json not found!");
+        return null;
+    }
+
+    // Read the JSON file
+    string json = File.ReadAllText(path);
+    ScheduleData scheduleData = JsonUtility.FromJson<ScheduleData>(json);
+
+    // Validate entry number
+    if (entryNumber < 0 || entryNumber >= scheduleData.entries.Length)
+    {
+        Debug.LogError($"Invalid entry number: {entryNumber}");
+        return null;
+    }
+
+    return scheduleData.entries[entryNumber];
+}
 }

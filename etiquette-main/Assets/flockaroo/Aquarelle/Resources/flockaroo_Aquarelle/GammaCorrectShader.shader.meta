@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1e7a64e6a7731d87881cd7b4a33378e9
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 173209
+  packageName: Aquarelle
+  packageVersion: 1.6
+  assetPath: Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/GammaCorrectShader.shader
+  uploadId: 760246

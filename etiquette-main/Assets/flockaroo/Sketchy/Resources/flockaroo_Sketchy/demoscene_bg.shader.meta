@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ad51dabe1db3880a7a9ffd626c008518
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174197
+  packageName: Sketchy
+  packageVersion: 1.2
+  assetPath: Assets/flockaroo/Sketchy/Resources/flockaroo_Sketchy/demoscene_bg.shader
+  uploadId: 760243

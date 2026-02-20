@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bc8d9e6bdf9e682769f8b6af3e088abc
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 173209
+  packageName: Aquarelle
+  packageVersion: 1.6
+  assetPath: Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/Buff_B.cginc
+  uploadId: 760246
