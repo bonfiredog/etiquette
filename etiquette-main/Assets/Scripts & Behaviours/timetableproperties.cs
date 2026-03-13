@@ -59,7 +59,7 @@ int currentHour = DateTime.Now.Hour;
 workingHour = currentHour;
 int currentMinute = DateTime.Now.Minute;
 workingMinute = currentMinute;
-Debug.Log($"{dayOrdinal} {monthName}, {time24}");
+
 
 TextMeshPro dateentry = dateObj.GetComponent<TextMeshPro>();
 dateentry.text = $"{dayOrdinal} {monthName}";
@@ -72,15 +72,15 @@ GameObject thisline = GameObject.Find("times" + x);
 TextMeshPro thislinetext = thisline.GetComponent<TextMeshPro>();
 
 stationLong = Mathf.Round(float.Parse(ss.getStationDataPointString(x, "longitude")));  
-Debug.Log($"SL: {stationLong}");
+
 stationRegress = System.Math.Abs(stationLong* 4).ToString();
 
 float distance = (float)ss.getStationDataPointInt(x, "distanceFromLastStation");
-Debug.Log($"dist: {distance}");
+
 float topspeed = 26.9f;
 float acceleration = 0.3f;
 float averageSpeed = GetAverageSpeed(distance, topspeed, acceleration);
-Debug.Log($"AS:{averageSpeed}");
+
 
 //Special Cases: London Paddington and Penzance
 if (x == 1) {
@@ -113,7 +113,7 @@ string arrivalTime = $"{workingHourString}.{workingMinuteString}";
 //UpdateScheduleEntry(x, "arrive", arrivalTime);
 
 
-Debug.Log($"AT:{arrivalTime}");
+
 
 TimeSpan leavestartTime = new TimeSpan(workingHour, workingMinute, 0);
 int waitaverage = ss.getStationDataPointInt(x, "minStationStay") + (ss.getStationDataPointInt(x, "maxStationStay") - ss.getStationDataPointInt(x, "minStationStay"));

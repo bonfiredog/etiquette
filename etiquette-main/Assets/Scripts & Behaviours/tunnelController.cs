@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class tunnelController : MonoBehaviour
 {
-    [HideInInspector]
+  
     public float speed;
-    [HideInInspector]
     public float topspeed;
     public string type;
     private TrainControl tc;

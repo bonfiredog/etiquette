@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
+using System.Linq;
 
 public class StationScheduler : MonoBehaviour
 {
@@ -53,13 +54,148 @@ public class StationScheduler : MonoBehaviour
      private startEndController startcontrol;
      private float timediscrepMod;
      public GameObject timetable;
+     private rockingController rocker;
      private timetableproperties ttp;
      private float currentMiles;
      private float idealMiles;
+     public bool delayTestToggle;
      private float metragediscrep;
      private bool chancepassingtrain = false;
      private bool chanceaccident = false;
      public GameObject timecontroller;
+     private string delay = "none";
+      string[] wordsToCheck = {    "train", "trains", "rail", "rails", "railway", "railways", "railroad", "railroads",
+    "station", "stations", "platform", "platforms", "track", "tracks", "signal", "signals",
+    "junction", "junctions", "depot", "depots", "yard", "yards", "crossing", "crossings",
+    "locomotive", "locomotives", "engine", "engines", "carriage", "carriages", "coach", "coaches",
+    "wagon", "wagons", "timetable", "timetables", "ticket", "tickets", "conductor", "conductors",
+    "guard", "guards", "driver", "drivers", "metro", "subway", "underground", "tube", "tram", "trams",
+    "light rail", "monorail", "level crossing", "level crossings", "carriage",
+            "first class",
+            "second class",
+            "third class",
+            "guardvan",
+            "brakevan",
+            "coach",
+            "van",
+            "truck",
+            "wagon",
+                "porter",
+            "ticketmaster",
+            "stationmaster",
+            "goods porter",
+            "attendant",
+            "steward",
+            "station lad",
+            "station cat",
+            "policeman",
+               "ticket office",
+            "waiting room",
+            "platform",
+            "storage room",
+            "attendant's office",
+            "station kitchen",
+            "goods shed",
+            "engine shed",
+            "refreshment room",
+            "tearoom",  "shunter",
+            "signalman",
+            "navvy",
+            "flagman",
+            "gateman",
+            "pointsman",
+            "wiper",
+            "platelayer",
+            "foreman",
+            "fettler",
+            "hostler",
+            "wheel tapper",
+             "fireman",
+            "conductor",
+            "brakeman",
+            "secondman",
+            "stoker",
+            "boilerman",
+            "engineman",
+            "engine",
+                "grab iron",
+            "bogie",
+            "chimney",
+            "boiler",
+            "tank",
+            "coupling",
+            "axle",
+            "cab",
+            "whistle",
+            "firebox",
+            "engine",
+            "blastpipe",
+            "fender",
+            "bell",
+            "bogie",
+            "coupler",
+            "cylinder",
+            "backhead",
+            "piston",
+            "cab",
+            "running gear",
+            "lagging",
+            "valve",
+              "cutting",
+            "siding",
+            "bridge",
+            "arch",
+            "depot",
+            "crossing",
+            "section house",
+            "headshunt",
+            "pocket track",
+            "passing loop",
+            "yard",
+            "signal nox",
+            "workshop",
+            "water crane",
+            "water stop",
+            "wye",
+            "block post",
+            "buffer stop",
+            "coaling tower",
+            "train shed",
+            "goods shed",
+            "water trough",
+            "water tank",
+            "flyover",
+            "turntable",
+            "abutment",
+            "line",
+            "tunnel",
+            "pumping station",
+            "shed",
+            "embankment",
+            "enginehouse",
+            "carriageworks",
+            "culvert",
+             "telegraph pole",
+            "signal",
+            "point",
+            "cess",
+            "whistle post",
+            "rail",
+            "fishplate",
+            "bell",
+            "track",
+            "water crane",
+            "detonator",
+            "point",
+            "crosstie",
+             "track",
+            "railway bridge",
+            "foot crossing",
+            "level crossing",
+            "tunnel",
+            "underpass",
+            "overpass"
+             };
      
 
 
@@ -67,6 +203,7 @@ public class StationScheduler : MonoBehaviour
     private dataTest data;
     private bool loadInitialData = false;
     private generateStation genscript;
+    private bool checkingdelay = false;
 
     public class ClosestTimeResult
     {
@@ -90,6 +227,23 @@ public class StationScheduler : MonoBehaviour
         public ScheduleEntry[] entries;
     }
 
+    [System.Serializable]
+public class SentenceWrapper
+{
+    public Sentence[] sentences;
+}
+
+[System.Serializable]
+public class Sentence
+{
+    public string text;
+}
+
+private createText genclose1;
+private createText genclose2;
+private createText genmiddle;
+private createText genback;
+
 
     //===============================================================================================
 
@@ -106,6 +260,11 @@ public class StationScheduler : MonoBehaviour
         ttp = timetable.GetComponent<timetableproperties>();
         currentMiles = 0;
         nextStationDelayTimer = 50;
+        rocker = GameObject.Find("Rocker").GetComponent<rockingController>();
+        genclose1 = GameObject.Find("generator_close1").GetComponent<createText>();
+        genclose2 = GameObject.Find("generator_close2").GetComponent<createText>();
+        genmiddle = GameObject.Find("generator_middle").GetComponent<createText>();
+        genback = GameObject.Find("generator_back").GetComponent<createText>();
 
     }
 
@@ -161,6 +320,7 @@ public class StationScheduler : MonoBehaviour
                 getStationData(nextStation);
 
                 tc.docked = false;
+                rocker.SuddenJolt();
                 Debug.Log("Leaving station...");
           
             }
@@ -242,67 +402,20 @@ public class StationScheduler : MonoBehaviour
         timediscrepMod = ((System.Math.Abs(tc.currentLong * 4)) / 25) * 100;
 
         //We can only TRY to delay the train if it is between stations (with a good buffer), and it is not already delaying.
-
-         if (milesToNextStation > (milesToNextStation * 0.1f) && tc.docked == false && tc.docking == false && tc.delaying == false)
+         if (milesToNextStation > (nextStationMilesTotal * 0.1f) && tc.docked == false && tc.docking == false && tc.delaying == false && checkingdelay == false && delayTestToggle == false)
         {
         //Reduce the timer.
             if (nextStationDelayTimer > 0) {
                 nextStationDelayTimer -= 1 * Time.deltaTime;
             } else {
-            // When the timer reaches zero...
-            //Chance Of A Train?
-             int diceroll = UnityEngine.Random.Range(1, 101);
-                  if (diceroll <= 10) {
-             
-                chancepassingtrain = true;
-                  } else {
-                    chancepassingtrain = false;
-                  }
-
-            //Chance Of An Accident
-
-            //Youll need to work out the discerpancy of current miles vs. ideal miles. 
-            //To get ideal miles, find which station from schedule.json is closest to the current time (which was the last station...)
-            int entryNumber = FindClosestPastTime();
-            int nextStationentryNumber = entryNumber + 1;
-            DateTime lastStationLeave = ParseTimeString(GetEntry(entryNumber).leave);
-            DateTime nextStationArrive = ParseTimeString(GetEntry(nextStationentryNumber).arrive);
-            TimeSpan minuteDifference = nextStationArrive - lastStationLeave;
-            TimeSpan sinceLastStation = DateTime.Now - lastStationLeave;
-            //Find out how many miles past last station you SHOULD be, based on the time...
-            float percentBetweenStations = (float)(sinceLastStation.TotalMinutes / minuteDifference.TotalMinutes) * 100f;
-            idealMiles = GetEntry(entryNumber).miles + (((GetEntry(nextStationentryNumber).miles - GetEntry(entryNumber).miles) / 100) * percentBetweenStations);
-
-            metragediscrep = idealMiles - currentMiles;
-
-
-            //Randomly choose a number of sentences from sentences.json (a percentage of the total);
-            //Add more for:
-            //Time Discrep Mod
-            //Metrage discrepancy
-            //TOD (darkness is higher chance).
-            //Weather (certain weathers have higher chance).
-
-            //From those sentences... are trains mentioned anywhere? If so, we have an accident (and turn off chancepassingtrain)
-
-            if (chanceaccident == true || chancepassingtrain == true) {
-                    tc.delaying = true;
-                    if (chanceaccident == true) {
-                    tc.delaytype = "accident";
-                    } else {
-                     tc.delaytype = "train";
-                    }
-
-                    //Create texts at the appropriate distance to be perfectly aligned with window when the train stops.
+                checkingdelay = true;
+                delayDecide(false);
             }
-            //Reset Tmer
-            chancepassingtrain = false;
-            chanceaccident = false;
-            nextStationDelayTimer = UnityEngine.Random.Range(20, 50);
-            }
-                    
-                }
-}
+        }
+
+
+    }
+
 
 
 
@@ -637,4 +750,201 @@ public ScheduleEntry GetEntry(int entryNumber)
 
     return scheduleData.entries[entryNumber];
 }
+
+[System.Serializable]
+public class SentenceData
+{
+    public string[] sentences;
 }
+
+
+
+
+public void delayDecide(bool autoDelay) {
+    
+ Debug.Log("1 Delaying attempt...");
+
+if (autoDelay == false) {
+
+ // We first of all determine if there is a chance of a train...
+
+             int diceroll = UnityEngine.Random.Range(1, 101);
+                  if (diceroll <= 10) {
+                    //TRIGGER DELAY WITH PASSING TRAIN
+                    tc.delaying = true;
+                    checkingdelay = false;
+                    delay = "train";
+                    rocker.SuddenJolt();
+                    createDelayText();
+                    Debug.Log("2) It's a train delay...");
+                    delayTimer = UnityEngine.Random.Range(25, 200);
+
+                    } else {
+
+                    Debug.Log ("2) No train delay, trying for an accident delay...");
+                    int todmod = 0;
+                    int seasonmod = 0;
+
+                     //if not, chance for an accident delay...
+                        bool trainwordfound = false;
+                        switch (currenttod) {
+                            case "Morning":
+                            todmod = 1;
+                            break;
+
+                            case "Afternoon":
+                            todmod = 0;
+                            break;
+
+                            case "Evening":
+                            todmod = 1;
+                            break;
+
+                            case "Night":
+                            todmod = 2;
+                            break;
+                        }
+
+                        switch (currentseason) {
+                            case "Winter":
+                            seasonmod = 2;
+                            break;
+                            
+                            case "Summer":
+                            seasonmod = 0;
+                            break;
+
+                            case "Autumn":
+                            seasonmod = 1;
+                            break;
+
+                            case "Spring":
+                            seasonmod = 1;
+                            break;
+                        
+                        }
+
+                           //Choose one (or multiple!) sentences from sentence.json, and look for a train-related word in them.
+                    //Randomly choose a number of sentences from sentences.json (a percentage of the total);
+                    //Add more for:
+                     //Time Discrep Mod
+                     //TOD (darkness is higher chance).
+                     //Weather (certain weathers have higher chance).
+                        double numberofsentences = 1 + Math.Round((2.0 / 100) * timediscrepMod) + Math.Round(2.0 * todmod) + Math.Round(2.0 * seasonmod);
+
+                        Debug.Log($"Checking {numberofsentences} sentences...");
+
+                       string path = Path.Combine(Application.streamingAssetsPath, "sentences.json");
+
+                        string json = File.ReadAllText(path);
+
+                        SentenceWrapper data = JsonUtility.FromJson<SentenceWrapper>(json);
+
+                        for (int i = 0; i < numberofsentences; i++) 
+
+                        {
+                               Sentence s = data.sentences[UnityEngine.Random.Range(0, data.sentences.Length)];
+
+                                 trainwordfound = wordsToCheck.Any(word =>
+                               s.text.ToLower().Contains(word.ToLower()));
+
+                                   Debug.Log($"Text: {s.text} | Match: {trainwordfound}");
+                        }
+
+                
+
+                        Debug.Log($"Found a train word? {trainwordfound}");
+
+                      if (trainwordfound == true) {
+                        tc.delaying = true;
+                           rocker.SuddenJolt();
+                           createDelayText();
+                        delay = "accident";
+                       checkingdelay = false;
+                       delayTimer = UnityEngine.Random.Range(25, 200);
+
+                         } else {
+                         //If nothing, exit
+                         tc.delaying = false;
+                         checkingdelay = false;
+                         delay = "none";
+                         nextStationDelayTimer = UnityEngine.Random.Range(20, 50);
+                    }
+                  }
+
+} else if (autoDelay == true) {
+    Debug.Log("Auto Delay!");
+     tc.delaying = true;
+                           rocker.SuddenJolt();
+                           createDelayText();
+                        delay = "accident";
+                       checkingdelay = false;
+                       delayTimer = UnityEngine.Random.Range(25, 200);
+}
+
+            }
+
+            private void createDelayText() {
+                    Debug.Log("Creating delay text...");
+
+                    float genclose1z;
+                    float genclose2z;
+                    float genmiddlez;
+                    float genbackz;
+
+                    float maincameraz;
+
+                    float genclose1currentspeed;
+                    float genclose2currentspeed;
+                    float genmiddlecurrentspeed;
+                    float genbackcurrentspeed;
+
+                    //Get the main camera position.
+                    maincameraz = 249.20f;
+                    Debug.Log($"Main Camera is at {maincameraz}");
+
+                    //Get current speed of all the generated texts when they are generated.
+                    genclose1currentspeed = (genclose1.assignedSpeed / tc.trainTopSpeed) * tc.trainCurrentSpeed;
+                    genclose2currentspeed = (genclose2.assignedSpeed / tc.trainTopSpeed) * tc.trainCurrentSpeed;
+                    genmiddlecurrentspeed = (genmiddle.assignedSpeed / tc.trainTopSpeed) * tc.trainCurrentSpeed;
+                    genbackcurrentspeed = (genback.assignedSpeed / tc.trainTopSpeed) * tc.trainCurrentSpeed;
+
+                    Debug.Log($"Speed for the generated text will be {genclose1currentspeed}");
+                    Debug.Log($"Current train speed is {tc.trainCurrentSpeed}");
+
+                     //Stopping Distances
+                    //If the z value of the generated text changes at 1 * currentspeed * Time.DeltaTime...
+
+                    float genclose1stoppingdistance = genclose1currentspeed * tc.trainCurrentSpeed * 0.5f;
+                    float genclose2stoppingdistance = genclose2currentspeed * tc.trainCurrentSpeed * 0.5f;
+                    float genmiddlestoppingdistance = genmiddlecurrentspeed * tc.trainCurrentSpeed * 0.5f;
+                    float genbackstoppingdistance = genbackcurrentspeed * tc.trainCurrentSpeed * 0.5f;
+
+                    Debug.Log($"Stopping distance is {genclose1stoppingdistance}");
+
+                    
+                    //Delete any texts that are close to the generators.
+
+                    GameObject[] allObjects = FindObjectsOfType<GameObject>();
+
+                     foreach (GameObject obj in allObjects)
+                       {
+                       if (obj.name == "frontgen" || obj.name == "loadup" || obj.name == "middlegen" || obj.name == "backgen" || obj.name == "belowgen")
+                      {
+                      float z = obj.GetComponent<RectTransform>().anchoredPosition3D.z;
+                        if (z < -700 && z > -3500) {
+                            Destroy(obj);
+                        }
+                         }
+                   }
+                     Debug.Log($"Created the text at Z value {-genclose1stoppingdistance + maincameraz}!");
+                    genclose1.generateMyText(-genclose1stoppingdistance + maincameraz, "DELAY TEXT");
+                    genclose2.generateMyText(-genclose2stoppingdistance + maincameraz, "DELAY TEXT");
+                    genmiddle.generateMyText(-genmiddlestoppingdistance + maincameraz, "DELAY TEXT");
+                    genback.generateMyText(-genbackstoppingdistance + maincameraz, "DELAY TEXT");
+
+            }
+
+
+}
+

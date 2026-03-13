@@ -103,7 +103,7 @@ void OpenAndCloseTimetable() {
     //If hovering over timetablefold... and click...
     
     if (holdingTimetable == false) {
-    if (Input.GetMouseButtonDown(0) && dc.currentTarget.name == "tfactual") {
+    if (Input.GetMouseButtonDown(0) && (dc.currentTarget != null && dc.currentTarget.name == "tfactual")) {
         holdingTimetable = true;
 
         Debug.Log("holding!");

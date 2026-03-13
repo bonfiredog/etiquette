@@ -81,7 +81,6 @@ void Update()
         //Generate the text randomly based on a Tracery grammar.
         thistextmesh = thisTT.transform.Find("text").GetComponent<TextMeshPro>();
         thisTextGenerator = thisTT.transform.Find("text").GetComponent<textGenerationControl>();
-        thisTextGeneratorName = thisTT.transform.Find("tunnel name").GetComponent<textGenerationControl>();
         //Make sure the grammars are correct for each one, and generate some text. 
         thisTextGenerator.setGrammarForObject(correctGrammar);
         thisTextGenerator.generateTextFromGrammar(thistextmesh);
@@ -93,7 +92,6 @@ void Update()
                 
         thistextmesh = thisTT.transform.Find("text").GetComponent<TextMeshPro>();
         thisTextGenerator = thisTT.transform.Find("text").GetComponent<textGenerationControl>();
-
 
         var thistextmeshname = thisTT.transform.Find("tunnel name").GetComponent<TextMeshPro>();
         thisTextGeneratorName = thisTT.transform.Find("tunnel name").GetComponent<textGenerationControl>();
@@ -116,9 +114,8 @@ void Update()
             //Set the width of the tunnel randomly.
         float length = Random.Range(1, 10);
         thisTT.transform.localScale = new Vector3(1,1,length);
-
+        thisTT.transform.position = new Vector3(-600f, -5.91f, -9955f);
         }
-
 
 
         if (type == "train") {
@@ -131,11 +128,8 @@ void Update()
         Vector3 cubeScale = thisCube.localScale;
         cubeScale.z = tmpWidth + (tmpWidth / 3);
         thisCube.localScale = cubeScale;
+        thisTT.transform.position = new Vector3(989f, -5.91f, -9955f);
         }
-
-        //Set its position to the generator.
-        thisTT.transform.position = new Vector3(-600f, -5.91f, -9955f);
-        //thisTT.transform.position = new Vector3(914, mypos.y, mypos.x);
     }
 
     private void setWidthOfBox(RectTransform myRect, float textWidth, float textHeight)

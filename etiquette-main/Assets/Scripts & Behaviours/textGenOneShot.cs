@@ -65,7 +65,7 @@ void Update() {
             // AAAAAND GENERATE
                 setGrammarForObject(startingGrammarName);
                 generateTextFromGrammar(myText);
-                Debug.Log("DONE");
+              
         amGenerated = true;
         }
 

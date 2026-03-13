@@ -66,7 +66,7 @@ public class generateStation : MonoBehaviour
         var thisStationMove = thisStation.GetComponent<stationMove>();
         thisStationMove.topspeed = stationTopSpeed;
         //The line below is not triggering... an object isn't being 'got'.
-        Debug.Log($"Object Check: {data}");
+      
         thisStationText.text = data.stationData.GetJSON(stationArrayNumber.ToString()).GetString("stationName");
 
         //Set its number of arches, and size of its line, based on the size.

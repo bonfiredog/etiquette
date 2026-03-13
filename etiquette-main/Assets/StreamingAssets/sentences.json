@@ -1,0 +1,39 @@
+{
+    "sentences": [
+        {
+            "text": "train",
+            "score": 0.9,
+            "source_file": "pg155_chunk3.txt",
+            "start_char": 76310,
+            "end_char": 76437
+        },
+        {
+            "text": "none",
+            "score": 0.9,
+            "source_file": "pg155_chunk3.txt",
+            "start_char": 76310,
+            "end_char": 76437
+        },
+        {
+            "text": "none",
+            "score": 0.9,
+            "source_file": "pg155_chunk3.txt",
+            "start_char": 76310,
+            "end_char": 76437
+        },
+        {
+            "text": "none",
+            "score": 0.9,
+            "source_file": "pg155_chunk3.txt",
+            "start_char": 76310,
+            "end_char": 76437
+        },
+        {
+            "text": "none",
+            "score": 0.9,
+            "source_file": "pg155_chunk3.txt",
+            "start_char": 76310,
+            "end_char": 76437
+        }
+    ]
+}

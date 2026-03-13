@@ -11,6 +11,9 @@ public class buttonFunctions : MonoBehaviour
     public GameObject tp;
     public Button joltbutton;
     public Button tunbutton;
+    public Button delaybutton;
+    private GameObject scheduleobject;
+    private StationScheduler ss;
     
     private generateTrainTunnel tpgenerator;
     private rockingController rocker;
@@ -23,6 +26,9 @@ public class buttonFunctions : MonoBehaviour
         joltbutton.onClick.AddListener(OnJoltButtonClick);
         tpgenerator = tp.GetComponent<generateTrainTunnel>();
         rocker = GameObject.Find("Rocker").GetComponent<rockingController>();
+        delaybutton.onClick.AddListener(OnDelayButtonClick);
+        scheduleobject = GameObject.Find("stationScheduleController");
+        ss = scheduleobject.GetComponent<StationScheduler>();
         
     }
 
@@ -41,6 +47,11 @@ public class buttonFunctions : MonoBehaviour
     void OnJoltButtonClick() {
         Debug.Log("Jolted!");
         rocker.SuddenJolt();
+    }
+
+    void OnDelayButtonClick() {
+        Debug.Log("Triggered A Delay!");
+        ss.delayDecide(true);
     }
 
 

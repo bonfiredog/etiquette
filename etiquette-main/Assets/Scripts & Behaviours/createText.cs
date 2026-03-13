@@ -79,11 +79,14 @@ public class createText : MonoBehaviour
                 } else {
                 NZ = mypos.z + (generateGap * i);
                 }
-                var thistrack = generateMyText(NZ);
+                
                 if (myTag == "trackgen") {
+                    var thistrack = generateMyText(NZ, "track");
                     var thistextrect = thistrack.GetComponent<RectTransform>();
                     Vector2 currentSize = thistextrect.sizeDelta;
                     thistextrect.sizeDelta = new Vector2(20000f, currentSize.y);
+                } else {
+                    var thistrack = generateMyText(NZ, "loadup");
                 }
             }
         }
@@ -110,7 +113,9 @@ public class createText : MonoBehaviour
 
 
         //Count down this generator's timer, based on the train's current speed. So if the train's speed is 0, the timer won't go down.
-        if (timer > 0 && tc.delaying == false)
+        if (myTag != "fargen") {
+        if (tc.delaying == false) {
+        if (timer > 0)
         {
             timer -= ((1 / tc.trainTopSpeed) * tc.trainCurrentSpeed) * timerMulti * Time.deltaTime;
             
@@ -133,7 +138,7 @@ public class createText : MonoBehaviour
             //If we're fine to continue...
             if (shouldgenerate == true)                
             {
-                    generateMyText(mypos.z);
+                    generateMyText(mypos.z, myTag);
 
 
 
@@ -145,14 +150,45 @@ public class createText : MonoBehaviour
             }
         }
     }
-
-    public GameObject generateMyText(float zvalue) {
-
-
-        
-              
+        } else {
+              if (timer > 0)
+        {
+            timer -= ((1 / tc.trainTopSpeed) * tc.trainCurrentSpeed) * timerMulti * Time.deltaTime;
+            
+        } 
+        else
+        {
+            //When the timer is at zero...
+            
+            //First of all, check whether you should generate a text:
+            //- Are we currently docked?
+            //- Are there any other texts on the line that would visually interfere? 
+            shouldgenerate = true;
+            currentmembers = GameObject.FindGameObjectsWithTag(myTag);
+            if (myTag != "sidegen" && myTag != "trackgen") {
+            //Working out whether we can generate...
+            }
+            
 
           
+            //If we're fine to continue...
+            if (shouldgenerate == true)                
+            {
+                    generateMyText(mypos.z, myTag);
+
+
+
+         //Finally, reset the timer to a random total.
+          timer = Random.Range(timerMin, timerMax);
+            } else {
+                  //Try again in a second.     
+              timer = 2;
+            }
+        }
+        }
+    }
+
+    public GameObject generateMyText(float zvalue, string myname) {
                 //Set the y position of the generator to a random position, within its prescribed bounds.
                 transform.position = new Vector3(transform.position.x, Random.Range(yPosLowerBound, yPosUpperBound), transform.position.z);
                 mypos = transform.position;
@@ -217,6 +253,7 @@ public class createText : MonoBehaviour
                 
 
                 }
+                thistext.name = myname;
             return thistext;
     }
 

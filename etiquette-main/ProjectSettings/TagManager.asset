@@ -22,6 +22,8 @@ TagManager:
   - inter
   - below
   - belowgen
+  - delaygen
+  - fargen
   layers:
   - Default
   - TransparentFX

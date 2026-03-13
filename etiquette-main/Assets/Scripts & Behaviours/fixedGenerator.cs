@@ -44,7 +44,7 @@ public class fixedGenerator : MonoBehaviour
            
                  if (stopped == false)
             {
-                 if (tc.trainCurrentSpeed < 1 && tc.docked == true) {
+                 if (tc.trainCurrentSpeed < 1 && (tc.docked == true || tc.delaying == true)) {
              if (timer > 0)
                     {
                         timer -= 1 * Time.deltaTime * timerMulti;
@@ -61,7 +61,7 @@ public class fixedGenerator : MonoBehaviour
                     }
             } 
             } else if (stopped == true) {
-                if (tc.docked == false) {
+                if (tc.docked == false && tc.delaying == false) {
                     //Retract the text, set the "".
                     animate.ReverseActivate();
 

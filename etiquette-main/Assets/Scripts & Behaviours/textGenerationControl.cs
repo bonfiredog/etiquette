@@ -80,7 +80,7 @@ public class textGenerationControl : MonoBehaviour
            if (oneShotText == true) {
                 setGrammarForObject(startingGrammarName);
                 generateTextFromGrammar(myText);
-                Debug.Log("DONE");
+               
              }
 
     }

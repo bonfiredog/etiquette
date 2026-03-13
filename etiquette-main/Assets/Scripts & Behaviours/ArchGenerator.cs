@@ -36,7 +36,7 @@ public class ArchGenerator : MonoBehaviour
         float roll = Random.Range(0f, 1f);
         if (roll < chanceOfNothing)
         {
-            Debug.Log("Nothing spawned this time!");
+           
             return;
         }
 
@@ -105,6 +105,6 @@ public class ArchGenerator : MonoBehaviour
 
 
 
-        Debug.Log($"Spawned: {selectedPrefab.name}");
+  
     }
 }

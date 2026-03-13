@@ -65,10 +65,10 @@
     <Compile Include="Assets/Scripts &amp; Behaviours/cameraControl.cs" />
     <Compile Include="Assets/flockaroo/Aquarelle/AquarelleEffectURP.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Examples/ParseAndHandleJSON.cs" />
+    <Compile Include="Assets/flockaroo/OilPainting/OilPaintingEffect.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/textStyleController.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/stationMove.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Internal/JSONRuntimeDebugContainer.cs" />
-    <Compile Include="Assets/flockaroo/OilPainting/OilPaintingEffect.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/TrainControl.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/traceGrammarControl.cs" />
     <Compile Include="Assets/Admin/flockaroo/ColoredPencils/ColoredPencilsEffectURP.cs" />
