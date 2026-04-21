@@ -12,8 +12,10 @@ public class buttonFunctions : MonoBehaviour
     public Button joltbutton;
     public Button tunbutton;
     public Button delaybutton;
+    public Button pausebutton;
     private GameObject scheduleobject;
     private StationScheduler ss;
+    public GameObject pausenotifier;
     
     private generateTrainTunnel tpgenerator;
     private rockingController rocker;
@@ -24,6 +26,7 @@ public class buttonFunctions : MonoBehaviour
         tpbutton.onClick.AddListener(OnButtonClick);
         tunbutton.onClick.AddListener(OnTunButtonClick);
         joltbutton.onClick.AddListener(OnJoltButtonClick);
+        pausebutton.onClick.AddListener(OnPauseButtonClick);
         tpgenerator = tp.GetComponent<generateTrainTunnel>();
         rocker = GameObject.Find("Rocker").GetComponent<rockingController>();
         delaybutton.onClick.AddListener(OnDelayButtonClick);
@@ -52,6 +55,18 @@ public class buttonFunctions : MonoBehaviour
     void OnDelayButtonClick() {
         Debug.Log("Triggered A Delay!");
         ss.delayDecide(true);
+    }
+
+    void OnPauseButtonClick() {
+        if (Time.timeScale == 1) {
+            Time.timeScale = 0;
+            pausenotifier.SetActive(true);
+        } else {
+            Time.timeScale = 1;
+            pausenotifier.SetActive(false);
+        }
+        Debug.Log("Triggered A Pause!");
+       
     }
 
 

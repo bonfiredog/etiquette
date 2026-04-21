@@ -59,12 +59,22 @@ void Update()
     var chance = Random.Range(0, 100);
     if (chance <= overallChance && ss.milesToNextStation > 3)
     {
-        generateTT("tunnel");
-    }
+        if (tc.docking == false && tc.docked == false && tc.delaying == false && ss.milesToNextStation > 5) {
 
+        var which = Random.Range(0, 100);
+        if (which <= 50) {
+            generateTT("train");
+        } else {
+            generateTT("tunnel");
+        }
+        
+    } else {
+generateTT("tunnel");
+    }
     // reset and EXIT
     timer = Random.Range(timerMin, timerMax);
     Debug.Log($"Timer reset to: {timer}");
+}
 }
 
 
@@ -74,7 +84,7 @@ void Update()
         textGenerationControl thisTextGenerator = null; 
         textGenerationControl thisTextGeneratorName = null;
 
-        Debug.Log("Generating a" + type + "! ================================|");
+        Debug.Log("Generating a " + type + "! ================================|");
         if (type == "train") {
          thisTT = Instantiate(genObjectTrain);
         var correctGrammar = type + "grammar";
@@ -84,6 +94,13 @@ void Update()
         //Make sure the grammars are correct for each one, and generate some text. 
         thisTextGenerator.setGrammarForObject(correctGrammar);
         thisTextGenerator.generateTextFromGrammar(thistextmesh);
+
+              //Assign a speed and fontSize, based on the generator, to the text object.
+        var thistextscript = thisTT.gameObject.GetComponent<tunnelController>();
+        thistextscript.speed = assignedSpeed;
+        thistextscript.topspeed = assignedSpeed;
+        thistextscript.type = type;
+        thistextmesh.fontSize = Random.Range(fontSizeLowerBound, fontSizeUpperBound);
 
         } else {
         thisTT = Instantiate(genObjectTunnel);
@@ -95,27 +112,33 @@ void Update()
 
         var thistextmeshname = thisTT.transform.Find("tunnel name").GetComponent<TextMeshPro>();
         thisTextGeneratorName = thisTT.transform.Find("tunnel name").GetComponent<textGenerationControl>();
+        
+              //Set the width of the tunnel randomly.
+        float length = Random.Range(1, 8);
+        Debug.Log("length " + length);
+        var tunnel = thisTT.transform.Find("tunnel");
+        tunnel.transform.localScale = new Vector3(5000,5000, 5000 + (1000 * length));
+        thisTT.transform.Find("text").GetComponent<RectTransform>().sizeDelta = new Vector2(100 + (20 * length), 5);
+        Vector3 currenttnpos = thisTT.transform.Find("tunnel name").GetComponent<RectTransform>().localPosition;
+        thisTT.transform.Find("tunnel name").GetComponent<RectTransform>().localPosition = new Vector3(currenttnpos.x,currenttnpos.y,currenttnpos.z - (9 * length));
+        thisTT.transform.position = new Vector3(0f, -5.91f, -9955f);
 
-        thisTextGenerator.setGrammarForObject(correctGrammar);
+      //Assign a speed and fontSize, based on the generator, to the text object.
+        var thistextscript = thisTT.gameObject.GetComponent<tunnelController>();
+        thistextscript.speed = assignedSpeed;
+        thistextscript.topspeed = assignedSpeed;
+        thistextscript.type = type;
+      
+    thisTextGenerator.setGrammarForObject(correctGrammar);
         thisTextGeneratorName.setGrammarForObject(correctGrammarTunnelName);
         thisTextGenerator.generateTextFromGrammar(thistextmesh);
         thisTextGeneratorName.generateTextFromGrammar(thistextmeshname);
 
         }                  
 
-        //Assign a speed and fontSize, based on the generator, to the text object.
-        var thistextscript = thisTT.gameObject.GetComponent<tunnelController>();
-        thistextscript.speed = assignedSpeed;
-        thistextscript.topspeed = assignedSpeed;
-        thistextscript.type = type;
-        thistextmesh.fontSize = Random.Range(fontSizeLowerBound, fontSizeUpperBound);
+  
 
-        if (type == "tunnel") {
-            //Set the width of the tunnel randomly.
-        float length = Random.Range(1, 10);
-        thisTT.transform.localScale = new Vector3(1,1,length);
-        thisTT.transform.position = new Vector3(-600f, -5.91f, -9955f);
-        }
+      
 
 
         if (type == "train") {
@@ -130,6 +153,8 @@ void Update()
         thisCube.localScale = cubeScale;
         thisTT.transform.position = new Vector3(989f, -5.91f, -9955f);
         }
+
+        
     }
 
     private void setWidthOfBox(RectTransform myRect, float textWidth, float textHeight)

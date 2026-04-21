@@ -487,6 +487,7 @@
 "Assets/Scripts & Behaviours/traceGrammarControl.cs"
 "Assets/Scripts & Behaviours/tunnelController.cs"
 "Assets/Scripts & Behaviours/windowPosition.cs"
+"Assets/Scripts & Behaviours/zThickness.cs"
 "Assets/StartButton.cs"
 "Assets/flockaroo/Aquarelle/AquarelleEffect.cs"
 "Assets/flockaroo/Aquarelle/AquarelleEffectHDRP.cs"

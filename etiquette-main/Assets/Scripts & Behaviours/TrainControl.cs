@@ -45,7 +45,7 @@ public class TrainControl : MonoBehaviour
     public string delaytype;
     private rockingController rocker;
     public createText delaytext;
-    private GameObject delayobj;
+    public GameObject delayobj;
  
     
 
@@ -64,8 +64,6 @@ public class TrainControl : MonoBehaviour
         ttg = GameObject.Find("generator_passingtrain").GetComponent<generateTrainTunnel>();
         currentMiles = 0;
         rocker = GameObject.Find("Rocker").GetComponent<rockingController>();
-        delayobj = GameObject.Find("generator_delay");
-        delaytext = delayobj.GetComponent<createText>();
     }
 
     // Update is called once per frame
@@ -140,7 +138,9 @@ public class TrainControl : MonoBehaviour
                                 //When it's finished, create a delay object some random distance from the camera, with randomly generated text from the special delay grammar.
                                 delaying = false;
                                 rocker.SuddenJolt();
-                                delaytext.generateMyText(delayobj.transform.position.z, "DELAYTEXT");
+                                GameObject delayobject = Instantiate(delayobj, new Vector3(1156,-387,-7000), Quaternion.identity);
+                                
+
 
                                 //Reset the delay timer.
                                 ss.nextStationDelayTimer = Random.Range(30,60);

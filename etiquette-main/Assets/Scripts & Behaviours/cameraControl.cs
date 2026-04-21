@@ -21,11 +21,12 @@ public class cameraControl : MonoBehaviour
     private GameObject timetablefold;
     private GameObject timetable;
     private Vector3 tfreadypos = new Vector3 (-914.5f, -769.9f, -592.2f);
-    private Vector3 ttreadypos = new Vector3 (167.2f, 2f, 43.1f);
+    private Vector3 ttreadypos = new Vector3 (-243.7f, -558.4f, 840.0f);
     private Vector3 tforiginalpos;
     private Vector3 ttoriginalpos;
     public float tfspeed = 100.0f;
     public float ttspeed = 100.0f;
+    public float xMod = 2.4f;
   
     [Header("Drag Settings")]
     [SerializeField] private float dragSensitivity = 0.5f; 
@@ -49,6 +50,7 @@ public class cameraControl : MonoBehaviour
      [HideInInspector] private float moveRangey;
 
     public float outSpeed;
+    private bool forcedBack = false;
     private float mpxPer;
     private float mpyPer;
     public float outAmount;
@@ -58,6 +60,9 @@ public class cameraControl : MonoBehaviour
     private windowPosition wp;
     private float lookmod;
     public float lookmodset = 5.0f;
+
+    [Header("Pushback Settings")]
+[SerializeField] private float pushbackSpeed = 1f;
 
     void Start()
     {
@@ -75,9 +80,9 @@ public class cameraControl : MonoBehaviour
        wp = window.GetComponent<windowPosition>();
        targetWindowAmount = wp.windowOpenAmount;
        timetablefold = GameObject.Find("timetablefold");
-       timetable = GameObject.Find("TIMETABLE");
-        tforiginalpos = timetablefold.transform.position;
-        ttoriginalpos = timetable.transform.position;
+       timetable = GameObject.Find("TIMETABLE 1");
+      tforiginalpos = timetablefold.transform.localPosition;
+ttoriginalpos = timetable.transform.localPosition;
         lookmod = 0.0f;
 
     }
@@ -94,6 +99,10 @@ public class cameraControl : MonoBehaviour
             HandleInputAndRotation();
             HandleWindowAndLeaning();
             OpenAndCloseTimetable();
+        }
+
+        if (Input.GetKeyDown(KeyCode.H)) {
+            PushBackIntoCabin();
         }
     }
 
@@ -118,24 +127,25 @@ void OpenAndCloseTimetable() {
     }
 
     if (holdingTimetable == true) {
-        //Move timetablefold to 'ready position'
-      timetablefold.transform.position =
+
+ //Move timetablefold to 'ready position'
+      timetablefold.transform.localPosition =
     Vector3.MoveTowards(
-        timetablefold.transform.position,
+        timetablefold.transform.localPosition,
         tfreadypos,
         tfspeed * Time.deltaTime
     );
 
-    
-
-       timetable.transform.position =
+        if (timetablefold.transform.localPosition == tfreadypos) {
+       timetable.transform.localPosition =
     Vector3.MoveTowards(
-        timetable.transform.position,
+        timetable.transform.localPosition,
         ttreadypos,
         ttspeed * Time.deltaTime
     );
 
     lookmod = lookmodset;
+        }
     
     }
        
@@ -148,25 +158,27 @@ void OpenAndCloseTimetable() {
     //If release cursor...
 
     //Move back to 'start positions'.
-         timetablefold.transform.position =
+
+    if (timetable.transform.localPosition == ttoriginalpos) {
+         timetablefold.transform.localPosition =
     Vector3.MoveTowards(
-        timetablefold.transform.position,
+        timetablefold.transform.localPosition,
         tforiginalpos,
         tfspeed * Time.deltaTime
     );
+    }
 
 
 
-            timetable.transform.position =
+            timetable.transform.localPosition =
     Vector3.MoveTowards(
-        timetable.transform.position,
+        timetable.transform.localPosition,
         ttoriginalpos,
         ttspeed * Time.deltaTime
     );
        lookmod = 0.0f;
     }
 }
-
 void HandleWindowAndLeaning()
 {
     if (Input.GetMouseButtonDown(0))
@@ -174,18 +186,16 @@ void HandleWindowAndLeaning()
         if (dc.currentTarget != null && dc.currentTarget.name == "handle")
         {
             isDraggingHandle = true;
-            dc.isGrabbed = true; // NEW: Lock cursor to handle
+            dc.isGrabbed = true;
             initialMouseY = Input.mousePosition.y;
             initialWindowOpenAmount = wp.windowOpenAmount;
         }
     }
 
-    if (Input.GetMouseButton(0) && isDraggingHandle)
+    if (Input.GetMouseButton(0) && isDraggingHandle && !forcedBack)
     {
         pressing = true;
 
-        // Update the cursor position to stick to the handle's current position
-        // We convert the 3D handle position to 2D screen space
         dc.grabPosition = Camera.main.WorldToScreenPoint(dc.currentTarget.transform.position);
 
         if (outAmount < 1f) 
@@ -208,21 +218,26 @@ void HandleWindowAndLeaning()
     else
     {
         isDraggingHandle = false;
-        dc.isGrabbed = false; // NEW: Unlock cursor
+        dc.isGrabbed = false;
         pressing = false;
 
-        if (wp.windowOpenAmount > 0) wp.windowOpenAmount -= windowCloseSpeed * Time.deltaTime * 10f;
-        if (outAmount > 0) outAmount -= outSpeed * Time.deltaTime * 50f;
-        
+        float retractionMultiplier = forcedBack ? pushbackSpeed : 1f;
+
+        if (wp.windowOpenAmount > 0) wp.windowOpenAmount -= windowCloseSpeed * Time.deltaTime * 10f * retractionMultiplier;
+        if (outAmount > 0) outAmount -= outSpeed * Time.deltaTime * 50f * retractionMultiplier;
         targetWindowAmount = wp.windowOpenAmount;
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            forcedBack = false;
+        }
     }
 
-    // Hide cursor when leaning out
     dc.forceHide = (outAmount > 1f);
 
     outAmount = Mathf.Clamp(outAmount, 0, 100);
     wp.windowOpenAmount = Mathf.Clamp(wp.windowOpenAmount, 0, 100);
-    transform.localPosition = new Vector3(originalX + (2.4f * outAmount), originalY + (0.1f * outAmount), transform.localPosition.z);
+    transform.localPosition = new Vector3(originalX + (xMod * outAmount), originalY + (0.1f * outAmount), transform.localPosition.z);
 }
 
     void HandleInputAndRotation()
@@ -277,4 +292,13 @@ void HandleWindowAndLeaning()
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, cameraRotateBackRate * Time.deltaTime);
         }
     }
+
+public void PushBackIntoCabin()
+{
+    forcedBack = true;
+    isDraggingHandle = false;
+    dc.isGrabbed = false;
+    pressing = false;
+    holdingTimetable = false;
+}
 }

@@ -60,7 +60,7 @@ Properties {
     _MainTex            ("Font Atlas", 2D) = "white" {}
     _TextureWidth       ("Texture Width", float) = 512
     _TextureHeight      ("Texture Height", float) = 512
-    _GradientScale      ("Gradient Scale", float) = 5.0
+    _GradientScale      ("Gradient Scale", float) = 5
     _ScaleX             ("Scale X", float) = 1.0
     _ScaleY             ("Scale Y", float) = 1.0
     _PerspectiveFilter  ("Perspective Correction", Range(0, 1)) = 0.875

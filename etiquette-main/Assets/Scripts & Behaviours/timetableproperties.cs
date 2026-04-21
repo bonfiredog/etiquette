@@ -84,7 +84,8 @@ float averageSpeed = GetAverageSpeed(distance, topspeed, acceleration);
 
 //Special Cases: London Paddington and Penzance
 if (x == 1) {
-thislinetext.text = $"            {time24}                     {stationRegress}";
+thislinetext.text = $"            {time24}                    {stationRegress}";
+thislinetext.ForceMeshUpdate();
 //UpdateScheduleEntry(x, "leave", time24);
 } else if (x != 1) {
 //Get the time of arrival.
@@ -143,9 +144,11 @@ string leaveTime = $"{workingHourString}.{workingMinuteString}";
 //UpdateScheduleEntry(x, "leave", leaveTime);
 
 if (x != 68) {
-thislinetext.text = $"{arrivalTime} / {leaveTime}                    {stationRegress}";
+thislinetext.text = $"{arrivalTime} / {leaveTime}         {stationRegress}";
+thislinetext.ForceMeshUpdate(true,true);
 } else {
   thislinetext.text = $"{arrivalTime}                      0";  
+  thislinetext.ForceMeshUpdate(true,true);
   //Save the finish time
   int endhour = int.Parse(workingHourString);
     int endminute = int.Parse(workingMinuteString);

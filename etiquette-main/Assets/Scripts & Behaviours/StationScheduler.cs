@@ -237,12 +237,17 @@ public class SentenceWrapper
 public class Sentence
 {
     public string text;
+     public float score;
+    public string source_file;
+    public int start_char;
+    public int end_char;
 }
 
 private createText genclose1;
 private createText genclose2;
 private createText genmiddle;
 private createText genback;
+private cameraControl cc;
 
 
     //===============================================================================================
@@ -265,7 +270,7 @@ private createText genback;
         genclose2 = GameObject.Find("generator_close2").GetComponent<createText>();
         genmiddle = GameObject.Find("generator_middle").GetComponent<createText>();
         genback = GameObject.Find("generator_back").GetComponent<createText>();
-
+        cc = GameObject.Find("Main Camera").GetComponent<cameraControl>();
     }
 
 
@@ -320,6 +325,7 @@ private createText genback;
                 getStationData(nextStation);
 
                 tc.docked = false;
+                nextStationDelayTimer = UnityEngine.Random.Range(20, 50);
                 rocker.SuddenJolt();
                 Debug.Log("Leaving station...");
           
@@ -775,6 +781,7 @@ if (autoDelay == false) {
                     checkingdelay = false;
                     delay = "train";
                     rocker.SuddenJolt();
+                     cc.PushBackIntoCabin();
                     createDelayText();
                     Debug.Log("2) It's a train delay...");
                     delayTimer = UnityEngine.Random.Range(25, 200);
@@ -858,6 +865,7 @@ if (autoDelay == false) {
                       if (trainwordfound == true) {
                         tc.delaying = true;
                            rocker.SuddenJolt();
+                           cc.PushBackIntoCabin();
                            createDelayText();
                         delay = "accident";
                        checkingdelay = false;
@@ -876,6 +884,7 @@ if (autoDelay == false) {
     Debug.Log("Auto Delay!");
      tc.delaying = true;
                            rocker.SuddenJolt();
+                            cc.PushBackIntoCabin();
                            createDelayText();
                         delay = "accident";
                        checkingdelay = false;

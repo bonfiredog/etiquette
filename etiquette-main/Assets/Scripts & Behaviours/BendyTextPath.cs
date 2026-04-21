@@ -63,10 +63,10 @@ public class BendyTextPath : MonoBehaviour
 
     public void RandomizePath()
     {
-        firstBendPosition      = Random.Range(0.25f, 0.45f);
-        secondBendPosition     = Random.Range(0.55f, 0.75f);
-        bendStrength           = Random.Range(2f, 6f);
-        horizontalBendStrength = Random.Range(0.2f, 1.5f);
+        firstBendPosition      = Random.Range(0.1f, 0.2f);
+        secondBendPosition     = Random.Range(0.7f, 0.9f);
+  bendStrength           = Random.Range(0.05f, 0.12f);  // much gentler
+    horizontalBendStrength = Random.Range(0.02f, 0.06f);;
 
         InitializePath();
         ApplyBend();
@@ -239,15 +239,15 @@ public class BendyTextPath : MonoBehaviour
         CacheTextMetrics(textMesh.textInfo);
 
         // Scale bend offsets relative to text height so they always look proportional
-        float vScale = bendStrength           * cachedTextHeight;
-        float hScale = horizontalBendStrength * cachedTextHeight;
+        float vScale = bendStrength           * cachedTextLength;
+        float hScale = horizontalBendStrength * cachedTextLength;
 
-        // Opposite signs = sinuous S-curve
-        float sign = Random.value > 0.5f ? 1f : -1f;
-        bendHeights[0]     =  sign * Random.Range(vScale * 0.6f, vScale);
-        bendHeights[1]     = -sign * Random.Range(vScale * 0.6f, vScale);
-        bendHorizontals[0] =  sign * Random.Range(0f, hScale);
-        bendHorizontals[1] = -sign * Random.Range(0f, hScale);
+      // First bend always down (negative), dramatic 80-100 degree drop
+bendHeights[0]     = -Random.Range(vScale * 0.8f, vScale);
+// Second bend always up (positive), more gentle return
+bendHeights[1]     =  Random.Range(vScale * 0.4f, vScale * 0.6f);
+bendHorizontals[0] = Random.Range(0f, hScale);
+bendHorizontals[1] = Random.Range(0f, hScale);
     }
 
     void CacheTextMetrics(TMP_TextInfo textInfo)

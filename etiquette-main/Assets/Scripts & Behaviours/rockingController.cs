@@ -34,6 +34,10 @@ public class rockingController : MonoBehaviour
     [SerializeField] private Vector2 suddenJoltLeftRight = new Vector2(-0.4f, 0.4f);
     [SerializeField] private float suddenJoltStrength = 1f;
     [SerializeField] private AnimationCurve suddenJoltCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+[SerializeField] private float suddenJoltJiggleFrequency = 8f;   // How fast it oscillates
+[SerializeField] private float suddenJoltJiggleDamping = 4f;     // How quickly it dies out
+[SerializeField] private float suddenJoltJiggleDuration = 0.8f; 
+[SerializeField] private float suddenJoltJiggleAmplitude = 50f;
 
     [Header("References")]
     public GameObject tcObj;
@@ -66,6 +70,10 @@ public class rockingController : MonoBehaviour
     private Vector3 suddenJoltTargetOffset;
     private Vector3 currentSuddenJoltOffset;
     private Coroutine suddenJoltCoroutine;
+    
+
+private float suddenJoltMagnitude;
+private bool isJiggling = false;
 
     private void Start()
     {
@@ -113,7 +121,7 @@ public class rockingController : MonoBehaviour
 
         // SUDDEN JOLTS:
         // always update regardless of outAmount / train speed
-        UpdateSuddenJoltPlayback();
+        
 
         ApplyMotion();
     }
@@ -212,32 +220,67 @@ public class rockingController : MonoBehaviour
         nextAmbientJoltTime = Time.time + Random.Range(minInterval, maxInterval);
     }
 
-    public void SuddenJolt(float strengthOverride = -1f, float durationOverride = -1f)
+
+public void SuddenJolt(float strengthOverride = -1f, float durationOverride = -1f)
+{
+    float strength = strengthOverride >= 0f ? strengthOverride : suddenJoltStrength;
+    float duration = durationOverride > 0f ? durationOverride : suddenJoltDuration;
+
+    suddenJoltTargetOffset = new Vector3(
+        Random.Range(suddenJoltForwardBackward.x, suddenJoltForwardBackward.y) * strength,
+        Random.Range(suddenJoltUpDown.x, suddenJoltUpDown.y) * strength,
+        Random.Range(suddenJoltLeftRight.x, suddenJoltLeftRight.y) * strength
+    );
+
+    suddenJoltMagnitude = suddenJoltTargetOffset.magnitude; // add this line
+
+    currentSuddenJoltDuration = duration;
+    suddenJoltStartTime = Time.time;
+    isSuddenJolting = true;
+
+    if (suddenJoltCoroutine != null)
+        StopCoroutine(suddenJoltCoroutine);
+
+    suddenJoltCoroutine = StartCoroutine(SuddenJoltThenJiggle(duration));
+}
+
+private IEnumerator SuddenJoltThenJiggle(float duration)
+{
+    isSuddenJolting = true;
+    float elapsed = 0f;
+
+    while (elapsed < duration)
     {
-        float strength = strengthOverride >= 0f ? strengthOverride : suddenJoltStrength;
-        float duration = durationOverride > 0f ? durationOverride : suddenJoltDuration;
-
-        suddenJoltTargetOffset = new Vector3(
-            Random.Range(suddenJoltForwardBackward.x, suddenJoltForwardBackward.y) * strength,
-            Random.Range(suddenJoltUpDown.x, suddenJoltUpDown.y) * strength,
-            Random.Range(suddenJoltLeftRight.x, suddenJoltLeftRight.y) * strength
-        );
-
-        currentSuddenJoltDuration = duration;
-        suddenJoltStartTime = Time.time;
-        isSuddenJolting = true;
-
-        if (suddenJoltCoroutine != null)
-        {
-            StopCoroutine(suddenJoltCoroutine);
-        }
-
-        suddenJoltCoroutine = StartCoroutine(ClearSuddenJoltAfterDuration(duration));
+        elapsed += Time.deltaTime;
+        float progress = Mathf.Clamp01(elapsed / duration);
+        currentSuddenJoltOffset = EvaluatePingPongJolt(suddenJoltTargetOffset, progress, suddenJoltCurve);
+        yield return null;
     }
+
+    isSuddenJolting = false;
+    elapsed = 0f;
+
+    Vector3 jiggleAxis = suddenJoltTargetOffset.normalized * (suddenJoltTargetOffset.magnitude * 0.5f);
+
+    while (elapsed < suddenJoltJiggleDuration)
+    {
+        elapsed += Time.deltaTime;
+        float damped = Mathf.Exp(-suddenJoltJiggleDamping * elapsed)
+                     * Mathf.Sin(suddenJoltJiggleFrequency * elapsed);
+
+        float fadeOut = 1f - Mathf.Clamp01((elapsed - suddenJoltJiggleDuration * 0.8f) / (suddenJoltJiggleDuration * 0.2f));
+
+        currentSuddenJoltOffset = jiggleAxis * damped * fadeOut;
+        yield return null;
+    }
+
+    currentSuddenJoltOffset = Vector3.zero;
+    suddenJoltCoroutine = null;
+}
 
     private void UpdateSuddenJoltPlayback()
     {
-        if (!isSuddenJolting)
+        if (!isSuddenJolting && !isJiggling)
         {
             currentSuddenJoltOffset = Vector3.zero;
             return;
@@ -285,12 +328,12 @@ public class rockingController : MonoBehaviour
             return Vector3.LerpUnclamped(targetOffset, Vector3.zero, curved);
         }
     }
-
-    private void ApplyMotion()
-    {
-        transform.localPosition = originalPosition + currentAmbientJoltOffset + currentSuddenJoltOffset;
-    }
-
+private void ApplyMotion()
+{
+    Vector3 finalPos = originalPosition + currentAmbientJoltOffset + currentSuddenJoltOffset;
+    transform.localPosition = finalPos;
+   
+}
     public void SetSwayEnabled(bool enabled)
     {
         enableSway = enabled;
