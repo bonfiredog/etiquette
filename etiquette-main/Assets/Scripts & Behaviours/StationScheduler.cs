@@ -63,7 +63,7 @@ public class StationScheduler : MonoBehaviour
      private bool chancepassingtrain = false;
      private bool chanceaccident = false;
      public GameObject timecontroller;
-     private string delay = "none";
+     public string delay = "none";
       string[] wordsToCheck = {    "train", "trains", "rail", "rails", "railway", "railways", "railroad", "railroads",
     "station", "stations", "platform", "platforms", "track", "tracks", "signal", "signals",
     "junction", "junctions", "depot", "depots", "yard", "yards", "crossing", "crossings",
@@ -783,6 +783,7 @@ if (autoDelay == false) {
                     rocker.SuddenJolt();
                      cc.PushBackIntoCabin();
                     createDelayText();
+                    tc.generatedtrain = false;
                     Debug.Log("2) It's a train delay...");
                     delayTimer = UnityEngine.Random.Range(25, 200);
 

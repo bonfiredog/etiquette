@@ -36,6 +36,7 @@ public class TrainControl : MonoBehaviour
     public float secondsToSlowGentle;
     public float secondsToSlowHard;
     public GameObject scheduler;
+    private generateTrainTunnel gtt;
 
     private StationScheduler ss;
     private float delayTime;
@@ -46,6 +47,7 @@ public class TrainControl : MonoBehaviour
     private rockingController rocker;
     public createText delaytext;
     public GameObject delayobj;
+    public bool generatedtrain = false;
  
     
 
@@ -64,6 +66,7 @@ public class TrainControl : MonoBehaviour
         ttg = GameObject.Find("generator_passingtrain").GetComponent<generateTrainTunnel>();
         currentMiles = 0;
         rocker = GameObject.Find("Rocker").GetComponent<rockingController>();
+        gtt = GameObject.Find("generator_passingtrain").GetComponent<generateTrainTunnel>();
     }
 
     // Update is called once per frame
@@ -132,14 +135,22 @@ public class TrainControl : MonoBehaviour
                             //Count down the delay timer.
                             if (ss.delayTimer > 0) {
                                 ss.delayTimer -= 1 * Time.deltaTime;
+
+                                if (ss.delayTimer == 20 && generatedtrain == false && ss.delay == "train") {
+                                    gtt.generateTT("train");
+                                    generatedtrain = true;
+                                }
+
                             } else
                             {
 
                                 //When it's finished, create a delay object some random distance from the camera, with randomly generated text from the special delay grammar.
                                 delaying = false;
                                 rocker.SuddenJolt();
+                                generatedtrain = false;
+                                if (ss.delay == "accident") {
                                 GameObject delayobject = Instantiate(delayobj, new Vector3(1156,-387,-7000), Quaternion.identity);
-                                
+                                }
 
 
                                 //Reset the delay timer.

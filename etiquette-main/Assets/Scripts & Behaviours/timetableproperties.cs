@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using TMPro;
 
+
 public class timetableproperties : MonoBehaviour
 {
 
@@ -61,7 +62,7 @@ int currentMinute = DateTime.Now.Minute;
 workingMinute = currentMinute;
 
 
-TextMeshPro dateentry = dateObj.GetComponent<TextMeshPro>();
+TextMeshProUGUI dateentry = dateObj.GetComponent<TextMeshProUGUI>();
 dateentry.text = $"{dayOrdinal} {monthName}";
 
 int stationtotal = data.stationData.Count;
@@ -69,7 +70,7 @@ int stationtotal = data.stationData.Count;
 // Go Through All Stations 
 for (int x = 1; x < stationtotal; x++) {
 GameObject thisline = GameObject.Find("times" + x);
-TextMeshPro thislinetext = thisline.GetComponent<TextMeshPro>();
+TextMeshProUGUI thislinetext = thisline.GetComponent<TextMeshProUGUI>();
 
 stationLong = Mathf.Round(float.Parse(ss.getStationDataPointString(x, "longitude")));  
 
@@ -84,7 +85,7 @@ float averageSpeed = GetAverageSpeed(distance, topspeed, acceleration);
 
 //Special Cases: London Paddington and Penzance
 if (x == 1) {
-thislinetext.text = $"            {time24}                    {stationRegress}";
+thislinetext.text = $"{time24}      {stationRegress}";
 thislinetext.ForceMeshUpdate();
 //UpdateScheduleEntry(x, "leave", time24);
 } else if (x != 1) {
@@ -144,10 +145,10 @@ string leaveTime = $"{workingHourString}.{workingMinuteString}";
 //UpdateScheduleEntry(x, "leave", leaveTime);
 
 if (x != 68) {
-thislinetext.text = $"{arrivalTime} / {leaveTime}         {stationRegress}";
+thislinetext.text = $"{arrivalTime}  / {leaveTime}      {stationRegress}";
 thislinetext.ForceMeshUpdate(true,true);
 } else {
-  thislinetext.text = $"{arrivalTime}                      0";  
+  thislinetext.text = $"{arrivalTime}                   0";  
   thislinetext.ForceMeshUpdate(true,true);
   //Save the finish time
   int endhour = int.Parse(workingHourString);

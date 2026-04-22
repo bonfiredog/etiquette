@@ -21,7 +21,7 @@ public class cameraControl : MonoBehaviour
     private GameObject timetablefold;
     private GameObject timetable;
     private Vector3 tfreadypos = new Vector3 (-914.5f, -769.9f, -592.2f);
-    private Vector3 ttreadypos = new Vector3 (-243.7f, -558.4f, 840.0f);
+    private Vector3 ttreadypos = new Vector3 (-308.01f, -536.3f, 841.33f);
     private Vector3 tforiginalpos;
     private Vector3 ttoriginalpos;
     public float tfspeed = 100.0f;
@@ -80,7 +80,7 @@ public class cameraControl : MonoBehaviour
        wp = window.GetComponent<windowPosition>();
        targetWindowAmount = wp.windowOpenAmount;
        timetablefold = GameObject.Find("timetablefold");
-       timetable = GameObject.Find("TIMETABLE 1");
+       timetable = GameObject.Find("TIMETABLE CANVAS");
       tforiginalpos = timetablefold.transform.localPosition;
 ttoriginalpos = timetable.transform.localPosition;
         lookmod = 0.0f;
