@@ -125,7 +125,7 @@ void Update()
         //Remove the curly braces from both strings, and reattached with new, enclosing curly braces.
         wordListToParse = removeCurlyBraces(gcScript.wordListString);
         var grammarToParse = removeCurlyBraces(currentGrammarJSON);
-        var finalGrammarString = "{" + wordListToParse + " " + grammarToParse + "}";
+        var finalGrammarString = "{" + wordListToParse + ", " + grammarToParse + "}";
 
         currentGrammar = new TraceryGrammar(finalGrammarString);
 

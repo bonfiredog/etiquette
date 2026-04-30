@@ -18,5 +18,5 @@ MonoBehaviour:
   - __PanelContainer__rootVisualContainer__package-list-scrollview-key__HorizontalScroller__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
   m_Values:
   - '{"m_ScrollOffset":{"x":0.0,"y":0.0}}'
-  - '{"m_Value":0.0,"m_LowValue":0.0,"m_HighValue":0.0}'
+  - '{"m_Value":0.0,"m_LowValue":0.0,"m_HighValue":27.0}'
   - '{"m_Value":0.0,"m_LowValue":0.0,"m_HighValue":0.0}'
