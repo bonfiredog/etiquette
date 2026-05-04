@@ -49,7 +49,9 @@ namespace UnityTracery {
         {"ed", Modifiers.PastTense},
         {"inQuotes", Modifiers.InQuotes},
         {"s", Modifiers.Pluralize},
-        {"titleCase", Modifiers.TitleCase}
+        {"titleCase", Modifiers.TitleCase},
+        {"ing", Modifiers.Gerund},
+        {"er", Modifiers.Er},
       };
 
       SaveData = new JSONObject();

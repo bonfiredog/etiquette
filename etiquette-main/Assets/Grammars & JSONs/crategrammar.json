@@ -1,5 +1,129 @@
-{
+{"alert_word": [
+    "caution!",
+    "care needed",
+    "danger!",
+    "this side up",
+    "authorised",
+    "authorised by #imperial_locations# #authority_words#",
+    "#placenames# via #imperial_locations#"
+  ],
+
+
+"haulage_words": [
+  "haulage",
+  "shipping",
+  "freight",
+  "freightage",
+  "conveyancing",
+  "passaging",
+  "portage",
+  "transit",
+  "transport",
+  "shipments",
+  "caravanning",
+  "distribution",
+  "transmittal",
+  "dispatch",
+  "consigning"
+],
+
+
+  "cratecontents": [
+    "#nouns_materials_empire#",
+    "#nouns_materials_common#",
+    "#nouns_materials_rare#",
+    "#musical_instruments.s#",
+    "#clothes#",
+    "#clothes_empire#",
+    "#tools#",
+    "#interior_fixtures#",
+    "#furniture#",
+    "#indoor_objects_small#",
+    "#indoor_objects_large#",
+    "#outdoor_objects_small#",
+    "#outdoor_objects_large#",
+    "#uncountable_objects#",
+    "#imperial_objects#",
+    "#ingredients#",
+    "#cooked_food#",
+    "#drinks_british#",
+    "#drinks_empire#",
+    "#animals_all#",
+    "#crops#",
+    "#crops_home#",
+    "#crops_empire#",
+    "#fruits_home#",
+    "#fruits_empire#"
+  ],
+  "company_name": [
+    "#mythical_beasts#",
+    "#classical_names#",
+    "Mr. #surnames#",
+    "#surnames#",
+    "#names_men# #surnames#",
+    "#surnames# & sons",
+    "#surnames# & son",
+    "#colonial_surnames# & sons",
+    "#colonial_surnames# & son",
+    "#colonial_surnames#"
+  ],
+  "authority_words": [
+    "authority",
+    "magistrate",
+    "registrar",
+    "adjutant",
+    "Council",
+    "administration",
+    "mandate",
+    "protectorate",
+    "dependency",
+    "provost",
+    "comptroller"
+  ],
+  "supplier_words": [
+    "supplier",
+    "purveyor",
+    "merchant",
+    "warranter",
+    "charter",
+    "licencor"
+  ],
+  "company": [
+    "#company_name#",
+    "#company_name# #haulage_words#"
+  ],
+  "returnaddress": [
+    "#imperial_locations#",
+    "#british_towns#",
+    "#placenames#"
+  ],
+  "advert": [
+    "#supplier_words# of #adjectives_generic_positive# #cratecontents#",
+    "contains #cratecontents#",
+    "#cratecontents#",
+    "#supplier_words# to the #person_office_title_home#",
+    "#supplier_words# to the #person_office_title_empire#",
+    "under licence to #imperial_locations# #authority_words#",
+    "appointed by #imperial_locations# #authority_words#",
+    "by warrant to #imperial_locations# #authority_words#",
+    "certified by #imperial_locations# #authority_words#"
+  ],
+  "result": [
+    "#imperial_locations#",
+    "#counties#",
+    "#placenames#",
+    "For #placenames#",
+    "To #placenames#",
+    "#alert_word#",
+    "#company#",
+    "#product_name#",
+    "#british_towns#",
+    "Return To:<br>#fullname_any#,<br>#returnaddress#",
+    "Return To:<br>#company_name#,<br>#returnaddress#",
+    "#imperial_locations# #authority_words#",
+    "#company#<br>#advert#"
+  ],
   "origin": [
-    "TEST"
+    "#result.capitalizeAll#"
   ]
 }

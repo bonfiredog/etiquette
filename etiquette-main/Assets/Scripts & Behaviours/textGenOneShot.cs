@@ -28,7 +28,9 @@ public class textGenOneShot : MonoBehaviour
     public string grammarParse;
     private StationScheduler ss;
     private timeControl tc;
+    private TextFitController tfc;
     private bool amGenerated = false;
+    private string savedtext;
 
     void Start()
     {
@@ -37,7 +39,9 @@ public class textGenOneShot : MonoBehaviour
             gcScript = gc.GetComponent<traceGrammarControl>();
             myText = gameObject.GetComponent<TextMeshPro>();
             ss = GameObject.Find("stationScheduleController").GetComponent<StationScheduler>();
-            
+            if (GetComponent<TextFitController>() != null) {
+            tfc = GetComponent<TextFitController>();
+            }
 
         
             }
@@ -64,7 +68,17 @@ void Update() {
 
             // AAAAAND GENERATE
                 setGrammarForObject(startingGrammarName);
-                generateTextFromGrammar(myText);
+               savedtext = generateTextFromGrammar(myText);
+
+            //Resize if a crate
+
+            if (GetComponent<TextFitController>() != null) {
+                    tfc.SetText(savedtext);
+               
+            }
+
+
+
               
         amGenerated = true;
         }
@@ -84,7 +98,7 @@ void Update() {
         //Remove the curly braces from both strings, and reattached with new, enclosing curly braces.
         wordListToParse = removeCurlyBraces(gcScript.wordListString);
         var grammarToParse = removeCurlyBraces(currentGrammarJSON);
-        var finalGrammarString = "{" + wordListToParse + " " + grammarToParse + "}";
+        var finalGrammarString = "{" + wordListToParse + ", " + grammarToParse + "}";
 
         currentGrammar = new TraceryGrammar(finalGrammarString);
 
@@ -92,28 +106,26 @@ void Update() {
         //====================================================|
     }
 
-    public void generateTextFromGrammar(TextMeshPro myText)
+    public string generateTextFromGrammar(TextMeshPro myText)
     {
         var ssch = GameObject.Find("stationScheduleController").GetComponent<StationScheduler>();
 
-        //Get the current variables that affect this, then add origin on the end.
         grammarParse = 
-         "[current_timeofday:" + ssch.currenttod + "]" 
-         + "[current_season:" + ssch.currentseason + "]"
-        + "[current_month:" + ssch.currentmonth + "]"
-        + "[next_month:" + ssch.nextmonth + "]"
-        + "[current_mealtime:" + ssch.currentmealtime + "]"
-        + "[appropriate_person:" + ssch.appropriateperson + "]"
-        + "[current_terrain:" + ssch.currentterrain + "]"
-        + "[station_last:" + ssch.stationlast + "]"
-        + "[appropriate_locations:" + ssch.appropriatelocs + "]"
-        + "[appropriate_buildings:" + ssch.appropriatebuildings + "]"
-        + "[large_number:" + Math.Round(UnityEngine.Random.Range(10000f,1000000f)).ToString() + "]"
+            "[current_person_type:" + currentGrammar.Parse(ssch.appropriateperson) + "]" 
+          +  "[current_locations:" + currentGrammar.Parse(ssch.appropriatelocs) + "]"
+         +   "[current_timeofday:" + currentGrammar.Parse(ssch.currenttod) + "]" 
+        +    "[current_season:" + currentGrammar.Parse(ssch.currentseason) + "]" 
+        +   "[current_month:" + currentGrammar.Parse(ssch.currentmonth) + "]" 
+        +   "[current_mealtime:" + currentGrammar.Parse(ssch.currentmealtime) + "]"
+        +   "[current_terrain:" + currentGrammar.Parse(ssch.currentterrain) + "]"
+        +    "[current_buildings:" + currentGrammar.Parse(ssch.appropriatebuildings)+ "]"
+        +    "[current_buildings_rare:" + currentGrammar.Parse(ssch.appropriatebuildingsrare)+ "]"
+        + "[current_weather_types:" + currentGrammar.Parse(ssch.currentweather) + "]"
         + "#origin#";
 
             myText.text = currentGrammar.Parse(grammarParse);
-        
-       // myText.text = currentGrammar.Generate();
+            return myText.text;
+    
    
 
         }

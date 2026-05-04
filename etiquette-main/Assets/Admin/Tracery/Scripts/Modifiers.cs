@@ -6,7 +6,7 @@ namespace UnityTracery {
   /// A static class containing all of the built-in ("universal") modifiers that can be applied.
   /// </summary>
   static class Modifiers {
-    private static readonly Regex title_case_regex = new Regex(@"(?=^|\s)([a-z])");
+    private static readonly Regex title_case_regex = new Regex(@"(?:^|\s)([a-z])");
 
     /// <summary>
     /// Punctuation used to end a sentence.
@@ -23,8 +23,9 @@ namespace UnityTracery {
     /// </summary>
     /// <param name="str">The string to modify.</param>
     /// <returns>The modified string.</returns>
-    public static string Article(string str) {
-      var lastChar = str[0];
+public static string Article(string str) {
+  if (string.IsNullOrEmpty(str)) return str;
+  var lastChar = str[0];
 
       if (IsVowel(lastChar)) {
         return "an " + str;
@@ -47,9 +48,10 @@ namespace UnityTracery {
     /// </summary>
     /// <param name="str">The string to modify.</param>
     /// <returns>The modified string.</returns>
-    public static string Capitalize(string str) {
-      return char.ToUpper(str[0]) + str.Substring(1);
-    }
+   public static string Capitalize(string str) {
+  if (string.IsNullOrEmpty(str)) return str;
+  return char.ToUpper(str[0]) + str.Substring(1);
+}
 
     /// <summary>
     /// Capitalizes the entire string.
@@ -69,7 +71,7 @@ namespace UnityTracery {
       if (str.Length == 0) {
         return ",";
       }
-      var lastChar = str.Substring(0, 1);
+      var lastChar = str[str.Length - 1].ToString();
 
       if (sentence_punctuation.Contains(lastChar)) {
         return str;
@@ -130,11 +132,12 @@ namespace UnityTracery {
     /// </summary>
     /// <param name="str">The string to modify.</param>
     /// <returns>The modified string.</returns>
-    public static string Pluralize(string str) {
-      var lastChar = str[str.Length - 1];
-      var secondToLastChar = str[str.Length - 2];
+public static string Pluralize(string str) {
+  if (str.Length == 0) return str;
+  var lastChar = str[str.Length - 1];
+  var secondToLastChar = str.Length > 1 ? str[str.Length - 2] : '\0';
 
-      switch (lastChar) {
+  switch (lastChar) {
       case 'y':
         // rays, convoys
         if (IsVowel(secondToLastChar)) {
@@ -143,9 +146,8 @@ namespace UnityTracery {
 
         // harpies, cries
         return str.Substring(0, str.Length - 1) + "ies";
-      case 'x':
-        // oxen, boxen, foxen
-        return str.Substring(0, str.Length - 1) + "xen";
+    case 'x':
+      return str + "es";
       case 'z':
         return str.Substring(0, str.Length - 1) + "zes";
       case 'h':
@@ -160,10 +162,9 @@ namespace UnityTracery {
     /// </summary>
     /// <param name="str">The string to modify.</param>
     /// <returns>The modified string.</returns>
-    public static string TitleCase(string str) {
-      return title_case_regex.Replace(str, "$1");
-    }
-
+  public static string TitleCase(string str) {
+  return title_case_regex.Replace(str, m => m.Value.ToUpper());
+}
     /// <summary>
     /// Checks to see if the given character is a consonant.
     /// </summary>
@@ -172,5 +173,76 @@ namespace UnityTracery {
     private static bool IsVowel(char c) {
       return vowels.IndexOf(c) >= 0;
     }
+  
+
+
+/// <summary>
+/// Converts a verb to its gerund (-ing) form.
+/// </summary>
+///
+public static string Gerund(string str) {
+  if (string.IsNullOrEmpty(str)) return str;
+
+  var index = str.IndexOf(' ');
+  var rest = "";
+  if (index > 0) {
+    rest = str.Substring(index);
+    str = str.Substring(0, index);
+  }
+
+  var lastChar = str[str.Length - 1];
+
+  // e.g. "make" → "making", "write" → "writing"
+  if (lastChar == 'e' && str.Length > 1) {
+    return str.Substring(0, str.Length - 1) + "ing" + rest;
+  }
+
+  // e.g. "run" → "running", "sit" → "sitting"
+  // Double the consonant if: CVC pattern and last char is a consonant
+  if (str.Length >= 3
+      && !IsVowel(lastChar)
+      && IsVowel(str[str.Length - 2])
+      && !IsVowel(str[str.Length - 3])) {
+    return str + lastChar + "ing" + rest;
+  }
+
+  return str + "ing" + rest;
+}
+
+/// <summary>
+/// Converts a verb or adjective to its -er comparative/agent form.
+/// </summary>
+public static string Er(string str) {
+  if (string.IsNullOrEmpty(str)) return str;
+
+  var index = str.IndexOf(' ');
+  var rest = "";
+  if (index > 0) {
+    rest = str.Substring(index);
+    str = str.Substring(0, index);
+  }
+
+  var lastChar = str[str.Length - 1];
+
+  // e.g. "write" → "writer", "make" → "maker"
+  if (lastChar == 'e') {
+    return str + "r" + rest;
+  }
+
+  // e.g. "run" → "runner", "big" → "bigger"
+  if (str.Length >= 3
+      && !IsVowel(lastChar)
+      && IsVowel(str[str.Length - 2])
+      && !IsVowel(str[str.Length - 3])) {
+    return str + lastChar + "er" + rest;
+  }
+
+  // e.g. "carry" → "carrier"
+  if (lastChar == 'y' && str.Length > 1 && !IsVowel(str[str.Length - 2])) {
+    return str.Substring(0, str.Length - 1) + "ier" + rest;
+  }
+
+  return str + "er" + rest;
+}
   }
 }

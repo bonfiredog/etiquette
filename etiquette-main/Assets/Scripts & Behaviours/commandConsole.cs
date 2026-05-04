@@ -24,7 +24,7 @@ public class commandConsole : MonoBehaviour {
     {
 
         //Every frame, update the readout.
-        myText.text = $"etiquette v. 1.0.0.1<br>Last Station: {ss.lastStationName}<br>Next Station: {ss.nextStationName}<br>Meters: {ss.milesToNextStation}<br>Current Speed: {tc.trainCurrentSpeed}<br>Current Terrain: {ss.currentTerrain}<br>Current Weather: {ss.currentweather}<br>Current Season: {ss.currentseason}<br>Current Month: {ss.currentmonth}<br>DelayChanceTimer: {ss.nextStationDelayTimer}<br>Is Delaying?: {tc.delaying}<br>Delay Timer: {ss.delayTimer}";     
+        myText.text = $"etiquette v. 1.0.0.1<br>Last Station: {ss.lastStationName}<br>Next Station: {ss.nextStationName}<br>Meters: {ss.milesToNextStation}<br>Current Speed: {tc.trainCurrentSpeed}<br><br>Current Terrain: {ss.currentTerrain}<br>Current Weather: {ss.currentweather}<br>Current Urban Density {ss.currentUrbanDensity}<br>Appropriate Buildings: {ss.appropriatebuildings}<br>Appropriate Rare Buildings: {ss.appropriatebuildingsrare}<br>Appropriate Locations: {ss.appropriatelocs}<br>Appropriate Persons: {ss.appropriateperson}<br>Time Of Day: {ss.currenttod}<br>Current Mealtime: {ss.currentmealtime}<br>Current Season: {ss.currentseason}<br>Current Month: {ss.currentmonth}<br><br>DelayChanceTimer: {ss.nextStationDelayTimer}<br>Is Delaying?: {tc.delaying}<br>Delay Timer: {ss.delayTimer}";     
              
         
     }

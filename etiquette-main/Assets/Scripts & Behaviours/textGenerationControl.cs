@@ -139,24 +139,19 @@ void Update()
 
         //Get the current variables that affect this, then add origin on the end.
         grammarParse = 
-         "[current_timeofday:" + ssch.currenttod + "]" 
-         + "[current_season:" + ssch.currentseason + "]"
-        + "[current_month:" + ssch.currentmonth + "]"
-        + "[next_month:" + ssch.nextmonth + "]"
-        + "[current_mealtime:" + ssch.currentmealtime + "]"
-        + "[appropriate_person:" + ssch.appropriateperson + "]"
-        + "[current_terrain:" + ssch.currentterrain + "]"
-        + "[station_last:" + ssch.stationlast + "]"
-        + "[appropriate_locations:" + ssch.appropriatelocs + "]"
-        + "[appropriate_buildings:" + ssch.appropriatebuildings + "]"
-        + "[large_number:" + Math.Round(UnityEngine.Random.Range(10000f,1000000f)).ToString() + "]"
+            "[current_person_type:" + currentGrammar.Parse(ssch.appropriateperson) + "]" 
+          +  "[current_locations:" + currentGrammar.Parse(ssch.appropriatelocs) + "]"
+         +   "[current_timeofday:" + currentGrammar.Parse(ssch.currenttod) + "]" 
+        +    "[current_season:" + currentGrammar.Parse(ssch.currentseason) + "]" 
+        +   "[current_month:" + currentGrammar.Parse(ssch.currentmonth) + "]" 
+        +   "[current_mealtime:" + currentGrammar.Parse(ssch.currentmealtime) + "]"
+        +   "[current_terrain:" + currentGrammar.Parse(ssch.currentterrain) + "]"
+        +    "[current_buildings:" + currentGrammar.Parse(ssch.appropriatebuildings)+ "]"
+        +    "[current_buildings_rare:" + currentGrammar.Parse(ssch.appropriatebuildingsrare)+ "]"
+        + "[current_weather_types:" + currentGrammar.Parse(ssch.currentweather) + "]"
         + "#origin#";
 
             myText.text = currentGrammar.Parse(grammarParse);
-        
-       // myText.text = currentGrammar.Generate();
-   
-
         }
 
    

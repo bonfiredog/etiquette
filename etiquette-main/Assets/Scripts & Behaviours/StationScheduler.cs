@@ -38,6 +38,8 @@ public class StationScheduler : MonoBehaviour
     public int nextStationSpeedMod;
     public string lastStationName = "Penzance";
     public bool ending = false;
+
+    //Appropriate Variables
     public string currentterrain = "coast";
     public string stationlast = "Penzance";
     public string currentseason = "spring";
@@ -46,10 +48,12 @@ public class StationScheduler : MonoBehaviour
     public string appropriatelocs = "#rural_locations#";
     public string currenttod = "dusk";
     public string currentmealtime = "supper";
-    public string appropriateperson = "#person_roles_rural#";
-    public string appropriatebuildings = "#rural_buildings#";
-    private float weatherTimer = 10000;
+    public string appropriateperson = "#person_role_rural#";
+    public string appropriatebuildings = "#rural_buildings_common#";
+    public string appropriatebuildingsrare = "#rural_buildings_rare#";
+    private float variablesTimer = 20;
     public string currentweather = "clear";
+
     private GameObject sec;
      private startEndController startcontrol;
      private float timediscrepMod;
@@ -271,6 +275,103 @@ private cameraControl cc;
         genmiddle = GameObject.Find("generator_middle").GetComponent<createText>();
         genback = GameObject.Find("generator_back").GetComponent<createText>();
         cc = GameObject.Find("Main Camera").GetComponent<cameraControl>();
+
+
+
+        //Updating variables
+        switch (DateTime.Now.Month)
+        {
+            case 1:
+                currentmonth = "January";
+                currentseason = "Winter";
+                nextmonth = "February";
+                break;
+
+            case 2:
+                currentmonth = "February";
+                currentseason = "Winter";
+                nextmonth = "March";
+                break;
+
+            case 3:
+                currentmonth = "March";
+                currentseason = "Winter";
+                nextmonth = "April";
+                break;
+
+            case 4:
+                currentmonth = "April";
+                currentseason = "Spring";
+                nextmonth = "May";
+                break;
+
+            case 5:
+                currentmonth = "May";
+                currentseason = "Spring";
+                nextmonth = "June";
+                break;
+
+            case 6:
+                currentmonth = "June";
+                currentseason = "Spring";
+                nextmonth = "July";
+                break;
+
+            case 7:
+                currentmonth = "July";
+                currentseason = "Summer";
+                nextmonth = "August";
+                break;
+
+            case 8:
+                currentmonth = "August";
+                currentseason = "Summer";
+                nextmonth = "September";
+                break;
+
+            case 9:
+                currentmonth = "September";
+                currentseason = "Summer";
+                nextmonth = "October";
+                break;
+
+            case 10:
+                currentmonth = "October";
+                currentseason = "Autumn";
+                nextmonth = "November";
+                break;
+
+            case 11:
+                currentmonth = "November";
+                currentseason = "Autumn";
+                nextmonth = "December";
+                break;
+
+            case 12:
+                currentmonth = "December";
+                currentseason = "Winter";
+                nextmonth = "January";
+                break;
+        }
+
+           if (currentseason == "Winter")
+            {
+                currentweather = "#weather_types_winter#";
+            }
+            else if (currentseason == "Spring")
+            {
+                currentweather = "#weather_types_spring#";
+                }
+            else if (currentseason == "Summer")
+            {
+               currentweather = "#weather_types_summer#";
+                }
+            else if (currentseason == "Autumn")
+            {
+                currentweather = "#weather_types_autumn#";
+                 }
+
+                 updateGrammarVariables();
     }
 
 
@@ -279,7 +380,7 @@ private cameraControl cc;
     // Update is called once per frame
     void Update()
     {
-       // updateGrammarVariables();
+       updateGrammarVariables();
 
         //Keep track of the miles covered 
         currentMiles += tc.trainCurrentSpeed * Time.deltaTime;
@@ -459,47 +560,30 @@ public string getStationDataPointString(int station, string keyname)
 
     public void updateGrammarVariables()
     {
+            if (variablesTimer > 0) {
+                variablesTimer -= 1 * Time.deltaTime;
+            } else {
+
+
         currentterrain = currentTerrain;
         stationlast = lastStationName;
 
-
-        if (weatherTimer > 0)
-        {
-            weatherTimer -= 1 * Time.deltaTime;
-        }
-        else
-        {
-            if (currentseason == "Winter")
-            {
-                currentweather = "rain, thunderbanks, clouds, hail, snow, wind, clear, stormclouds, high clouds, low clouds, sleet, showers, sun, gales";
-            }
-            else if (currentseason == "Spring")
-            {
-                currentweather = "rain, thunderbanks, clouds, wind, clear, stormclouds, high clouds, low clouds, showers, sun, gales";
-            }
-            else if (currentseason == "Summer")
-            {
-                currentweather = "rain, thunderbanks, clouds, wind, clear, stormclouds, high clouds, low clouds, showers, sun, gales";
-            }
-            else if (currentseason == "Autumn")
-            {
-                currentweather = "rain, thunderbanks, clouds, wind, clear, stormclouds, high clouds, low clouds, showers, sun, gales, sleet, hail";
-            }
-            weatherTimer = UnityEngine.Random.Range(1000, 10000);
-        }
-
+        
+        
         if (currentUrbanDensity < 25)
         {
             appropriateperson = "#person_role_country#";
             if (currentterrain != "coast")
             {
                 appropriatelocs = "#rural_locations#";
-                appropriatebuildings = "#rural_buildings#";
+                appropriatebuildings = "#rural_buildings_common#";
+                appropriatebuildingsrare = "#rural_buildings_rare#";
             }
             else
             {
                 appropriatelocs = "#coastal_locations#";
-                appropriatebuildings = "#coastal_buildings";
+                appropriatebuildings = "#coastal_buildings#";
+                appropriatebuildingsrare = "#rural_buildings_rare#";
             }
         }
         else if (currentUrbanDensity >= 25 && currentUrbanDensity < 50)
@@ -509,12 +593,14 @@ public string getStationDataPointString(int station, string keyname)
             if (currentterrain != "coast")
             {
                 appropriatelocs = "#town_locations#";
-                appropriatebuildings = "#town_buildings#";
+                appropriatebuildings = "#town_buildings_common#";
+                appropriatebuildingsrare = "#town_buildings_rare#";
             }
             else
             {
                 appropriatelocs = "#coastal_locations#";
-                appropriatebuildings = "#coastal_buildings";
+                appropriatebuildings = "#coastal_buildings#";
+                appropriatebuildingsrare = "#town_buildings_rare#";
             }
         }
         else
@@ -523,92 +609,18 @@ public string getStationDataPointString(int station, string keyname)
             if (currentterrain != "coast")
             {
                 appropriatelocs = "#city_locations#";
-                appropriatebuildings = "#city_buildings#";
+                appropriatebuildings = "#city_buildings_common#";
+                appropriatebuildingsrare = "#city_buildings_rare#";
             }
             else
             {
                 appropriatelocs = "#coastal_locations#";
-                appropriatebuildings = "#coastal_buildings";
+                appropriatebuildings = "#coastal_buildings#";
+                   appropriatebuildingsrare = "#city_buildings_rare#";
             }
         }
 
 
-
-        //Updating variables
-        switch (DateTime.Now.Month)
-        {
-            case 1:
-                currentmonth = "January";
-                currentseason = "Winter";
-                nextmonth = "February";
-                break;
-
-            case 2:
-                currentmonth = "February";
-                currentseason = "Winter";
-                nextmonth = "March";
-                break;
-
-            case 3:
-                currentmonth = "March";
-                currentseason = "Winter";
-                nextmonth = "April";
-                break;
-
-            case 4:
-                currentmonth = "April";
-                currentseason = "Spring";
-                nextmonth = "May";
-                break;
-
-            case 5:
-                currentmonth = "May";
-                currentseason = "Spring";
-                nextmonth = "June";
-                break;
-
-            case 6:
-                currentmonth = "June";
-                currentseason = "Spring";
-                nextmonth = "July";
-                break;
-
-            case 7:
-                currentmonth = "July";
-                currentseason = "Summer";
-                nextmonth = "August";
-                break;
-
-            case 8:
-                currentmonth = "August";
-                currentseason = "Summer";
-                nextmonth = "September";
-                break;
-
-            case 9:
-                currentmonth = "September";
-                currentseason = "Summer";
-                nextmonth = "October";
-                break;
-
-            case 10:
-                currentmonth = "October";
-                currentseason = "Autumn";
-                nextmonth = "November";
-                break;
-
-            case 11:
-                currentmonth = "November";
-                currentseason = "Autumn";
-                nextmonth = "December";
-                break;
-
-            case 12:
-                currentmonth = "December";
-                currentseason = "Winter";
-                nextmonth = "January";
-                break;
-        }
 
         if (DateTime.Now.Hour > 4 && DateTime.Now.Hour <= 11)
         {
@@ -640,6 +652,9 @@ public string getStationDataPointString(int station, string keyname)
             currenttod = "Night";
             currentmealtime = "breakfast";
         }
+
+        variablesTimer = 20;
+            }
     }
 
 

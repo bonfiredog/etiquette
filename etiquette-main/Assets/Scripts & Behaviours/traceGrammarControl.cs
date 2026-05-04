@@ -7,6 +7,7 @@ public class traceGrammarControl : MonoBehaviour
 {
     public List<TextAsset> GrammarFiles;
     public TextAsset wordListJSON;
+    
     [HideInInspector]
     public string wordListString;
 

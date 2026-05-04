@@ -97,6 +97,7 @@
     <Compile Include="Assets/flockaroo/Sketchy/DemoScene/youSpinMeRiseRound_Sketchy.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/commandConsole.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Examples/ExampleSerializeObjects/ExamplePlayerItemObject.cs" />
+    <Compile Include="Assets/Scripts &amp; Behaviours/TextFitController.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Scripts/Settings/DeserializeSettings.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/StartButton.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/DynamicCursor.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Assets/Admin/TotalJSON/Scripts/Attributes/IncludeToJSONSerializeAttribute.cs" />
     <Compile Include="Assets/Admin/Tracery/Demo/Scripts/DemoPanel.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/startingStation.cs" />
+    <Compile Include="Assets/Scripts &amp; Behaviours/DisableCulling.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Scripts/Exceptions/JValueTypeException.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/TextOpacityController.cs" />
     <Compile Include="Assets/Admin/TotalJSON/Scripts/JValue.cs" />
@@ -275,6 +277,7 @@
     <None Include="Assets/Admin/Plugins/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
     <None Include="Assets/Admin/Tracery/JSON/readme.txt" />
     <None Include="Assets/Admin/flockaroo/ColoredPencils/Resources/flockaroo_ColoredPencils/gradientPrecalc.shader" />
+    <None Include="Assets/Shaders/TMP_ZWindow.shader" />
     <None Include="Assets/Admin/flockaroo/ColoredPencils/Resources/flockaroo_ColoredPencils/imageEffShader2HDRP.shader" />
     <None Include="Assets/Admin/Plugins/TextMesh Pro/Shaders/TMP_Sprite.shader" />
     <None Include="Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/Image.cginc" />
