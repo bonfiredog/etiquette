@@ -31,6 +31,8 @@ public class textGenOneShot : MonoBehaviour
     private TextFitController tfc;
     private bool amGenerated = false;
     private string savedtext;
+    public int length; 
+    private string yardlength;
 
     void Start()
     {
@@ -64,10 +66,17 @@ void Update() {
 
                 currentGrammar = new TraceryGrammar(finalGrammarString);
 
-
+                //If it's a tunnel name, set the length in yards.
 
             // AAAAAND GENERATE
                 setGrammarForObject(startingGrammarName);
+
+            //Work out the length if needed.
+            if (startingGrammarName == "tunnelnamegrammar") {
+                        length = 10 * length;
+                        yardlength = length.ToString();
+            }
+
                savedtext = generateTextFromGrammar(myText);
 
             //Resize if a crate
@@ -121,6 +130,7 @@ void Update() {
         +    "[current_buildings:" + currentGrammar.Parse(ssch.appropriatebuildings)+ "]"
         +    "[current_buildings_rare:" + currentGrammar.Parse(ssch.appropriatebuildingsrare)+ "]"
         + "[current_weather_types:" + currentGrammar.Parse(ssch.currentweather) + "]"
+        + "[tunnel_length:" + yardlength + "]"
         + "#origin#";
 
             myText.text = currentGrammar.Parse(grammarParse);

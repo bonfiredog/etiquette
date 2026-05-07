@@ -1,3 +1,47 @@
 {
-  "origin": [ "I am a very long tunnel. I am a very long tunnel. I am a very long tunnel. I am a very long tunnel. I am a very long tunnel. I am a very long tunnel." ]
-}
+    "decades": [
+      "XXX",
+      "XL"
+    ],
+    "years": [
+      "I",
+      "II",
+      "III",
+      "IV",
+      "V",
+      "VI",
+      "VII",
+      "VIII",
+      "IX"
+    ],
+    "ad": [
+      "A.D.",
+      ""
+    ],
+
+    "construct_date": [
+      "MDCCC#decades##years# #ad#"
+    ],
+
+    "legendjob": [
+      "Engineer",
+      "Proctor",
+      "Director",
+      "#person_office_title_home.capitalize#"
+    ],
+    "legend": [
+      "#fullname_male.capitalize#<br>#legendjob#",
+      ""
+    ],
+    "tunnelname": [
+      "#placenames.capitalize# Tunnel",
+      "#compass_points# #placenames# Tunnel",
+      "#placenames# Tunnel (#compass_points#)"
+    ],
+    "length": [
+      "",
+      "#tunnellength# yards"
+    ],
+    "origin": ["#tunnelname.capitalizeAll#<br><br>#construct_date.capitalizeAll#<br><br>#length.capitalize#<br><br>#legend.capitalize#"]
+    }
+

@@ -25,6 +25,7 @@ public class generateTrainTunnel : MonoBehaviour
     private StationScheduler ss;
     private string toGen;
     GameObject thisTT;
+    public textGenOneShot genscript;
    
 
     // Start is called before the first frame update
@@ -103,7 +104,10 @@ generateTT("tunnel");
         thistextmesh.fontSize = Random.Range(fontSizeLowerBound, fontSizeUpperBound);
 
         } else {
+  
+        
         thisTT = Instantiate(genObjectTunnel);
+      genscript = thisTT.transform.Find("tunnel name").GetComponent<textGenOneShot>();
         var correctGrammar = type + "grammar";
         var correctGrammarTunnelName = "tunnelnamegrammar";
                 
@@ -114,13 +118,12 @@ generateTT("tunnel");
         thisTextGeneratorName = thisTT.transform.Find("tunnel name").GetComponent<textGenerationControl>();
         
               //Set the width of the tunnel randomly.
-        float length = Random.Range(1, 8);
-        Debug.Log("length " + length);
+        genscript.length = Random.Range(1,8);
         var tunnel = thisTT.transform.Find("tunnel");
-        tunnel.transform.localScale = new Vector3(5000,5000, 5000 + (1000 * length));
-        thisTT.transform.Find("text").GetComponent<RectTransform>().sizeDelta = new Vector2(100 + (20 * length), 5);
+        tunnel.transform.localScale = new Vector3(5000,5000, 5000 + (1000 * genscript.length));
+        thisTT.transform.Find("text").GetComponent<RectTransform>().sizeDelta = new Vector2(100 + (20 * genscript.length), 5);
         Vector3 currenttnpos = thisTT.transform.Find("tunnel name").GetComponent<RectTransform>().localPosition;
-        thisTT.transform.Find("tunnel name").GetComponent<RectTransform>().localPosition = new Vector3(currenttnpos.x,currenttnpos.y,currenttnpos.z - (9 * length));
+        thisTT.transform.Find("tunnel name").GetComponent<RectTransform>().localPosition = new Vector3(currenttnpos.x,currenttnpos.y,currenttnpos.z - (9 * genscript.length));
         thisTT.transform.position = new Vector3(0f, -5.91f, -9955f);
 
       //Assign a speed and fontSize, based on the generator, to the text object.
@@ -129,7 +132,7 @@ generateTT("tunnel");
         thistextscript.topspeed = assignedSpeed;
         thistextscript.type = type;
       
-    thisTextGenerator.setGrammarForObject(correctGrammar);
+        thisTextGenerator.setGrammarForObject(correctGrammar);
         thisTextGeneratorName.setGrammarForObject(correctGrammarTunnelName);
         thisTextGenerator.generateTextFromGrammar(thistextmesh);
         thisTextGeneratorName.generateTextFromGrammar(thistextmeshname);

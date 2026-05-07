@@ -198,12 +198,12 @@ PrefabInstance:
     - target: {fileID: 6399391411232519596, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_Pivot.x
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
@@ -213,32 +213,32 @@ PrefabInstance:
     - target: {fileID: 6399391411232519596, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
@@ -328,22 +328,22 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_margin.w
-      value: 1.1306125
+      value: 0.38927096
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_margin.x
-      value: 29.581688
+      value: 4.597902
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_margin.y
-      value: 3.6204894
+      value: 0.38260025
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_margin.z
-      value: -10.185892
+      value: 4.846346
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
@@ -405,7 +405,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
@@ -427,6 +427,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7718043142196437281}
+    - targetCorrespondingSourceObject: {fileID: 6399391411232519584, guid: 873c2936ae846154e80c1b10586184ab,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9035740396770984353}
   m_SourcePrefab: {fileID: 100100000, guid: 873c2936ae846154e80c1b10586184ab, type: 3}
 --- !u!224 &3909443860880700656 stripped
 RectTransform:
@@ -459,3 +463,23 @@ MonoBehaviour:
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
   grammarParse: 
+  length: 0
+--- !u!114 &9035740396770984353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909443860880700668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8dfedb4e284cda1ad28d50e1a7f54a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextFitController
+  boxSize: {x: 0.6, y: 0.2}
+  showGizmo: 0
+  initialText: 
+  fontAsset: {fileID: 11400000, guid: bc737ba9377135845a9f1b19b5c3478f, type: 2}
+  maxFontSize: 0.4
+  minFontSize: 0.8
+  fitIterations: 12

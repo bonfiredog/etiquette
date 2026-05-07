@@ -16148,8 +16148,19 @@
     "stationmaster",
     "ticketmaster"
   ],
+
+
+  "tsr_name":[
+    "office", "department", "booth", "room", "shed"
+],
+
   "train_stationroom": [
     "attendant's office",
+    "#train_station_staff.capitalizeAll#'s Office",
+    "#indoor_activity.capitalize# #tsr_name.capitalize#",
+    "#mealtimes.capitalize# Room",
+    "#plot_elements.capitalize# Room",
+    "#verbs_interaction.ing.capitalize# Room",
     "coal shed",
     "depot",
         "station kitchen",
@@ -16159,7 +16170,10 @@
         "waiting room",
     "engine shed",
     "commissary",
-    "refreshment-corridor","office","lost luggage office","booking office",
+    "refreshment-corridor",
+    "office",
+    "lost luggage office",
+    "booking office",
     "goods shed",
     "landing",
     "wheelhouse"
@@ -18061,14 +18075,13 @@
     "winter"
   ],
   "compass_points": [
-    "astern",
-    "declination",
-    "direction",
+
     "east",
     "eastbound",
     "easterly",
     "eastward",
-    "equator",
+    "upward",
+    "downward",
     "homeward",
     "landward",
     "larboard",
@@ -18085,7 +18098,6 @@
     "northwesterly",
     "northwestern",
     "onshore",
-    "onwards",
     "overland",
     "seaward",
     "south",
@@ -18096,7 +18108,6 @@
     "southward",
     "southwest",
     "starboard",
-    "thither",
     "west",
     "westerly",
     "westward",
@@ -19713,7 +19724,6 @@
     "angelica",
     "apricot",
     "arbutus",
-    "Himalayan balsam",
     "henbane",
     "stonecrop",
     "hornwort",
@@ -19724,7 +19734,8 @@
     "sweetbriar",
     "allium",
     "bulrush",
-    "pennywort","spleenwort",
+    "pennywort",
+    "spleenwort",
     "cinquefoil",
     "buckthorn",
     "agaric",
@@ -30703,23 +30714,26 @@
   "wright",
   "#abstract_nouns_all##surname_ending#",
 "#adjectives_colours_common##surname_ending#",
-"#air_types##surnameending#",
-"#weather_types_spring##surnameending#",
-"#weather_types_summer##surnameending#",
-"#weather_types_autumn##surnameending#",
-"#weather_types_winter##surnameending#",
-"#adjectives_temperature##surnameending#",
+"#air_types##surname_ending#",
+"#weather_types_spring##surname_ending#",
+"#weather_types_summer##surname_ending#",
+"#weather_types_autumn##surname_ending#",
+"#weather_types_winter##surname_ending#",
+"#adjectives_temperature##surname_ending#",
 "#animals_large_british#",
 "#animals_small_british#",
 "#animals_medium_british#",
-"#verbs_all.ing##surnameending#",
-"#seasons##surnameending#",
+"#verbs_all.ing##surname_ending#",
+"#seasons##surname_ending#",
 "#plantsflowers_home#"
 ],
 
 "fullname_any": [
   "#names_men.capitalize# #surnames.capitalize#",
   "#names_women.capitalize# #surnames.capitalize#"
+],
+"fullname_male":[
+  "#names_men.capitalize# #surnames.capitalize#"
 ],
 "downup": [
   "down",
@@ -31117,13 +31131,70 @@
     "millennia"
   ],
 
-"invasive": [
-  "placenames.capitalize #plantname#",
-  "#abstract_noun##plantname#",
-  "#imperial_locations##plantname#",
-  "#railway_furniture##plantname#",
-  "#counties# #verbs_noise##plantname#"
+
+"placenameornot": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "#imperial_locations.capitalizeAll#",
+  "#imperial_locations.capitalizeAll#",
+  "#imperial_locations.capitalizeAll#",
+  "#person_role_empire.capitalizeAll#'s",
+  "#surnames.capitalizeAll#'s",
+  "#verbs_all.ing#"
 ],
+"invasive_types": [
+  "#nouns_materials_empire.capitalize##plantname#",
+  "#nouns_materials_common.capitalize##plantname#",
+  "#nouns_materials_rare.capitalize##plantname#",
+  "#placenames.capitalize# #plantname.capitalize#",
+  "#weapons##plantname#",
+  "#tools##plantname#",
+  "#animals_all# #plantname#",
+  "#marks_injuries##plantname#",
+  "#illness_type##plantname#",
+  "#locations_all##plantname#",
+  "#railway_architecture##plantname#",
+  "#railway_crossing_place##plantname#",
+  "#train_parts##plantname#",
+  "#railway_furniture##plantname#",
+  "#verbs_noise##plantname#",
+  "#weather_types_spring##plantname#",
+  "#weather_types_summer##plantname#",
+  "#weather_types_autumn##plantname#",
+  "#weather_types_winter##plantname#",
+  "#celestial_body##plantname#",
+  "#plantname#",
+  "#plantname#"
+],
+  "invasive": [
+    "#placenameornot# #invasive_types.capitalizeAll#"
+  ],
+
+"plot_elements":[
+"denouement",
+"cliffhanger",
+"eucatastrophe",
+"foreshadowing",
+"flashback",
+"frame story",
+"reveal",
+"bildungsroman",
+"catastasis",
+"catastrophe",
+"epitasis",
+"protasis",
+"anagnorisis",
+"peripeteia",
+"catharsis",
+"ekphrasis",
+"pathos",
+"bathos"
+],
+
+
 "plantname": [
   "weed",
   "grass",
@@ -31132,8 +31203,26 @@
   "cover",
   "berry",
   "wort",
+  "salve",
+  "heal",
   "flower",
-  "sweet"
+  "sweet",
+  "bloom", 
+  "blossom", 
+  "bell",
+  "cup",
+  "lip",
+  "star",
+  "crown",
+  "glory",
+  "plume",
+  "spike",
+  "tassel",
+  "reed",
+  "rush",
+  "sedge",
+  "mat"
+  
 ],
 
   "train_classes": [
@@ -31169,6 +31258,13 @@
   "#animals_air_empire#"
 ],
  
+"locations_all":[
+  "#imperial_locations#",
+  "#rural_locations#",
+  "#town_locations#",
+  "#city_locations#",
+  "#coastal_locations#"
+],
 
   "words_all":[
 "#abstract_nouns_positive#",

@@ -1,5 +1,16 @@
 {
+  "dest":[
+  "#placenames.capitalizeAll#",
+    "#current_buildings.capitalizeAll#",
+    "#current_buildings_rare.capitalizeAll#",
+    "Platform #numbers#",
+    "#train_stationroom.capitalizeAll#",
+    "#railway_crossing_place.capitalizeAll#"
+  ],
+
   "origin": [
-    "TEST"
+  "#dest#",
+  "To #dest#"
+
   ]
 }

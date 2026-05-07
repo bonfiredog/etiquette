@@ -75,6 +75,8 @@ public class rockingController : MonoBehaviour
 private float suddenJoltMagnitude;
 private bool isJiggling = false;
 
+private float jolttimer = 10;
+
     private void Start()
     {
         if (cameraObj != null) cc = cameraObj.GetComponent<cameraControl>();
@@ -92,6 +94,19 @@ private bool isJiggling = false;
 
     private void Update()
     {
+
+        //Randomised jolting
+        if (tc.trainCurrentSpeed > 0) {
+        if (jolttimer > 0) {
+            jolttimer -= 1 * Time.deltaTime;
+        } else {
+            SuddenJolt();
+            jolttimer = Random.Range(5,40);
+        }
+        }
+
+
+
         UpdateSpeedPercentage();
 
         bool allowAmbientMotion = cc != null && cc.outAmount > 0f;

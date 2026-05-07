@@ -466,6 +466,7 @@
 "Assets/Scripts & Behaviours/TrainControl.cs"
 "Assets/Scripts & Behaviours/VerticalCam.cs"
 "Assets/Scripts & Behaviours/WindowTextGenerate.cs"
+"Assets/Scripts & Behaviours/border.cs"
 "Assets/Scripts & Behaviours/buttonFunctions.cs"
 "Assets/Scripts & Behaviours/cameraControl.cs"
 "Assets/Scripts & Behaviours/commandConsole.cs"

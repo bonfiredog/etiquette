@@ -150,6 +150,7 @@
     <Compile Include="Assets/Admin/TotalJSON/Scripts/Exceptions/JNumberFormatException.cs" />
     <Compile Include="Assets/flockaroo/VanGogh/VanGoghEffectHDRP.cs" />
     <Compile Include="Assets/flockaroo/Sketchy/SketchyEffectURP.cs" />
+    <Compile Include="Assets/Scripts &amp; Behaviours/border.cs" />
     <Compile Include="Assets/Scripts &amp; Behaviours/stationArchGenerate.cs" />
     <Compile Include="Assets/flockaroo/Aquarelle/AquarelleEffect.cs" />
     <Compile Include="Assets/Admin/Tracery/Scripts/Modifiers.cs" />

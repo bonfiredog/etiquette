@@ -13,6 +13,7 @@ using TMPro;
 ///   1. Attach both TextFitController and TextMeshPro to the SAME GameObject.
 ///   2. In textGenOneShot, call tfc.SetText(savedtext) and do NOT clear myText.text.
 /// </summary>
+[ExecuteAlways]
 public class TextFitController : MonoBehaviour
 {
     [Header("Box Constraints")]
@@ -86,8 +87,10 @@ public class TextFitController : MonoBehaviour
             go.transform.localPosition = Vector3.zero;
             go.transform.localRotation = Quaternion.identity;
             go.transform.localScale    = Vector3.one;
+        
 
             _tmp = go.AddComponent<TextMeshPro>();
+
 
             if (fontAsset != null)
                 _tmp.font = fontAsset;
@@ -100,37 +103,43 @@ public class TextFitController : MonoBehaviour
 
         // Centre the RectTransform pivot so it aligns with the Gizmo.
         var rt              = _tmp.rectTransform;
-        rt.pivot            = new Vector2(0.5f, 0.5f);
-        rt.anchorMin        = new Vector2(0.5f, 0.5f);
-        rt.anchorMax        = new Vector2(0.5f, 0.5f);
-        rt.anchoredPosition = Vector2.zero;
-        rt.sizeDelta        = boxSize; // tells TMP where to wrap lines
+    
+      
     }
 
     // ── Core fitting logic ────────────────────────────────────────────────────
+private void FitTextToBox()
+{
 
-    private void FitTextToBox()
+var rt = _tmp.rectTransform;
+    Debug.Log($"sizeDelta:{rt.sizeDelta} rect:{rt.rect} localScale:{rt.localScale} lossyScale:{rt.lossyScale} parent lossyScale:{rt.parent?.lossyScale}");
+
+    // lossyScale matches the yellow box size when resized by dragging in Scene view
+    Vector2 size = new Vector2(
+        _tmp.rectTransform.lossyScale.x,
+        _tmp.rectTransform.lossyScale.y
+    );
+
+    float lo = minFontSize;
+    float hi = maxFontSize;
+
+    for (int i = 0; i < fitIterations; i++)
     {
-        float lo = minFontSize;
-        float hi = maxFontSize;
-
-        for (int i = 0; i < fitIterations; i++)
-        {
-            float mid = (lo + hi) * 0.5f;
-            _tmp.fontSize = mid;
-            _tmp.ForceMeshUpdate();
-
-            Vector2 rendered = _tmp.GetRenderedValues(onlyVisibleCharacters: false);
-
-            if (rendered.x <= boxSize.x && rendered.y <= boxSize.y)
-                lo = mid;   // fits → try bigger
-            else
-                hi = mid;   // overflows → try smaller
-        }
-
-        _tmp.fontSize = lo;
+        float mid = (lo + hi) * 0.5f;
+        _tmp.fontSize = mid;
         _tmp.ForceMeshUpdate();
+
+        Vector2 rendered = _tmp.GetRenderedValues(onlyVisibleCharacters: false);
+
+        if (rendered.x <= size.x && rendered.y <= size.y)
+            lo = mid;
+        else
+            hi = mid;
     }
+
+    _tmp.fontSize = lo;
+    _tmp.ForceMeshUpdate();
+}
 
     // ── Editor Gizmo ─────────────────────────────────────────────────────────
 

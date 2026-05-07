@@ -43,6 +43,14 @@ public class BendyTextPath : MonoBehaviour
     {
         textMesh = GetComponent<TMP_Text>();
         StartCoroutine(InitializeAfterFrame());
+
+        //Randomise text rotation.
+         float randomZ = Random.Range(-15, 15);
+        transform.rotation = Quaternion.Euler(
+            transform.eulerAngles.x,
+            transform.eulerAngles.y,
+            randomZ
+        );
     }
 
     IEnumerator InitializeAfterFrame()
