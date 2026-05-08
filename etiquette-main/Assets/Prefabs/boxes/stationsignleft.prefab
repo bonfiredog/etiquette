@@ -318,7 +318,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_text
-      value: asdasdadadad
+      value: To the ancient trains
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
@@ -384,7 +384,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_overflowMode
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}

@@ -795,7 +795,9 @@ if (autoDelay == false) {
                     tc.delaying = true;
                     checkingdelay = false;
                     delay = "train";
-                    rocker.SuddenJolt();
+                    rocker.SuddenJolt(rocker.suddenJoltStrength * 2f);
+
+         
                      cc.PushBackIntoCabin();
                     createDelayText();
                     tc.generatedtrain = false;
@@ -880,7 +882,7 @@ if (autoDelay == false) {
 
                       if (trainwordfound == true) {
                         tc.delaying = true;
-                           rocker.SuddenJolt();
+                           rocker.SuddenJolt(rocker.suddenJoltStrength * 2f);
                            cc.PushBackIntoCabin();
                            createDelayText();
                         delay = "accident";
@@ -899,7 +901,7 @@ if (autoDelay == false) {
 } else if (autoDelay == true) {
     Debug.Log("Auto Delay!");
      tc.delaying = true;
-                           rocker.SuddenJolt();
+                           rocker.SuddenJolt(rocker.suddenJoltStrength * 2f);
                             cc.PushBackIntoCabin();
                            createDelayText();
                         delay = "accident";

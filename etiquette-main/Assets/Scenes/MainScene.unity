@@ -1289,6 +1289,7 @@ MonoBehaviour:
   - sidegen
   - middlegen
   - backgen
+  - belowgen
   stationTag: station
   updateInterval: 1
   fadeDurationMs: 250
@@ -3579,6 +3580,24 @@ Transform:
   - {fileID: 751621418}
   m_Father: {fileID: 2115017685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &307653095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2615990814294816003, guid: 6a53003c561fded46b2204fbb29ec9a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4434441878542383646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &307653097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307653095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fa632c9333c34bfb0a31e3a4ba1675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableCulling
 --- !u!1 &311046359
 GameObject:
   m_ObjectHideFlags: 0
@@ -11537,6 +11556,7 @@ MonoBehaviour:
   timer: 0
   timerMulti: 20
   overallChance: 100
+  genscript: {fileID: 0}
 --- !u!224 &949585504 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1306999284015460243, guid: d6e690df48a68411f9e3800f10386bfd,
@@ -11785,7 +11805,8 @@ MonoBehaviour:
   outSpeed: 0.9
   outAmount: 0
   lookmodset: 20
-  pushbackSpeed: 8
+  pushbackSpeed: 1
+  pushbackBounceAmount: 3
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28631,6 +28652,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 3618590200645847476, guid: 6a53003c561fded46b2204fbb29ec9a1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4434441878542383648}
     - targetCorrespondingSourceObject: {fileID: 1737254803625511432, guid: 6a53003c561fded46b2204fbb29ec9a1,
         type: 3}
       insertIndex: -1
@@ -28639,7 +28664,51 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 9121236946359424986, guid: 6a53003c561fded46b2204fbb29ec9a1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4434441878542383650}
+    - targetCorrespondingSourceObject: {fileID: 2615990814294816003, guid: 6a53003c561fded46b2204fbb29ec9a1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 307653097}
   m_SourcePrefab: {fileID: 100100000, guid: 6a53003c561fded46b2204fbb29ec9a1, type: 3}
+--- !u!1 &4434441878542383647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3618590200645847476, guid: 6a53003c561fded46b2204fbb29ec9a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4434441878542383646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4434441878542383648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4434441878542383647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fa632c9333c34bfb0a31e3a4ba1675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableCulling
+--- !u!1 &4434441878542383649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9121236946359424986, guid: 6a53003c561fded46b2204fbb29ec9a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4434441878542383646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4434441878542383650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4434441878542383649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fa632c9333c34bfb0a31e3a4ba1675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableCulling
 --- !u!1001 &7566954703280699851
 PrefabInstance:
   m_ObjectHideFlags: 0

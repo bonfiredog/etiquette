@@ -330,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_fontSize
-      value: 0.9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
@@ -386,12 +386,12 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_overflowMode
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
@@ -412,7 +412,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_VerticalAlignment
-      value: 256
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
@@ -444,6 +444,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5320086576046715525}
+    - targetCorrespondingSourceObject: {fileID: 6399391411232519584, guid: 873c2936ae846154e80c1b10586184ab,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 230656035063066755}
   m_SourcePrefab: {fileID: 100100000, guid: 873c2936ae846154e80c1b10586184ab, type: 3}
 --- !u!224 &3909443860880700656 stripped
 RectTransform:
@@ -476,3 +480,23 @@ MonoBehaviour:
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
   grammarParse: 
+  length: 0
+--- !u!114 &230656035063066755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909443860880700668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8dfedb4e284cda1ad28d50e1a7f54a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextFitController
+  boxSize: {x: 0.84, y: 1.5}
+  showGizmo: 1
+  initialText: 
+  fontAsset: {fileID: 11400000, guid: a29bc921a0026ef96910d1452c9beeba, type: 2}
+  maxFontSize: 1
+  minFontSize: 0.6
+  fitIterations: 12

@@ -8,12 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: arch
-  m_Shader: {fileID: 4800000, guid: 390e567c3b7f8c558ba1afde2abab38e, type: 3}
+  m_Shader: {fileID: 4800000, guid: ce6b4529b344aa52587fe289cd421830, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_ValidKeywords:
   - _ALPHAPREMULTIPLY_ON
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -63,17 +63,20 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
+    - _CameraZ: 840
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
-    - _FadeEnd: 5000
-    - _FadeStart: 1650
+    - _EdgeFade: 50
+    - _FadeEnd: 4000
+    - _FadeStart: 4000
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 3
     - _OcclusionStrength: 1
+    - _Opacity: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

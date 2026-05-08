@@ -9,7 +9,7 @@ public class TextOpacityController : MonoBehaviour
     public List<string> monitoredTags = new List<string>();
 
     [Header("Tag of Station Objects")]
-    public string stationTag = "station";
+    public string stationTag = "fade";
 
     [Header("Update Interval (Seconds)")]
     public float updateInterval = 1f;

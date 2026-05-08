@@ -208,7 +208,7 @@
     <None Include="Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/Buff_BHDRP.shader" />
     <None Include="Assets/flockaroo/OilPainting/Resources/flockaroo_OilPainting/Image.cginc" />
     <None Include="Assets/Admin/Plugins/TextMesh Pro/Shaders/SDFFunctions.hlsl" />
-    <None Include="Assets/Shaders/tmpfade.shader" />
+    <None Include="Assets/Shaders/ZFadeText.shader" />
     <None Include="Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/demoscene_bg.shader" />
     <None Include="Assets/Admin/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets/Admin/Plugins/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
@@ -225,7 +225,7 @@
     <None Include="Assets/Admin/flockaroo/ColoredPencils/Resources/flockaroo_ColoredPencils/GammaCorrectShader.shader" />
     <None Include="Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/Buff_C.shader" />
     <None Include="Assets/Admin/Plugins/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
-    <None Include="Assets/Shaders/ZFadeShader.shader" />
+    <None Include="Assets/Shaders/ZFadeObject.shader" />
     <None Include="Assets/Admin/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
     <None Include="Assets/Admin/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
     <None Include="Assets/Admin/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
@@ -239,7 +239,6 @@
     <None Include="Assets/flockaroo/Sketchy/Resources/flockaroo_Sketchy/glsl2hlsl.hlsl" />
     <None Include="Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/Geom_A.cginc" />
     <None Include="Assets/flockaroo/VanGogh/Resources/flockaroo_VanGogh/Image.shader" />
-    <None Include="Assets/Shaders/ZFadeStandard.shader" />
     <None Include="Assets/flockaroo/OilPainting/Resources/flockaroo_OilPainting/Buff_AHDRP.shader" />
     <None Include="Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/shaderoo.cginc" />
     <None Include="Assets/Admin/Plugins/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
@@ -274,11 +273,12 @@
     <None Include="Assets/flockaroo/VanGogh/Resources/flockaroo_VanGogh/Buff_AHDRP.shader" />
     <None Include="Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/Buff_C.cginc" />
     <None Include="Assets/flockaroo/OilPainting/Resources/flockaroo_OilPainting/Geom_A.shader" />
+    <None Include="Assets/Shaders/ZWindowObject.shader" />
     <None Include="Assets/flockaroo/Sketchy/Resources/flockaroo_Sketchy/Geom_AHDRP.shader" />
     <None Include="Assets/Admin/Plugins/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
     <None Include="Assets/Admin/Tracery/JSON/readme.txt" />
     <None Include="Assets/Admin/flockaroo/ColoredPencils/Resources/flockaroo_ColoredPencils/gradientPrecalc.shader" />
-    <None Include="Assets/Shaders/TMP_ZWindow.shader" />
+    <None Include="Assets/Shaders/ZWindowText.shader" />
     <None Include="Assets/Admin/flockaroo/ColoredPencils/Resources/flockaroo_ColoredPencils/imageEffShader2HDRP.shader" />
     <None Include="Assets/Admin/Plugins/TextMesh Pro/Shaders/TMP_Sprite.shader" />
     <None Include="Assets/flockaroo/Aquarelle/Resources/flockaroo_Aquarelle/Image.cginc" />

@@ -32,7 +32,7 @@ public class rockingController : MonoBehaviour
     [SerializeField] private Vector2 suddenJoltForwardBackward = new Vector2(-0.5f, 0.5f);
     [SerializeField] private Vector2 suddenJoltUpDown = new Vector2(-0.3f, 0.6f);
     [SerializeField] private Vector2 suddenJoltLeftRight = new Vector2(-0.4f, 0.4f);
-    [SerializeField] private float suddenJoltStrength = 1f;
+    [SerializeField] public float suddenJoltStrength = 1f;
     [SerializeField] private AnimationCurve suddenJoltCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 [SerializeField] private float suddenJoltJiggleFrequency = 8f;   // How fast it oscillates
 [SerializeField] private float suddenJoltJiggleDamping = 4f;     // How quickly it dies out

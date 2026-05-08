@@ -63,6 +63,7 @@ public class cameraControl : MonoBehaviour
 
     [Header("Pushback Settings")]
 [SerializeField] private float pushbackSpeed = 1f;
+[SerializeField] private float pushbackBounceAmount = 5f;
 
     void Start()
     {
@@ -293,6 +294,25 @@ void HandleWindowAndLeaning()
         }
     }
 
+private IEnumerator PushbackBounce()
+{
+    // Wait until fully retracted
+    yield return new WaitUntil(() => outAmount <= 0f);
+
+    float elapsed = 0f;
+    float duration = 0.4f;
+
+    while (elapsed < duration)
+    {
+        elapsed += Time.deltaTime;
+        float t = elapsed / duration;
+        outAmount = Mathf.Sin(t * Mathf.PI) * pushbackBounceAmount;
+        yield return null;
+    }
+
+    outAmount = 0f;
+}
+
 public void PushBackIntoCabin()
 {
     forcedBack = true;
@@ -300,5 +320,6 @@ public void PushBackIntoCabin()
     dc.isGrabbed = false;
     pressing = false;
     holdingTimetable = false;
+    StartCoroutine(PushbackBounce());
 }
 }

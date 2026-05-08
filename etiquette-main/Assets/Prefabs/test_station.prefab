@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2035294226305700600
 Transform:
   m_ObjectHideFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 597432718902771089}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 88.3, z: -2.3}
+  m_LocalPosition: {x: 25.142855, y: 88.3, z: 352.27142}
   m_LocalScale: {x: 1, y: 270, z: 230}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 6159376615657953629}
   - component: {fileID: 1171246025282946194}
   - component: {fileID: 8101073500899712268}
+  - component: {fileID: 2554623094971831845}
   m_Layer: 0
   m_Name: Quad
   m_TagString: station
@@ -223,6 +224,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2554623094971831845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2175393311453053222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fa632c9333c34bfb0a31e3a4ba1675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableCulling
 --- !u!1 &3103540393133066717
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +247,7 @@ GameObject:
   - component: {fileID: 6240565358323503432}
   - component: {fileID: 45684611368478465}
   - component: {fileID: 8737830809526775266}
+  - component: {fileID: 6378119869124297262}
   m_Layer: 0
   m_Name: station_name_text
   m_TagString: Untagged
@@ -403,6 +417,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 45684611368478465}
   m_maskType: 0
+--- !u!114 &6378119869124297262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103540393133066717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fa632c9333c34bfb0a31e3a4ba1675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableCulling
 --- !u!1 &3755056678621381274
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +440,7 @@ GameObject:
   - component: {fileID: 8235779519852273278}
   - component: {fileID: 5248924347277511728}
   - component: {fileID: 7812985074213074906}
+  - component: {fileID: 5475297661016397178}
   m_Layer: 0
   m_Name: stationflagging
   m_TagString: station
@@ -583,6 +610,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 5248924347277511728}
   m_maskType: 0
+--- !u!114 &5475297661016397178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3755056678621381274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fa632c9333c34bfb0a31e3a4ba1675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableCulling
 --- !u!1 &4365193767529172177
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +634,7 @@ GameObject:
   - component: {fileID: 5543283732012813223}
   - component: {fileID: 3275864071866655226}
   - component: {fileID: 4703466774922127328}
+  - component: {fileID: 201756384718610289}
   m_Layer: 0
   m_Name: Quad (1)
   m_TagString: Untagged
@@ -695,6 +735,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &201756384718610289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4365193767529172177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fa632c9333c34bfb0a31e3a4ba1675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableCulling
 --- !u!1 &5809269246315468787
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +758,7 @@ GameObject:
   - component: {fileID: 7976253467122879600}
   - component: {fileID: 1671393739598591322}
   - component: {fileID: 6089702824679508824}
+  - component: {fileID: 880225263836913121}
   m_Layer: 0
   m_Name: stationawning
   m_TagString: station
@@ -875,6 +928,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1671393739598591322}
   m_maskType: 0
+--- !u!114 &880225263836913121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809269246315468787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fa632c9333c34bfb0a31e3a4ba1675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableCulling
 --- !u!1 &5949950550156189512
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,6 +952,7 @@ GameObject:
   - component: {fileID: 1318117333966151909}
   - component: {fileID: 5098060143004661471}
   - component: {fileID: 4536508230680044608}
+  - component: {fileID: 5085912560428348164}
   m_Layer: 0
   m_Name: AWN
   m_TagString: station
@@ -987,6 +1053,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5085912560428348164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949950550156189512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fa632c9333c34bfb0a31e3a4ba1675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableCulling
 --- !u!1 &8613157156894663085
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +1077,7 @@ GameObject:
   - component: {fileID: 1004766475553698131}
   m_Layer: 0
   m_Name: test_station
-  m_TagString: station
+  m_TagString: fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

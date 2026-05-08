@@ -24,6 +24,7 @@ TagManager:
   - belowgen
   - delaygen
   - fargen
+  - fade
   layers:
   - Default
   - TransparentFX

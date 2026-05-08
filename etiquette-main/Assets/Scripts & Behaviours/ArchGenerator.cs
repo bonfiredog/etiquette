@@ -65,7 +65,7 @@ public class ArchGenerator : MonoBehaviour
             float randomZRotation = Random.Range(-10f, 10f);
             spawnedObject.transform.localRotation = Quaternion.Euler(0f, 0f, randomZRotation);
             spawnedObject.transform.localScale = new Vector3(0.44f,0.29f,0.6f);
-            spawnedObject.transform.localPosition = new Vector3(Random.Range(-0.15f, 0.15f), Random.Range(-0.35f, 0), myz);
+            spawnedObject.transform.localPosition = new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.03f, 0.03f), 0);
 
         }
 

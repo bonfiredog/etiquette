@@ -34,7 +34,7 @@ public class textController : MonoBehaviour
         
 
         //If beyond a certain z value, destroy.
-        if (myPos.anchoredPosition3D.z > 10000)
+        if (myPos.anchoredPosition3D.z > 9000)
         {
             Destroy(gameObject);
         }
