@@ -6,7 +6,7 @@
 
 - A work of 3D, minimally-interactive digital concrete/kinetic poetry, recreating in real time the rail journey between Penzance and London on the British [Great Western Railway](https://en.wikipedia.org/wiki/Great_Western_Railway), c.1852.
 - Uses context-free grammars ([Tracery](http://tracery.io)) in combination with corpora derived from historic datasets to generate the passing landscapes and stations as poetic fragments moving in parallax.
-- Algorithmically-generated delays provide momentary combinations and "almost-narratives", framed by the train window.
+- Algorithmically-generated (and text-derived) delays provide momentary combinations of fragments into glimpsed "almost-narratives", framed by the train window.
 - Surfacing new combinations, juxtapositions and poetic imagery from this tangled, globalised web of cultural data, the work offers a polyphonic reimagining of the biases, desires and imaginations of the Victorian machine age.
 - A framework for understanding the shifting relationships with space and time engendered by the First Industrial Revolution, as well as the emerging imperialist projects of standardised “data regimes” (Atik, 2026) and “data colonialism” (Couldry and Mejias, 2018), whose descendant ideologies continue to define our societies today. 
 - Created in collaboration with the Alan Turing Institute's '[*Living With Machines*](%5Bhttps://livingwithmachines.ac.uk/%5D(https://livingwithmachines.ac.uk/)' research project.
