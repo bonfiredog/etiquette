@@ -9,7 +9,7 @@
 - Algorithmically-generated (and text-derived) delays provide momentary combinations of fragments into glimpsed "almost-narratives", framed by the train window.
 - Surfacing new combinations, juxtapositions and poetic imagery from this tangled, globalised web of cultural data, the work offers a polyphonic reimagining of the biases, desires and imaginations of the Victorian machine age.
 - A framework for understanding the shifting relationships with space and time engendered by the First Industrial Revolution, as well as the emerging imperialist projects of standardised “data regimes” (Atik, 2026) and “data colonialism” (Couldry and Mejias, 2018), whose descendant ideologies continue to define our societies today. 
-- Created in collaboration with the Alan Turing Institute's '[*Living With Machines*](%5Bhttps://livingwithmachines.ac.uk/%5D(https://livingwithmachines.ac.uk/)' research project.
+- Created in collaboration with the Alan Turing Institute's [*Living With Machines*](https://livingwithmachines.ac.uk) research project.
   
 ---
 
