@@ -1500,10 +1500,10 @@ MonoBehaviour:
   grammarNameFront: fargrammar
   grammarNameBack: fargrammar
   distanceOfGeneratorFromWindow: -9000
-  fontSizeLowerBound: 30000
-  fontSizeUpperBound: 30000
-  yPosLowerBound: 2700
-  yPosUpperBound: 2700
+  fontSizeLowerBound: 200
+  fontSizeUpperBound: 200
+  yPosLowerBound: 1624
+  yPosUpperBound: 1624
   fc: {fileID: 2083337607}
   timer: 0
   timerMulti: 6
@@ -22518,6 +22518,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 07841c89f07908c4581917aecc8c9bbc,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399391411232519596, guid: 07841c89f07908c4581917aecc8c9bbc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399391411232519596, guid: 07841c89f07908c4581917aecc8c9bbc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399391411232519596, guid: 07841c89f07908c4581917aecc8c9bbc,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -22529,7 +22544,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519596, guid: 07841c89f07908c4581917aecc8c9bbc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 07841c89f07908c4581917aecc8c9bbc,
         type: 3}
@@ -22559,7 +22574,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519596, guid: 07841c89f07908c4581917aecc8c9bbc,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2700
+      value: 1624
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519596, guid: 07841c89f07908c4581917aecc8c9bbc,
         type: 3}
@@ -22579,12 +22594,12 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 07841c89f07908c4581917aecc8c9bbc,
         type: 3}
       propertyPath: m_fontSize
-      value: 30000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 07841c89f07908c4581917aecc8c9bbc,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 30000
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

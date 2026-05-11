@@ -5,9 +5,13 @@ public class DisableCulling : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<Renderer>().bounds = new Bounds(
-            Vector3.zero, 
-            new Vector3(99999, 99999, 99999)
-        );
+        MeshRenderer rend = GetComponent<MeshRenderer>();
+        if (rend != null)
+        {
+            rend.localBounds = new Bounds(
+                Vector3.zero,
+                new Vector3(99999, 99999, 99999)
+            );
+        }
     }
 }

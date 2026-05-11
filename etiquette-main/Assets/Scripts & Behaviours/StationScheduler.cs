@@ -798,15 +798,15 @@ if (autoDelay == false) {
                     rocker.SuddenJolt(rocker.suddenJoltStrength * 2f);
 
          
-                     cc.PushBackIntoCabin();
-                    createDelayText();
+                    cc.PushBackIntoCabin();
+                    
                     tc.generatedtrain = false;
-                    Debug.Log("2) It's a train delay...");
+                    Debug.Log("2) It's a train delay!");
                     delayTimer = UnityEngine.Random.Range(25, 200);
 
                     } else {
 
-                    Debug.Log ("2) No train delay, trying for an accident delay...");
+                    Debug.Log ("3) No train delay, trying for an accident delay...");
                     int todmod = 0;
                     int seasonmod = 0;
 
@@ -849,7 +849,7 @@ if (autoDelay == false) {
                         
                         }
 
-                           //Choose one (or multiple!) sentences from sentence.json, and look for a train-related word in them.
+                    //Choose one (or multiple!) sentences from sentence.json, and look for a train-related word in them.
                     //Randomly choose a number of sentences from sentences.json (a percentage of the total);
                     //Add more for:
                      //Time Discrep Mod
@@ -884,7 +884,7 @@ if (autoDelay == false) {
                         tc.delaying = true;
                            rocker.SuddenJolt(rocker.suddenJoltStrength * 2f);
                            cc.PushBackIntoCabin();
-                           createDelayText();
+                          
                         delay = "accident";
                        checkingdelay = false;
                        delayTimer = UnityEngine.Random.Range(25, 200);
@@ -903,7 +903,6 @@ if (autoDelay == false) {
      tc.delaying = true;
                            rocker.SuddenJolt(rocker.suddenJoltStrength * 2f);
                             cc.PushBackIntoCabin();
-                           createDelayText();
                         delay = "accident";
                        checkingdelay = false;
                        delayTimer = UnityEngine.Random.Range(25, 200);
@@ -911,43 +910,7 @@ if (autoDelay == false) {
 
             }
 
-            private void createDelayText() {
-                    Debug.Log("Creating delay text...");
-
-                    float genclose1z;
-                    float genclose2z;
-                    float genmiddlez;
-                    float genbackz;
-
-                    float maincameraz;
-
-                    float genclose1currentspeed;
-                    float genclose2currentspeed;
-                    float genmiddlecurrentspeed;
-                    float genbackcurrentspeed;
-
-                    //Get the main camera position.
-                    maincameraz = 249.20f;
-                    Debug.Log($"Main Camera is at {maincameraz}");
-
-                    //Get current speed of all the generated texts when they are generated.
-                    genclose1currentspeed = (genclose1.assignedSpeed / tc.trainTopSpeed) * tc.trainCurrentSpeed;
-                    genclose2currentspeed = (genclose2.assignedSpeed / tc.trainTopSpeed) * tc.trainCurrentSpeed;
-                    genmiddlecurrentspeed = (genmiddle.assignedSpeed / tc.trainTopSpeed) * tc.trainCurrentSpeed;
-                    genbackcurrentspeed = (genback.assignedSpeed / tc.trainTopSpeed) * tc.trainCurrentSpeed;
-
-                    Debug.Log($"Speed for the generated text will be {genclose1currentspeed}");
-                    Debug.Log($"Current train speed is {tc.trainCurrentSpeed}");
-
-                     //Stopping Distances
-                    //If the z value of the generated text changes at 1 * currentspeed * Time.DeltaTime...
-
-                    float genclose1stoppingdistance = genclose1currentspeed * tc.trainCurrentSpeed * 0.5f;
-                    float genclose2stoppingdistance = genclose2currentspeed * tc.trainCurrentSpeed * 0.5f;
-                    float genmiddlestoppingdistance = genmiddlecurrentspeed * tc.trainCurrentSpeed * 0.5f;
-                    float genbackstoppingdistance = genbackcurrentspeed * tc.trainCurrentSpeed * 0.5f;
-
-                    Debug.Log($"Stopping distance is {genclose1stoppingdistance}");
+            public void deleteTexts() {
 
                     
                     //Delete any texts that are close to the generators.
@@ -956,19 +919,15 @@ if (autoDelay == false) {
 
                      foreach (GameObject obj in allObjects)
                        {
-                       if (obj.name == "frontgen" || obj.name == "loadup" || obj.name == "middlegen" || obj.name == "backgen" || obj.name == "belowgen")
+                       if (obj.name == "frontgen" || obj.name == "loadup" || obj.name == "middlegen" || obj.name == "backgen" || obj.name == "belowgen" || obj.name == "sidegen")
                       {
                       float z = obj.GetComponent<RectTransform>().anchoredPosition3D.z;
-                        if (z < -700 && z > -3500) {
+                        if (z < -5000) {
                             Destroy(obj);
                         }
                          }
                    }
-                     Debug.Log($"Created the text at Z value {-genclose1stoppingdistance + maincameraz}!");
-                    genclose1.generateMyText(-genclose1stoppingdistance + maincameraz, "DELAY TEXT");
-                    genclose2.generateMyText(-genclose2stoppingdistance + maincameraz, "DELAY TEXT");
-                    genmiddle.generateMyText(-genmiddlestoppingdistance + maincameraz, "DELAY TEXT");
-                    genback.generateMyText(-genbackstoppingdistance + maincameraz, "DELAY TEXT");
+                  
 
             }
 

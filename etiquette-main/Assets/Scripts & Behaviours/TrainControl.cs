@@ -141,12 +141,14 @@ public class TrainControl : MonoBehaviour
                                     generatedtrain = true;
                                 }
 
+
                             } else
                             {
 
                                 //When it's finished, create a delay object some random distance from the camera, with randomly generated text from the special delay grammar.
                                 delaying = false;
                                 rocker.SuddenJolt();
+                                ss.deleteTexts();
                                 generatedtrain = false;
                                 if (ss.delay == "accident") {
                                 GameObject delayobject = Instantiate(delayobj, new Vector3(1156,-387,-7000), Quaternion.identity);

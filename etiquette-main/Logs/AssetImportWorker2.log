@@ -7,22 +7,22 @@ Distro version:          #1 SMP PREEMPT_DYNAMIC Fri, 13 Mar 2026 18:47:31 +0000
 Kernel version:          6.12.77-1-MANJARO
 Architecture:            x86_64
 Available memory:        31451 MB
-Date:                    2026-05-08T14:28:32Z
+Date:                    2026-05-11T16:12:32Z
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rob" at "2026-05-08T14:28:32.645757Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rob" at "2026-05-11T16:12:32.290716Z"
 [SignatureVerifier] Application signature verification not supported on this platform.
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.17.4+4293ba1
-  Session Id:              239931315d304975b2637f226b80d054
+  Session Id:              dd55c614a2244011b5af5cecb8b3e196
   Correlation Id:          999ee35adc98f077484cf541070ae668
-  External correlation Id: 794339241972893444
+  External correlation Id: 4888163629101645139
   Machine Id:              Zkygl3yxU1pAziy40zPDnRx5sRM=
 [Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-rob" (connect: 0.00s, validation: 0.00s, handshake: 0.00s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rob-notifications" at "2026-05-08T14:28:32.648001Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rob-notifications" at "2026-05-11T16:12:32.292029Z"
 [Licensing::Module] Licensing Background thread has ended after 0.00s
 Selected window backend: (null) 
-Gtk-Message: 15:28:32.673: Failed to load module "xapp-gtk3-module"
-Gtk-Message: 15:28:32.673: Failed to load module "canberra-gtk-module"
+Gtk-Message: 17:12:32.323: Failed to load module "xapp-gtk3-module"
+Gtk-Message: 17:12:32.323: Failed to load module "canberra-gtk-module"
 Desktop is 5040 x 2160 @ 60 Hz
 Initialize udev device monitor.
 
@@ -38,7 +38,7 @@ AssetImportWorker2
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-45371
+38363
 -licensingIpc
 LicenseClient-rob
 -job-worker-count
@@ -49,9 +49,9 @@ LicenseClient-rob
 1
 Successfully changed project path to: /home/rob/pith/current-projects/Etiquette/Unity Project/etiquette/etiquette-main
 
-(Unity:23874): Gtk-CRITICAL **: 15:28:32.867: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
+(Unity:31397): Gtk-CRITICAL **: 17:12:32.470: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
 
-(Unity:23874): Gtk-CRITICAL **: 15:28:32.867: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
+(Unity:31397): Gtk-CRITICAL **: 17:12:32.471: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
 /home/rob/pith/current-projects/Etiquette/Unity Project/etiquette/etiquette-main
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-allocator-temp-initial-block-size-main=262144"
@@ -88,18 +88,18 @@ Successfully changed project path to: /home/rob/pith/current-projects/Etiquette/
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [139837487553088]  Target information:
+Player connection [139932207540800]  Target information:
 
-Player connection [139837487553088]  * "[IP] 192.168.1.202 [Port] 0 [Flags] 2 [Guid] 1091609547 [EditorId] 1091609547 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.243) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+Player connection [139932207540800]  * "[IP] 192.168.1.202 [Port] 0 [Flags] 2 [Guid] 2581578677 [EditorId] 2581578677 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.243) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
 
-Player connection [139837487553088]  * "[IP] 172.18.0.1 [Port] 0 [Flags] 2 [Guid] 1091609547 [EditorId] 1091609547 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.243) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+Player connection [139932207540800]  * "[IP] 172.18.0.1 [Port] 0 [Flags] 2 [Guid] 2581578677 [EditorId] 2581578677 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.243) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
 
-Player connection [139837487553088]  * "[IP] 172.17.0.1 [Port] 0 [Flags] 2 [Guid] 1091609547 [EditorId] 1091609547 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.243) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+Player connection [139932207540800]  * "[IP] 172.17.0.1 [Port] 0 [Flags] 2 [Guid] 2581578677 [EditorId] 2581578677 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.243) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
 
-Player connection [139837487553088]  * "[IP] 192.168.1.243 [Port] 0 [Flags] 2 [Guid] 1091609547 [EditorId] 1091609547 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.243) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+Player connection [139932207540800]  * "[IP] 192.168.1.243 [Port] 0 [Flags] 2 [Guid] 2581578677 [EditorId] 2581578677 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.243) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
 
-Player connection [139837487553088] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [139837487553088] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [139932207540800] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [139932207540800] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 10
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -111,7 +111,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 1.33 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2.67 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.2.5f1 (43d04cd1df69)
 [Subsystems] Discovering subsystems at path /home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/UnitySubsystems
@@ -130,50 +130,50 @@ t GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_
 port_array GL_ATI_blend_equation_separate GL_ATI_texture_float GL_EXT_EGL_image_storage GL_EXT_EGL_image_storage_compression GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_debug_label GL_EXT_demote_to_helper_invocation GL_EXT_depth_bounds_test GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_clock GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT_text
 ure_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_INTEL_conservative_rasterization GL_INTEL_performance_query GL_INTEL_shader_atomic_float_minmax GL_INTEL_shader_integer_functions2 GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_shader_subgroup GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_const_bandwidth GL_MESA_texture_signed_rgba GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_N
 V_depth_clamp GL_NV_fragment_shader_interlock GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc
-OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle -499568848
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle -818762576
 Initialize mono
 Mono path[0] = '/home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Managed'
 Mono path[1] = '/home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
 Mono config path = '/home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56874
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56397
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.001251 seconds.
-- Loaded All Assemblies, in  0.314 seconds
+Registered in 0.001420 seconds.
+- Loaded All Assemblies, in  0.275 seconds
 Native extension for LinuxStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.311 seconds
-Domain Reload Profiling: 626ms
-	BeginReloadAssembly (84ms)
+- Finished resetting the current domain, in  0.284 seconds
+Domain Reload Profiling: 559ms
+	BeginReloadAssembly (62ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (48ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (132ms)
-		LoadAssemblies (83ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (123ms)
+		LoadAssemblies (62ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (130ms)
-			TypeCache.Refresh (128ms)
-				TypeCache.ScanAssembly (118ms)
+		AnalyzeDomain (121ms)
+			TypeCache.Refresh (120ms)
+				TypeCache.ScanAssembly (110ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (312ms)
+	FinalizeReload (285ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (276ms)
+		SetupLoadedEditorAssemblies (251ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (47ms)
+			InitializePlatformSupportModulesInManaged (43ms)
 			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (57ms)
-			ProcessInitializeOnLoadAttributes (116ms)
-			ProcessInitializeOnLoadMethodAttributes (53ms)
+			BeforeProcessingInitializeOnLoad (54ms)
+			ProcessInitializeOnLoadAttributes (100ms)
+			ProcessInitializeOnLoadMethodAttributes (50ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -188,8 +188,8 @@ Begin MonoManager ReloadAssembly
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-- Loaded All Assemblies, in  0.431 seconds
-Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+- Loaded All Assemblies, in  0.417 seconds
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -197,49 +197,233 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.392 seconds
-Domain Reload Profiling: 824ms
-	BeginReloadAssembly (117ms)
+- Finished resetting the current domain, in  0.372 seconds
+Domain Reload Profiling: 788ms
+	BeginReloadAssembly (118ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (32ms)
-	RebuildCommonClasses (28ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (30ms)
 	RebuildNativeTypeToScriptingClass (7ms)
 	initialDomainReloadingComplete (30ms)
-	LoadAllAssembliesAndSetupDomain (250ms)
-		LoadAssemblies (183ms)
+	LoadAllAssembliesAndSetupDomain (232ms)
+		LoadAssemblies (177ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (113ms)
-			TypeCache.Refresh (85ms)
-				TypeCache.ScanAssembly (75ms)
-			BuildScriptInfoCaches (21ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (392ms)
+		AnalyzeDomain (103ms)
+			TypeCache.Refresh (78ms)
+				TypeCache.ScanAssembly (70ms)
+			BuildScriptInfoCaches (19ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (372ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (298ms)
+		SetupLoadedEditorAssemblies (282ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
 			SetLoadedEditorAssemblies (2ms)
-			BeforeProcessingInitializeOnLoad (72ms)
-			ProcessInitializeOnLoadAttributes (200ms)
-			ProcessInitializeOnLoadMethodAttributes (19ms)
-			AfterProcessingInitializeOnLoad (2ms)
+			BeforeProcessingInitializeOnLoad (68ms)
+			ProcessInitializeOnLoadAttributes (187ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
+			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (3ms)
-AutoLocale: current locale expects 'C' but got 'en_GB.UTF-8'Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+		AwakeInstancesAfterBackupRestoration (2ms)
+AutoLocale: current locale expects 'C' but got 'en_GB.UTF-8'Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3472 unused Assets / (1.3 MB). Loaded Objects now: 4059.
-Memory consumption went from 87.9 MB to 86.6 MB.
-Total: 7.490466 ms (FindLiveObjects: 0.351754 ms CreateObjectMapping: 0.189621 ms MarkObjects: 4.373148 ms  DeleteObjects: 2.574569 ms)
+Unloading 3472 unused Assets / (1.1 MB). Loaded Objects now: 4059.
+Memory consumption went from 88.2 MB to 87.1 MB.
+Total: 7.129531 ms (FindLiveObjects: 0.292429 ms CreateObjectMapping: 0.202352 ms MarkObjects: 5.012899 ms  DeleteObjects: 1.621111 ms)
 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
+========================================================================
+Received Import Request.
+  Time since last request: 534571.732253 seconds.
+  path: Assets/Prefabs/boxes/stationnewspaperposter.prefab
+  artifactKey: Guid(5fb881c868585cd8d866eb3801eeaf21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/boxes/stationnewspaperposter.prefab using Guid(5fb881c868585cd8d866eb3801eeaf21) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3a0accef7d05e598d6e43ce4e444c104') in 0.220955391 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
 
-SDL leaked 2 allocations
+========================================================================
+Received Import Request.
+  Time since last request: 9.147581 seconds.
+  path: Assets/Prefabs/boxes/stationnewspaperposter.prefab
+  artifactKey: Guid(5fb881c868585cd8d866eb3801eeaf21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/boxes/stationnewspaperposter.prefab using Guid(5fb881c868585cd8d866eb3801eeaf21) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '037d1c721d0281d8f473a9b073f6bf09') in 0.120782898 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.582495 seconds.
+  path: Assets/Prefabs/boxes/stationnewspaperposter.prefab
+  artifactKey: Guid(5fb881c868585cd8d866eb3801eeaf21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/boxes/stationnewspaperposter.prefab using Guid(5fb881c868585cd8d866eb3801eeaf21) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b868b3fdba19a243c9e3a23c8cc33d67') in 0.098743074 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.223747 seconds.
+  path: Assets/Prefabs/boxes/stationsignleft.prefab
+  artifactKey: Guid(024db43d41c35672b90564f31bf5b0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/boxes/stationsignleft.prefab using Guid(024db43d41c35672b90564f31bf5b0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5913f8585222d4abfc58197d239535a2') in 0.113571371 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 40
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fonts/FetteEgyptienne SDF.asset
+  artifactKey: Guid(bc737ba9377135845a9f1b19b5c3478f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/FetteEgyptienne SDF.asset using Guid(bc737ba9377135845a9f1b19b5c3478f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '26d9c86a7e45e934441503f3657a3766') in 0.119493712 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.903303 seconds.
+  path: Assets/Prefabs/boxes/stationsignleft.prefab
+  artifactKey: Guid(024db43d41c35672b90564f31bf5b0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/boxes/stationsignleft.prefab using Guid(024db43d41c35672b90564f31bf5b0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6adbdaa43c9f160c53d4497ce49037df') in 0.120670518 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 40
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.658669 seconds.
+  path: Assets/Prefabs/boxes/stationsignleft.prefab
+  artifactKey: Guid(024db43d41c35672b90564f31bf5b0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/boxes/stationsignleft.prefab using Guid(024db43d41c35672b90564f31bf5b0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'abd4b6d6501a51a71e40992b55af58e1') in 0.091571284 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 40
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.660015 seconds.
+  path: Assets/Prefabs/boxes/stationsignleft.prefab
+  artifactKey: Guid(024db43d41c35672b90564f31bf5b0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/boxes/stationsignleft.prefab using Guid(024db43d41c35672b90564f31bf5b0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'da15467154c22a5d60a5083bc782db5b') in 0.090604965 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 40
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.387142 seconds.
+  path: Assets/Prefabs/boxes/stationsignright.prefab
+  artifactKey: Guid(9320fb20596c8ee39b1f101f8e994fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/boxes/stationsignright.prefab using Guid(9320fb20596c8ee39b1f101f8e994fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a5e3c680eb7f3ad77e3c4a9a6d8a295a') in 0.091956321 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 40
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.246244 seconds.
+  path: Assets/Prefabs/Arch.prefab
+  artifactKey: Guid(1509ad5b28fe0344b83f6629b2a6def6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Arch.prefab using Guid(1509ad5b28fe0344b83f6629b2a6def6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9b73f885edff700a4c1b129045d35e98') in 0.336345341 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 311
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Prefabs/test_station_start Variant.prefab
+  artifactKey: Guid(6a53003c561fded46b2204fbb29ec9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/test_station_start Variant.prefab using Guid(6a53003c561fded46b2204fbb29ec9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '691df97bec271c597143cc1ae7767df4') in 0.441853898 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 581
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Prefabs/TIMETABLE 1.prefab
+  artifactKey: Guid(47917d9b0cec436f6a74bce285462139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/TIMETABLE 1.prefab using Guid(47917d9b0cec436f6a74bce285462139) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c1c101abf337087bd338880be118fe5a') in 0.154051113 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 365
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.766692 seconds.
+  path: Assets/Prefabs/test_station.prefab
+  artifactKey: Guid(5a7c67da2bdcd1748b2cf53bbdaa63b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/test_station.prefab using Guid(5a7c67da2bdcd1748b2cf53bbdaa63b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'defc546e681e04b0d9cb5f057022d264') in 0.302622568 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 470
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.854099 seconds.
+  path: Assets/Prefabs/test_station.prefab
+  artifactKey: Guid(5a7c67da2bdcd1748b2cf53bbdaa63b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/test_station.prefab using Guid(5a7c67da2bdcd1748b2cf53bbdaa63b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9eccbe9c2d5ae3b02c621769cd9c99e2') in 0.288899252 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 470
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.870244 seconds.
+  path: Assets/Prefabs/test_station_start Variant.prefab
+  artifactKey: Guid(6a53003c561fded46b2204fbb29ec9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/test_station_start Variant.prefab using Guid(6a53003c561fded46b2204fbb29ec9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2a33b03f68d1bdf90f1a340044e646cc') in 0.29865026 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 581
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  0.547 seconds
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.542 seconds
+Domain Reload Profiling: 1092ms
+	BeginReloadAssembly (182ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (70ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (300ms)
+		LoadAssemblies (243ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (119ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (104ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (543ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (409ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (103ms)
+			ProcessInitializeOnLoadAttributes (271ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3470 unused Assets / (0.7 MB). Loaded Objects now: 4108.
+Memory consumption went from 91.6 MB to 90.8 MB.
+Total: 5.616099 ms (FindLiveObjects: 0.318402 ms CreateObjectMapping: 0.131294 ms MarkObjects: 4.229140 ms  DeleteObjects: 0.935906 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 120.897183 seconds.
+  path: Assets/Prefabs/test_station_start Variant.prefab
+  artifactKey: Guid(6a53003c561fded46b2204fbb29ec9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/test_station_start Variant.prefab using Guid(6a53003c561fded46b2204fbb29ec9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4bf678ed29dbabc98c01d99d1614385a') in 0.402187917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 581
+
+========================================================================
+Received Import Request.
+  Time since last request: 73.001309 seconds.
+  path: Assets/Prefabs/test_station_start Variant.prefab
+  artifactKey: Guid(6a53003c561fded46b2204fbb29ec9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/test_station_start Variant.prefab using Guid(6a53003c561fded46b2204fbb29ec9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a0f84b61d9a9dc1bafc7d1755243d523') in 0.293103752 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 581
+

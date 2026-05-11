@@ -67,8 +67,8 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EdgeFade: 50
-    - _FadeEnd: 4000
-    - _FadeStart: 4000
+    - _FadeEnd: 3000
+    - _FadeStart: 2000
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1

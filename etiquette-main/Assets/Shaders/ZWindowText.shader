@@ -6,10 +6,10 @@ Shader "Custom/ZWindowText"
         _MainTex ("Font Atlas", 2D) = "white" {}
         _Softness ("Edge Softness", Range(0,0.5)) = 0.1
         _CameraZ ("Camera World Z", Float) = 840
-        _FadeStart ("Near Clip Distance", Float) = 5000
-        _FadeEnd ("Far Clip Distance", Float) = 5000
-        _EdgeFade ("Edge Fade Width", Float) = 50
-        _Opacity ("Max Opacity", Range(0,1)) = 0.5
+        _FadeStart ("Near Clip Distance", Float) = 3000
+        _FadeEnd ("Far Clip Distance", Float) = 3000
+        _EdgeFade ("Edge Fade Width", Float) = 100
+        _Opacity ("Max Opacity", Range(0,1)) = 1
 
         // TMP required internal properties
         _WeightNormal ("Weight Normal", Float) = 0
@@ -81,16 +81,20 @@ Shader "Custom/ZWindowText"
                 // Signed Z distance from camera
                 float signedDist = i.worldPos.z - _CameraZ;
 
-                // Near edge (behind camera): fade in as object comes into range
+                // Near edge: fade in as object comes into range
                 float nearFade = smoothstep(-_FadeStart - _EdgeFade, -_FadeStart, signedDist);
 
-                // Far edge (in front of camera): fade out as object leaves range
+                // Far edge: fade out as object leaves range
                 float farFade = smoothstep(_FadeEnd + _EdgeFade, _FadeEnd, signedDist);
 
                 float window = nearFade * farFade;
 
                 fixed4 col = _Color * i.color;
                 col.a = alpha * window * _Opacity;
+
+                // Discard fully transparent pixels early
+                clip(col.a - 0.01);
+
                 return col;
             }
             ENDCG

@@ -18,26 +18,24 @@ public class border : MonoBehaviour
         UpdateBorder();
     }
 
-    // Catches changes made in the Inspector while in edit mode
     void OnValidate()
     {
         if (_tmp == null) _tmp = GetComponent<TextMeshPro>();
-        // Delay one frame — OnValidate can fire before TMP rebuilds its mesh
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.delayCall += UpdateBorder;
+#endif
     }
 
-private void UpdateBorder()
-{
-    if (borderQuad == null || _tmp == null) return;
-
-    _tmp.ForceMeshUpdate();
-    Bounds b = _tmp.textBounds;
-
-    borderQuad.localPosition = b.center;
-    borderQuad.localScale = new Vector3(
-        b.size.x + padding.x,
-        b.size.y + padding.y,
-        1f
-    );
-}
+    private void UpdateBorder()
+    {
+        if (borderQuad == null || _tmp == null) return;
+        _tmp.ForceMeshUpdate();
+        Bounds b = _tmp.textBounds;
+        borderQuad.localPosition = b.center;
+        borderQuad.localScale = new Vector3(
+            b.size.x + padding.x,
+            b.size.y + padding.y,
+            1f
+        );
+    }
 }
