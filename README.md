@@ -15,13 +15,15 @@
 
 ### Builds
 
-- [Windows, Mac, Linux]()
+- [Windows, Mac, Linux](https://bonfiredog.itch.io/bradshaws-etiquette)
 
-- [Web-Based]()
+- [Web-Based](http://bonfiredog.co.uk/resources/etiquette)
 
 - App (iOS and Google Play, coming soon)
 
 **Requirements:**
+
+The application should run on most modern machines, and does not need dedicated graphics as most of the work is done on the CPU. It is quite RAM-thirsty (because of instantiation logic), so allow 1.5GB of overhead.
 
 ---
 
