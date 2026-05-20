@@ -1,0 +1,38 @@
+{  
+
+"firstnamevariants":[
+"#letters#. #letters#.",
+"#letters#.",
+"#names_men#",
+"",
+"Mr.",
+"Mr. #letters#. #letters#.",
+"Mr. #letters#."
+],
+
+"track_maker":[
+"#firstnamevariants# #surnames#",
+"#surnames# & #surnames#",
+"#surnames#, #surnames# and #surnames#",
+"#letters#. #letters#. #colonial_surnames#",
+"#surnames# & sons"
+],
+
+"track_location":[
+"#placenames.capitalize#",
+"#placenames.capitalize#, #counties.capitalize#",
+"#imperial_locations.capitalize#",
+"#placenames.capitalize# and #imperial_locations.capitalize#",
+"#british_towns.capitalize#",
+"#british_towns.capitalize# and #imperial_locations.capitalize#"
+],
+
+"builder": [
+"#track_maker#<br>#track_location#<br>#recent_date#"
+],
+
+"origin": [
+  "#builder.titleCase#"
+]
+
+}

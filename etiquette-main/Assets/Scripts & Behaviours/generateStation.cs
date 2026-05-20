@@ -76,95 +76,75 @@ public class generateStation : MonoBehaviour
 
     }
 
-    public void setStationArchAndLine(GameObject thisStation, float size)
+  public void setStationArchAndLine(GameObject thisStation, float size)
     {
-
-        //Set the line's x scale as a multiplier of the size.
+        // Find all child objects
         var linequad = thisStation.transform.Find("Quad");
-        var awnline = thisStation.transform.Find("AWN");
+        var awnline  = thisStation.transform.Find("AWN");
         var backcube = thisStation.transform.Find("Cube");
-        
         var flagging = thisStation.transform.Find("stationflagging").GetComponent<RectTransform>();
-         
-        var awning = thisStation.transform.Find("stationawning").GetComponent<RectTransform>();
-        var yscale = thisStation.transform.localScale.y;
-        var zscale = thisStation.transform.localScale.z;
-        var xscale = thisStation.transform.localScale.x;
+        var awning   = thisStation.transform.Find("stationawning").GetComponent<RectTransform>();
 
+        // Calculate arch count and span first, so everything else can use it.
+        float moveAmount = 120f;
+        float adjustedSize = size + 1;
+        if (adjustedSize % 2 != 0) adjustedSize += 1;
+        finalsize = adjustedSize;
+        var sideCount = finalsize / 2;
+        float archSpan = (sideCount - 1) * moveAmount * 2f;
 
+        // Stretch the back cube to match the full arch span.
+        backcube.transform.localScale = new Vector3(
+            backcube.transform.localScale.x,
+            backcube.transform.localScale.y,
+            archSpan
+        );
 
-        backcube.transform.localScale = new Vector3 (backcube.transform.localScale.x, backcube.transform.localScale.y, backcube.transform.localScale.z * size);
+        // Scale the line and awning quads to match size.
         linequad.transform.localScale = new Vector3(200 * size, 5, 20);
-        awnline.transform.localScale = new Vector3(200 * size, 5, 20);
-        if (size > 1) {
-        flagging.sizeDelta = new Vector2(170 * size, 5);
-        awning.sizeDelta = new Vector2(170 * size, 5);
-        } else {
-        flagging.sizeDelta = new Vector2(20,5);
-        awning.sizeDelta = new Vector2(20,5);
-        }
+        awnline.transform.localScale  = new Vector3(200 * size, 5, 20);
 
-        //Add the number of arches corresponding to the size.
-        //Firstly, make sure we are adding an even number.
-
-        //Firstly, add one to make sure there are enough.
-        size += 1;
-
-        if (size % 2 == 0)
+        // Scale the flagging and awning rect transforms.
+        if (size > 1)
         {
-           finalsize = size;
+            flagging.sizeDelta = new Vector2(170 * size, 5);
+            awning.sizeDelta   = new Vector2(170 * size, 5);
         }
         else
         {
-           finalsize = size + 1;
+            flagging.sizeDelta = new Vector2(20, 5);
+            awning.sizeDelta   = new Vector2(20, 5);
         }
 
-    
-            //There are finalsize number of slots: we fill them one at a time using i.
-
-            //Firstly, work out how many to create on each side.
-            var sideCount = finalsize / 2;
-        
-
-            //Firstly, create all the arches on the left side.
-            for (int k = 1; k < sideCount; k++ )
-            {
-                //Firstly, create a new arch, make it a child of the station and place it in the 'default' position.
-                GameObject thisArch = Instantiate(archObject);
-                      
-                
-                thisArch.transform.SetParent(thisStation.transform);
-                thisArch.transform.localPosition = new Vector3(0, 84.8f, 0);
-                thisArch.transform.localScale = new Vector3(thisArch.transform.localScale.x * 3.5f, thisArch.transform.localScale.y * 3.5f, thisArch.transform.localScale.z * 3.5f);
-                Quaternion localRot = Quaternion.Euler(0f, 90f, 0f);     
-                thisArch.transform.localRotation = localRot;
-
-                //Set a movement amount.
-                float moveAmount = 120f;
-
-                //Move the arch according to the current k value.
-                thisArch.transform.localPosition += new Vector3(0, 0, -moveAmount * k);
-
-            }
-
-            //Firstly, create all the arches on the left side.
-            for (int m = 1; m < sideCount; m++)
-            {
-                //Firstly, create a new arch, make it a child of the station and place it in the 'default' position.
-                GameObject thisArch = Instantiate(archObject);
-                thisArch.transform.SetParent(thisStation.transform);
-                thisArch.transform.localPosition = new Vector3(0, 84.8f, 0);
-                 thisArch.transform.localScale = new Vector3(thisArch.transform.localScale.x * 3.5f, thisArch.transform.localScale.y * 3.5f, thisArch.transform.localScale.z * 3.5f);
-            Quaternion localRot = Quaternion.Euler(0f, 90f, 0f);
-                thisArch.transform.localRotation = localRot;
-
-                //Set a movement amount.
-                float moveAmount = 120f;
-
-                //Move the arch according to the current k value.
-                thisArch.transform.localPosition += new Vector3(0, 0, moveAmount * m);
-
-            }
+        // Spawn arches on the left side.
+        for (int k = 1; k < sideCount; k++)
+        {
+            GameObject thisArch = Instantiate(archObject);
+            thisArch.transform.SetParent(thisStation.transform);
+            thisArch.transform.localPosition = new Vector3(0, 84.8f, 0);
+            thisArch.transform.localScale    = new Vector3(
+                thisArch.transform.localScale.x * 3.5f,
+                thisArch.transform.localScale.y * 3.5f,
+                thisArch.transform.localScale.z * 3.5f
+            );
+            thisArch.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            thisArch.transform.localPosition += new Vector3(0, 0, -moveAmount * k);
         }
+
+        // Spawn arches on the right side.
+        for (int m = 1; m < sideCount; m++)
+        {
+            GameObject thisArch = Instantiate(archObject);
+            thisArch.transform.SetParent(thisStation.transform);
+            thisArch.transform.localPosition = new Vector3(0, 84.8f, 0);
+            thisArch.transform.localScale    = new Vector3(
+                thisArch.transform.localScale.x * 3.5f,
+                thisArch.transform.localScale.y * 3.5f,
+                thisArch.transform.localScale.z * 3.5f
+            );
+            thisArch.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            thisArch.transform.localPosition += new Vector3(0, 0, moveAmount * m);
+        }
+    }
 
 }

@@ -42,6 +42,7 @@ public class StationScheduler : MonoBehaviour
     //Appropriate Variables
     public string currentterrain = "coast";
     public string stationlast = "Penzance";
+    public string currentCounty = "Cornwall";
     public string currentseason = "spring";
     public string currentmonth = "May";
     public string nextmonth = "june";
@@ -252,6 +253,7 @@ private createText genclose2;
 private createText genmiddle;
 private createText genback;
 private cameraControl cc;
+public float timediff;
 
 
     //===============================================================================================
@@ -380,10 +382,10 @@ private cameraControl cc;
     // Update is called once per frame
     void Update()
     {
-       updateGrammarVariables();
-
+       
         //Keep track of the miles covered 
         currentMiles += tc.trainCurrentSpeed * Time.deltaTime;
+        timediff = tc.currentLong * 4;
 
         //Load in the data for the first time from the JSON, to get the initial station data.
         if (loadInitialData == false)
@@ -400,7 +402,7 @@ private cameraControl cc;
             nextStationLong = float.Parse(data.stationData.GetJSON(nextStation.ToString()).GetString("longitude"));
             lastStationLong = nextStationLong;
             tc.currentLong = nextStationLong;
-
+            updateGrammarVariables();
             loadInitialData = true;
         }
 
@@ -429,6 +431,7 @@ private cameraControl cc;
                 nextStationDelayTimer = UnityEngine.Random.Range(20, 50);
                 rocker.SuddenJolt();
                 Debug.Log("Leaving station...");
+                updateGrammarVariables();
           
             }
         }
@@ -453,6 +456,7 @@ private cameraControl cc;
                             {
                                 tc.trainSlowDownStartSpeed = tc.trainCurrentSpeed;
                                 tc.docking = true;
+                                updateGrammarVariables();
                                 Debug.Log("Slowing down for the station...");
                                 tc.decelerationStartTime = Time.time;
                                 tc.decelerationTime = (2 * tc.secondsToSlowGentle) / tc.trainSlowDownStartSpeed;
@@ -467,6 +471,7 @@ private cameraControl cc;
                     //If we are at mile 0 (i.e. we are at the station, make sure we are docked, and start the station timer.
                     tc.docked = true;
                     tc.docking = false;
+                    rocker.SuddenJolt(rocker.suddenJoltStrength * 0.7f);
                     Debug.Log($"We are at {nextStationName}!");
                     currentStationTimer = UnityEngine.Random.Range(nextStationMinStay, nextStationMaxStay);
                 }
@@ -544,6 +549,7 @@ private void getStationData(int station)
         currentTerrain = getStationDataPointString(nextStation, "terrain");
         currentUrbanDensity = getStationDataPointInt(nextStation, "urbanDensity");
         nextStationDelayChance = getStationDataPointInt(station, "delayChance");
+        currentCounty = getStationDataPointString(station, "county");
        
     }
 
@@ -560,9 +566,7 @@ public string getStationDataPointString(int station, string keyname)
 
     public void updateGrammarVariables()
     {
-            if (variablesTimer > 0) {
-                variablesTimer -= 1 * Time.deltaTime;
-            } else {
+           
 
 
         currentterrain = currentTerrain;
@@ -653,8 +657,6 @@ public string getStationDataPointString(int station, string keyname)
             currentmealtime = "breakfast";
         }
 
-        variablesTimer = 20;
-            }
     }
 
 
@@ -873,7 +875,7 @@ if (autoDelay == false) {
                                  trainwordfound = wordsToCheck.Any(word =>
                                s.text.ToLower().Contains(word.ToLower()));
 
-                                   Debug.Log($"Text: {s.text} | Match: {trainwordfound}");
+                                   
                         }
 
                 

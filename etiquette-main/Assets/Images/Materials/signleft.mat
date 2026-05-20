@@ -30,7 +30,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _CameraZ: 840
-    - _EdgeFade: 200
+    - _EdgeFade: 3000
     - _FadeEnd: 3000
     - _FadeStart: 3000
     - _Glossiness: 0.5

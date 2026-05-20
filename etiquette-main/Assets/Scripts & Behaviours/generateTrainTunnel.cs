@@ -74,7 +74,7 @@ generateTT("tunnel");
     }
     // reset and EXIT
     timer = Random.Range(timerMin, timerMax);
-    Debug.Log($"Timer reset to: {timer}");
+ 
 }
 }
 

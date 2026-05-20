@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2035294226305700600
 Transform:
   m_ObjectHideFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 597432718902771089}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.142855, y: 88.3, z: 352.27142}
+  m_LocalPosition: {x: 25.142855, y: 88.3, z: -2.8571167}
   m_LocalScale: {x: 1, y: 270, z: 230}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1277,6 +1277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394827015080014120, guid: 1509ad5b28fe0344b83f6629b2a6def6,
+        type: 3}
+      propertyPath: chanceOfNothing
+      value: 0.196
       objectReference: {fileID: 0}
     - target: {fileID: 5407720729710772502, guid: 1509ad5b28fe0344b83f6629b2a6def6,
         type: 3}

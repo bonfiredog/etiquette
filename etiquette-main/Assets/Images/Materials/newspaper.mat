@@ -30,12 +30,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _CameraZ: 840
-    - _EdgeFade: 100
+    - _EdgeFade: 3000
     - _FadeEnd: 3000
     - _FadeStart: 2000
     - _Glossiness: 0.5
     - _Metallic: 0
-    - _Opacity: 0.5
+    - _Opacity: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

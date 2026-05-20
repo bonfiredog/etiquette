@@ -188,7 +188,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519584, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_Name
-      value: test_universal_text
+      value: newstext
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519585, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
@@ -497,6 +497,6 @@ MonoBehaviour:
   showGizmo: 1
   initialText: 
   fontAsset: {fileID: 11400000, guid: a29bc921a0026ef96910d1452c9beeba, type: 2}
-  maxFontSize: 1
+  maxFontSize: 72
   minFontSize: 0.6
   fitIterations: 12

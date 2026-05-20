@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8dfedb4e284cda1ad28d50e1a7f54a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  boxSize: {x: 30, y: 48}
+  boxSize: {x: 50, y: 48}
   showGizmo: 1
   initialText: CRATE NAME
   fontAsset: {fileID: 11400000, guid: bcfe9125851c45d3ba9ffbebc78aff2c, type: 2}

@@ -10,7 +10,9 @@
     "longitude": "-5.53",
     "willStop": 1,
     "delayChance": 0,
+    "county": "Cornwall",
     "speedMod": 50
+
   },
   "1": {
     "stationName": "Penzance",
@@ -23,6 +25,7 @@
     "longitude": "-5.53",
     "willStop": 1,
     "delayChance": 0,
+    "county": "Cornwall",
     "speedMod": 50
   },
   "2": {
@@ -36,6 +39,7 @@
     "longitude": "-5.44",
     "willStop": 1,
     "delayChance": 5,
+    "county": "Cornwall",
     "speedMod": 100
   },
   "3": {
@@ -49,6 +53,7 @@
     "longitude": "-5.42",
     "willStop": 1,
     "delayChance": 75,
+    "county": "Cornwall",
     "speedMod": 100
   },
   "4": {
@@ -62,6 +67,7 @@
     "longitude": "-5.29",
     "willStop": 1,
     "delayChance": 75,
+    "county": "Cornwall",
     "speedMod": 90
   },
   "5": {
@@ -75,6 +81,7 @@
     "longitude": "-5.22",
     "willStop": 0,
     "delayChance": 70,
+    "county": "Cornwall",
     "speedMod": 90
   },
   "6": {
@@ -88,6 +95,7 @@
     "longitude": "-5.22",
     "willStop": 1,
     "delayChance": 50,
+    "county": "Cornwall",
     "speedMod": 80
   },
   "7": {
@@ -101,6 +109,7 @@
     "longitude": "-5.0",
     "willStop": 0,
     "delayChance": 50,
+    "county": "Cornwall",
     "speedMod": 100
   },
   "8": {
@@ -114,6 +123,7 @@
     "longitude": "-4.79",
     "willStop": 1,
     "delayChance": 50,
+    "county": "Cornwall",
     "speedMod": 80
   },
   "9": {
@@ -127,6 +137,7 @@
     "longitude": "-4.70",
     "willStop": 1,
     "delayChance": 50,
+    "county": "Cornwall",
     "speedMod": 100
   },
   "10": {
@@ -140,6 +151,7 @@
     "longitude": "-4.79",
     "willStop": 1,
     "delayChance": 50,
+    "county": "Cornwall",
     "speedMod": 100
   },
   "11": {
@@ -153,6 +165,7 @@
     "longitude": "-4.66",
     "willStop": 0,
     "delayChance": 50,
+    "county": "Cornwall",
     "speedMod": 50
   },
   "12": {
@@ -166,6 +179,7 @@
     "longitude": "-4.53",
     "willStop": 1,
     "delayChance": 50,
+    "county": "Cornwall",
     "speedMod": 90
   },
   "13": {
@@ -179,6 +193,7 @@
     "longitude": "-4.46",
     "willStop": 1,
     "delayChance": 50,
+    "county": "Cornwall",
     "speedMod": 100
   },
   "14": {
@@ -192,6 +207,7 @@
     "longitude": "-4.41",
     "willStop": 0,
     "delayChance": 50,
+    "county": "Cornwall",
     "speedMod": 100
   },
   "15": {
@@ -205,6 +221,7 @@
     "longitude": "-4.30",
     "willStop": 1,
     "delayChance": 50,
+    "county": "Cornwall",
     "speedMod": 100
   },
   "16": {
@@ -218,6 +235,7 @@
     "longitude": "-4.21",
     "willStop": 1,
     "delayChance": 70,
+    "county": "Cornwall",
     "speedMod": 40
   },
   "17": {
@@ -231,6 +249,7 @@
     "longitude": "-4.17",
     "willStop": 1,
     "delayChance": 70,
+    "county": "Devonshire",
     "speedMod": 40
   },
   "18": {
@@ -244,6 +263,7 @@
     "longitude": "-4.14",
     "willStop": 1,
     "delayChance": 30,
+    "county": "Devonshire",
     "speedMod": 50
   },
   "19": {
@@ -257,6 +277,7 @@
     "longitude": "-4.13",
     "willStop": 1,
     "delayChance": 40,
+    "county": "Devonshire",
     "speedMod": 50
   },
   "20": {
@@ -270,6 +291,7 @@
     "longitude": "-4.06",
     "willStop": 0,
     "delayChance": 45,
+    "county": "Devonshire",
     "speedMod": 100
   },
   "21": {
@@ -283,6 +305,7 @@
     "longitude": "-3.96",
     "willStop": 0,
     "delayChance": 45,
+    "county": "Devonshire",
     "speedMod": 100
   },
   "22": {
@@ -296,6 +319,7 @@
     "longitude": "-3.90",
     "willStop": 1,
     "delayChance": 45,
+    "county": "Devonshire",
     "speedMod": 100
   },
   "23": {
@@ -309,6 +333,7 @@
     "longitude": "-3.83",
     "willStop": 1,
     "delayChance": 45,
+    "county": "Devonshire",
     "speedMod": 100
   },
   "24": {
@@ -322,6 +347,7 @@
     "longitude": "-3.85",
     "willStop": 1,
     "delayChance": 45,
+    "county": "Devonshire",
     "speedMod": 100
   },
   "25": {
@@ -335,6 +361,7 @@
     "longitude": "-4.79",
     "willStop": 1,
     "delayChance": 40,
+    "county": "Devonshire",
     "speedMod": 90
   },
   "26": {
@@ -347,6 +374,7 @@
     "terrain": "fields",
     "longitude": "-3.59",
     "willStop": 1,
+    "county": "Devonshire",
     "delayChance": 40,
     "speedMod": 80
   },
@@ -360,6 +388,7 @@
     "terrain": "coast",
     "longitude": "-3.49",
     "willStop": 1,
+    "county": "Devonshire",
     "delayChance": 40,
     "speedMod": 100
   },
@@ -373,6 +402,7 @@
     "terrain": "coast",
     "longitude": "-4.79",
     "willStop": 1,
+    "county": "Devonshire",
     "delayChance": 40,
     "speedMod": 100
   },
@@ -387,6 +417,7 @@
     "longitude": "-3.44",
     "willStop": 0,
     "delayChance": 40,
+    "county": "Devonshire",
     "speedMod": 100
   },
   "30": {
@@ -398,6 +429,7 @@
     "urbanDensity": 0,
     "terrain": "estuary",
     "longitude": "-3.48",
+    "county": "Devonshire",
     "willStop": 1,
     "delayChance": 40,
     "speedMod": 100
@@ -412,6 +444,7 @@
     "terrain": "fields",
     "longitude": "-3.54",
     "willStop": 1,
+    "county": "Devonshire",
     "delayChance": 40,
     "speedMod": 100
   },
@@ -425,6 +458,7 @@
     "terrain": "fields",
     "longitude": "-3.51",
     "willStop": 1,
+    "county": "Devonshire",
     "delayChance": 35,
     "speedMod": 100
   },
@@ -434,6 +468,7 @@
     "minStationStay": 5,
     "maxStationStay": 30,
     "stationSize": 1,
+    "county": "Devonshire",
     "urbanDensity": 5,
     "terrain": "fields",
     "longitude": "-3.42",
@@ -449,6 +484,7 @@
     "stationSize": 6,
     "urbanDensity": 20,
     "terrain": "fields",
+    "county": "Devonshire",
     "longitude": "-3.38",
     "willStop": 1,
     "delayChance": 35,
@@ -464,6 +500,7 @@
     "terrain": "fields",
     "longitude": "-3.36",
     "willStop": 1,
+    "county": "Devonshire",
     "delayChance": 35,
     "speedMod": 100
   },
@@ -477,6 +514,7 @@
     "terrain": "fields",
     "longitude": "-3.24",
     "willStop": 0,
+    "county": "Somersetshire",
     "delayChance": 35,
     "speedMod": 100
   },
@@ -488,6 +526,7 @@
     "stationSize": 8,
     "urbanDensity": 30,
     "terrain": "fields",
+    "county": "Somersetshire",
     "longitude": "-3.10",
     "willStop": 1,
     "delayChance": 35,
@@ -500,6 +539,7 @@
     "maxStationStay": 80,
     "stationSize": 4,
     "urbanDensity": 20,
+    "county": "Somersetshire",
     "terrain": "marsh",
     "longitude": "-2.99",
     "willStop": 1,
@@ -511,6 +551,7 @@
     "distanceFromLastStation": 9000,
     "minStationStay": 10,
     "maxStationStay": 30,
+    "county": "Somersetshire",
     "stationSize": 2,
     "urbanDensity": 0,
     "terrain": "moor",
@@ -526,6 +567,7 @@
     "maxStationStay": 30,
     "stationSize": 1,
     "urbanDensity": 0,
+    "county": "Somersetshire",
     "terrain": "fields",
     "longitude": "-2.82",
     "willStop": 1,
@@ -541,6 +583,7 @@
     "urbanDensity": 0,
     "terrain": "fields",
     "longitude": "-2.75",
+    "county": "Somersetshire",
     "willStop": 0,
     "delayChance": 35,
     "speedMod": 100
@@ -554,6 +597,7 @@
     "urbanDensity": 0,
     "terrain": "fields",
     "longitude": "-2.7",
+    "county": "Somersetshire",
     "willStop": 0,
     "delayChance": 35,
     "speedMod": 100
@@ -568,6 +612,7 @@
     "terrain": "hills",
     "longitude": "-2.58",
     "willStop": 1,
+    "county": "Somersetshire",
     "delayChance": 40,
     "speedMod": 60
   },
@@ -580,6 +625,7 @@
     "urbanDensity": 10,
     "terrain": "fields",
     "longitude": "-2.49",
+    "county": "Somersetshire",
     "willStop": 1,
     "delayChance": 40,
     "speedMod": 100
@@ -593,6 +639,7 @@
     "urbanDensity": 0,
     "terrain": "fields",
     "longitude": "-2.45",
+    "county": "Somersetshire",
     "willStop": 1,
     "delayChance": 30,
     "speedMod": 100
@@ -605,6 +652,7 @@
     "stationSize": 3,
     "urbanDensity": 20,
     "terrain": "river",
+    "county": "Somersetshire",
     "longitude": "-2.39",
     "willStop": 0,
     "delayChance": 30,
@@ -619,6 +667,7 @@
     "urbanDensity": 40,
     "terrain": "river",
     "longitude": "-2.35",
+    "county": "Somersetshire",
     "willStop": 1,
     "delayChance": 30,
     "speedMod": 80
@@ -632,6 +681,7 @@
     "urbanDensity": 5,
     "terrain": "fields",
     "longitude": "-2.26",
+    "county": "Wiltshire",
     "willStop": 1,
     "delayChance": 30,
     "speedMod": 100
@@ -644,6 +694,7 @@
     "stationSize": 2,
     "urbanDensity": 0,
     "terrain": "fields",
+    "county": "Wiltshire",
     "longitude": "-2.18",
     "willStop": 1,
     "delayChance": 30,
@@ -660,6 +711,7 @@
     "longitude": "-2.11",
     "willStop": 1,
     "delayChance": 30,
+    "county": "Wiltshire",
     "speedMod": 100
   },
   "51": {
@@ -673,6 +725,7 @@
     "longitude": "-1.78",
     "willStop": 1,
     "delayChance": 30,
+    "county": "Wiltshire",
     "speedMod": 100
   },
   "52": {
@@ -682,6 +735,7 @@
     "maxStationStay": 40,
     "stationSize": 2,
     "urbanDensity": 0,
+    "county": "Oxfordshire",
     "terrain": "fields",
     "longitude": "-1.55",
     "willStop": 0,
@@ -698,6 +752,7 @@
     "terrain": "fields",
     "longitude": "-1.48",
     "willStop": 0,
+    "county": "Oxfordshire",
     "delayChance": 30,
     "speedMod": 100
   },
@@ -707,12 +762,14 @@
     "minStationStay": 5,
     "maxStationStay": 30,
     "stationSize": 1,
+    "county": "Oxfordshire",
     "urbanDensity": 0,
     "terrain": "fields",
     "longitude": "-1.40",
     "willStop": 1,
     "delayChance": 25,
     "speedMod": 100
+    
   },
   "55": {
     "stationName": "Steventon",
@@ -723,6 +780,7 @@
     "urbanDensity": 0,
     "terrain": "fields",
     "longitude": "-1.31",
+    "county": "Oxfordshire",
     "willStop": 1,
     "delayChance": 30,
     "speedMod": 100
@@ -733,6 +791,7 @@
     "minStationStay": 50,
     "maxStationStay": 80,
     "stationSize": 8,
+    "county": "Oxfordshire",
     "urbanDensity": 10,
     "terrain": "fields",
     "longitude": "-1.24",
@@ -747,6 +806,7 @@
     "maxStationStay": 35,
     "stationSize": 2,
     "urbanDensity": 5,
+    "county": "Berkshire",
     "terrain": "river",
     "longitude": "-1.14",
     "willStop": 0,
@@ -761,6 +821,7 @@
     "stationSize": 4,
     "urbanDensity": 5,
     "terrain": "river",
+    "county": "Oxfordshire",
     "longitude": "-1.13",
     "willStop": 1,
     "delayChance": 20,
@@ -770,6 +831,7 @@
     "stationName": "Pangbourne",
     "distanceFromLastStation": 5000,
     "minStationStay": 45,
+    "county": "Berkshire",
     "maxStationStay": 80,
     "stationSize": 5,
     "urbanDensity": 15,
@@ -785,6 +847,7 @@
     "minStationStay": 40,
     "maxStationStay": 100,
     "stationSize": 10,
+    "county": "Berkshire",
     "urbanDensity": 40,
     "terrain": "river",
     "longitude": "-0.97",
@@ -800,6 +863,7 @@
     "stationSize": 8,
     "urbanDensity": 10,
     "terrain": "fields",
+    "county": "Berkshire",
     "longitude": "-0.86",
     "willStop": 1,
     "delayChance": 15,
@@ -815,6 +879,7 @@
     "terrain": "fields",
     "longitude": "-0.72",
     "willStop": 1,
+    "county": "Berkshire",
     "delayChance": 15,
     "speedMod": 100
   },
@@ -824,6 +889,7 @@
     "minStationStay": 10,
     "maxStationStay": 40,
     "stationSize": 2,
+    "county": "Berkshire",
     "urbanDensity": 0,
     "terrain": "fields",
     "longitude": "-0.54",
@@ -838,6 +904,7 @@
     "maxStationStay": 70,
     "stationSize": 4,
     "urbanDensity": 10,
+    "county": "Middlesex",
     "terrain": "marsh",
     "longitude": "-0.47",
     "willStop": 1,
@@ -853,6 +920,7 @@
     "urbanDensity": 5,
     "terrain": "fields",
     "longitude": "-0.37",
+    "county": "Middlesex",
     "willStop": 1,
     "delayChance": 5,
     "speedMod": 100
@@ -862,6 +930,7 @@
     "distanceFromLastStation": 3000,
     "minStationStay": 20,
     "maxStationStay": 80,
+    "county": "Middlesex",
     "stationSize": 6,
     "urbanDensity": 15,
     "terrain": "fields",
@@ -876,6 +945,7 @@
     "minStationStay": 20,
     "maxStationStay": 80,
     "stationSize": 6,
+    "county": "Middlesex",
     "urbanDensity": 20,
     "terrain": "fields",
     "longitude": "-0.30",
@@ -890,6 +960,7 @@
     "maxStationStay": 300,
     "stationSize": 25,
     "urbanDensity": 100,
+    "county": "Middlesex",
     "terrain": "fields",
     "longitude": "-0.17",
     "willStop": 1,

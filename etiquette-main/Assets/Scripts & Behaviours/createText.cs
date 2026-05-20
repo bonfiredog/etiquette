@@ -70,7 +70,7 @@ public class createText : MonoBehaviour
 
         //At the start...
         if (generateAtStart) {
-            for (int i = 1; i < numbertoGenerate; i++) {
+            for (int i = 0; i < numbertoGenerate; i++) {
                 float NZ = 0;
                 if (myTag != "trackgen") {
                 var newBound = Random.Range(-generateBound, generateBound);
@@ -83,8 +83,9 @@ public class createText : MonoBehaviour
                 if (myTag == "trackgen") {
                     var thistrack = generateMyText(NZ, "track");
                     var thistextrect = thistrack.GetComponent<RectTransform>();
-                    Vector2 currentSize = thistextrect.sizeDelta;
-                    thistextrect.sizeDelta = new Vector2(20000f, currentSize.y);
+                    thistextrect.localScale = new Vector3(0.7f,0.7f,0.7f);
+                    //Vector2 currentSize = thistextrect.sizeDelta;
+                    //thistextrect.sizeDelta = new Vector2(20000f, currentSize.y);
                 } else {
                     var thistrack = generateMyText(NZ, "loadup");
                 }
@@ -111,14 +112,11 @@ public class createText : MonoBehaviour
             timerMax = timerMaxOriginal + (timerMaxOriginal / 100) * (100 - ss.currentUrbanDensity);
         }
 
-
         //Count down this generator's timer, based on the train's current speed. So if the train's speed is 0, the timer won't go down.
-        if (myTag != "fargen") {
         if (tc.delaying == false) {
         if (timer > 0)
         {
             timer -= ((1 / tc.trainTopSpeed) * tc.trainCurrentSpeed) * timerMulti * Time.deltaTime;
-            
         } 
         else
         {
@@ -126,69 +124,20 @@ public class createText : MonoBehaviour
             
             //First of all, check whether you should generate a text:
             //- Are we currently docked?
-            //- Are there any other texts on the line that would visually interfere? 
-            shouldgenerate = true;
-            currentmembers = GameObject.FindGameObjectsWithTag(myTag);
-            if (myTag != "sidegen" && myTag != "trackgen") {
-            //Working out whether we can generate...
-            }
-            
 
-          
-            //If we're fine to continue...
-            if (shouldgenerate == true)                
-            {
+            if (tc.docked == false) {
                     generateMyText(mypos.z, myTag);
-
-
+            }
 
          //Finally, reset the timer to a random total.
           timer = Random.Range(timerMin, timerMax);
-            } else {
-                  //Try again in a second.     
-              timer = 2;
-            }
-        }
-    }
-        } else {
-              if (timer > 0)
-        {
-            timer -= ((1 / tc.trainTopSpeed) * tc.trainCurrentSpeed) * timerMulti * Time.deltaTime;
-            
-        } 
-        else
-        {
-            //When the timer is at zero...
-            
-            //First of all, check whether you should generate a text:
-            //- Are we currently docked?
-            //- Are there any other texts on the line that would visually interfere? 
-            shouldgenerate = true;
-            currentmembers = GameObject.FindGameObjectsWithTag(myTag);
-            if (myTag != "sidegen" && myTag != "trackgen") {
-            //Working out whether we can generate...
-            }
-            
-
-          
-            //If we're fine to continue...
-            if (shouldgenerate == true)                
-            {
-                    generateMyText(mypos.z, myTag);
-
-
-
-         //Finally, reset the timer to a random total.
-          timer = Random.Range(timerMin, timerMax);
-            } else {
-                  //Try again in a second.     
-              timer = 2;
-            }
         }
         }
-    }
+        }
+    
 
     public GameObject generateMyText(float zvalue, string myname) {
+  
                 //Set the y position of the generator to a random position, within its prescribed bounds.
                 transform.position = new Vector3(transform.position.x, Random.Range(yPosLowerBound, yPosUpperBound), transform.position.z);
                 mypos = transform.position;
@@ -207,10 +156,10 @@ public class createText : MonoBehaviour
                     var width2 = thistextmesh2.rectTransform.rect.width;
 
                     //Make sure the grammars are correct for each one, and generate some text. 
-                    thisTextGenerator1.setGrammarForObject(grammarNameFront);
-                    thisTextGenerator1.generateTextFromGrammar(thistextmesh1);
-                    thisTextGenerator2.setGrammarForObject(grammarNameBack);
-                    thisTextGenerator2.generateTextFromGrammar(thistextmesh2);
+                    thisTextGenerator1.setGrammarForObject(grammarNameFront, textgen);
+thisTextGenerator1.generateTextFromGrammar(thistextmesh1, ss);
+thisTextGenerator2.setGrammarForObject(grammarNameBack, textgen);
+thisTextGenerator2.generateTextFromGrammar(thistextmesh2, ss);
 
                     //Assign a speed and fontSize, based on the generator, to the text object.
                     var thistextscript = thistext.gameObject.GetComponent<textControllerSide>();
@@ -226,26 +175,36 @@ public class createText : MonoBehaviour
                     //Set its position to the generator. 
                     thistext.transform.position = mypos;
 
+                } else if (myTag == "trackgen") {
+                    //Assign a speed and fontSize, based on the geneator, to the text object.
+                    var thistextscript = thistext.gameObject.GetComponent<textController>();
+                    thistextscript.speed = assignedSpeed;
+                    thistextscript.topspeed = assignedSpeed;
+                   
+                    //Set its position to the generator.
+                    var thistextrect = thistext.GetComponent<RectTransform>();
+                    thistextrect.anchoredPosition3D = new Vector3(mypos.x, mypos.y, zvalue);
+                    thistextrect.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+
                 }
                 else
                 { //For single-sided text.
-
+                    if (myTag != "trackgen") {
                     //Generate the text randomly based on a Tracery grammar.
                     var thistextmesh = thistext.gameObject.GetComponent<TextMeshPro>();
                     var thisTextGenerator = thistext.gameObject.GetComponent<textGenerationControl>();
 
                     //Make sure the grammars are correct for each one, and generate some text. 
-                    thisTextGenerator.setGrammarForObject(grammarNameFront);
-                    thisTextGenerator.generateTextFromGrammar(thistextmesh);
-
+                    thisTextGenerator.setGrammarForObject(grammarNameFront, textgen);
+thisTextGenerator.generateTextFromGrammar(thistextmesh, ss);
+                     thistextmesh.fontSize = Random.Range(fontSizeLowerBound, fontSizeUpperBound);
+                   
+                    }
                     //Assign a speed and fontSize, based on the geneator, to the text object.
                     var thistextscript = thistext.gameObject.GetComponent<textController>();
                     thistextscript.speed = assignedSpeed;
                     thistextscript.topspeed = assignedSpeed;
-                    thistextmesh.fontSize = Random.Range(fontSizeLowerBound, fontSizeUpperBound);
                    
-              
-
                     //Set its position to the generator.
                     var thistextrect = thistext.GetComponent<RectTransform>();
                     thistextrect.anchoredPosition3D = new Vector3(mypos.x, mypos.y, zvalue);

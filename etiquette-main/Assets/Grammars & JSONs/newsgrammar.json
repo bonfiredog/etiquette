@@ -1,5 +1,677 @@
 {
-  "origin": [
-    "TEST"
-  ]
+
+"forbidden_objects": [
+  "#nouns_materials_empire#",
+  "#nouns_materials_common#",
+  "#nouns_materials_rare#",
+  "#nouns_materials_empire#",
+  "#musical_instruments#",
+  "#weapons#",
+  "#tools#",
+  "#carried_misc_objects#",
+  "#indoor_objects_small#"
+],
+"forbidden_people": [
+  "#person_role_town#",
+  "#person_role_city#",
+  "#person_role_country#",
+  "#person_role_empire#",
+  "#person_role_general#"
+],
+"forbidden_verb": [
+  "#verbs_all.ing#",
+  "#outdoor_activity#",
+  "#indoor_activity#"
+],
+"instructionpreamble": [
+  "",
+  "",
+  "By order of the Station Superintendent",
+  "Notice for passengers",
+  "attention!",
+  "notice",
+  "Great Western Railway"
+],
+"instructionbody": [
+  "No #forbidden_verb#",
+  "No #forbidden_objects.s# anywhere on this station",
+  "All #forbidden_people.s# will be ejected from this station",
+  "The #train_stationroom# is closed until further notice",
+  "Strictly no #plot_elements# in the #train_stationroom#",
+  "Persons caught #verbs_interaction.ing# other persons will be ejected from the station",
+  "Please report any #abstract_noun_negative# to the #train_station_staff#",
+  "No trains on #public_holidays_home# from this station.",
+  "Please report any #events_rare.s# to the #train_station_staff#",
+  "No trains on #day_of_week.s# from this station.",
+  "Due to the recent #events_all# at this station, the #train_stationroom# is closed until further notice",
+  "Please do not enter the #railway_architecture#",
+  "Beware of #train_types# trains when crossing the #railway_crossing_place#",
+  "No trespassing on the #railway_architecture#",
+  "Please do not cross the #railway_crossing_place# unless the light is green",
+  "Please be aware that trains run on London time, not local time",
+  "Only #numbers_written.capitalize# #forbidden_people.s# In The #train_stationroom.capitalize# At Any Time"
+],
+"thisdate": [
+  "#months# 184#number_recent#"
+],
+"instructionend": [
+  "",
+  "",
+  "By order of the Company, #thisdate#",
+  "#letters#. #letters#. #surnames#, Station Superintendent, #thisdate#"
+],
+"station_notice": [
+  "#instructionpreamble.capitalizeAll#<br><br>#instructionbody.capitalizeAll#<br><br>#instructionend.capitalizeAll#"
+],
+
+"newspaper_name": [
+    "Reporter",
+    "Intelligencer",
+    "news",
+    "chronicle",
+    "Times",
+    "Enquirer",
+    "Arbitrator",
+    "observer",
+    "review",
+    "register",
+    "gazette",
+    "mirror",
+    "Magnet",
+    "notices",
+    "mercury",
+    "Telegraph",
+    "Loquator",
+    "Circumlocutor",
+    "Networker",
+    "Wiring",
+    "Scapegoater",
+    "Hysteriad",
+    "Star",
+    "#verbs_noise.er#",
+    "miscellany",
+    "journal",
+    "herald",
+    "life",
+    "survey"
+  ],
+
+  "adjective_pool": [
+    "Illustrated",
+    "Graphic",
+    "Monthly",
+    "Weekly",
+    "Occasional"
+  ],
+
+  "newspaper_title": [
+    "#surnames#'s #newspaper_name#",
+    "The #placenames# #newspaper_name#",
+    "The #adjective_pool# #placenames# #newspaper_name#",
+    "the #current_county# #newspaper_name#",
+    "the #adjective_pool# #current_county# #newspaper_name#",
+    "the #current_station# #newspaper_name#",
+    "the #adjective_pool# #current_station# #newspaper_name#",
+    "the #person_role_general#",
+    "the #verbs_noise.er#",
+    "the #adjective_pool# #newspaper_name#",
+    "the #newspaper_name#",
+    "the #person_role_general#'s #newspaper_name#"
+  ],
+
+  "headlineloc": [
+    "#imperial_locations#",
+    "#placenames#",
+    "#british_towns#"
+  ],
+
+  "dramatic_hl_noun": [
+    "crisis",
+    "danger",
+    "defeat",
+    "unrest",
+    "disaster",
+    "intrigue",
+    "#events_rare#"
+  ],
+
+  "dramatic_hl_verb": [
+    "stalled",
+    "in crisis",
+    "#verbs_extreme.ed#",
+    "suspended",
+    "collapsed",
+    "shattered",
+    "devastated",
+    "overwhelmed",
+    "paralysed",
+    "engulfed",
+    "threatened",
+    "besieged",
+    "overrun",
+    "abandoned",
+    "seized",
+    "occupied",
+    "destroyed",
+    "ravaged",
+    "decimated",
+    "crippled",
+    "severed",
+    "blocked",
+    "derailed",
+    "disrupted",
+    "undermined",
+    "exposed",
+    "implicated",
+    "indicted",
+    "charged",
+    "arrested",
+    "detained",
+    "deposed",
+    "ousted",
+    "toppled",
+    "overthrown",
+    "forced out",
+    "swept away",
+    "wiped out",
+    "cut off",
+    "left stranded",
+    "left reeling",
+    "thrown into chaos",
+    "plunged into darkness",
+    "brought to its knees",
+    "pushed to the brink",
+    "driven to the edge",
+    "torn apart",
+    "rocked by scandal",
+    "gripped by fear",
+    "seized by panic",
+    "mired in debt",
+    "locked in dispute",
+    "locked out",
+    "shut down",
+    "wound up",
+    "liquidated",
+    "frozen",
+    "sanctioned",
+    "banned",
+    "barred",
+    "stripped",
+    "recalled",
+    "withdrawn",
+    "reversed",
+    "overturned",
+    "quashed",
+    "rejected",
+    "rebuffed",
+    "snubbed",
+    "humiliated",
+    "embarrassed",
+    "contradicted",
+    "contradicted by evidence",
+    "disputed",
+    "challenged",
+    "questioned",
+    "doubted",
+    "denied",
+    "suppressed",
+    "leaked",
+    "revealed",
+    "uncovered",
+    "unearthed",
+    "unmasked"
+  ],
+
+  "good_noun":[
+    "success",
+    "triumph",
+    "wonder",
+    "pleasure"
+  ],
+
+"bad_noun":[
+  "disaster",
+  "ruin",
+  "fury",
+  "disagreement",
+  "slander",
+  "murder",
+  "assassination",
+  "bloodbath",
+  "#verbs_all.ing#",
+  "#punishment_penalty#"
+],
+
+"news_persons":[
+  "#surnames#",
+  "#colonial_surnames#",
+  "#product_inventor_title# #surnames#",
+  "#product_inventor_title# #colonial_surnames#",
+  "#person_office_title_home# of #imperial_locations#",
+  "#person_office_title_empire# of #imperial_locations#"
+],
+
+"news_verb":[
+  "climax in",
+  "culminate in",
+  "end as",
+  "finishes in",
+  "descends into",
+  "becomes"
+],
+
+"headline": [
+    "by telegraph from #imperial_locations#",
+    "#news_persons# Guilty!",
+    "#news_persons# Innocent!",
+    "#news_persons# Dead!",
+    "#news_persons# Alive!",
+    "#news_persons# '#adjectives_all#'",
+    "#events_rare# at #headlineloc#",
+    "#events_specific# at #headlineloc#",
+    "#events_rare# in #headlineloc#",
+    "#events_specific# in #headlineloc#",
+    "#punishment_penalty# for #surnames#",
+    "#punishment_penalty# for #news_persons#",
+    "#trade_commerce_terms# #dramatic_hl_verb# at #headlineloc#",
+    "#headlineloc# #events_specific# '#dramatic_hl_verb#'",
+    "#news_persons# at #headlineloc#",
+    "#train_incidents_rare# at #headlineloc#",
+    "'#abstract_nouns_all#' for #news_persons#",
+    "#events_specific# #dramatic_hl_verb#",
+    "#placenames# #events_specific# a '#good_noun#'",
+    "#placenames# #events_specifics# #news_verb# '#bad_noun#'",
+    "#adjectives_generic_negative# #events_general# for #person_role_all#",
+    "#person_role_all# #verbs_extreme.s# #relation#",
+    "#objects_all# Stolen In #placenames#",
+    "#direct_word.capitalize# #headlineloc.capitalizeAll#"
+],
+
+
+  "direct_word": [
+    "Direct From",
+    "Arising From",
+    "Delivered Via",
+    "Dreamt Of In",
+    "#adjectives_all.capitalize# From",
+    "abstract_nouns_all.capitalize# In"
+  ],  
+
+  "newspaper_headline":[
+   "#newspaper_title.capitalizeAll#<br>----------<br><br>#headline.allCaps#<br>----------"
+  ],
+
+
+
+
+"product_poster_variants":[
+  "DRINK #drinks_british#<br><br>#fooddrinkfinal#",
+  "DRINK #drinks_empire#<br><br>#fooddrinkfinal#",
+  "EAT #ingredients#<br><br>#fooddrinkfinal#",
+  "EAT #cooked_food#<br><br>#fooddrinkfinal#",
+  "#normal_product_poster.capitalizeAll#",
+  "#normal_product_poster.capitalizeAll#",
+  "#normal_product_poster.capitalizeAll#",
+  "#normal_product_poster.capitalizeAll#"
+],
+
+"normal_product_poster":[
+  "#product_preamble#<br>#product_name#<br>#productprice#<br>#productlocation#",
+  "#product_name#<br>#product_preamble#<br>#productprice#<br>#productlocation#"
+],
+
+"bodypartsall":[
+  "#body_part_outer#",
+  "#body_part_inner#"
+],
+
+"product_preamble": [
+  "The #abstract_nouns_positive#",
+  "#fooddrinkfinal#",
+  "#adjectives_generic_positive# for the #body_parts_all#",
+  "Where available",
+  "For #adjectives_generic_positive# #person_role_general#",
+  "For #abstract_nouns_all#",
+  "Winner Of The #person_office_title_home# #precious_stones# award",
+  "For Unwanted #air_types#",
+  "The #abstract_nouns_positive# of #imperial_locations#",
+  "made of #adjectives_generic_positive# #nouns_materials_all",
+  "Recommmended By The #person_office_title_empire# of #imperial_locations#",
+  "#adjectives_generic_positive#, #adjectives_generic_positive#, #adjectives_generic_positive#",
+  "#verbs_gentle.ing# and #verbs_gentle.ing#",
+  "#verbs_gentle.s# the #body_part_inner#",
+  "for #adjectives_generic_negative# #relation#",
+  "Before Any #plot_elements#,",
+  "Before any #story_types#,",
+  "Ask For",
+  "Buy",
+  "Pure '#nouns_materials_all#'",
+  "The best #medicine_word# for #abstract_nouns_negative#",
+  "imported via #imperial_locations#",
+  "Pure #nouns_materials_empire#",
+  "For #person_role_all#, #person_role_all#... and the rest!",
+  "after #outdoor_activity#, take",
+  "after #indoor_activity#, take",
+  "Perfect for the complexion",
+  "#adjectives_generic_positive# for #seasons_all#",
+  "derived of #adjectives_nationality# #chemistry_substances#",
+  "with extract of #plantsflowers_empire#",
+  "with extract of #invasive#",
+  "For #events_all#",
+  "manufactured of #imperial_locations# #fruits_empire#",
+  "for #marks_injuries.s#",
+  "for #illness_type#",
+  "for #physical_deformity_damage.s#"
+
+],
+
+"fooddrinkfinal":[
+  "For #abstract_nouns_all# And #abstract_nouns_all#",
+  "For #abstract_nouns_all#",
+  "For All Complaints Of The #body_part_inner#",
+  "For Any #illness_type#",
+  "For #verbs_movement.ing# of the #body_part_inner#",
+  "For #marks_injuries#",
+  "For #physical_deformity_damage#",
+  "For #adjectives_generic_positive# #indoor_activity#",
+  "For #adjectives_generic_positive# #outdoor_activity#"
+],
+
+
+"productprice": [
+  "",
+  "",
+  "#numbers#d",
+  "#numbers#s",
+  "#numbers#s/#numbers#d"
+],
+
+"streetname":[
+"#abstract_nouns_positive#",
+"#abstract_nouns_neutral#",
+"#trade_commerce_terms#",
+"#body_part_outer#",
+"#body_part_inner#",
+"#air_types#",
+"#celestial_body#",
+"#person_role_empire.s#",
+"#person_role_country.s#",
+"#person_role_town.s#",
+"#person_role_city.s#",
+"#person_role_general.s#",
+"#person_office_title_home.s#",
+"#person_office_title_empire.s#",
+"#classical_names#",
+"#nouns_materials_all#",
+"#animals_all#",
+"#mythicalbeasts#",
+"#railway_architecture#",
+"#buildings_all#",
+"#natural_feature_large#",
+"#locations_all#",
+"#imperial_locations#",
+"#events_all#",
+"#outdoor_activity#",
+"#punishment_penalty#",
+"#crops_home#",
+"#plantsflowers_empire#",
+"#plantsflowers_home#",
+"#story_types#",
+"#plot_elements#",
+"#verbs_all.ing#",
+"#compass_points#",
+"#seasons#"
+],
+
+"streettype": [
+  "street",
+  "lane",
+  "row",
+  "road",
+  "way",
+  "end",
+  "path",
+  "green",
+  "common",
+  "drove",
+  "batch",
+  "coombe",
+  "chase",
+  "shaw",
+  "hay",
+  "dene",
+  "lees",
+  "hurst"
+],
+
+"locend":[
+  "#placenames#",
+  "stockists",
+  "druggists",
+  "purveyor &c.",
+  "broker",
+  "importer",
+  "#streetname# #streettype#, #placenames#",
+  "#streetname# #streettype#, #placenames#"
+],
+
+"productlocation": [
+  "#surnames# & #surnames#, #locend#",
+  "#surnames# & sons, #locend#",
+  "En-quire with mr. #surnames#, #locend#",
+  "",""
+],
+
+
+"product_poster":[
+"#product_poster_variants.capitalizeAll#"
+],
+
+
+
+
+
+
+
+
+
+"eventname" :[
+"'The #adjectives_generic_positive# #colonial_surnames#'",
+"'the #wallah# of #imperial_locations#'",
+"'#events_rare# at #imperial_locations#'",
+"'#events_all.a in #british_towns#'",
+"'#surnames#'s circus#'",
+"'An Evening With #mythicalbeasts.a#'",
+"'The #animals_all#'s #events_all#'",
+"'A #events_specific# of the #placenames# #person_role_general.s#'",
+"'A #person_role_all# from #celestial_body_proper#'",
+"'The #precious_stones# of #imperial_locations#'",
+"'#punishment_penalty# for my #relation#'",
+"'The #adjectives_generic_positive# #classical_names#'",
+"'The Lost '#objects_all#'",
+"'the #story_types# of the #train_stationroom#'",
+"'the #train_incidents_rare# of #imperial_locations#'",
+"'The #animals_all# #indoor_activity#'",
+"'the #animals_all# #outdoor_activity#'",
+"'the #adjectives_all# #train_station_staff#'",
+"'the events_all in the #eventlocations#'",
+"'#objects_all# sale'",
+"'#events_rare.a#'"
+],
+
+"eventlocations":[
+  "train_stationroom",
+  "rooms",
+  "private_places"
+],
+
+"eventloc":[ 
+"#streetname# #streettype#",
+"#placenames#",
+"#placenames# #town_locations#",
+"#british_towns# #city_locations#",
+"#placenames# #town_buildings_common#",
+"#british_towns# #city_buildings_common#"
+],
+
+"eventdate":[
+"#numbers_month# #months#",
+"this #day_of_week#",
+"all #current_month#",
+"tonight",
+"next #day_of_week#",
+"the #numbers_month#"
+],
+
+"eventnotes":[
+  "(No #person_role_country.s#)",
+  "Tickets From #streetname# #streettype#, #placenames#",
+  "All Ages Well-come",
+  "tickets #numbers#d",
+  "tickets #numbers#s",
+  "tickets #numbers#s/#numbers#d",
+  "(#person_role_general.s# welcome)",
+  "the new entertainment!",
+  "the #adjectives_generic_positive# #events_general#!",
+  "",
+  "#cooked_food# on Sale",
+  "Be #adjectives_emotions#!"
+],
+
+"event_poster_variants": [
+  "#eventname.capitalizeAll#<br><br>#eventloc#<br><br>#eventdate#<br><br>#eventnotes#",
+  "#eventname.capitalizeAll#<br><br>#eventloc#<br><br>#eventnotes#<br><br>#eventdate#",
+  "#eventname.capitalizeAll#<br><br>#eventdate#<br><br>#eventloc#<br><br>#eventnotes#",
+  "#eventname.capitalizeAll#<br><br>#eventdate#<br><br>#eventnotes#<br><br>#eventloc#",
+  "#eventname.capitalizeAll#<br><br>#eventnotes#<br><br>#eventloc#<br><br>#eventdate#",
+  "#eventname.capitalizeAll#<br><br>#eventnotes#<br><br>#eventdate#<br><br>#eventloc#",
+  "#eventloc#<br><br>#eventname.capitalizeAll#<br><br>#eventdate#<br><br>#eventnotes#",
+  "#eventloc#<br><br>#eventname.capitalizeAll#<br><br>#eventnotes#<br><br>#eventdate#",
+  "#eventloc#<br><br>#eventdate#<br><br>#eventname.capitalizeAll#<br><br>#eventnotes#",
+  "#eventloc#<br><br>#eventdate#<br><br>#eventnotes#<br><br>#eventname.capitalizeAll#",
+  "#eventloc#<br><br>#eventnotes#<br><br>#eventname.capitalizeAll#<br><br>#eventdate#",
+  "#eventloc#<br><br>#eventnotes#<br><br>#eventdate#<br><br>#eventname.capitalizeAll#",
+  "#eventdate#<br><br>#eventname.capitalizeAll#<br><br>#eventloc#<br><br>#eventnotes#",
+  "#eventdate#<br><br>#eventname.capitalizeAll#<br><br>#eventnotes#<br><br>#eventloc#",
+  "#eventdate#<br><br>#eventloc#<br><br>#eventname.capitalizeAll#<br><br>#eventnotes#",
+  "#eventdate#<br><br>#eventloc#<br><br>#eventnotes#<br><br>#eventname.capitalizeAll#",
+  "#eventdate#<br><br>#eventnotes#<br><br>#eventname.capitalizeAll#<br><br>#eventloc#",
+  "#eventdate#<br><br>#eventnotes#<br><br>#eventloc#<br><br>#eventname.capitalizeAll#",
+  "#eventnotes#<br><br>#eventname.capitalizeAll#<br><br>#eventloc#<br><br>#eventdate#",
+  "#eventnotes#<br><br>#eventname.capitalizeAll#<br><br>#eventdate#<br><br>#eventloc#",
+  "#eventnotes#<br><br>#eventloc#<br><br>#eventname.capitalizeAll#<br><br>#eventdate#",
+  "#eventnotes#<br><br>#eventloc#<br><br>#eventdate#<br><br>#eventname.capitalizeAll#",
+  "#eventnotes#<br><br>#eventdate#<br><br>#eventname.capitalizeAll#<br><br>#eventloc#",
+  "#eventnotes#<br><br>#eventdate#<br><br>#eventloc#<br><br>#eventname.capitalizeAll#"
+],
+
+"event_poster":[
+  "#event_poster_variants.capitalizeAll#"
+],
+
+
+
+
+
+
+"tourism_locale":[
+"#counties#",
+"#imperial_locations#",
+"#british_towns#",
+"#placenames#"
+],
+
+"tourism_imp_verb":[
+  "visit",
+  "see",
+  "stay in",
+  "come to",
+  "enjoy",
+  "stay awhile in",
+"discover",
+"explore",
+"behold",
+"marvel at",
+"venture to",
+"journey to",
+"sojourn in",
+"delight in",
+"tarry in",
+"partake of",
+"revel in",
+"repair to",
+"take the air in",
+"seek out",
+"retreat to",
+"escape to",
+"savour"
+],
+
+"tourism_vehicles":
+[
+  "#road_vehicles_home#",
+"#road_vehicles_empire#",
+"#sea_river_vehicles#",
+"#sea_river_vehicles_empire#"
+],
+
+"tourism_end":[
+"Enquire At #train_stationroom.capitalizeAll#",
+"Enquire At The #placenames.capitalizeAll# Office",
+"Please Ask The #train_station_staff.capitalizeAll# for Details ThereOf",
+"By #tourism_vehicles#",
+"By #tourism_vehicles# and #tourism_vehicles#",
+"#surnames# & #surnames#, #placenames#",
+"#surnames# & #surnames#, #british_towns#",
+"#surnames# & #surnames#, #british_towns# & #imperial_locations#",
+"Via #tourism_locale#",
+"","","",
+"For The #adjectives_generic_positive# #tourism_role.s#",
+"All #tourism_role.s# welcome",
+"A #medicine_word# for all #tourism_role.s#",
+"Departing from #british_towns# & #british_towns#"
+],
+
+"tourism_role":[
+"excurisonist",
+"tourist",
+"traveller",
+"explorer"
+],
+
+"tourism_poster_body":[
+"#adjectives_generic_positive.capitalize# #tourism_locale#",
+"#tourism_imp_verb# #tourism_locale#",
+"#tourism_imp_verb# #adjectives_generic_positive.capitalize# #tourism_locale#",
+"For #abstract_nouns_positive#, #tourism_imp_verb# #tourism_locale#",
+"The #abstract_nouns_positive# of #tourism_locale#",
+"#tourism_imp_verb# the #natural_feature_large# of #tourism_locale#",
+"Take the #adjectives_generic_positive# #air_types# of #tourism_locale#",
+"#outdoor_activity# in #tourism_locale#",
+"A #story_types# in #tourism_locale#",
+"A #hintword# of #abstract_nouns_positive# in #tourism_locale#",
+"#tourism_locale# at your disposal"
+],
+
+"tourism_poster":[
+  "#tourism_poster_body.capitalizeAll#<br><br>#tourism_end.capitalizeAll#"
+],
+
+
+
+
+
+"advert": [
+  "#product_poster#",
+  "#event_poster#",
+  "#tourism_poster#",
+  "BRADSHAW'S ETIQUETTE<br>For Minor Time Travel<br><br>The Glories Of The Past Fourteen Minutes By Rail<br><br>Enquire At #train_stationroom.capitalizeAll#"
+],
+
+"origin": [
+  "#newspaper_headline#",
+  "#advert#",
+  "#station_notice#"
+]
 }
+

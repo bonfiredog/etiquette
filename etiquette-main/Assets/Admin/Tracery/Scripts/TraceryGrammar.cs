@@ -52,6 +52,7 @@ namespace UnityTracery {
         {"titleCase", Modifiers.TitleCase},
         {"ing", Modifiers.Gerund},
         {"er", Modifiers.Er},
+        {"allCaps", Modifiers.AllCaps}
       };
 
       SaveData = new JSONObject();

@@ -116,14 +116,14 @@ void OpenAndCloseTimetable() {
     if (Input.GetMouseButtonDown(0) && (dc.currentTarget != null && dc.currentTarget.name == "tfactual")) {
         holdingTimetable = true;
 
-        Debug.Log("holding!");
+      
     }
     }
 
     if (holdingTimetable == true) {
         if (Input.GetMouseButton(0) == false) {
             holdingTimetable = false;
-            Debug.Log("not holding.");
+           
         }
     }
 

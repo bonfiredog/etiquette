@@ -110,15 +110,8 @@ public class TextFitController : MonoBehaviour
     // ── Core fitting logic ────────────────────────────────────────────────────
 private void FitTextToBox()
 {
-
-var rt = _tmp.rectTransform;
-    Debug.Log($"sizeDelta:{rt.sizeDelta} rect:{rt.rect} localScale:{rt.localScale} lossyScale:{rt.lossyScale} parent lossyScale:{rt.parent?.lossyScale}");
-
-    // lossyScale matches the yellow box size when resized by dragging in Scene view
-    Vector2 size = new Vector2(
-        _tmp.rectTransform.lossyScale.x,
-        _tmp.rectTransform.lossyScale.y
-    );
+    Vector2 size = _tmp.rectTransform.sizeDelta;
+    _tmp.rectTransform.sizeDelta = size; // ensure TMP knows the wrap width
 
     float lo = minFontSize;
     float hi = maxFontSize;
@@ -129,12 +122,13 @@ var rt = _tmp.rectTransform;
         _tmp.fontSize = mid;
         _tmp.ForceMeshUpdate();
 
-        Vector2 rendered = _tmp.GetRenderedValues(onlyVisibleCharacters: false);
+        // Width is constrained by the box so only check height after wrapping
+        float h = _tmp.preferredHeight;
 
-        if (rendered.x <= size.x && rendered.y <= size.y)
-            lo = mid;
-        else
-            hi = mid;
+    if (h <= size.y && _tmp.preferredWidth <= size.x)
+    lo = mid;
+else
+    hi = mid;
     }
 
     _tmp.fontSize = lo;
