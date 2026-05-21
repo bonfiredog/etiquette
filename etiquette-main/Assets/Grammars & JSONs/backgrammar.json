@@ -3,7 +3,7 @@
 "root_noun_urban":[
 "#current_buildings#",
 "#current_buildings_rare#",
-"#road_vehicles_home#",
+"#current_vehicles#",
 "#current_locations#"
 ],
 
@@ -94,7 +94,8 @@
     "#current_buildings#",
     "#current_locations#",
     "#current_locations#",
-    "current_buildings_rare"
+    "current_buildings_rare",
+    "#current_weather_types#"
 ],
 
 "rurallinesroot":[
@@ -160,7 +161,7 @@
 "something #adjectives_all# #relative_position# #root_noun_rural.a#",
 "a very #adjectives_all# #root_noun_rural#",
 "waiting for #weather_types_all#",
-"#comparison_noun#-shaped #root_noun_rural#",
+"#comparison_noun.a#-shaped #root_noun_rural#",
 "#current_season# is #verbs_all.ing#",
 "#verbs_all.ing# and #verbs_all.ing# #relative_position# the #root_noun_rural#",
 "there's #counties#",
@@ -232,9 +233,8 @@
 "#view_words.a# of #root_noun_urban#",
 "#root_noun_urban.s# like #comparison_noun#",
 "#root_noun_urban.a# like #comparison_noun.a#",
-"#collective_nouns.a# of #animals_large_british.s#",
-"#comparison_noun.a# of #animals_large_british.a#",
 "#measurements.s# of #root_noun_urban#",
+"#counties# behind the #root_noun_urban#",
 "#comparison_noun.s# of #skystuff#",
 "#comparison_noun.s# of #root_noun_urban#",
 "#measurements.s# of #crops_home#",
@@ -264,7 +264,7 @@
 "something #adjectives_all# #relative_position# #root_noun_urban.a#",
 "a very #adjectives_all# #root_noun_urban#",
 "waiting for #weather_types_all#",
-"#comparison_noun#-shaped #root_noun_urban#",
+"#comparison_noun.a#-shaped #root_noun_urban#",
 "#current_season# is #verbs_all.ing#",
 "#verbs_all.ing# and #verbs_all.ing# #relative_position# the #root_noun_urban#",
 "there's #counties#",
@@ -309,8 +309,6 @@
 ],
 
 "origin":[
-    "#rurallines#"
-
 ]
 }
 
