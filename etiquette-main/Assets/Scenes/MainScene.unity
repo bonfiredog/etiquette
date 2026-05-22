@@ -3633,7 +3633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &312134480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4358,8 +4358,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 200
+  m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10344,6 +10344,8 @@ MonoBehaviour:
   appropriatelocs: '#rural_locations#'
   currenttod: dusk
   currentmealtime: supper
+  current_vehicles: '#sea_river_vehicles_home#'
+  current_vehicles_rare: '#sea_river_vehicles_empire#'
   appropriateperson: '#person_roles_rural#'
   appropriatebuildings: '#rural_buildings#'
   appropriatebuildingsrare: '#rural_buildings_rare#'
@@ -11810,7 +11812,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79621082da8ba124eba3da9eba119a06, type: 3}
   m_Name: 
@@ -11821,30 +11823,30 @@ MonoBehaviour:
   outputMipmap: 0
   effectMaskTexture: {fileID: 0}
   effectMaskFade: 0.877
-  fade: 0.636
-  panFade: 0.683
-  brightness: 0.744
-  contrast: 1.199
-  color: 2
+  fade: 0.643
+  panFade: 0.684
+  brightness: 0.663
+  contrast: 1.071
+  color: 1.742
   linear2Gamma: 1
   shaderMethod: 2
-  outlines: 2
-  outlineColor: {r: 0.3773585, g: 0.14427331, b: 0, a: 1}
-  hatches: 0.63
-  outlineError: 0.704
-  flicker: 0.582
-  flickerFreq: 22.4
-  fixedHatchDir: 0.648
+  outlines: 1.665
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  hatches: 0.611
+  outlineError: 0.92
+  flicker: 0.499
+  flickerFreq: 22.9
+  fixedHatchDir: 0.604
   precalcGradient: 1
   precalcGradientFlipY: 0
-  hatchScale: 1.373
+  hatchScale: 1.274
   hatchAngle: 2.75
-  hatchLength: 189.3
+  hatchLength: 55.8
   mipLevel: 0
-  vignetting: 0.506
+  vignetting: 0.435
   contentVignetting: 0.586
   paperTint: {r: 0.9056604, g: 0.82734555, b: 0.5502314, a: 1}
-  paperRoughness: 1.204
+  paperRoughness: 1.368
   paperTex: {fileID: 0}
   flipY: 0
 --- !u!114 &963194232
@@ -11883,15 +11885,15 @@ MonoBehaviour:
   renderToTexture: 0
   outputTexture: {fileID: 0}
   outputMipmap: 0
-  SrcBrightness: 1.226
-  SrcContrast: 2
-  SrcColor: 1.013
+  SrcBrightness: 1.042
+  SrcContrast: 1.314
+  SrcColor: 0.825
   linear2Gamma: 1
   ContentVignAspect: 0.626
   ContentVignSharp: 0.939
   ContentVignSize: 1
-  MasterFade: 1
-  PaperRough: 0.532
+  MasterFade: 0.796
+  PaperRough: 0.37
   PaperTint: {r: 1, g: 1, b: 1, a: 1}
   PredrawStrength: 0.85
   PredrawAmount: 1
@@ -11922,18 +11924,18 @@ MonoBehaviour:
   renderToTexture: 0
   outputTexture: {fileID: 0}
   outputMipmap: 0
-  EffectFade: 0.449
+  EffectFade: 0.641
   PanFade: 0
-  SrcBright: 1
-  SrcContrast: 1.4
+  SrcBright: 1.196
+  SrcContrast: 1.099
   SrcColor: 1
   SrcBlur: 0
   linear2Gamma: 1
-  BrushDetail: 0.911
-  BrushFill: 0.231
+  BrushDetail: 0.703
+  BrushFill: 0.22
   NumStrokes: 200000
-  LayerScale: 0.708
-  Canvas: 0.626
+  LayerScale: 0.745
+  Canvas: 0.449
   FlickerFreq: 30
   FlickerStrength: 0.62
   LightAng: 135
@@ -11944,10 +11946,10 @@ MonoBehaviour:
   ColorSpread: 0.3
   ScreenFOV: 0
   StrokeAng: 0
-  StrokeBend: -0.545
+  StrokeBend: -0.602
   StrokeDir: 0.43
   StrokeContour: 1
-  MultiStroke: 2.9
+  MultiStroke: 2.66
   strokeSeed: 27830
   Vignette: 0
   CanvasBg: 0.094
@@ -11998,16 +12000,16 @@ MonoBehaviour:
   outputMipmap: 0
   linear2Gamma: 1
   Colors: 1
-  ColorsBlur: 0.061
+  ColorsBlur: 0
   MasterFade: 1
-  Noise: 0.4
+  Noise: 0.445
   Outlines: 0.695
   OutlinesBlur: 0.072
-  StrokeSpread: 0.156
-  StrokeThresh: 0.382
-  VignWidth: 0.228
+  StrokeSpread: 0.768
+  StrokeThresh: 0.596
+  VignWidth: 0.27
   Vignetting: 1
-  NumTriangles: 162416
+  NumTriangles: 368489
   flipY: 0
   geomFlipY: 0
 --- !u!1 &965639844
@@ -16568,7 +16570,7 @@ Transform:
   m_GameObject: {fileID: 1409222491}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -143.5, y: -420.58313, z: 1433.3799}
+  m_LocalPosition: {x: -143.5, y: -420.58313, z: 1371}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17420,7 +17422,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519584, guid: 88bfd17626aa60e4db8658263f06a3fe,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519584, guid: 88bfd17626aa60e4db8658263f06a3fe,
         type: 3}
@@ -17573,11 +17575,7 @@ PrefabInstance:
     - {fileID: 6399391411232519585, guid: 88bfd17626aa60e4db8658263f06a3fe, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6399391411232519584, guid: 88bfd17626aa60e4db8658263f06a3fe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88bfd17626aa60e4db8658263f06a3fe, type: 3}
 --- !u!1 &1505291109
 GameObject:
@@ -22803,7 +22801,7 @@ Transform:
   m_GameObject: {fileID: 1809018744}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -159, y: -420.58313, z: 349.9798}
+  m_LocalPosition: {x: -159, y: -420.58313, z: 438}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27574,8 +27572,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 200
+  m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28092,6 +28090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: signmesh
       objectReference: {fileID: 0}
+    - target: {fileID: 3843890377292893450, guid: 21d326a1ff002f6a2b46bf24d0a75f38,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4215239399832031815, guid: 21d326a1ff002f6a2b46bf24d0a75f38,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28196,6 +28199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.894
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371220956631641484, guid: 21d326a1ff002f6a2b46bf24d0a75f38,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -28483,6 +28491,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: centralarch
       objectReference: {fileID: 0}
+    - target: {fileID: 4641540691530956616, guid: 6a53003c561fded46b2204fbb29ec9a1,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.03137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641540691530956616, guid: 6a53003c561fded46b2204fbb29ec9a1,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641540691530956616, guid: 6a53003c561fded46b2204fbb29ec9a1,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641540691530956616, guid: 6a53003c561fded46b2204fbb29ec9a1,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278732293
+      objectReference: {fileID: 0}
     - target: {fileID: 5298327735188073093, guid: 6a53003c561fded46b2204fbb29ec9a1,
         type: 3}
       propertyPath: m_Pitch
@@ -28507,17 +28535,17 @@ PrefabInstance:
     - target: {fileID: 6144140240607094128, guid: 6a53003c561fded46b2204fbb29ec9a1,
         type: 3}
       propertyPath: m_fontColor.b
-      value: 0.023529412
+      value: 0.011764706
       objectReference: {fileID: 0}
     - target: {fileID: 6144140240607094128, guid: 6a53003c561fded46b2204fbb29ec9a1,
         type: 3}
       propertyPath: m_fontColor.g
-      value: 0.3137255
+      value: 0.18039216
       objectReference: {fileID: 0}
     - target: {fileID: 6144140240607094128, guid: 6a53003c561fded46b2204fbb29ec9a1,
         type: 3}
       propertyPath: m_fontColor.r
-      value: 0
+      value: 0.003921569
       objectReference: {fileID: 0}
     - target: {fileID: 6144140240607094128, guid: 6a53003c561fded46b2204fbb29ec9a1,
         type: 3}
@@ -28533,7 +28561,7 @@ PrefabInstance:
     - target: {fileID: 6144140240607094128, guid: 6a53003c561fded46b2204fbb29ec9a1,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4278341632
+      value: 4278595073
       objectReference: {fileID: 0}
     - target: {fileID: 6144140240607094128, guid: 6a53003c561fded46b2204fbb29ec9a1,
         type: 3}
@@ -28564,6 +28592,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.2706
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684528159592809418, guid: 6a53003c561fded46b2204fbb29ec9a1,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.03086859
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684528159592809418, guid: 6a53003c561fded46b2204fbb29ec9a1,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.27408844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684528159592809418, guid: 6a53003c561fded46b2204fbb29ec9a1,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.019556008
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684528159592809418, guid: 6a53003c561fded46b2204fbb29ec9a1,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278732293
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5298327735188073093, guid: 6a53003c561fded46b2204fbb29ec9a1, type: 3}

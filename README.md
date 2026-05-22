@@ -5,33 +5,46 @@
 ### Kinetic, Concrete Almost-Narrative Digital Poetry On Broad-Gauge Rails
 
 - A work of 3D, minimally-interactive digital concrete/kinetic poetry, recreating in real time the rail journey between Penzance and London on the British [Great Western Railway](https://en.wikipedia.org/wiki/Great_Western_Railway), c.1852.
-- Uses context-free grammars ([Tracery](http://tracery.io)) in combination with corpora derived from historic datasets to generate the passing landscapes and stations as poetic fragments moving in parallax.
+- Uses context-free grammars ([Tracery](http://tracery.io)) in combination with corpora derived from historical datasets to generate the passing landscapes and stations as poetic  textual fragments, moving in parallax.
 - Algorithmically-generated (and text-derived) delays provide momentary combinations of fragments into glimpsed "almost-narratives", framed by the train window.
 - Surfacing new combinations, juxtapositions and poetic imagery from this tangled, globalised web of cultural data, the work offers a polyphonic reimagining of the biases, desires and imaginations of the Victorian machine age.
-- A framework for understanding the shifting relationships with space and time engendered by the First Industrial Revolution, as well as the emerging imperialist projects of standardised “data regimes” (Atik, 2026) and “data colonialism” (Couldry and Mejias, 2018), whose descendant ideologies continue to define our societies today. 
+- A framework for understanding the shifting relationships with space and time engendered by the First Industrial Revolution, as well as the emerging imperialist projects of standardised “data regimes” (Atik, 2026) and “data colonialism” (Couldry and Mejias, 2018; Banerjee, 2025), whose descendant ideologies continue to define our societies today. 
 - Created in collaboration with the Alan Turing Institute's [*Living With Machines*](https://livingwithmachines.ac.uk) research project.
-  
+
 ---
 
 ### Builds
 
 - [Windows, Mac, Linux](https://bonfiredog.itch.io/bradshaws-etiquette)
 
-- [Web-Based](http://bonfiredog.co.uk/resources/etiquette)
+- [Web-Based](http://bonfiredog.co.uk/resources/etiquette) (may have performance issues on older/lower RAM machines)
 
 - App (iOS and Google Play, coming soon)
-
-**Requirements:**
-
-The application should run on most modern machines, and does not need dedicated graphics as most of the work is done on the CPU. It is quite RAM-thirsty (because of instantiation logic), so allow 1.5GB of overhead.
 
 ---
 
 ### Longer Context
 
+A work of 3D interactive digital poetry, combining kinetic and concrete poetic traditions with novel data-led and generative methodologies to explore human/machine relations in 19th century Britain. 
+
+Originating during my digital residency with the Alan Turing Institute’s [Living With Machines](https://livingwithmachines.ac.uk/) project, the work uses the 3D videogame software [Unity](http://unity.com/) to simulate the ten-hour rail journey between Penzance and London in 1852. The views of the landscape and passing stations are rendered as fragments of poetry moving past the train window, procedurally generated from hand-authored grammars using Kate Compton's Tracery software (Compton *et al.*, 2014). These fragments only coalesce into accidental, haiku-like vignettes when the train stops at a station or is delayed.   
+
+The work draws heavily on historical datasets, including train timetables, station geodata and a large corpus of contemporary texts including novels, poetry, essays, scientific/medical/botanical texts and ‘grey literature’ from both Britain and its colonies, including railway accident reports, newspaper clippings, political speeches and more. This textual data has been cleaned and processed using a bespoke technical pipeline, relying on both established natural language processing techniques and emerging large language model methodologies. It provides the raw material for both the generated poetry and the functioning of the simulated railway itself. Surfacing new combinations, juxtapositions and poetic imagery from this tangled, globalised web of cultural data, the work offers a polyphonic reimagining of the biases, desires and imaginations of the Victorian age, as well as the shifting relationships with space and time engendered by the First Industrial Revolution. It also reflects the emerging imperialist projects of standardised “data regimes”Atik, 2026) and “data colonialism” (Couldry and Mejias, 2018; Banerjee, 2025), whose descendant ideologies continue to define our societies today.
+
+Inspired by, informed by and in conversation with an interdisciplinary mix of works and discourses (including concrete and kinetic poetry, “zero-player” and art games and generative narrative practice), the work provides novel perspectives on: 
+
+- The challenges of generativity for interactive narrative, with the proposal  of fragmentary and kinetically-fleeting ‘almost-narratives’ as a potential solution;  
+
+- The historical dichotomy of database and narrative in digital media, and new ways to creatively interpenetrate them;  
+
+- The emerging crossover of videogame design and artistic/poetic practice, especially the rise of minimally interactive, meditative or “zero-player” experiences;  
+
+- The emerging use of large language models for bottom-up, schema-specific 
+  corpora construction for generative cultural work (also known as [Generative Information Extraction](https://arxiv.org/abs/2112.08340)).
+
 ---
 
-### Screenshots 
+### Screenshots
 
 ---
 
@@ -62,9 +75,9 @@ The application should run on most modern machines, and does not need dedicated 
 
 ### Texts & Datasets
 
-The structure of the simulated rail journey (including historically-accurate station stops and landscape data) at the centre of the work was based on the [StopsGB](https://bl.iro.bl.uk/concern/datasets/0abea1b1-2a43-4422-ba84-39b354c8bb09?locale=en) dataset (Coll Arudnay, M. *et al*, 2021) and the National Library of Scotland's [digitised database](https://maps.nls.uk/os/25inch/) of the Ordnance Survey's 25 inch to the mile maps, c.1855-1882.
+The structure of the simulated rail journey (including historically-accurate station stops and landscape data) at the centre of the work was based on the [StopsGB](https://bl.iro.bl.uk/concern/datasets/0abea1b1-2a43-4422-ba84-39b354c8bb09?locale=en) dataset (Coll Arudnay *et al*, 2021) and the National Library of Scotland's [digitised database](https://maps.nls.uk/os/25inch/) of the Ordnance Survey's 25 inch to the mile maps, c.1855-1882.
 
-The text generated by the experience uses the [Tracery](http://tracery.io) library (Compton, K. *et al.*, 2014), based on corpora that are partially hand-authored and partially scraped and categorised  from the following texts:
+The text generated by the experience uses the [Tracery](http://tracery.io) library (Compton. *et al.*, 2014), based on corpora that are partially hand-authored and partially scraped and categorised from the following texts:
 
 - The entire database of accident reports on British railways, until 1852, held on [Railways Archive](https://www.railwaysarchive.co.uk/);
 
@@ -169,7 +182,7 @@ The text generated by the experience uses the [Tracery](http://tracery.io) libra
 
 - White, G. *The natural history of Selborne*. London: James Chambers ,1833.
 
-<span style="background-color:yellow;">More coming!</span>
+<span style="background-color:yellow;">🚧 Full bibliography in progress...g🚧!</span>
 
 The various outputs of the project explain the artistic and technical contexts of this generation in more detail.
 
@@ -177,7 +190,7 @@ The various outputs of the project explain the artistic and technical contexts o
 
 ### Credits & Tools Used
 
-Built in [Unity](http://unity.com).
+Built in [Unity](http://unity.com) (6000.2.5f).
 
 Large language models (Claude, ChatGPT and self-hosted Qwen builds) were used for both corpora classification (see 'Longer Context' above) and for targeted code support for specific Unity C# scripts.
 
@@ -187,9 +200,7 @@ Large language models (Claude, ChatGPT and self-hosted Qwen builds) were used fo
 
 - [miniprofiler](https://assetstore.unity.com/packages/tools/utilities/mini-profiler-pro-65997)
 
-- [Colored Pencils](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/colored-pencils-122848), [Sketchy](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/sketchy-174197), [Oil Painting](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/oil-painting-136385), [Aquarelle](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/aquarelle-173209), [Van Gogh](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/van-gogh-174199), [Crosshatch Pencil](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/crosshatch-pencil-182337)
-
-- [Stylized Wood Textures](https://assetstore.unity.com/packages/2d/textures-materials/wood/stylized-wood-textures-213607)
+- [Colored Pencils](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/colored-pencils-122848)
 
 - [Tracery](https://github.com/v21/unity-tracery)
 
@@ -221,12 +232,14 @@ Large language models (Claude, ChatGPT and self-hosted Qwen builds) were used fo
 
 ### Bibliography
 
-StopsGB
+'Accident Archive', *Railways Archive*, 2026 [[Online](https://www.railwaysarchive.co.uk/eventlisting.php)]
 
-railways archive
+Atik, F. 'The Transformation of Narrative In The Age Of Data Regimes'. *I.J. Social Sciences and Management Review*. 9:1, 2026.
 
-tracery paper
+Banerjee, S. 'Historical Genealogies of Data Colonialism: From Colonial Censuses to Digital AI Systems'. *Int. Conf on Smart Systems and Social Management*, 31 December 2025.
 
-Atik
+Coll Ardanuy, M *et al.* 'StopsGB: Structured Timeline of Passenger Stations in Great Britain'. London: British Library, 2021.
 
-Couldry and Mejias
+Compton, K. *et al.* 'Tracery: Approachable Story Grammar Authoring for Casual Users'. *Intelligent Narrative Technologies 7*, AAAI, 2014.
+
+Couldry, N. and Mejias, U.A. 'Data Colonialism: Rethinking Big Data's Relation to the Contemporary Subject'. *Television and New Media* 20:4, 2018.

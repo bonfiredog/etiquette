@@ -96,7 +96,7 @@
 "#track_animals.a#: his #relation# is missing",
 "#track_objects.a#, labelled #adverbs_generic_positive# with '#fullname_any#'",
 "the #damage_adj# #body_part_outer# of a #person_role_all#",
-"#track_animals.a# in the midst of a #events_all#",
+"#track_animals.a# in the midst of #events_all.a#",
 "#numbers_written# lives in the #ballast_word#",
 "#track_animals.a# #adjectives_emotions# at the noise",
 "#track_animals.a# waiting for #current_weather_types#",

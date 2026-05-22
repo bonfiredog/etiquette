@@ -49,6 +49,8 @@ public class StationScheduler : MonoBehaviour
     public string appropriatelocs = "#rural_locations#";
     public string currenttod = "dusk";
     public string currentmealtime = "supper";
+    public string current_vehicles = "#sea_river_vehicles_home#";
+     public string current_vehicles_rare = "#sea_river_vehicles_empire#";
     public string appropriateperson = "#person_role_rural#";
     public string appropriatebuildings = "#rural_buildings_common#";
     public string appropriatebuildingsrare = "#rural_buildings_rare#";
@@ -582,12 +584,16 @@ public string getStationDataPointString(int station, string keyname)
                 appropriatelocs = "#rural_locations#";
                 appropriatebuildings = "#rural_buildings_common#";
                 appropriatebuildingsrare = "#rural_buildings_rare#";
+                current_vehicles = "#road_vehicles_home#";
+                current_vehicles_rare = "#road_vehicles_empire#";
             }
             else
             {
                 appropriatelocs = "#coastal_locations#";
                 appropriatebuildings = "#coastal_buildings#";
                 appropriatebuildingsrare = "#rural_buildings_rare#";
+                current_vehicles = "#sea_river_vehicles_home#";
+                current_vehicles_rare = "#sea_river_vehicles_empire#";
             }
         }
         else if (currentUrbanDensity >= 25 && currentUrbanDensity < 50)
@@ -599,12 +605,16 @@ public string getStationDataPointString(int station, string keyname)
                 appropriatelocs = "#town_locations#";
                 appropriatebuildings = "#town_buildings_common#";
                 appropriatebuildingsrare = "#town_buildings_rare#";
+                 current_vehicles = "#road_vehicles_home#";
+                current_vehicles_rare = "#road_vehicles_empire#";
             }
             else
             {
                 appropriatelocs = "#coastal_locations#";
                 appropriatebuildings = "#coastal_buildings#";
                 appropriatebuildingsrare = "#town_buildings_rare#";
+                current_vehicles = "#sea_river_vehicles_home#";
+                current_vehicles_rare = "#sea_river_vehicles_empire#";
             }
         }
         else
@@ -615,12 +625,16 @@ public string getStationDataPointString(int station, string keyname)
                 appropriatelocs = "#city_locations#";
                 appropriatebuildings = "#city_buildings_common#";
                 appropriatebuildingsrare = "#city_buildings_rare#";
+                 current_vehicles = "#road_vehicles_home#";
+                current_vehicles_rare = "#road_vehicles_empire#";
             }
             else
             {
                 appropriatelocs = "#coastal_locations#";
                 appropriatebuildings = "#coastal_buildings#";
                    appropriatebuildingsrare = "#city_buildings_rare#";
+                   current_vehicles = "#sea_river_vehicles_home#";
+                current_vehicles_rare = "#sea_river_vehicles_empire#";
             }
         }
 

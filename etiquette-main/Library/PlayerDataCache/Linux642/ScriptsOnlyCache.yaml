@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - ArchGenerator
     - BendyTextAnimator
     - BendyTextPath
+    - CombineChildMeshes
     - CursorManager
     - DisableCulling
     - DynamicCursor
@@ -144,127 +145,129 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 8694}
+      Script: {instanceID: 18450}
     - Class: 114
-      Script: {instanceID: 8726}
+      Script: {instanceID: 18452}
     - Class: 114
-      Script: {instanceID: 8776}
+      Script: {instanceID: 18454}
     - Class: 114
-      Script: {instanceID: 8932}
+      Script: {instanceID: 25428}
     - Class: 114
-      Script: {instanceID: 8942}
+      Script: {instanceID: 25460}
     - Class: 114
-      Script: {instanceID: 9016}
+      Script: {instanceID: 25510}
     - Class: 114
-      Script: {instanceID: 9094}
+      Script: {instanceID: 25666}
     - Class: 114
-      Script: {instanceID: 9106}
+      Script: {instanceID: 25676}
     - Class: 114
-      Script: {instanceID: 9202}
+      Script: {instanceID: 25750}
     - Class: 114
-      Script: {instanceID: 9318}
+      Script: {instanceID: 25828}
     - Class: 114
-      Script: {instanceID: 9688}
+      Script: {instanceID: 25840}
     - Class: 114
-      Script: {instanceID: 9904}
+      Script: {instanceID: 25936}
     - Class: 114
-      Script: {instanceID: 10056}
+      Script: {instanceID: 26052}
     - Class: 114
-      Script: {instanceID: 10342}
+      Script: {instanceID: 26422}
     - Class: 114
-      Script: {instanceID: 10618}
+      Script: {instanceID: 26638}
     - Class: 114
-      Script: {instanceID: 10740}
+      Script: {instanceID: 26790}
     - Class: 114
-      Script: {instanceID: 10808}
+      Script: {instanceID: 27076}
     - Class: 114
-      Script: {instanceID: 10862}
+      Script: {instanceID: 27352}
     - Class: 114
-      Script: {instanceID: 10912}
+      Script: {instanceID: 27474}
     - Class: 114
-      Script: {instanceID: 10980}
+      Script: {instanceID: 27542}
     - Class: 114
-      Script: {instanceID: 11024}
+      Script: {instanceID: 27596}
     - Class: 114
-      Script: {instanceID: 11046}
+      Script: {instanceID: 27646}
     - Class: 114
-      Script: {instanceID: 11252}
+      Script: {instanceID: 27714}
     - Class: 114
-      Script: {instanceID: 11282}
+      Script: {instanceID: 27758}
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 27984}
     - Class: 114
-      Script: {instanceID: 11718}
+      Script: {instanceID: 28014}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 28218}
     - Class: 114
-      Script: {instanceID: 11752}
+      Script: {instanceID: 28450}
     - Class: 114
-      Script: {instanceID: 11980}
+      Script: {instanceID: 28480}
     - Class: 114
-      Script: {instanceID: 12028}
+      Script: {instanceID: 28484}
     - Class: 114
-      Script: {instanceID: 12330}
+      Script: {instanceID: 28712}
     - Class: 114
-      Script: {instanceID: 12462}
+      Script: {instanceID: 28760}
     - Class: 114
-      Script: {instanceID: 12502}
+      Script: {instanceID: 29062}
     - Class: 114
-      Script: {instanceID: 12540}
+      Script: {instanceID: 29194}
     - Class: 114
-      Script: {instanceID: 12602}
+      Script: {instanceID: 29234}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 29272}
     - Class: 114
-      Script: {instanceID: 12730}
+      Script: {instanceID: 29334}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 29448}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 29460}
     - Class: 114
-      Script: {instanceID: 13156}
+      Script: {instanceID: 29514}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 29638}
     - Class: 114
-      Script: {instanceID: 13252}
+      Script: {instanceID: 29936}
     - Class: 114
-      Script: {instanceID: 13270}
+      Script: {instanceID: 29980}
     - Class: 114
-      Script: {instanceID: 13356}
+      Script: {instanceID: 29998}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 30084}
     - Class: 114
-      Script: {instanceID: 13936}
+      Script: {instanceID: 30314}
     - Class: 114
-      Script: {instanceID: 14006}
+      Script: {instanceID: 30662}
     - Class: 114
-      Script: {instanceID: 14254}
+      Script: {instanceID: 30732}
     - Class: 114
-      Script: {instanceID: 14278}
+      Script: {instanceID: 30980}
     - Class: 114
-      Script: {instanceID: 14338}
+      Script: {instanceID: 31004}
     - Class: 114
-      Script: {instanceID: 14410}
+      Script: {instanceID: 31064}
     - Class: 114
-      Script: {instanceID: 14464}
+      Script: {instanceID: 31136}
     - Class: 114
-      Script: {instanceID: 14578}
+      Script: {instanceID: 31190}
     - Class: 114
-      Script: {instanceID: 14642}
+      Script: {instanceID: 31304}
     - Class: 114
-      Script: {instanceID: 14700}
+      Script: {instanceID: 31368}
     - Class: 114
-      Script: {instanceID: 14814}
+      Script: {instanceID: 31426}
     - Class: 114
-      Script: {instanceID: 14912}
+      Script: {instanceID: 31540}
     - Class: 114
-      Script: {instanceID: 15536}
+      Script: {instanceID: 31638}
     - Class: 114
-      Script: {instanceID: 15610}
+      Script: {instanceID: 32262}
     - Class: 114
-      Script: {instanceID: 15612}
+      Script: {instanceID: 32350}
     - Class: 114
-      Script: {instanceID: 15616}
+      Script: {instanceID: 32868}
+    - Class: 114
+      Script: {instanceID: 32872}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -290,6 +293,24 @@ ScriptsOnlyBuild:
     - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 0cc496153888607f8d4b484d413e09ce
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StationScheduler
+  - hash:
+      serializedVersion: 2
+      Hash: a9d888a707f6033c0245f2c08179287a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: rockingController
+  - hash:
+      serializedVersion: 2
+      Hash: 687de2e1155d92486802c05ee4220855
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: createText
   - hash:
       serializedVersion: 2
       Hash: ee0be33c7c014d2ebd0e0f7dabf47f4a
@@ -688,12 +709,6 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
-      Hash: a9d888a707f6033c0245f2c08179287a
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: rockingController
-  - hash:
-      serializedVersion: 2
       Hash: b14e186823458f549289789cccbb77ce
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -718,12 +733,6 @@ ScriptsOnlyBuild:
     className: textStyleController
   - hash:
       serializedVersion: 2
-      Hash: 687de2e1155d92486802c05ee4220855
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: createText
-  - hash:
-      serializedVersion: 2
       Hash: 4663ce278bf334bc7cb334ea8061129e
     assemblyName: Unity.AI.Navigation
     namespaceName: Unity.AI.Navigation
@@ -734,6 +743,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: 9481bf13d9d4e3e91b747707dbc0b6e3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CombineChildMeshes
   - hash:
       serializedVersion: 2
       Hash: 4728e3d21cc2a12e391e71ec9b7eed0b
@@ -940,7 +955,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 4b0d1f79566ede5c84532cfc0cebcef7
+      Hash: 8cab972d9573de9e192eb594228c881e
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: textGenOneShot
@@ -1082,12 +1097,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDeselectMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 0980b8a524a5c9bebe2beb42e69cb37c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: StationScheduler
   - hash:
       serializedVersion: 2
       Hash: ef38c1407dba8c1f5d69f5db61a694fe
@@ -1475,4 +1484,4 @@ ScriptsOnlyBuild:
   platform: 24
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: /home/rob/pith/current-projects/Etiquette/Project Builds/devbuild1.x86_64
+  playerPath: /home/rob/pith/current-projects/Etiquette/Project Builds/devbuild2.x86_64

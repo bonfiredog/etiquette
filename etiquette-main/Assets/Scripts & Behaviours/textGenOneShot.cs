@@ -188,6 +188,8 @@ public class textGenOneShot : MonoBehaviour
             + "[current_buildings_rare:" + currentGrammar.Parse(ss.appropriatebuildingsrare) + "]"
             + "[current_weather_types:"  + currentGrammar.Parse(ss.currentweather)           + "]"
             + "[current_station:"        + currentGrammar.Parse(ss.nextStationName)          + "]"
+            + "[current_vehicles:" + currentGrammar.Parse(ss.current_vehicles) + "]"
+            + "[current_vehicles_rare:" + currentGrammar.Parse(ss.current_vehicles_rare) + "]"
             + "[current_county:"         + currentGrammar.Parse(ss.currentCounty)            + "]";
 
         if (includeTunnel)

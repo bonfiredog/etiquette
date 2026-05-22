@@ -391,7 +391,7 @@ PrefabInstance:
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_overflowMode
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
@@ -404,6 +404,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -9466126922233593, guid: a29bc921a0026ef96910d1452c9beeba,
         type: 2}
+    - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
+        type: 3}
+      propertyPath: m_TextWrappingMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6399391411232519598, guid: 873c2936ae846154e80c1b10586184ab,
         type: 3}
       propertyPath: m_fontColor32.rgba
@@ -480,6 +485,7 @@ MonoBehaviour:
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
   grammarParse: 
+  ss: {fileID: 0}
   length: 0
 --- !u!114 &230656035063066755
 MonoBehaviour:

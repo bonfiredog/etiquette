@@ -1,105 +1,297 @@
 {
+  "vignette":[
+    "#current_person_type.a# asking, 'do you have the time?'",
+    "#current_person_type.a# #verbs_movement.ing#, shouting '#heard_phrase#'",
+    "#containers.s# of #luggage#",
+    "#shape#-shaped #containers.s#",
+    "A #carried_misc_objects# dropped by #current_person_type#",
+    "In The Lost Property Office: #lostobject#, #lostobject#, #lostobject#",
+    "#train_station_staff.a# mouthing '#quickword#'",
+    "#current_person_type.a, #adjectives_emotions#, #current_time_discrepancy# minutes late for the #train_types# to #placenames#",
+    "An open #container#, #luggage.s#",
+    "#container.s# shaped like #objects_all#",
+    "A lost #objects_all#",
+    "#adjectives_all.a# #container#",
+    "#person_generic.a# selling #objects_all#",
+    "#person_generic.a# and their #adjectives_all# #relations#, #verbs_interaction.ing#",
+    "a hand from the #train_stationroom# window, making a #symbol#",
+    "#numbers_written# #person_generic.s# talking of #events_all.a#",
+    "#numbers_written# #current_person_type.s#, #verbs_interaction.ing#, #adjectives_emotions#",
+    "#person_generic.a# waving",
+    "#current_person_type.a# and #current_person_type# #verbs_interaction#",
+    "#current_person_type.a# sheltering from the #current_weather#",
+    "#current_person_type.a# waiting for #waitobject#",
+    "#person_generic.a# waiting for #waitobject#",
+    "#current_person_type.a# #verbs_noise.ing# at the train",
+    "#current_person_type.a#, #current_time_discrepancy# late for #events_all.a#",
+    "#current_time_discrepancy# late, #verbs_movement.ing#",
+    "#train_station_staff.s# looking for #current_person_type.a#",
+    "there's an issue with the gauges",
+    "there's an issue with the #train_parts#",
+    "#person_generic.a# looking for #waitobject#",
+    "#person_generic.a# escaping #waitobject#",
+    "#current_person_type# #verbs_movement.ing# to #imperial_locations#",
+    "#current_person_type.a# #verbs_interaction.s# a #objects_all#",
+    "#person_generic.a# thinkg of #current_mealtime#",
+    "#person_generic.a# looking #ae_negative#",
+    "two #persons_generic.s# talking #trade_commerce_terms#",
+    "#current_person_type.a# hoping for #current_weather_types#",
+    "#train_track_staff.a# holding #tools.a#, looking #adjectives_emotions#",
+    "#container.s# of #luggage# and #luggage#",
+    "#train_station_staff.a# carrying #container.s# through the #train_stationroom#",
+    "#numbers_written# #train_station_staff# sharing #cooked_food#",
+    "#containers.s# of #luggage#, #verbs_all.ing#"
+
+  ],
+
+  "lostobject":[
+    "#objects_all.a#",
+    "#objects_all.a#",
+    "#adjectives_all.a# #objects_all#",
+    "a scrap of paper, bearing #fragments#",
+    "#carried_misc_objects.a#"
+    ],
 
 
-  "origin":[
-    "#windowview#"
-    "#interaction#",
-    "#describedplatformscene#"
+  "waitobject":[
+  "their #relations#",
+  "#abstract_nouns_all#",
+  "#weather_types_all#",
+  "#current_person_type.a#",
+  "their #person_role_general#",
+  "their luggage",
+  "#person_generic.a#",
+  "#train_station_staff.a#",
+  "#events_all.a#",
+  "their #events_specific#",
+  "their #punishment_penalty#",
+  "#story_types.a#",
+  "their #plot_elements#"
+  ],
+
+
+  "luggagebits":[
+    "musical_instrument.s#",
+    "#weapons#",
+    "#clothes_count.s#",
+    "#clothes_noncount#",
+    "#clothes_empire_count.s#",
+    "#clothes_empire_noncount#",
+    "#tools.s#",
+    "#animals_small_empire#",
+    "#animals_medium_empire#",
+    "#animals_air_empire#",
+    "#fish#",
+    "#shellfishandcrustaceans#",
+    "#crops_home#",
+    "#imperial_objects#",
+    "#fruits_home#",
+    "#fruits_empire#",
+    "#crops_empire#",
+    "#indoor_objects_small#"
+  ],
+
+  "luggage":[
+    "#luggagebits#",
+    "#luggagebits#",
+    "#luggagebits#",
+    "#luggagebits# from #counties#",
+    "#luggagebits# from #imperial_locations#"
+  ],
+
+  "heard_phrase": [
+    "'#names_men.capitalize#!'",
+    "'#names_women.capitalize#!'",
+    "'#surnames.capitalize#, #verbs_movement# to the next #railway_furniture#, #quickword#'",
+    "'I'll meet you by the #buildings_all#, and don't #verbs_noise# about it'",
+    "'#abstract_nouns_all.capitalize# and #cooked_food# is all it takes, #endearment#'",
+    "'If you had stayed quite quiet about the #indoor_objects_small#, he wouldn't have come on so #emotions#'",
+    "'Where's #firstnames_all.capitalize#?'",
+    "'Where's #firstnames_all.capitalize# with that utter #abstract_nouns_negative#?'",
+    "'See it there, just on his #body_part_outer#... that #colours#ness'",
+    "'Stop #verbs_noise#ing!'",
+    "'Is there a #vehicle# to #placenames.capitalize#?'",
+    "'#heshe.capitalize# #verbs_all#.ed that #objects_all# not #number# #time.s# ago'",
+    "'Did you say #words_any#'",
+    "'#number.capitalize# #money.s#!'",
+    "'recreation_outdoor.capitalize# by #mealtimes# please'",
+    "'#heshe.capitalize# said #heshe# would #verbs_interaction# him like a #mythicalbeast#'",
+    "'#words_all!#'",
+    "'#quickword#'",
+    "'#swearwords.capitalize#'",
+    "'#swearwords.capitalize#'",
+    "'#swearwords.capitalize#'",
+    "'#swearwords.capitalize#'",
+    "'#swearwords.capitalize# him'",
+    "'#swearwords.capitalize# her'",
+    "'#swearwords.capitalize# them'"
+  ],
+
+"quickword": [
+  "lively!",
+  "quick now!",
+  "quickly!",
+  "sharp!",
+  "double it!",
+  "force yourself!",
+  "any time now"
+],
+  "inner_place": [
+  "A #hintword# of #train_stationroom.a#, #adjectives_all#",
+  "Through an arch, the #downup# #train_types# #verbs_movement.ing#",
+  "Through the arch, Platform #numbers_written#",
+  "In #train_stationroom.a#, #current_person_type.a# #relative_position# #interior_fixtures.a#",
+  "through the doorway: was that #person_role_empire.a#, #verbs_all.ing#?",
+  "#plot_element.a# in the #train_stationroom#",
+  "Through an arch, #adjectives_all.a# #train_carriage_types#",
+  "#pstory_types.a# in the #train_stationroom#",
+  "In #train_stationroom.a#, #objects_all.a# #relative_position# #furniture.a#",
+  "In #train_stationroom.a#, #adjectives_all.a# #furniture#",
+  "In #train_stationroom.a#, a #person_generic.a# and #person_generic.a# play #indoorgame#",
+  "In #train_stationroom.a#, a #person_generic.a# and #person_generic.a# #verbs_interaction#",
+  "In #train_stationroom.a#, two #current_person_types# #verbs_interaction#",
+  "In #train_stationroom.a#, #adjectives_all.a# #indoor_objects_small#", 
+  "In #train_stationroom.a#, #train_parts.s# and #train_parts.s#",
+  "#events_all.a# in #train_stationroom.a#",
+  "#adjectives_generic_negative.a# #plantsflowers_home#",
+  "behind a fence, #invasive# grows",
+  "in the canteen, they're serving #cooked_food#"
+],
+
+"person_cons":[
+"#p_type#, #p_age#, #p_phyfeature#, #metaphorsim#, #p_clothing#, #p_holdingdoing#",
+"#p_type#, #p_age#",
+"#p_type#, #p_phyfeature#",
+"#p_type#, #p_clothing#",
+"#p_type#, #p_holdingdoing#",
+"#p_type#, #metaphorsim#",
+"#p_type#, #p_phyfeature#, #p_age#, #p_clothing#, #p_holdingdoing#",
+"#p_type#,  #p_age#, #p_phyfeature#, #p_clothing#, #p_holdingdoing#, #metaphorsim#",
+"#p_type#, #p_phyfeature#, #metaphorsim#",
+"#p_type#, #metaphorsim#, #p_holdingdoing#"
+],
+
+"p_type":[
+"#person_generic.a#",
+"#current_person_type.a#",
+"Looks like #current_person_type.a#",
+"#person_generic.a, looks like #current_person_type.a#",
+"person_generic.a, looks like #person_type_general.a#",
+"a #downup# traveller",
+"an excursionist who alighted",
+"#adjectives_all.a# #person_generic#",
+"#adjectives_all.a# sort of #person_generic#"
+],
+
+"p_age":[
+"no more than #numbers_age_rough#",
+"at least #numbers_age_rough#",
+"young",
+"old"
+],
+
+"metaphorsim":[
+"#adjectives_all#",
+"running #current_time_discrepancy# late",
+"#adjectives_emotions#",
+"fresh from #imperial_locations#, by the look of it",
+"fresh from #counties#, by the look of it",
+"fresh from #british_towns#, by the look of it",
+"a #comparison_noun# sort of person",
+"on their way to #events_all.a#",
+"as #adjectives_emotions# as #comparison_noun.a#"
+],
+
+"numbers_age_rough":[
+  "twenty","fifteen", "thirty", "forty", "fifty", "sixty", "seventy"
+],
+
+"p_phyfeature":[
+"with a #physical_deformity_damage# on their #body_part_outer#",
+"#adjective_colours_common# hair",
+"with #marks_injuries.a#",
+"with a #adjectives_all# look",
+"with #body_part_outer.a# like #comparison_noun.a#",
+"maybe #adjectives_nationality#",
+"#colonial_disease#, #hedging_adverbs#",
+"#illness_type#, #hedging_adverbs#"
+],
+
+"comparison_noun":[
+    "#noun_materials_all#",
+    "#body_part_outer#",
+    "#body_part_inner#",
+    "#weather_types_all#",
+    "#celestial_body#",
+    "#musical_instruments#",
+    "#weapons#",
+    "#clothes#",
+    "#clothes_empire#",
+    "#tools#",
+    "#carried_misc_objects#",
+    "#interior_fixtures#",
+    "#furniture#",
+    "#objects_all#",
+    "#animals_all#",
+    "#current_person_type#",
+    "#mythicalbeasts#",
+    "#precious_stones#",
+    "#money#",
+    "#railway_architecture#",
+    "#railway_furniture#",
+    "#railway_crossing_place#",
+    "#buildings_all#",
+    "#locations_all#",
+    "#rooms#",
+    "#private_places#",
+    "#road_vehicles_empire#",
+    "#sea_river_vehicles_empire#",
+    "#events_all#",
+    "#punishment_penalty#",
+    "#outdoor_activity#",
+    "#indoor_activity#",
+    "#train_incidents_common#",
+    "#train_incidents_rare#",
+    "#plantsflowers_home#",
+    "#plantsflowers_empire#",
+    "#crops_empire#",
+    "#fruits_home#",
+    "#fruits_empire#",
+    "#medicineword#",
+    "#illness_type#",
+    "#marks_injuries#",
+    "#physical_deformity_damage#",
+    "#symbol#"
+],
+
+"p_clothing":[
+"wearing #clothes_count.a#",
+"wearing #clothes_noncount#",
+"weating #clothes_rare_noncount#",
+"wearing #adjectives_all.a# #clothes_count#",
+"wearing #adjectives_all# #clothes_noncount#"
+],
+
+"p_holdingdoing": [
+"carrying #carried_misc_objects.a#",
+"verbs_gentle.ing# #adjectives_all.a# #animals_small_british#",
+"#verbs_interaction.ing# their #carried_misc_objects#",
+"carrying #containers.a#",
+"#verbs_movement.ing#",
+"#verbs_gentle.ing#",
+"#verbs_gentle.ing# #carried_misc_objects.a#"
+],
+
+"origin":[
+    "#person_cons.capitalize#",
+    "#person_cons.capitalize#",
+    "#inner_place.capitalize#",
+    "#vignette.capitalize#."
   ]
-
-}- #containers#s of #noun#.
-- - "Do you have the time?"
-  
- 
-  "quickword":["lively","quick now", "quickly", "sharp", "double it", "force yourself", "any time now"],
-  
-  "heard_phrase":[
-  "'#names_men.capitalize#!'",
-  "'#names_women.capitalize#!'",
-  "'#surnames.capitalize#, #verbs_movement# to the next #railway_furniture#, #quickword#'",
-  "'I'll meet you by the #buildings_all# and don't #verbs_noise# about it'",
-  "'#abstract_nouns.capitalize# and #cooked_food# is all it takes, #endearment#'",
-  "'If you had stayed quite quiet about the #indoor_objects_small#, he wouldn't have come on so #emotions#'",
-  "'Where's #firstnames_all.capitalize#'",
-  "'Where's #firstnames_all.capitalize# with that utter #appropriate_person#'",
-  "'See it there, just on his #body_part_outer#, that #colours#ness'",
-  "'Stop #verbs_noise#ing!'",
-  "'Is there a #vehicle# to #placenames.capitalize#?'",
-  "'#heshe.capitalize# #verbs_all#.ed that #objects_all# not #number# #time.s# ago'",
-  "'Did you say #words_any#'",
-  "'#number.capitalize# #money.s#!'",
-  "'recreation_outdoor.capitalize# by #mealtimes# please'",
-  "'#heshe.capitalize# said #heshe# would #verbs_interaction# him like a #mythicalbeast#'",
-  "'#swearwords.capitalize#'", "'#swearwords.capitalize#'", "'#swearwords.capitalize#'", "'#swearwords.capitalize#'",
-  "'#swearwords.capitalize# him'",
-  "'#swearwords.capitalize# her'",  
-  "'#swearwords.capitalize# them'"
-  ],
-  
-  
-  "person_on_platform": ["#stationposition# #traveller#", "#stationroom# #employee#"],
-  
-  "traveller": [
-  "#people.a# and their #relation#s, #verbs_interaction#ing",
-  "#people.a# with a #body_part_outer# like a #buildings_all#",
-  "#appropriate_person.s# on their way to #events_specific.a# in #placenames.capitalize#",
-  "#number# #people# with #body_part_outer#s like #appropriate_person#s #verbs_interaction#ing",
-  "#appropriate_person.a#, #hedging_words#, mouthing a word at a #people# onboard: '#mouthed_word#'",
-  "#people.a# as #adjectives_all# as #comparison.a#",
-  "#people.a# #verbs_all#ing",
-  "#people.a# #verbs_all#ing with #indoor_objects_small.a#",
-  "a hand from the #stationroom# window, in the shape of #shapes_all.a#",
-  "two #people.s# talking of #events_specific.a#"
-  ],
-  
-  "employee": [
-  "A #railway_staff# carrying #indoor_objects_large.a# through the #stationroom#",
-  "A #railway_staff# sharing a #cooked_food#", 
-  "A #railway_staff# pointing #compass_points#",
-  "A #adjectives_all# #railway_staff# #verbs_movement#ing",  
-  "A #railway_staff# with a #colours#ness in his #body_part_inner#"
-  ],
-  
-
-  "object_on_platform": [
-  "A #containers# full of #objects_all#, #hedging_words",
-  "A door open on a #carriage_types#: #objects_all#, #hedging_words#",
-  "A lost #indoor_objects_small#",
-  "A dropped #outdoor_objects_small#",  
-  
-  "origin":[
-  "#person_on_platform#",
-  "#advert#",
-  "#news_headline#",
-  "#signage#",
-  "#object_on_platform#",
-  "#heard_phrase#"
-  ]
-
-
-  missed connections, tearful goodbyes, 
-  blinking in and out?
-  glimpsed tableux through "windows" 
-  people from different worlds meeting. 
-
-  reading document, booktitle
-  people out of place
-  current_persons
-  people interacting with each other, the train
-  running late
-  x minutes late, emotions bad 
-  peering at
-  hint_words inside
-  containers shaped lie objects
-  luggage
-  selling things
-  station staff looking for
-  Someone on a journey to find 
-  stories - escaping, looking for, going to, hiding, changing...
-  ON [x] time 
-  [x] minutes late for which dervice? 
-  An event concerning an objects.
-
-- Think of plot-types
-
 }
+
+
+
+
+
+

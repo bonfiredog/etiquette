@@ -197,7 +197,8 @@
 "was that #vehicles_all.a#?",
 "#relative_location#, #current_terrain#",
 "#hedging_adverbs#",
-"#hintword.a#"
+"#hintword.a#",
+"A #adjectives_colours_common# #shape# #verbs_movement.ing#"
 ],
 
 "rurallines":[
@@ -215,6 +216,7 @@
 "root_noun_urban# #relative_position# the #air_types#",
 "#imperial_locations.a# #root_noun_urban#",
 "#adjectives_nationality.a# #root_noun_urban#",
+"A #adjectives_colours_common# #shape# #verbs_movement.ing#",
 "the #hintword.s# of #root_noun_urban#",
 "#shape.s# at #numbers_written# #measurements.s#",
 "#root_noun_urban.a# #relative_position# #root_noun_urban.a#",

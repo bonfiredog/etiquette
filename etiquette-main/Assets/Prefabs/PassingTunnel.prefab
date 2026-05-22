@@ -378,6 +378,7 @@ MonoBehaviour:
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
   grammarParse: 
+  ss: {fileID: 0}
   length: 0
 --- !u!1 &5469125053034367768
 GameObject:
@@ -597,6 +598,7 @@ MonoBehaviour:
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
   grammarParse: 
+  ss: {fileID: 0}
   length: 0
 --- !u!114 &8751035024681062998
 MonoBehaviour:
