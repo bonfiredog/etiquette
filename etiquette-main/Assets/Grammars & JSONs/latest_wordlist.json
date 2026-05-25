@@ -6391,7 +6391,7 @@
     "zany"
   ],
   
-  "adjectives_nationality": [
+  "adjectives_nationality_un": [
     "american",
     "french",
     "irish",
@@ -6461,6 +6461,10 @@
     "tropical"
   ],
 
+  "adjectives_nationality":[
+    "#adjectives_nationality_un.capitalize#"
+  ],
+
   "noun":[
 "#body_part_outer#",
 "#body_part_inner#",
@@ -6481,6 +6485,12 @@
 "#crops_home#",
 "#precious_stones#"
   ],
+
+
+"body_parts_all":[
+  "#body_part_inner#",
+  "#body_part_outer#"
+],
 
 "adjectives_colours_common": [
   "achromatic",
@@ -12089,7 +12099,6 @@
         "widow",
         "woodsman",
     "boatman",
-    "bowmen",
     "breeder",
     "butcher",
     "butler",
@@ -12725,7 +12734,6 @@
       "father",
       "fiancé",
       "grandchild",
-      "grandchildren",
       "granddaughter",
       "grandfather",
       "grandmother",
@@ -12746,10 +12754,8 @@
       "spouse",
       "uncle",
       "wife",
-    "dad",
     "descendant",
     "descendent",
-    "fatherhood",
     "fiancee",
     "forebear",
     "forefather",
@@ -12780,7 +12786,6 @@
     "mummy",
     "papa",
     "parent",
-    "poppa",
     "relation",
     "sibling",
     "sire",
@@ -14278,7 +14283,7 @@
   "corset",
   "costume",
   "cravat",
-  "crinoline",
+
   "cuff",
   "dickey",
   "dress",
@@ -14374,6 +14379,8 @@
   "lace",
   "lingerie",
   "livery",
+    "crinoline",
+    "bombazeen",
   "merino",
   "millinery",
   "pantaloons",
@@ -14500,7 +14507,7 @@
 "#clothes_noncount#",
 "#clothes_rare_count#",
 "#clothes_rare_noncount#"
-]
+],
 
 
 
@@ -15602,7 +15609,7 @@
     "batten",
     "bell",
     "bifurcation","fog-signal"
-,"railway-#tool#",     "dangerwhistle",
+,"railway-#tools#",     "dangerwhistle",
     "apparatus","implement","semaphore",
     "machinery",
     "bolt",
@@ -16788,10 +16795,10 @@
     "birdie",
     "bowling",
     "Catch The #animals_all.capitalize#",
-    "#adjectives_emotions.capitalize# #adjectives_nationality.capitalize#man",
-    "#imperial_locations.capitalize# #activities_all.capitalize#",
-    "#verbs_interaction.capitalize.ing# #firstnames_all.capitalize#",
-    "'Hunt The #adjectives_emotions.capitalize# #mythicalbeasts.capitalize#",
+    "'#adjectives_emotions.capitalize# #adjectives_nationality.capitalize#man'",
+    "'#imperial_locations.capitalize# #activities_all.capitalize#'",
+    "'#verbs_interaction.capitalize.ing# #firstnames_all.capitalize#'",
+    "'Hunt The #adjectives_emotions.capitalize# #mythicalbeasts.capitalize#'",
     "'#animals_all.s.capitalize# & #objects_all.capitalize.s#'",
     "boxing",
       "badminton",
@@ -17369,7 +17376,7 @@
   "vehicles_all":[
     "#road_vehicles_home#",
     "#road_vehicles_empire#",
-    "#sea_river_vehicles_home#",
+    "#sea_river_vehicles#",
     "#sea_river_vehicles_empire#"
   ],
 
@@ -17415,7 +17422,6 @@
     "dray",
     "equipage",
     "gig",
-    "gigs",
     "glider",
     "growler",
     "hack",
@@ -20096,6 +20102,12 @@
 "potato"
       ],
 
+      "adjectives_generic_all":[
+        "#adjectives_generic_negative#",
+        "#adjectives_generic_neutral#",
+        "#adjectives_generic_positive#"
+      ],
+
       "person_generic":[
       "man",
       "boy",
@@ -20339,19 +20351,19 @@
   ],
 
 "buildings_all":[
-  "rural_buildings_common",
-  "city_buildings_common",
-  "town_buildings_common",
-    "rural_buildings_common",
-    "city_buildings_common",
-    "town_buildings_common",
-      "rural_buildings_common",
-      "city_buildings_common",
-      "town_buildings_common",
-  "coastal_buildings",
-"rural_buildings_rare",
-"city_buildings_rare",
-"town_buildings_rare"
+  "#rural_buildings_common#",
+  "#city_buildings_common#",
+  "#town_buildings_common#",
+    "#rural_buildings_common#",
+    "#city_buildings_common#",
+    "#town_buildings_common#",
+      "#rural_buildings_common#",
+      "#city_buildings_common#",
+      "#town_buildings_common#",
+  "#coastal_buildings#",
+"#rural_buildings_rare#",
+"#city_buildings_rare#",
+"#town_buildings_rare#"
 ],
 
 "british_towns":[
@@ -20589,7 +20601,6 @@
         "soup",
         "soup",
         "stew",
-        "stews",
         "tart",
         "trifle",
         "turnover",
@@ -20666,14 +20677,14 @@
     "pickle",
     "pickling",
     "pilaf",
-    "poached",
+    "poached #animals_all#",
     "pone",
     "pork",
     "porridge",
     "pud",
     "quiche",
     "ragout",
-    "roasting",
+    "roasted #animals_all#",
     "rusk",
     "saute",
     "scampi",
@@ -28027,7 +28038,8 @@
     "#person_role_country#",
     "#person_role_town#",
     "#person_role_city#",
-    "#person_role_empire#"
+    "#person_role_empire#",
+    "#person_role_general#"
   ],
 
   "story_types":[
@@ -29388,7 +29400,7 @@
       "obstruction on the line", 
       "blockage on the line",
       "malfunction",
-      "a slow #train_types#",
+      "slow #train_types#",
       "breakdown",
       "coaling",
       "problem",
@@ -29405,9 +29417,9 @@
     "collision",
     "collision with #animals_large_british.a#",
     "collision with a person",
-    "collision with #persons_generic.a#",
+    "collision with #person_generic.a#",
     "accident with a person",
-    "accident with #persons_generic.a#",
+    "accident with #person_generic.a#",
     "#animals_large_british# on the line",
     "collision with the #downup# #train_types#",
     "striking",
@@ -31107,6 +31119,12 @@
   
 ],
 
+"train_carriage_class":[
+  "first class",
+  "second class",
+  "third class"
+],
+
   "train_classes": [
     "#mythicalbeasts#",
     "#classical_names#",
@@ -31272,6 +31290,13 @@
 "'#counties.capitalizeAll#'s #abstract_nouns_positive.capitalizeAll#"
 ],
 
+"person_roles_all":[
+"#person_role_country#",
+"#person_role_town#",
+"#person_role_empire#",
+"#person_role_city#"
+],
+
 "product_material":[
   "cream",
   "lozenge",
@@ -31364,10 +31389,14 @@
   "#product_ext#"
 ],
 
-"product_name":[
+"product_name_constructor":[
  "#product_name_first.capitalizeAll# #product_name_second.capitalizeAll# #product_name_third.capitalizeAll#",
  "The #product_name_second.capitalizeAll# #product_name_third.capitalizeAll#",
  "#product_name_first.capitalizeAll# #product_name_third.capitalizeAll#"
+],
+
+"product_name":[
+  "#product_name_constructor.capitalizeAll#"
 ],
 
  "words_all":[
@@ -31575,7 +31604,7 @@
 
   ],
 
-    "fragmentsroot": [
+    "fragments": [
       "garden-house near the city",
       "rooms on the ground-floor",
       "tables in the house",
@@ -40980,8 +41009,5 @@
       "the river peaceably",
       "the men must",
       "the low lovel station"
-    ],
-    "fragments":[
-      "'#fragmentsroot#'"
     ]
 }

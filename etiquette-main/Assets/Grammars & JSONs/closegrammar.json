@@ -1,137 +1,365 @@
 {
-    "test":[""],
-    "origin":[
-    "The #people# #verbs_noise.s# '#mouthed_word#'",
-    "A #piece_word# of #outdoor_objects_small# #verbs_movement#ing",
-    "#flowers.capitalize# #verbs_gentle#ing in the #railway_furniture#",
-    "#adjectives_all.capitalize# #railway_furniture#",
-    "A #adjectives_all# #people# #verbs_all.s# at the train",
-    "#closepositional# #events_all.a#",
-    "A plant from #imperial_locations.capitalize# with #colours# #plantparts# and a #plantparts# shaped like a #shapes_all#",  
-    "#hedging_words.capitalize#, #objects_all.a#",
-    "The #appropriate_person# #verbs_all#ing",
-    "The #adjectives_all# #appropriate_buildings#",
-    "A #hintword# of #hint#",
-    "#colours.capitalize# #appropriate_locations#",
-    "#closepositional.capitalize# #adjectives_negative.a# #mealtimes# is served",
-    "A #people# pulls #downup# a #clothes#: #colours.a# #body_part_outer#", 
-    "A #people# and a #people# #verbs_interaction#",
-    "The #appropriate_locations.capitalize# #verbs_all#ing its #body_parts_inner#",  
-    "#colours.capitalize# and #colours# like a #comparison#", 
-    "#number.capitalize# #animals.s# #verbs_all# in the shape of a #objects_all#",
-    "Some sort of #adjectives_all# #events_all#",
-    "A #train_types# #verbs_all#ing",
-    "They are building #appropriate_buildings.a# in the shape of a #shapes_all#",
-    "A lost #railway_staff#",
-    "The #events_all# #positional# #railway_furniture.a#",  
-    "#railways_objects.capitalize.s# #positional# #appropriate_locations.a#",
-    "#adjectives_all# #fruits#",
-    "#closepositional.capitalize# a moment of #adjectives_all# #events_all#",
-    "#materials.capitalize#",
-    "#fraction.capitalize# of a #appropriate_buildings# and a date: #recent_date#",
-    "Fields of #cropsorfood#",
-    "#animals_small.capitalize# #verbs_extreme#ing",
-    "#closepositional# #objects_all.a",
-    "#closepositional# #people_indistinct.a# #verbs_all.s#",
-    "#closepositional# #people_indistinct.a# is #emotions#",
-    "#closepositional# #appropriate_person.a# is #adjectives_rare#",
-    "#closepositional# #people.a# #verbs_interaction#ing",
-    "A #objects_all# #positional# #rooms.a#",
-    "#closepositional# #symbol.a# on a #indoor_objects_large#",
-    "#large_number# #animals_small.s# #verbs_extreme# #cooked_food.a#",
-    "A #people# #verbs_interaction.s# with a #appropriate_person#, their #body_part_outer# #adjective_neutral#"
-]
-}
+    "closepeople":[
+        "#person_generic#",
+        "#current_person_type#",
+        "#person_generic#",
+        "#current_person_type#",
+        "#person_generic#",
+        "#current_person_type#",
+        "#person_generic#",
+        "#relation#",
+        "#fullname_any#",
+        "Mr. #colonial_surnames#",
+        "Mrs. #colonial_surnames#",
+        "Miss #colonial_surnames#",
+        "#train_track_staff#"
+    ],
 
-Geology and fossil hunting in the railway cuttings (Freeman,
-1999)
-train tack stuff
-the colour of invasives
-up close, microscopic dramas
-A buried body part...
-#train_carriage_types#
-#train_station_staff#
-#train_stationroom#
-#train_track_staff#
-#train_staff#
-#train_types#
-#train_parts#
-#railway_architecture#
-#railway_furniture#
-#train_classes#
-#railway_crossing_place#
+    "closenaturalobjects":[
+            "#outdoor_objects_small#",
+            "#natural_feature_small#"
+       
+    ],
 
-#swearwords#
-mouth in the shape of a swear_word
+    "closenaturalfixtures":[
+    "#railway_architecture#",
+    "#railway_furniture#",
+    "#natural_feature_small#",
+    "#natural_feature_medium#",
+    "#current_buildings#",
+    "#current_locations#"
+    ],
 
-#downup#
-streetnames/types
-"#railway_furniture.capitalize# #verbs_all.ed# #colour# and #materials#",
-NO TRACK STUFF
-"Millions of #animals_small#",
-rooms and pricate_places
+    "closeurbanobjects":[
 
-a hintword of a room
+    ],
 
-  
+    "closeurbanfixtures":[
+            "#railway_architecture#",
+            "#railway_furniture#",
+            "#current_buildings#",
+            "#current_locations#"
+    ],
 
-Middle and close: people's names
+"occurences":[
+"#events_all#",
+"#story_types#",
+"#plot_elements#"
+],
 
+"mouthed_word": [
+    "the #railway furniture#",
+    "#endearment#",
+    "#abstract_nouns_all#",
+    "#compass_points#",
+    "#placenames.capitalize#",
+    "#names_women.capitalize#!",
+    "#names_men.capitalize#!",
+    "#surnames.capitalize#",
+    "#swearwords#",
+    "#celestial_body_a#",
+    "#adjectives_all#",
+    "please",
+    "no",
+    "yes",
+    "maybe",
+    "soon",
+    "never",
+    "yet"
+],
+
+"pub_sign": [
+    "the #mythicalbeasts# and #person_type_general#",
+    "the #numbers_written# #animals_all.s#",
+    "the #adjectives_colours_common# #animals_all#",
+    "the  #person_roles_all#",
+    "the #person_role_empire#",
+    "the #person_role_empire# and #tools#",
+    "the #events_all#",
+    "the #tools#",
+    "the #punishment_penalty#",
+    "the #current_locations#",
+    "the #sea_river_vehicles#",
+    "the #sea_river_vehicles_empire#",
+    "the #adjectives_nationality.capitalize#mans #body_part_outer#",
+    "#symbol.a# pointing #compass_points#"
+],
+
+"urbanlinescommon":[
+"an #adjectives_generic_all# day for #closepeople.a#",
+"#road_vehicles_home# #verbs_movement.ing# on the #roadname#",
+"#roadnamefirst.capitalize# #roadname.capitalize#",
+"in a #rooms.a#",
+"in #private_places.a#",
+"#relative_position# closeurbanfixtures#.a",
+"#closepeople.a# #indoor_activity#",
+"#occurences.a#",
+"through a #current_buildings# window",
+"#closepeople# #verbs_all#",
+"#closepeople.a# plays #outdoorgame#",
+"#closepeople.a# plays #indoorgame#",
+"#closepeople.a# #outdoor_activity#",
+"#person_generic.a# faces #punishment_penalty#",
+"#person_generic.a# faces #punishment_penalty# for #verbs_extreme.ing#",
+"he will hang",
+"he will be sent to #imperial_locations.capitalize#",
+"a carved stone: #carving#",
+"a carved stone on #current_buildings.a#: #carving#",
+"#invasive# in a garden",
+"#invasive# in a pot",
+"#plantsflowers_home.a# in a #adjectives_colours_common# garden",
+"#plantsflowers_home.a# in a #adjectives_colours_common# pot",
+"#invasive# #verbs_movement.ing#",
+"#adjectives_colours_common.a# bowl of #fruits_empire#",
+"#person_generic.a# with #colonial_disease# and #carried_misc_objects.a#",
+"crowds of #current_person_type.s# like #air_types.a#",
+"#shape.a# of #adjectives_all# light #relative_position# #closeurbanfixtures.#",
+"#trade_commerce_terms.a# meeting in #current_buildings.a#",
+"a meeting for #person_role_general.s#",
+"a warehouse of #nouns_materials_common#, #verbs_interaction.ing#",
+"somebody #verbs_all.ing#",
+"#body_part_outer.a# #relative_position# #closeurbanfixtures.a#",
+"#closeurbanobjects.s# #relative_position# the #closeurbanfixtures#",
+"#animals_small_british.s#",
+"#closeurbanfixtures.a#",
+"#body_parts_all.s# buried by #closepeople.a#",
+"a buried #closeurbanobjects#",
+"#closepeople.a# looks for #celestial_body_a.a#",
+"#person_role_empire.a#, #verbs_all.ing#",
+"#closepeople.a# has lost their #relation#",
+"a visit from the #person_office_title_empire#",
+"a visit from the #person_office_title_home#",
+"#cooked_food# is served with #drinks_all#",
+"#current_mealtime# is served",
+"a new #containers# of #objects_all#",
+"a new #container# of #product_name#",
+"crowds of #current_person_type.s#",
+"#collective_nouns.a# of #current_person_type.s#",
+"#closepeople.a# plays #musical_instruments.a# to #closepeople.a#",
+"they are #adjectives_emotions#",
+"they believe they are #classical_names.capitalize#",
+"#closepeople.a# #verbs_interaction.ing# with #closepeople.a#",
+"#closepeople.a# #verbs_interaction.ing# with #animals_small_british.a#",
+"#closepeople.a# #verbs_interaction.ing# with #animals_air_british.a#",
+"#furniture.a# #verbs_movement.ed# from #imperial_locations.capitalize#",
+"#closepeople.a# practicing with #weapons.a#",
+"drying #adjectives_colours_common# #clothes_noncount#",
+"drying #adjectives_colours_common.a# #clothes_count#",
+"trying on their #relation#'s #clothes_count#",
+"trying on a new #clothes_count#",
+"#adjectives_all# #interior_fixtures.s#",
+"#indoor_objects_small.a# #verbs_movement.ing#",
+"a #adjectives_all# market selling #produce# and #produce#",
+"a pet #animals_small_empire# #verbs_extreme.ing#",
+"#verbs_noise.ing# on the #air_types#",
+"#drinks_british.a# in #private_places.a#",
+"in #private_places.a#, #verbs_interaction.ing# until #time_of_day#",
+"the #surnames.capitalize# family at #events_all.a#",
+"#relation.a# discovers #events_rare.a#",
+"#closepeople.a# mouthing '#mouthed_word#'",
+"A plant from #imperial_locations.capitalizeAll#",
+"#adjectives_all# #closeurbanfixtures.s#",
+"#adjectives_all.a# #occurences#",
+"a lost #person_role_empire#",
+"#events_all.a# #relative_position# the #closeurbanfixtures#",
+"#adjectives_all# #closenaturalobjects.s#",
+"#fraction# of #closeurbanfixtures#",
+"#animals_small_british.s# #verbs_extreme.ing#",
+"#adjectives_all.a# #furniture# in a #rooms#",
+"#closepeople.a# in the #private_places#",
+"#closepeople.a#'s mouth in the #shape# of #insults#",
+"#hintword.a# of #rooms#",
 "#fragments#",
+"speaking of #topics#",
+"#verbs_interaction.ing# #relative_position# the #furniture#",
+"hunting for #body_part_outer# in the #closenaturalfixtures#",
+"buried #objects_all.s#",
+"half an ancient #animals_all#",
+"on excursion from #counties#",
+"#animals_small_british.s# hunting #animals_small_british.s#",
+"#current_buildings.a#",
+    "a sign above a building: #product_name#",
+"the rear of #current_buildings.a#",
+"the #hintword# of #occurences.a#",
+"#adjectives_colours_common# on the #closeurbanfixtures#",
+"a sign above a pub: #pub_sign.capitalizeAll#",
+"#occurences.a# on #roadnamefirst.capitalizeAll# #roadname.capitalizeAll#",
+"#occurences# #relative_position# the #closenaturalfixtures#",
+"#road_vehicles_home.a# full of #current_person_type.s#",
+"#adjectives_all# walls",
+"#adjectives_all# windows",
+"hanging #clothes_noncount#",
+"#person_generic.a#'s #body_part_outer# in a window",
+"a painting of #events_all.a#",
+"between #numbers_written# #current_buildings.s#",
+"somebody #verbs_noise.ing#",
+"#closepeople.a# moving #indoor_objects_large.a#",
+"#current_time_discrepancy# minutes ago",
+"#adjectives_colours_common.a# face"
 
-  
+],
 
-Mouthing something about ""
-doing something on furniture, in a room
+"produce":[
+    "#ingredients#",
+    "#objects_all#",
+    "#fish#",
+    "#shellfishandcrustaceans#"
+],
 
+"topics":[
 
-"origin": [
-    "The #people# #verbs_noise.s# '#mouthed_word#'",
-    "A #piece_word# of #outdoor_objects_small# #verbs_movement#ing",
-    "#flowers.capitalize# #verbs_gentle#ing in the #railway_furniture#",
-    "#adjectives_all.capitalize# #railway_furniture#",
-    "A #adjectives_all# #people# #verbs_all.s# at the train",
-    "#closepositional# #events_all.a#",
-    "A plant from #imperial_locations.capitalize# with #colours# #plantparts# and a #plantparts# shaped like a #shapes_all#",
-    "#hedging_words.capitalize#, #objects_all.a#",
-    "The #appropriate_person# #verbs_all#ing",
-    "The #adjectives_all# #appropriate_buildings#",
-    "A #hintword# of #hint#",
-    "#colours.capitalize# #appropriate_locations#",
-    "#closepositional.capitalize# #adjectives_negative.a# #mealtimes# is served",
-    "A #people# pulls #downup# a #clothes#: #colours.a# #body_part_outer#",
-    "A #people# and a #people# #verbs_interaction#",
-    "The #appropriate_locations.capitalize# #verbs_all#ing its #body_parts_inner#",
-    "#colours.capitalize# and #colours# like a #comparison#",
-    "#number.capitalize# #animals.s# #verbs_all# in the shape of a #objects_all#",
-    "Some sort of #adjectives_all# #events_all#",
-    "A #train_types# #verbs_all#ing",
-    "They are building #appropriate_buildings.a# in the shape of a #shapes_all#",
-    "A lost #railway_staff#",
-    "The #events_all# #positional# #railway_furniture.a#",
-    "#railways_objects.capitalize.s# #positional# #appropriate_locations.a#",
-    "#adjectives_all# #fruits#",
-    "#closepositional.capitalize# a moment of #adjectives_all# #events_all#",
-    "#materials.capitalize#",
-    "#fraction.capitalize# of a #appropriate_buildings# and a date: #recent_date#",
-    "Fields of #cropsorfood#",
-    "#animals_small.capitalize# #verbs_extreme#ing",
-    "#closepositional# #objects_all.a",
-    "#closepositional# #people_indistinct.a# #verbs_all.s#",
-    "#closepositional# #people_indistinct.a# is #emotions#",
-    "#closepositional# #appropriate_person.a# is #adjectives_rare#",
-    "#closepositional# #people.a# #verbs_interaction#ing",
-    "A #objects_all# #positional# #rooms.a#",
-    "#closepositional# #symbol.a# on a #indoor_objects_large#",
-    "#large_number# #animals_small.s# #verbs_extreme# #cooked_food.a#",
-    "A #people# #verbs_interaction.s# with a #appropriate_person#, their #body_part_outer# #adjective_neutral#"
+],
+
+"carving":[
+"#anyyear#",
+"dedicated to the #events_rare# at #imperial_locations.capitalize#",
+"#surnames.allCaps# FECIT",
+"#shape.a# and #symbol.a#",
+"#shape.a# and #shape.a#",
+"SEMPER",
+"#symbol.a# and #symbol.a#",
+"#animals_all.a# #relative_position# #symbol.a#",
+"#imperial_locations.allCaps# HOUSE",
+"REGINA VICTORIA"
+],
+
+"roadnamefirst":[
+"#placenames#",
+"#imperial_locations#",
+"#abstract_nouns_all#",
+"#person_roles_all#",
+"#crops_home#",
+"#"
+],
+
+"roadname":[
+    "road","lane","street","avenue", "row", "alley"
+],
+
+"urbanlines":[
+    "#urbanlinescommon#"
+],
+
+"rurallinescommon":[
+"a #body_part_outer# #verbs_movement.ing# in the #crops_home#",
+"people #verbs_all.ing# in the #crops_home#",
+"somebody #adjectives_all# #relative_position# the #crops_home#",
+"an #adjectives_generic_all# day for #closepeople.a#",
+"#road_vehicles_home# #verbs_movement.ing# on the #roadname#",
+"#roadnamefirst.capitalize# #roadname.capitalize#",
+"in a #rooms.a#",
+"in #private_places.a#",
+"#relative_position# #closenaturalfixtures.a#",
+"#closepeople.a# #indoor_activity#",
+"#occurences.a#",
+"through a #current_buildings# window",
+"#closepeople# #verbs_all#",
+"#closepeople.a# plays #outdoorgame#",
+"#closepeople.a# plays #indoorgame#",
+"#closepeople.a# #outdoor_activity#",
+"#person_generic.a# faces #punishment_penalty#",
+"#person_generic.a# faces #punishment_penalty# for #verbs_extreme.ing#",
+"he will hang",
+"he will be sent to #imperial_locations.capitalize#",
+"a carved stone: #carving#",
+"a carved stone on #current_buildings.a#: #carving#",
+"#invasive# in a garden",
+"#invasive# in a pot",
+"#plantsflowers_home.a# in a #adjectives_colours_common# garden",
+"#plantsflowers_home.a# in a #adjectives_colours_common# pot",
+"#invasive# #verbs_movement.ing#",
+"#adjectives_colours_common.a# bowl of #fruits_empire#",
+"#person_generic.a# with #colonial_disease# and #carried_misc_objects.a#",
+"crowds of #current_person_type.s# like #air_types.a#",
+"#shape.a# of #adjectives_all# light #relative_position# #closenaturalfixtures.a#",
+"#trade_commerce_terms.a# meeting in #current_buildings.a#",
+"a meeting for #person_role_general.s#",
+"a warehouse of #nouns_materials_common#, #verbs_interaction.ing#",
+"somebody #verbs_all.ing#",
+"#body_part_outer.a# #relative_position# #closenaturalfixtures.a#",
+"#closenaturalobjects.s# #relative_position# the #closenaturalfixtures#",
+"#animals_small_british.s#",
+"#closenaturalfixtures.a#",
+"#body_parts_all# buried by #closepeople.a#",
+"a buried #closenaturalobjects#",
+"#closepeople.a# looks for #celestial_body_a.a#",
+"#person_role_empire.a#, #verbs_all.ing#",
+"#closepeople.a# has lost their #relation#",
+"a visit from the #person_office_title_empire#",
+"a visit from the #person_office_title_home#",
+"#cooked_food# is served with #drinks_all#",
+"#current_mealtime# is served",
+"a new #containers# of #objects_all#",
+"a new #containers# of #product_name#",
+"crowds of #current_person_type.s#",
+"#collective_nouns.a# of #current_person_type.s#",
+"#closepeople.a# plays #musical_instruments.a# to #closepeople.a#",
+"they are #adjectives_emotions#",
+"they believe they are #classical_names.capitalize#",
+"#closepeople.a# #verbs_interaction.ing# with #closepeople.a#",
+"#closepeople.a# #verbs_interaction.ing# with #animals_small_british.a#",
+"#closepeople.a# #verbs_interaction.ing# with #animals_air_british.a#",
+"#furniture.a# #verbs_movement.ed# from #imperial_locations.capitalize#",
+"#closepeople.a# practicing with #weapons.a#",
+"drying #adjectives_colours_common# #clothes_noncount#",
+"drying #adjectives_colours_common.a# #clothes_count#",
+"trying on their #relation#'s #clothes_count#",
+"trying on a new #clothes_count#",
+"#adjectives_all# #interior_fixtures.s#",
+"#indoor_objects_small.a# #verbs_movement.ing#",
+"a #adjectives_all# market selling #produce# and #produce#",
+"a pet #animals_small_empire# #verbs_extreme.ing#",
+"#verbs_noise.ing# on the #air_types#",
+"#drinks_all.a# in #private_places.a#",
+"in #private_places.a#, #verbs_interaction.ing# until #time_of_day#",
+"the #surnames.capitalize# family at #events_all.a#",
+"#relation.a# discovers #events_rare.a#",
+"#closepeople.a# mouthing'#mouthed_word#'",
+"A plant from #imperial_locations.capitalizeAll#",
+"#adjectives_all# #closenaturalfixtures.s#",
+"#adjectives_all.a# #occurences#",
+"a lost #person_role_empire#",
+"#events_all.a# #relative_position# the #closenaturalfixtures#",
+"#adjectives_all# #closenaturalobjects.s#",
+"#fraction# of #closenaturalfixtures#",
+"#animals_small_british.s# #verbs_extreme.ing#",
+"#adjectives_all.a# #furniture# in a #rooms#",
+"#closepeople.a# in the #private_places#",
+"#closepeople.a#'s mouth in the #shape# of #insults#",
+"#hintword.a# of #rooms#",
+"#fragments#",
+"speaking of #topics#",
+"#verbs_interaction.ing# #relative_position# the #furniture#",
+"hunting for #body_part_outer# in the #closenaturalfixtures#",
+"buried #objects_all.s#",
+"half an ancient #animals_all#",
+"on excursion from #counties#",
+"#animals_small_british.s# hunting #animals_small_british.s#",
+"#current_buildings.a#",
+"a sign above a building: #product_name#",
+"the rear of #current_buildings.a#",
+"the #hintword# of #occurences.a#",
+"#adjectives_colours_common# on the #closenaturalfixtures#",
+"a sign above a pub: #pub_sign.capitalizeAll#",
+"#occurences.a# on #roadnamefirst.capitalizeAll# #roadname.capitalizeAll#",
+"#occurences# #relative_position# the #closenaturalfixtures#",
+"#road_vehicles_home.a# full of #current_person_type.s#",
+"#adjectives_all# walls",
+"#adjectives_all# windows",
+"hanging #clothes_noncount#",
+"#person_generic.a#'s #body_part_outer# in a window",
+"a painting of #events_all.a#",
+"between #numbers_written# #current_buildings.s#",
+"somebody #verbs_noise.ing#",
+"#closepeople.a# moving #indoor_objects_large.a#",
+"#current_time_discrepancy# minutes ago",
+"#adjectives_colours_common.a# face"
+],
+
+"rurallines":[
+    "#rurallinescommon#"
+],
+
+"origin":[
 ]
 }
-```
-inside nouns, outside nouns
-
-- - Hook up fragments when #fragments# is invoked?
-dropped_animals_small
-animals hunting animals 
-Actual names when in close?
-something eeling adjectives_emotions (displaying them, narrative).

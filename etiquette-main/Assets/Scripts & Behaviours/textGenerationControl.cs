@@ -34,8 +34,13 @@ public class textGenerationControl : MonoBehaviour
     private static Dictionary<string, TraceryGrammar> grammarCache = new Dictionary<string, TraceryGrammar>();
 
 
+void Awake() {
+     grammarCache.Clear();
+}
+
     void Start()
     {
+       
         if (generated == false)
         {
             gc = GameObject.Find("grammarController");
@@ -83,6 +88,7 @@ public class textGenerationControl : MonoBehaviour
     // Use this to initially set or change the current grammar.
     public void setGrammarForObject(string grammarName, traceGrammarControl cachedGcScript = null)
     {
+        startingGrammarName = grammarName;
         // Use passed-in reference if available, avoiding a Find() call.
         if (cachedGcScript != null)
             gcScript = cachedGcScript;
@@ -93,7 +99,7 @@ public class textGenerationControl : MonoBehaviour
         }
 
         // Return cached grammar if we've already built this one.
-        if (grammarCache.TryGetValue(grammarName, out var cached))
+       if (grammarCache.TryGetValue(grammarName, out var cached))
         {
             currentGrammar = cached;
             return;
@@ -150,6 +156,7 @@ public class textGenerationControl : MonoBehaviour
             return;
         }
 
+
         switch (startingGrammarName)
         {
             case "tracknamegrammar":
@@ -162,12 +169,15 @@ public class textGenerationControl : MonoBehaviour
             case "closegrammar":
                 var urbanDensity = Math.Clamp(ss.currentUrbanDensity, 1, 100);
                 int urbanCount = (int)Math.Round((10.0 / 100) * urbanDensity);
-                int ruralCount = 10 - urbanCount;
+                int ruralCount = 10 - ((int)Math.Round((10.0 / 100) * urbanDensity));
+                
 
                 var parts = new List<string>();
-                for (int x = 0; x < urbanCount; x++) parts.Add("\"#urbanlines#\"");
-                for (int x = 0; x < ruralCount; x++) parts.Add("\"#rurallines#\"");
-                string ruralUrbanOrigin = "[" + string.Join(", ", parts) + "]";
+                for (int x = 0; x < urbanCount; x++) parts.Add("#urbanlines#");
+
+                for (int x = 0; x < ruralCount; x++) parts.Add("#rurallines#");
+                string ruralUrbanOrigin = string.Join(", ", parts);
+        
 
                 grammarParse = buildContextPush(true, ruralUrbanOrigin);
                 break;
@@ -177,13 +187,14 @@ public class textGenerationControl : MonoBehaviour
                 break;
         }
 
-        myText.text = currentGrammar.Parse(grammarParse);
+        myText.text = currentGrammar.Parse(currentGrammar.Parse(grammarParse));
     }
 
 
     // Builds the Tracery context-push string, shared between the default and rural/urban cases.
     private string buildContextPush(bool includeRuralUrban, string ruralUrbanOrigin)
     {
+
         var result =
               "[current_person_type:"    + currentGrammar.Parse(ss.appropriateperson)       + "]"
             + "[current_locations:"      + currentGrammar.Parse(ss.appropriatelocs)          + "]"
@@ -203,8 +214,10 @@ public class textGenerationControl : MonoBehaviour
 
         if (includeRuralUrban && ruralUrbanOrigin != null)
             result += "[origin:" + ruralUrbanOrigin + "]";
+      
 
         result += "#origin#";
+           
         return result;
     }
 

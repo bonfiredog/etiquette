@@ -81,7 +81,7 @@ public class generateStation : MonoBehaviour
         // Find all child objects
         var linequad = thisStation.transform.Find("Quad");
         var awnline  = thisStation.transform.Find("AWN");
-        var backcube = thisStation.transform.Find("Cube");
+     
         var flagging = thisStation.transform.Find("stationflagging").GetComponent<RectTransform>();
         var awning   = thisStation.transform.Find("stationawning").GetComponent<RectTransform>();
 
@@ -93,13 +93,7 @@ public class generateStation : MonoBehaviour
         var sideCount = finalsize / 2;
         float archSpan = (sideCount - 1) * moveAmount * 2f;
 
-        // Stretch the back cube to match the full arch span.
-        backcube.transform.localScale = new Vector3(
-            backcube.transform.localScale.x,
-            backcube.transform.localScale.y,
-            archSpan
-        );
-
+       
         // Scale the line and awning quads to match size.
         linequad.transform.localScale = new Vector3(200 * size, 5, 20);
         awnline.transform.localScale  = new Vector3(200 * size, 5, 20);

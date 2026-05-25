@@ -42,7 +42,7 @@ public class createText : MonoBehaviour
     private float modifier = 250;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //Initial Values
         transform.position = new Vector3(transform.position.x, transform.position.y, distanceOfGeneratorFromWindow);

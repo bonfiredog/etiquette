@@ -81,7 +81,7 @@
 "#body_part_inner# of #track_animals.a#",
 "#damage_adj.a# #track_animals#",
 "#track_adj.a# #track_objects#",
-"#track_objects.a#, #lost_word# by #person_role_all#",
+"#track_objects.a#, #lost_word# by #person_role_all.a#",
 "#train_parts.a#",
 "#damage_adj.a# page, reading: '#fragment#'",
 "#numbers_written# #track_animals.s#",

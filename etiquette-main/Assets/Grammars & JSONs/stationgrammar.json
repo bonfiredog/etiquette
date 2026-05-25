@@ -4,14 +4,14 @@
     "#current_person_type.a# #verbs_movement.ing#, shouting '#heard_phrase#'",
     "#containers.s# of #luggage#",
     "#shape#-shaped #containers.s#",
-    "A #carried_misc_objects# dropped by #current_person_type#",
+    "#carried_misc_objects.a# dropped by #current_person_type.a#",
     "In The Lost Property Office: #lostobject#, #lostobject#, #lostobject#",
     "#train_station_staff.a# mouthing '#quickword#'",
-    "#current_person_type.a, #adjectives_emotions#, #current_time_discrepancy# minutes late for the #train_types# to #placenames#",
-    "An open #container#, #luggage.s#",
-    "#container.s# shaped like #objects_all#",
+    "#current_person_type.a#, #adjectives_emotions#, #current_time_discrepancy# minutes late for the #train_types# train to #placenames#",
+    "An open #containers#, #luggage.s#",
+    "#containers.s# shaped like #objects_all#",
     "A lost #objects_all#",
-    "#adjectives_all.a# #container#",
+    "#adjectives_all.a# #containers#",
     "#person_generic.a# selling #objects_all#",
     "#person_generic.a# and their #adjectives_all# #relations#, #verbs_interaction.ing#",
     "a hand from the #train_stationroom# window, making a #symbol#",
@@ -23,8 +23,8 @@
     "#current_person_type.a# waiting for #waitobject#",
     "#person_generic.a# waiting for #waitobject#",
     "#current_person_type.a# #verbs_noise.ing# at the train",
-    "#current_person_type.a#, #current_time_discrepancy# late for #events_all.a#",
-    "#current_time_discrepancy# late, #verbs_movement.ing#",
+    "#current_person_type.a#, #current_time_discrepancy# minutes late for #events_all.a#",
+    "#current_time_discrepancy# minutes late, #verbs_movement.ing#",
     "#train_station_staff.s# looking for #current_person_type.a#",
     "there's an issue with the gauges",
     "there's an issue with the #train_parts#",
@@ -34,11 +34,11 @@
     "#current_person_type.a# #verbs_interaction.s# a #objects_all#",
     "#person_generic.a# thinkg of #current_mealtime#",
     "#person_generic.a# looking #ae_negative#",
-    "two #persons_generic.s# talking #trade_commerce_terms#",
+    "two #person_generic.s# talking #trade_commerce_terms#",
     "#current_person_type.a# hoping for #current_weather_types#",
     "#train_track_staff.a# holding #tools.a#, looking #adjectives_emotions#",
-    "#container.s# of #luggage# and #luggage#",
-    "#train_station_staff.a# carrying #container.s# through the #train_stationroom#",
+    "#containers.s# of #luggage# and #luggage#",
+    "#train_station_staff.a# carrying #containers.s# through the #train_stationroom#",
     "#numbers_written# #train_station_staff# sharing #cooked_food#",
     "#containers.s# of #luggage#, #verbs_all.ing#"
 
@@ -75,8 +75,8 @@
     "#weapons#",
     "#clothes_count.s#",
     "#clothes_noncount#",
-    "#clothes_empire_count.s#",
-    "#clothes_empire_noncount#",
+    "#clothes_rare_count.s#",
+    "#clothes_rare_noncount#",
     "#tools.s#",
     "#animals_small_empire#",
     "#animals_medium_empire#",
@@ -138,7 +138,7 @@
 ],
   "inner_place": [
   "A #hintword# of #train_stationroom.a#, #adjectives_all#",
-  "Through an arch, the #downup# #train_types# #verbs_movement.ing#",
+  "Through an arch, the #downup# #train_types# train #verbs_movement.ing#",
   "Through the arch, Platform #numbers_written#",
   "In #train_stationroom.a#, #current_person_type.a# #relative_position# #interior_fixtures.a#",
   "through the doorway: was that #person_role_empire.a#, #verbs_all.ing#?",
@@ -147,8 +147,8 @@
   "#pstory_types.a# in the #train_stationroom#",
   "In #train_stationroom.a#, #objects_all.a# #relative_position# #furniture.a#",
   "In #train_stationroom.a#, #adjectives_all.a# #furniture#",
-  "In #train_stationroom.a#, a #person_generic.a# and #person_generic.a# play #indoorgame#",
-  "In #train_stationroom.a#, a #person_generic.a# and #person_generic.a# #verbs_interaction#",
+  "In #train_stationroom.a#, #person_generic.a# and #person_generic.a# play #indoorgame#",
+  "In #train_stationroom.a#, #person_generic.a# and #person_generic.a# #verbs_interaction#",
   "In #train_stationroom.a#, two #current_person_types# #verbs_interaction#",
   "In #train_stationroom.a#, #adjectives_all.a# #indoor_objects_small#", 
   "In #train_stationroom.a#, #train_parts.s# and #train_parts.s#",
@@ -175,8 +175,8 @@
 "#person_generic.a#",
 "#current_person_type.a#",
 "Looks like #current_person_type.a#",
-"#person_generic.a, looks like #current_person_type.a#",
-"person_generic.a, looks like #person_type_general.a#",
+"#person_generic.a#, looks like #current_person_type.a#",
+"#person_generic.a#, looks like #person_role_general.a#",
 "a #downup# traveller",
 "an excursionist who alighted",
 "#adjectives_all.a# #person_generic#",
@@ -192,11 +192,11 @@
 
 "metaphorsim":[
 "#adjectives_all#",
-"running #current_time_discrepancy# late",
+"running #current_time_discrepancy# minutes late",
 "#adjectives_emotions#",
-"fresh from #imperial_locations#, by the look of it",
+"fresh from #imperial_locations.capitalizeAll#, by the look of it",
 "fresh from #counties#, by the look of it",
-"fresh from #british_towns#, by the look of it",
+"fresh from #british_towns.capitalizeAll#, by the look of it",
 "a #comparison_noun# sort of person",
 "on their way to #events_all.a#",
 "as #adjectives_emotions# as #comparison_noun.a#"
@@ -208,7 +208,7 @@
 
 "p_phyfeature":[
 "with a #physical_deformity_damage# on their #body_part_outer#",
-"#adjective_colours_common# hair",
+"#adjectives_colours_common# hair",
 "with #marks_injuries.a#",
 "with a #adjectives_all# look",
 "with #body_part_outer.a# like #comparison_noun.a#",
@@ -225,8 +225,8 @@
     "#celestial_body#",
     "#musical_instruments#",
     "#weapons#",
-    "#clothes#",
-    "#clothes_empire#",
+    "#clothes_count#",
+    "#clothes_rare_count#",
     "#tools#",
     "#carried_misc_objects#",
     "#interior_fixtures#",
@@ -267,14 +267,14 @@
 "p_clothing":[
 "wearing #clothes_count.a#",
 "wearing #clothes_noncount#",
-"weating #clothes_rare_noncount#",
+"wearing #clothes_rare_noncount#",
 "wearing #adjectives_all.a# #clothes_count#",
 "wearing #adjectives_all# #clothes_noncount#"
 ],
 
 "p_holdingdoing": [
 "carrying #carried_misc_objects.a#",
-"verbs_gentle.ing# #adjectives_all.a# #animals_small_british#",
+"#verbs_gentle.ing# #adjectives_all.a# #animals_small_british#",
 "#verbs_interaction.ing# their #carried_misc_objects#",
 "carrying #containers.a#",
 "#verbs_movement.ing#",
@@ -286,7 +286,7 @@
     "#person_cons.capitalize#",
     "#person_cons.capitalize#",
     "#inner_place.capitalize#",
-    "#vignette.capitalize#."
+    "#vignette.capitalize#"
   ]
 }
 

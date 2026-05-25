@@ -34,9 +34,18 @@ public class textController : MonoBehaviour
         
 
         //If beyond a certain z value, destroy.
+        if (tag == "fargen") {
+  if (myPos.anchoredPosition3D.z > 25000)
+        {
+            Destroy(gameObject);
+        }
+        } else {
+
+        
         if (myPos.anchoredPosition3D.z > 9000)
         {
             Destroy(gameObject);
+        }
         }
         
     }

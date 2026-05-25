@@ -28,7 +28,9 @@ public class textGenOneShot : MonoBehaviour
     // Shared cache across all instances — grammar only needs to be built once per name.
     private static Dictionary<string, TraceryGrammar> grammarCache = new Dictionary<string, TraceryGrammar>();
 
-
+void Awake() {
+     grammarCache.Clear();
+}
     void Start()
     {
         gc = GameObject.Find("grammarController");
@@ -63,7 +65,7 @@ public class textGenOneShot : MonoBehaviour
 
 
     public void SetGrammarForObject(string grammarName, traceGrammarControl cachedGcScript = null)
-    {
+    {     startingGrammarName = grammarName;
         // Use passed-in reference if available, avoiding a Find() call.
         if (cachedGcScript != null)
             gcScript = cachedGcScript;
@@ -116,6 +118,7 @@ public class textGenOneShot : MonoBehaviour
 
     public string GenerateTextFromGrammar(TextMeshPro targetText, StationScheduler cachedSs = null)
     {
+   
         // Use passed-in reference if available, avoiding a Find() call.
         if (cachedSs != null)
             ss = cachedSs;
@@ -149,9 +152,9 @@ public class textGenOneShot : MonoBehaviour
                 int ruralCount = 10 - urbanCount;
 
                 var parts = new List<string>();
-                for (int x = 0; x < urbanCount; x++) parts.Add("\"#urbanlines#\"");
-                for (int x = 0; x < ruralCount; x++) parts.Add("\"#rurallines#\"");
-                string ruralUrbanOrigin = "[" + string.Join(", ", parts) + "]";
+                for (int x = 0; x < urbanCount; x++) parts.Add("#urbanlines#");
+                for (int x = 0; x < ruralCount; x++) parts.Add("#rurallines#");
+                string ruralUrbanOrigin = string.Join(", ", parts);
 
                 grammarParse = BuildContextPush(false, null)
                              + "[origin:" + ruralUrbanOrigin + "]"
@@ -168,7 +171,7 @@ public class textGenOneShot : MonoBehaviour
                 break;
         }
 
-        targetText.text = currentGrammar.Parse(grammarParse);
+        targetText.text = currentGrammar.Parse(currentGrammar.Parse(grammarParse));
         return targetText.text;
     }
 

@@ -9,12 +9,14 @@ public class tunnelController : MonoBehaviour
     public float topspeed;
     public string type;
     private TrainControl tc;
+    private rockingController rocker;
 
     // Start is called before the first frame update
     void Start()
     {
 
         tc = GameObject.Find("trainController").GetComponent<TrainControl>();
+        rocker = GameObject.Find("Rocker").GetComponent<rockingController>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,9 @@ public class tunnelController : MonoBehaviour
         } else
         {
             speed = topspeed;
+            if (transform.position.z == 840.0f) {
+                rocker.SuddenJolt(rocker.suddenJoltStrength * 1.5f);
+            }
         }
 
         //Move text to the left at speed (slightly different from the main text controller as the object orientation is different).
@@ -35,7 +40,7 @@ public class tunnelController : MonoBehaviour
         transform.position += new Vector3(0, 0, 1) * speed * Time.deltaTime;
 
         //If beyond a certain z value, destroy.
-        if (transform.position.z > 10000)
+        if (transform.position.z > 30000)
         {
             Destroy(gameObject);
         }

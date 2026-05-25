@@ -98,8 +98,8 @@ generateTT("tunnel");
 
               //Assign a speed and fontSize, based on the generator, to the text object.
         var thistextscript = thisTT.gameObject.GetComponent<tunnelController>();
-        thistextscript.speed = assignedSpeed;
-        thistextscript.topspeed = assignedSpeed;
+        thistextscript.speed = assignedSpeed * 1.4f;
+        thistextscript.topspeed = assignedSpeed * 1.4f;
         thistextscript.type = type;
         thistextmesh.fontSize = Random.Range(fontSizeLowerBound, fontSizeUpperBound);
 
