@@ -15,8 +15,6 @@
 
 - [Windows, Mac, Linux](https://bonfiredog.itch.io/bradshaws-etiquette)
 
-- [Web-Based](http://bonfiredog.co.uk/resources/etiquette) (may have performance issues on older/lower RAM machines)
-
 - App (iOS and Google Play, coming soon)
 
 ---
