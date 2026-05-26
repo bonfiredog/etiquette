@@ -822,7 +822,7 @@ if (autoDelay == false) {
                     
                     tc.generatedtrain = false;
                     Debug.Log("2) It's a train delay!");
-                    delayTimer = UnityEngine.Random.Range(25, 200);
+                    delayTimer = UnityEngine.Random.Range(25, 90);
 
                     } else {
 
@@ -907,7 +907,7 @@ if (autoDelay == false) {
                           
                         delay = "accident";
                        checkingdelay = false;
-                       delayTimer = UnityEngine.Random.Range(25, 200);
+                       delayTimer = UnityEngine.Random.Range(25, 90);
 
                          } else {
                          //If nothing, exit
@@ -925,7 +925,7 @@ if (autoDelay == false) {
                             cc.PushBackIntoCabin();
                         delay = "accident";
                        checkingdelay = false;
-                       delayTimer = UnityEngine.Random.Range(25, 200);
+                       delayTimer = UnityEngine.Random.Range(25, 90);
 }
 } else {
     //Don't delay if another delaygen exists

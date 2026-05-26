@@ -62,6 +62,8 @@ Inspired by, informed by and in conversation with an interdisciplinary mix of wo
 
 - NLP scripts, categoriser code and other corpora generation material in `/corpora_generation`
 
+- Latest builds also available in `/builds`
+
 ---
 
 ### Elsewhere

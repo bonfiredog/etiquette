@@ -8,73 +8,81 @@ public class TextOpacityController : MonoBehaviour
     [Header("Tags of Text Objects to Monitor")]
     public List<string> monitoredTags = new List<string>();
 
-    [Header("Tag of Station Objects")]
+    [Header("Tag of Fade Zone Objects")]
     public string stationTag = "fade";
 
-    [Header("Update Interval (Seconds)")]
-    public float updateInterval = 0.5f;
+    [Header("Check Interval (Seconds)")]
+    public float updateInterval = 0.05f;
 
-    [Header("Fade Duration (Milliseconds)")]
-    public float fadeDurationMs = 200f;
+    [Header("Fade Duration (Seconds)")]
+    public float fadeDuration = 0.2f;
 
     private class TextData
     {
-        public TextMeshPro tmp;
-        public Renderer renderer;
+        public Material material;
         public float targetAlpha = 1f;
+        public float currentAlpha = 1f;
     }
 
     private Dictionary<Renderer, TextData> textObjects = new Dictionary<Renderer, TextData>();
-    private List<Renderer> stationObjects = new List<Renderer>();
+    private List<Renderer> fadeZones = new List<Renderer>();
 
     void Start()
     {
-        StartCoroutine(UpdateOpacityLoop());
+        RefreshFadeZones();
+        StartCoroutine(UpdateLoop());
     }
 
-    IEnumerator UpdateOpacityLoop()
+    // Fade zones are static — only needs to run once at start.
+    // Call this manually if fade zones ever change at runtime.
+    public void RefreshFadeZones()
+    {
+        fadeZones.Clear();
+        GameObject[] zones = GameObject.FindGameObjectsWithTag(stationTag);
+        foreach (GameObject zone in zones)
+        {
+            Renderer rend = zone.GetComponent<Renderer>();
+            if (rend != null)
+                fadeZones.Add(rend);
+        }
+    }
+
+    IEnumerator UpdateLoop()
     {
         while (true)
         {
-            RefreshObjects();
+            RefreshTextObjects();
             SetTargetOpacities();
             yield return new WaitForSeconds(updateInterval);
         }
     }
 
-    void RefreshObjects()
+    // Text objects change frequently (pooling), so refresh on interval.
+    void RefreshTextObjects()
     {
         textObjects.Clear();
-        stationObjects.Clear();
-
         foreach (string tag in monitoredTags)
         {
             GameObject[] found = GameObject.FindGameObjectsWithTag(tag);
             foreach (GameObject go in found)
             {
-                TextMeshPro tmp = go.GetComponent<TextMeshPro>();
                 Renderer rend = go.GetComponent<Renderer>();
+                if (rend == null || textObjects.ContainsKey(rend)) continue;
 
-                if (tmp != null && rend != null && !textObjects.ContainsKey(rend))
+                TextMeshPro tmp = go.GetComponent<TextMeshPro>();
+                if (tmp == null) continue;
+
+                // Calling .material creates a per-instance material, allowing
+                // each text object to fade independently.
+                Material mat = rend.material;
+                float opacity = mat.GetFloat("_Opacity");
+
+                textObjects.Add(rend, new TextData
                 {
-                    TextData data = new TextData
-                    {
-                        tmp = tmp,
-                        renderer = rend,
-                        targetAlpha = tmp.color.a
-                    };
-                    textObjects.Add(rend, data);
-                }
-            }
-        }
-
-        GameObject[] stations = GameObject.FindGameObjectsWithTag(stationTag);
-        foreach (GameObject station in stations)
-        {
-            Renderer rend = station.GetComponent<Renderer>();
-            if (rend != null)
-            {
-                stationObjects.Add(rend);
+                    material = mat,
+                    targetAlpha = 1f,
+                    currentAlpha = opacity
+                });
             }
         }
     }
@@ -83,42 +91,29 @@ public class TextOpacityController : MonoBehaviour
     {
         foreach (var pair in textObjects)
         {
-            Renderer textRenderer = pair.Key;
-            TextData data = pair.Value;
-
             bool overlaps = false;
-
-            foreach (Renderer stationRenderer in stationObjects)
+            foreach (Renderer fadeZone in fadeZones)
             {
-                if (ZBoundsOverlap(textRenderer, stationRenderer))
+                if (ZBoundsOverlap(pair.Key, fadeZone))
                 {
                     overlaps = true;
                     break;
                 }
             }
-
-            data.targetAlpha = overlaps ? 0f : 1f;
+            pair.Value.targetAlpha = overlaps ? 0f : 1f;
         }
     }
 
+    // Runs every frame, but only does work when a fade is in progress.
+    // Reads/writes cached material and alpha — no GetComponent or Find calls.
     void Update()
     {
-        float fadeSpeed = Time.deltaTime / (fadeDurationMs / 1000f);
-
-        foreach (var pair in textObjects.Values)
+        float fadeSpeed = Time.deltaTime / fadeDuration;
+        foreach (TextData data in textObjects.Values)
         {
-            TextMeshPro tmp = pair.tmp;
-            float currentAlpha = tmp.color.a;
-            float targetAlpha = pair.targetAlpha;
-
-            if (Mathf.Approximately(currentAlpha, targetAlpha))
-                continue;
-
-            float newAlpha = Mathf.MoveTowards(currentAlpha, targetAlpha, fadeSpeed);
-
-            Color color = tmp.color;
-            color.a = newAlpha;
-            tmp.color = color;
+            if (Mathf.Approximately(data.currentAlpha, data.targetAlpha)) continue;
+            data.currentAlpha = Mathf.MoveTowards(data.currentAlpha, data.targetAlpha, fadeSpeed);
+            data.material.SetFloat("_Opacity", data.currentAlpha);
         }
     }
 
@@ -126,10 +121,8 @@ public class TextOpacityController : MonoBehaviour
     {
         float aMin = a.bounds.min.z;
         float aMax = a.bounds.max.z;
-
         float bMin = b.bounds.min.z;
         float bMax = b.bounds.max.z;
-
-        return (aMin <= bMax && aMax >= bMin);
+        return aMin <= bMax && aMax >= bMin;
     }
-}
+}   

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2554623094971831845}
   m_Layer: 0
   m_Name: Quad
-  m_TagString: fade
+  m_TagString: station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 6378119869124297262}
   m_Layer: 0
   m_Name: station_name_text
-  m_TagString: fade
+  m_TagString: station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 5475297661016397178}
   m_Layer: 0
   m_Name: stationflagging
-  m_TagString: fade
+  m_TagString: station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 201756384718610289}
   m_Layer: 0
   m_Name: Quad (1)
-  m_TagString: fade
+  m_TagString: station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 880225263836913121}
   m_Layer: 0
   m_Name: stationawning
-  m_TagString: fade
+  m_TagString: station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -964,9 +964,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1734239326883604540}
   - component: {fileID: 1004766475553698131}
+  - component: {fileID: 182777940006615829}
   m_Layer: 0
   m_Name: test_station
-  m_TagString: fade
+  m_TagString: station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1009,6 +1010,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   topspeed: 600
+--- !u!23 &182777940006615829
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8613157156894663085}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &217330469947234613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1025,7 +1074,7 @@ PrefabInstance:
     - target: {fileID: 3156352544261783525, guid: cd04df4127387da4f8dd19fa3f384c09,
         type: 3}
       propertyPath: m_TagString
-      value: fade
+      value: station
       objectReference: {fileID: 0}
     - target: {fileID: 3156352544261783529, guid: cd04df4127387da4f8dd19fa3f384c09,
         type: 3}

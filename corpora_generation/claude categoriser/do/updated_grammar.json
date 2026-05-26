@@ -1,0 +1,2369 @@
+{
+  "categories": [
+    {
+      "id": "adjectives_generic_positive",
+      "label": "Adjectives Generic Positive",
+      "description": "Positive adjectives that can relate to people, events or objects, without emotional contexts.",
+      "examples": [
+        "authentic",
+        "beautiful",
+        "brave",
+        "braver",
+        "bright",
+        "calm",
+        "careful"
+      ]
+    },
+    {
+      "id": "adjectives_generic_negative",
+      "label": "Adjectives Generic Negative",
+      "description": "Negative character traits and unpleasant qualities without emotional context.",
+      "examples": [
+        "abusive",
+        "aching",
+        "awful",
+        "bad",
+        "battered",
+        "bleak",
+        "blind"
+      ]
+    },
+    {
+      "id": "adjectives_generic_neutral",
+      "label": "Adjectives Generic Neutral",
+      "description": "Descriptive adjectives with neither positive nor negative connotation.",
+      "examples": [
+        "ashamed",
+        "atmospheric",
+        "bare",
+        "basking",
+        "big",
+        "bony",
+        "brief",
+        "broad",
+        "burnished",
+        "burnt",
+        "busy",
+        "widest"
+      ]
+    },
+    {
+      "id": "adjectives_rare",
+      "label": "Adjectives Rare",
+      "description": "Uncommon or archaic adjectives.",
+      "examples": [
+        "alive",
+        "amazing",
+        "appalled",
+        "arcane",
+        "awesome",
+        "birthing",
+        "bismuth",
+        "wrecked"
+      ]
+    },
+    {
+      "id": "adjectives_emotions",
+      "label": "Adjectives Emotions",
+      "description": "Adjectives describing emotional or psychological states.",
+      "examples": [
+        "afraid",
+        "alarmed",
+        "anxious",
+        "bilious",
+        "concerned",
+        "delighted",
+        "disappointed",
+        "wounded"
+      ]
+    },
+    {
+      "id": "adjectives_nationality",
+      "label": "Adjectives Nationality",
+      "description": "Adjectives denoting nationality, ethnic or geographic origin.",
+      "examples": [
+        "American",
+        "French",
+        "Irish",
+        "Prussian",
+        "Scottish"
+      ]
+    },
+    {
+      "id": "adjectives_materials_common",
+      "label": "Adjectives Materials Common",
+      "description": "Everyday materials used in Victorian construction and craftsmanship.",
+      "examples": [
+        "brass",
+        "brick",
+        "chalk",
+        "clag",
+        "coal"
+      ]
+    },
+    {
+      "id": "adjectives_materials_rare",
+      "label": "Adjectives Materials Rare",
+      "description": "Uncommon, exotic, or precious materials from Victorian era.",
+      "examples": [
+        "air",
+        "amethyst",
+        "antimony",
+        "bronze",
+        "bronzed",
+        "chamois",
+        "cobalt",
+        "damask",
+        "doeskin",
+        "emerald",
+        "feldspar"
+      ]
+    },
+    {
+      "id": "adjectives_colours_common",
+      "label": "Adjectives Colours Common",
+      "description": "Standard color descriptions in Victorian writing.",
+      "examples": [
+        "black",
+        "blue",
+        "bluish",
+        "brown",
+        "colored",
+        "coloured",
+        "dark",
+        "darkened",
+        "dun",
+        "gray"
+      ]
+    },
+    {
+      "id": "adjectives_colours_rare",
+      "label": "Adjectives Colours Rare",
+      "description": "Sophisticated or specialized color terms from Victorian palettes.",
+      "examples": [
+        "azure",
+        "bisque",
+        "blond",
+        "blonde",
+        "brunette",
+        "burgundy",
+        "carnelian",
+        "cream",
+        "fawn"
+      ]
+    },
+    {
+      "id": "adjectives_temperature",
+      "label": "Adjectives Temperature",
+      "description": "Adjectives describing thermal sensations.",
+      "examples": [
+        "cold",
+        "hot",
+        "muggy"
+      ]
+    },
+    {
+      "id": "body_part_outer",
+      "label": "Body Part Outer",
+      "description": "External human anatomical features visible from outside.",
+      "examples": [
+        "arm",
+        "back",
+        "breast",
+        "brow",
+        "calf",
+        "chest",
+        "chin"
+      ]
+    },
+    {
+      "id": "body_part_inner",
+      "label": "Body Part Inner",
+      "description": "Internal human organs and skeletal structures.",
+      "examples": [
+        "abdomen",
+        "bile",
+        "bladder",
+        "blood",
+        "bone",
+        "brain",
+        "cortex",
+        "coxxyx"
+      ]
+    },
+    {
+      "id": "body_fluid",
+      "label": "Body Fluid",
+      "description": "Liquids produced by or contained within the human body.",
+      "examples": [
+        "blood",
+        "drool",
+        "earwax",
+        "mucous",
+        "spit",
+        "sputum",
+        "sweat",
+        "urine",
+        "water"
+      ]
+    },
+    {
+      "id": "weather_types_spring",
+      "label": "Weather Types Spring",
+      "description": "Weather conditions typical of spring season.",
+      "examples": [
+        "breeze",
+        "clear",
+        "cloud",
+        "cloudfront",
+        "fog",
+        "gale",
+        "high cloud"
+      ]
+    },
+    {
+      "id": "weather_types_summer",
+      "label": "Weather Types Summer",
+      "description": "Weather conditions typical of summer season.",
+      "examples": [
+        "breeze",
+        "clear",
+        "cloud",
+        "cloudfront",
+        "gale",
+        "high cloud"
+      ]
+    },
+    {
+      "id": "weather_types_autumn",
+      "label": "Weather Types Autumn",
+      "description": "Weather conditions typical of autumn season.",
+      "examples": [
+        "breeze",
+        "clear",
+        "cloud",
+        "cloudfront",
+        "fog",
+        "gale"
+      ]
+    },
+    {
+      "id": "weather_types_winter",
+      "label": "Weather Types Winter",
+      "description": "Weather conditions typical of winter season.",
+      "examples": [
+        "blizzard",
+        "breeze",
+        "clear",
+        "cloud",
+        "cloudfront",
+        "fog",
+        "gale",
+        "hail",
+        "high cloud",
+        "lightning"
+      ]
+    },
+    {
+      "id": "air_types",
+      "label": "Air Types",
+      "description": "Variations in air movement and atmospheric conditions.",
+      "examples": [
+        "breeze",
+        "current",
+        "draft",
+        "draught",
+        "gust",
+        "wind"
+      ]
+    },
+    {
+      "id": "celestial_body",
+      "label": "Celestial Body",
+      "description": "Astronomical objects visible in the night sky.",
+      "examples": [
+        "asteroid",
+        "comet",
+        "meteor",
+        "moon",
+        "nebula",
+        "nebulae",
+        "planet",
+        "shooting star",
+        "star",
+        "sun"
+      ]
+    },
+    {
+      "id": "person_role_empire",
+      "label": "Person Role Empire",
+      "description": "Occupational or social roles within colonial empire settings.",
+      "examples": [
+        "camp guard",
+        "clerk",
+        "fakir",
+        "janissary",
+        "mandarin",
+        "sepoy",
+        "subaltern",
+        "wallah"
+      ]
+    },
+    {
+      "id": "person_role_country",
+      "label": "Person Role Country",
+      "description": "Occupational or social roles in rural countryside settings.",
+      "examples": [
+        "baker",
+        "batsman",
+        "beater",
+        "beggar",
+        "butcher",
+        "chaperon",
+        "churl",
+        "clergyman",
+        "cripple",
+        "crone",
+        "crony",
+        "cryer",
+        "docker",
+        "eremite",
+        "woodsman"
+      ]
+    },
+    {
+      "id": "person_role_town",
+      "label": "Person Role Town",
+      "description": "Occupational or social roles in small town settings.",
+      "examples": [
+        "baker",
+        "barber",
+        "beadle",
+        "beggar",
+        "butcher",
+        "commuter",
+        "cryer",
+        "docker",
+        "farmer"
+      ]
+    },
+    {
+      "id": "person_role_city",
+      "label": "Person Role City",
+      "description": "Occupational or social roles in urban city settings.",
+      "examples": [
+        "agitator",
+        "baker",
+        "beadle",
+        "beggar",
+        "butcher",
+        "commuter",
+        "cryer"
+      ]
+    },
+    {
+      "id": "relation",
+      "label": "Relation",
+      "description": "Family kinship terms and blood relations.",
+      "examples": [
+        "aunt",
+        "brother",
+        "child",
+        "cousin",
+        "dad"
+      ]
+    },
+    {
+      "id": "classical_names",
+      "label": "Classical Names",
+      "description": "Names from classical mythology and ancient history.",
+      "examples": [
+        "achilles",
+        "adam",
+        "aeneas",
+        "aesculapius",
+        "agamemnon",
+        "ajax",
+        "anubis",
+        "ashoka",
+        "atalanta",
+        "bast"
+      ]
+    },
+    {
+      "id": "names_men",
+      "label": "Names Men",
+      "description": "Proper names for male Victorian characters.",
+      "examples": [
+        "alf",
+        "alfred",
+        "arthur",
+        "charles",
+        "clarence",
+        "claude",
+        "clement",
+        "clifford",
+        "douglas"
+      ]
+    },
+    {
+      "id": "names_women",
+      "label": "Names Women",
+      "description": "Proper names for female Victorian characters.",
+      "examples": [
+        "ada",
+        "agnes",
+        "alexandra",
+        "alice",
+        "audrey",
+        "beatrice",
+        "beryl",
+        "caroline",
+        "charlotte",
+        "chloe",
+        "climentine",
+        "constance",
+        "cora"
+      ]
+    },
+    {
+      "id": "musical_instruments",
+      "label": "Musical Instruments",
+      "description": "Instruments used in Victorian music and orchestras (including colonial, exotic and 'native' instruments).",
+      "examples": [
+        "bagpipe",
+        "bass",
+        "bassoon",
+        "bugle",
+        "cello",
+        "clarinet"
+      ]
+    },
+    {
+      "id": "weapons",
+      "label": "Weapons",
+      "description": "Weapons and implements of combat.",
+      "examples": [
+        "arquebus",
+        "ballista",
+        "bardiche",
+        "basilisk"
+      ]
+    },
+    {
+      "id": "clothes",
+      "label": "Clothes",
+      "description": "Garments and personal attire worn during Victorian era.",
+      "examples": [
+        "blouse",
+        "boater",
+        "bodice",
+        "bonnet",
+        "bowler",
+        "chemise",
+        "chemisette",
+        "coat"
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Tools",
+      "description": "Implements and instruments for work and craftsmanship.",
+      "examples": [
+        "adze",
+        "awl",
+        "axe",
+        "broom",
+        "broomstick",
+        "brush",
+        "drill"
+      ]
+    },
+    {
+      "id": "carried_misc_objects",
+      "label": "Carried Misc Objects",
+      "description": "Small personal items typically carried on one's person.",
+      "examples": [
+        "billpurse",
+        "handkerchief",
+        "key",
+        "pocket watch",
+        "purse",
+        "spectacle"
+      ]
+    },
+    {
+      "id": "furniture",
+      "label": "Furniture",
+      "description": "Movable household furnishings.",
+      "examples": [
+        "armoire",
+        "blanket",
+        "chair",
+        "chiffonier",
+        "closet",
+        "crossbeam",
+        "cupboard"
+      ]
+    },
+    {
+      "id": "indoor_objects_small",
+      "label": "Indoor Objects Small",
+      "description": "Small inanimate objects found inside buildings.",
+      "examples": [
+        "antimacassar",
+        "bandage",
+        "bedpan",
+        "blade",
+        "blowpipe",
+        "brush",
+        "bullet",
+        "clock",
+        "crutch",
+        "cushion"
+      ]
+    },
+    {
+      "id": "outdoor_objects_small",
+      "label": "Outdoor Objects Small",
+      "description": "Small inanimate objects found in outdoor settings.",
+      "examples": [
+        "bolt",
+        "chaff",
+        "horn",
+        "leaf",
+        "nail"
+      ]
+    },
+    {
+      "id": "indoor_objects_large",
+      "label": "Indoor Objects Large",
+      "description": "Large inanimate objects found inside buildings.",
+      "examples": [
+        "armoire",
+        "bed",
+        "couch",
+        "dining table",
+        "furniture",
+        "mattress",
+        "sofas",
+        "sopha"
+      ]
+    },
+    {
+      "id": "outdoor_objects_large",
+      "label": "Outdoor Objects Large",
+      "description": "Large inanimate objects found in outdoor settings.",
+      "examples": [
+        "barrel",
+        "firewood",
+        "furrow",
+        "headstone",
+        "ironwork"
+      ]
+    },
+    {
+      "id": "money",
+      "label": "Money",
+      "description": "Currency denominations and monetary units.",
+      "examples": [
+        "crown",
+        "farthing",
+        "guinea",
+        "half crown"
+      ]
+    },
+    {
+      "id": "precious_stones",
+      "label": "Precious Stones",
+      "description": "Gemstones valued for rarity and beauty.",
+      "examples": [
+        "agate",
+        "beryl",
+        "diamond",
+        "emerald",
+        "garnet"
+      ]
+    },
+    {
+      "id": "containers",
+      "label": "Containers",
+      "description": "Objects designed to hold or store other items.",
+      "examples": [
+        "bag",
+        "bagged",
+        "barrel",
+        "basket",
+        "bin",
+        "box",
+        "bucket",
+        "bundle"
+      ]
+    },
+    {
+      "id": "fish",
+      "label": "Fish",
+      "description": "Fish species found in British waters.",
+      "examples": [
+        "chub",
+        "cod",
+        "codfish",
+        "dab",
+        "dogfish",
+        "dolphin",
+        "eel"
+      ]
+    },
+    {
+      "id": "shellfishandcrustaceans",
+      "label": "Shellfishandcrustaceans",
+      "description": "Marine shellfish and crustacean species.",
+      "examples": [
+        "cockle",
+        "crab",
+        "mussel",
+        "sea snail",
+        "shrimp",
+        "whelk"
+      ]
+    },
+    {
+      "id": "mythicalbeasts",
+      "label": "Mythicalbeasts",
+      "description": "Creatures and beings from mythology.",
+      "examples": [
+        "angel",
+        "aphrodite",
+        "apollo",
+        "apparition",
+        "artemis",
+        "athena",
+        "babguest",
+        "banshee"
+      ]
+    },
+    {
+      "id": "animals_large_british",
+      "label": "Animals Large British",
+      "description": "Large wild or domesticated animals native to Britain.",
+      "examples": [
+        "boar",
+        "buck",
+        "bull",
+        "cow"
+      ]
+    },
+    {
+      "id": "animals_medium_british",
+      "label": "Animals Medium British",
+      "description": "Medium-sized wild or domesticated animals native to Britain.",
+      "examples": [
+        "animal",
+        "badger",
+        "canine",
+        "cat",
+        "cockerel"
+      ]
+    },
+    {
+      "id": "animals_small_british",
+      "label": "Animals Small British",
+      "description": "Small wild or domesticated animals native to Britain.",
+      "examples": [
+        "ant",
+        "beetle",
+        "beetles",
+        "caterpillar",
+        "earwig",
+        "frog"
+      ]
+    },
+    {
+      "id": "animals_air_british",
+      "label": "Animals Air British",
+      "description": "Flying animals native to British regions.",
+      "examples": [
+        "bee",
+        "bird",
+        "butterfly",
+        "buzzard",
+        "coot",
+        "crow",
+        "duck",
+        "duckling",
+        "eagle"
+      ]
+    },
+    {
+      "id": "animals_large_empire",
+      "label": "Animals Large Empire",
+      "description": "Large wild animals found throughout the British empire.",
+      "examples": [
+        "alligator",
+        "buffalo",
+        "camel",
+        "crocodile",
+        "giraffe",
+        "hippopotamus"
+      ]
+    },
+    {
+      "id": "animals_medium_empire",
+      "label": "Animals Medium Empire",
+      "description": "Medium-sized wild animals found throughout the British empire.",
+      "examples": [
+        "caiman",
+        "dingo",
+        "peacock",
+        "snake"
+      ]
+    },
+    {
+      "id": "animals_small_empire",
+      "label": "Animals Small Empire",
+      "description": "Small wild animals found throughout the British empire.",
+      "examples": [
+        "coon",
+        "locust",
+        "marmoset"
+      ]
+    },
+    {
+      "id": "animals_air_empire",
+      "label": "Animals Air Empire",
+      "description": "Flying animals found throughout the British empire.",
+      "examples": [
+        "bird of paradise",
+        "vulture"
+      ]
+    },
+    {
+      "id": "train_carriage_types",
+      "label": "Train Carriage Types",
+      "description": "Types of railway passenger and freight carriages.",
+      "examples": [
+        "brakevan",
+        "carriage",
+        "coach",
+        "first classer",
+        "guardvan",
+        "second classer",
+        "third classer",
+        "truck",
+        "van",
+        "wagon"
+      ]
+    },
+    {
+      "id": "train_station_staff",
+      "label": "Train Station Staff",
+      "description": "Workers employed at railway stations.",
+      "examples": [
+        "clerk",
+        "guard",
+        "porter",
+        "ticketmaster"
+      ]
+    },
+    {
+      "id": "train_stationroom",
+      "label": "Train Stationroom",
+      "description": "Rooms and structures at railway stations.",
+      "examples": [
+        "attendant's office",
+        "coal shed",
+        "depot",
+        "engine shed",
+        "goods shed",
+        "platform"
+      ]
+    },
+    {
+      "id": "train_station_furniture",
+      "label": "Train Station Furniture",
+      "description": "Objects and fixtures found at railway stations.",
+      "examples": [
+        "barrel",
+        "crate"
+      ]
+    },
+    {
+      "id": "train_track_staff",
+      "label": "Train Track Staff",
+      "description": "Workers employed on railway tracks and infrastructure.",
+      "examples": [
+        "hostler",
+        "navvy",
+        "pilot",
+        "shunter",
+        "signaller",
+        "signalman",
+        "tapper",
+        "wheel tapper"
+      ]
+    },
+    {
+      "id": "train_staff",
+      "label": "Train Staff",
+      "description": "Workers employed directly on railway trains.",
+      "examples": [
+        "attendant",
+        "boilerman",
+        "brakeman",
+        "driver",
+        "engineer",
+        "engineman",
+        "fireman",
+        "guard",
+        "oilman",
+        "stoker"
+      ]
+    },
+    {
+      "id": "train_types",
+      "label": "Train Types",
+      "description": "Categories of railway trains by purpose.",
+      "examples": [
+        "army",
+        "cattle",
+        "charter",
+        "commuter",
+        "excursion",
+        "express",
+        "goods",
+        "hand",
+        "holiday"
+      ]
+    },
+    {
+      "id": "train_parts",
+      "label": "Train Parts",
+      "description": "Mechanical and structural components of trains.",
+      "examples": [
+        "axle",
+        "backhead",
+        "bell",
+        "blastpipe",
+        "bogie",
+        "boiler",
+        "cab",
+        "chimney",
+        "cog",
+        "coupler",
+        "coupling"
+      ]
+    },
+    {
+      "id": "railway_architecture",
+      "label": "Railway Architecture",
+      "description": "Large structures and infrastructure of railway systems.",
+      "examples": [
+        "bridge",
+        "carriageworks",
+        "culvert",
+        "cutting",
+        "embankment",
+        "enginehouse",
+        "pumping station",
+        "shed",
+        "siding",
+        "tunnel"
+      ]
+    },
+    {
+      "id": "railway_furniture",
+      "label": "Railway Furniture",
+      "description": "Equipment and fixtures used in railway operation.",
+      "examples": [
+        "bell",
+        "cess",
+        "crane",
+        "crosstie",
+        "detonator",
+        "fishplate",
+        "point"
+      ]
+    },
+    {
+      "id": "railway_crossing_place",
+      "label": "Railway Crossing Place",
+      "description": "Locations where railways intersect with roads, water or non-railway areas.",
+      "examples": [
+        "bridge",
+        "canal",
+        "crossing",
+        "highway",
+        "overpass",
+        "path",
+        "road",
+        "track",
+        "tunnel",
+        "underpass"
+      ]
+    },
+    {
+      "id": "rural_buildings_common",
+      "label": "Rural Buildings Common",
+      "description": "Typical buildings found in countryside settings.",
+      "examples": [
+        "alley",
+        "almshouse",
+        "barn",
+        "church",
+        "cottage",
+        "crossroads",
+        "farm",
+        "farmhouse",
+        "hayloft",
+        "henhouse"
+      ]
+    },
+    {
+      "id": "rural_buildings_rare",
+      "label": "Rural Buildings Rare",
+      "description": "Specialized or uncommon rural structures.",
+      "examples": [
+        "blacksmith",
+        "canal",
+        "castle",
+        "forge",
+        "forger",
+        "gasworks",
+        "manor",
+        "pithead",
+        "smeltingworks",
+        "villa"
+      ]
+    },
+    {
+      "id": "town_buildings_common",
+      "label": "Town Buildings Common",
+      "description": "Typical buildings found in small town settings.",
+      "examples": [
+        "alley",
+        "bank",
+        "brewery",
+        "chapel",
+        "church",
+        "factory",
+        "gasworks",
+        "house",
+        "lane",
+        "mill",
+        "road",
+        "schoolhouse",
+        "shop",
+        "smeltingworks",
+        "street",
+        "town hall",
+        "workhouse"
+      ]
+    },
+    {
+      "id": "town_buildings_rare",
+      "label": "Town Buildings Rare",
+      "description": "Specialized or uncommon buildings found in towns.",
+      "examples": [
+        "almshouse",
+        "hospital",
+        "hotel"
+      ]
+    },
+    {
+      "id": "city_buildings_common",
+      "label": "City Buildings Common",
+      "description": "Typical buildings found in urban city settings.",
+      "examples": [
+        "alley",
+        "bank",
+        "chapel",
+        "church",
+        "factory",
+        "gasworks",
+        "hospital",
+        "hotel",
+        "jail"
+      ]
+    },
+    {
+      "id": "city_buildings_rare",
+      "label": "City Buildings Rare",
+      "description": "Specialized or impressive buildings found in cities.",
+      "examples": [
+        "cathedral",
+        "concert hall"
+      ]
+    },
+    {
+      "id": "coastal_buildings",
+      "label": "Coastal Buildings",
+      "description": "Structures and fortifications found in coastal areas.",
+      "examples": [
+        "battery",
+        "beacon",
+        "dock",
+        "gun battery",
+        "harbour",
+        "harbourmouth",
+        "lighthouse",
+        "pier",
+        "sea wall",
+        "telegraph",
+        "telegraph station"
+      ]
+    },
+    {
+      "id": "events_general",
+      "label": "Events General",
+      "description": "Common occurrences and happenings in narratives.",
+      "examples": [
+        "accident",
+        "arguing",
+        "argument",
+        "argumentation",
+        "betrayal",
+        "betraying",
+        "catastrophe",
+        "celebration",
+        "commemoration",
+        "connivance",
+        "crisis",
+        "debate",
+        "departing",
+        "disaster",
+        "discovering",
+        "discovery",
+        "victory"
+      ]
+    },
+    {
+      "id": "events_specific",
+      "label": "Events Specific",
+      "description": "Named or categorized significant events.",
+      "examples": [
+        "anniversary",
+        "battle",
+        "battlement",
+        "battles",
+        "battling",
+        "birth",
+        "birthday",
+        "born",
+        "brawling",
+        "combat",
+        "excursion"
+      ]
+    },
+    {
+      "id": "events_rare",
+      "label": "Events Rare",
+      "description": "Unusual, dramatic, or momentous occasions.",
+      "examples": [
+        "assault",
+        "charade",
+        "cotillion",
+        "crime",
+        "death",
+        "demise",
+        "homicide"
+      ]
+    },
+    {
+      "id": "outdoorgame",
+      "label": "Outdoorgame",
+      "description": "Games and sports played outdoors.",
+      "examples": [
+        "badminton",
+        "catch",
+        "cricket",
+        "croquet",
+        "falconry",
+        "football",
+        "hide-and-seek",
+        "hopscotch",
+        "soccer",
+        "tennis"
+      ]
+    },
+    {
+      "id": "indoorgame",
+      "label": "Indoorgame",
+      "description": "Games and pastimes played indoors.",
+      "examples": [
+        "backgammon",
+        "charades",
+        "chess",
+        "draughts",
+        "play cards"
+      ]
+    },
+    {
+      "id": "outdoor_activity",
+      "label": "Outdoor Activity",
+      "description": "Activities and pursuits conducted outdoors.",
+      "examples": [
+        "concert",
+        "fish",
+        "paint",
+        "picnic",
+        "read",
+        "ride",
+        "shoot",
+        "sunbathe",
+        "write"
+      ]
+    },
+    {
+      "id": "indoor_activity",
+      "label": "Indoor Activity",
+      "description": "Activities and pursuits conducted indoors.",
+      "examples": [
+        "breakfast",
+        "chat",
+        "dine",
+        "eat",
+        "knit",
+        "nap"
+      ]
+    },
+    {
+      "id": "public_holidays_home",
+      "label": "Public Holidays Home",
+      "description": "Holidays and festivals celebrated in Britain.",
+      "examples": [
+        "Allhallowtide",
+        "Christmas Day",
+        "Feast Of St. John",
+        "Feast Of The Innocents",
+        "George's Day",
+        "Good Friday",
+        "Guy Fawkes Night",
+        "Harvest Day",
+        "Lammas",
+        "Maundy Thursday",
+        "May Day"
+      ]
+    },
+    {
+      "id": "public_holidays_empire",
+      "label": "Public Holidays Empire",
+      "description": "Holidays and festivals celebrated throughout the British empire.",
+      "examples": [
+        "Coronation",
+        "The Queen's Birthday"
+      ]
+    },
+    {
+      "id": "seasons",
+      "label": "Seasons",
+      "description": "The four annual seasons.",
+      "examples": [
+        "autumn",
+        "spring",
+        "summer",
+        "winter"
+      ]
+    },
+    {
+      "id": "compass_points",
+      "label": "Compass Points",
+      "description": "Directional terms based on cardinal and intercardinal directions.",
+      "examples": [
+        "east",
+        "north",
+        "northeast",
+        "northwest",
+        "south",
+        "southeast",
+        "southeastward",
+        "southwest",
+        "west"
+      ]
+    },
+    {
+      "id": "road_vehicles",
+      "label": "Road Vehicles",
+      "description": "Wheeled vehicles designed for land travel.",
+      "examples": [
+        "cab",
+        "cabriolet",
+        "carriage",
+        "cart",
+        "cartage",
+        "charabanc",
+        "coach",
+        "gig",
+        "haywagon"
+      ]
+    },
+    {
+      "id": "sea_river_vehicles",
+      "label": "Sea River Vehicles",
+      "description": "Vessels designed for water-based travel.",
+      "examples": [
+        "battleship",
+        "boat",
+        "boatload",
+        "canoe",
+        "dreadnought",
+        "ferry",
+        "ferryboat",
+        "fishingboat",
+        "yacht"
+      ]
+    },
+    {
+      "id": "rooms",
+      "label": "Rooms",
+      "description": "Interior spaces within buildings.",
+      "examples": [
+        "attic",
+        "back passage",
+        "bathroom",
+        "bedroom",
+        "buttery",
+        "cellar",
+        "corridor",
+        "dining room"
+      ]
+    },
+    {
+      "id": "imperial_locations",
+      "label": "Imperial Locations",
+      "description": "Cities and places within the British Empire.",
+      "examples": [
+        "accra",
+        "adelaide",
+        "akasa",
+        "amritsar",
+        "bangalore",
+        "benin",
+        "bhore ghaut",
+        "bombay",
+        "calcutta",
+        "cape",
+        "cape town",
+        "chandragore",
+        "chuka",
+        "ciudad rodrigo",
+        "coonoor",
+        "darjeeling",
+        "dehli"
+      ]
+    },
+    {
+      "id": "rural_locations",
+      "label": "Rural Locations",
+      "description": "Geographical features and places in countryside.",
+      "examples": [
+        "alley",
+        "barnyard",
+        "beach",
+        "borderland",
+        "bridge",
+        "brook",
+        "brushwood",
+        "cairn",
+        "camp",
+        "cave",
+        "coalfield",
+        "copse",
+        "crossroad"
+      ]
+    },
+    {
+      "id": "natural_feature_large",
+      "label": "Natural Feature Large",
+      "description": "Large-scale natural landscape features.",
+      "examples": [
+        "clifftop",
+        "escarpment",
+        "field",
+        "forest",
+        "heath",
+        "hedge"
+      ]
+    },
+    {
+      "id": "natural_feature_medium",
+      "label": "Natural Feature Medium",
+      "description": "Medium-sized trees and natural features.",
+      "examples": [
+        "alder",
+        "ash",
+        "aspen",
+        "beech",
+        "birch",
+        "cave",
+        "cherry"
+      ]
+    },
+    {
+      "id": "natural_feature_small",
+      "label": "Natural Feature Small",
+      "description": "Small-scale natural features and objects.",
+      "examples": [
+        "acorn",
+        "anthill",
+        "beechnut",
+        "beehive",
+        "brook",
+        "cataract",
+        "catkin",
+        "dew"
+      ]
+    },
+    {
+      "id": "plantparts",
+      "label": "Plantparts",
+      "description": "Botanical structures and components of plants.",
+      "examples": [
+        "calyx",
+        "fruit",
+        "leaf",
+        "petal",
+        "root",
+        "seed",
+        "seeds",
+        "sepal",
+        "stamen",
+        "stem"
+      ]
+    },
+    {
+      "id": "plantsflowers_home",
+      "label": "Plantsflowers Home",
+      "description": "Plants and flowers cultivated in British gardens.",
+      "examples": [
+        "Himalayan balsam",
+        "agaric",
+        "amaranth",
+        "amaryllis",
+        "anemone",
+        "apricot",
+        "aster",
+        "azalea",
+        "begonia",
+        "bergamot",
+        "bindweed",
+        "bistort",
+        "bluebell",
+        "bramble",
+        "buckthorn"
+      ]
+    },
+    {
+      "id": "town_locations",
+      "label": "Town Locations",
+      "description": "Specific places and thoroughfares within towns.",
+      "examples": [
+        "alleyway",
+        "avenue",
+        "bridge",
+        "crossroad",
+        "distillery",
+        "district",
+        "ditch",
+        "dock",
+        "drain",
+        "embankment"
+      ]
+    },
+    {
+      "id": "private_places",
+      "label": "Private Places",
+      "description": "Non-public spaces with restricted access, which might be viewable from a train carriage.",
+      "examples": [
+        "alley",
+        "back room",
+        "bathroom",
+        "bedroom",
+        "coal cellar",
+        "doorway",
+        "garden",
+        "houseback",
+        "ice house",
+        "library"
+      ]
+    },
+    {
+      "id": "city_locations",
+      "label": "City Locations",
+      "description": "Specific places and thoroughfares within cities.",
+      "examples": [
+        "alleyway",
+        "avenue",
+        "bridge",
+        "crossroad",
+        "district",
+        "ditch",
+        "dock",
+        "drain",
+        "embankment",
+        "gravel pit"
+      ]
+    },
+    {
+      "id": "coastal_locations",
+      "label": "Coastal Locations",
+      "description": "Geographic features and places along coastlines.",
+      "examples": [
+        "bay",
+        "beach",
+        "cave",
+        "clifftop",
+        "cove",
+        "estuary",
+        "harbour"
+      ]
+    },
+    {
+      "id": "crops",
+      "label": "Crops",
+      "description": "Cultivated plants grown for food production.",
+      "examples": [
+        "barley",
+        "bean",
+        "beans",
+        "beetroot",
+        "cabbage",
+        "carrot",
+        "cauliflower"
+      ]
+    },
+    {
+      "id": "fruits",
+      "label": "Fruits",
+      "description": "Fruit-bearing plants and their edible products.",
+      "examples": [
+        "apple",
+        "barberry",
+        "berry",
+        "bilberry",
+        "blackberry",
+        "bullace",
+        "cherry",
+        "chestnut",
+        "citrus",
+        "cobnut"
+      ]
+    },
+    {
+      "id": "ingredients",
+      "label": "Ingredients",
+      "description": "Individual food components for cooking.",
+      "examples": [
+        "buckwheat",
+        "butter",
+        "candy",
+        "capsicum",
+        "chive",
+        "chum",
+        "cream",
+        "curry powder",
+        "dairy"
+      ]
+    },
+    {
+      "id": "cooked_food",
+      "label": "Cooked Food",
+      "description": "Prepared dishes and meals.",
+      "examples": [
+        "#imperial_locations# soup",
+        "bacon",
+        "biscuit",
+        "bisque",
+        "bread",
+        "bun",
+        "bunt",
+        "cake",
+        "casserole",
+        "cheesecake",
+        "cob",
+        "crumble"
+      ]
+    },
+    {
+      "id": "plantsflowers_empire",
+      "label": "Plantsflowers Empire",
+      "description": "Plants and flowers found throughout the British Empire.",
+      "examples": [
+        "balsam",
+        "bamboo",
+        "chilli",
+        "cottonwood",
+        "palm tree",
+        "sequoia",
+        "waterlily",
+        "windflower"
+      ]
+    },
+    {
+      "id": "fruits_empire",
+      "label": "Fruits Empire",
+      "description": "Fruit-bearing plants found throughout the British empire.",
+      "examples": [
+        "agave",
+        "banana",
+        "cassia",
+        "coconut",
+        "durian",
+        "gourd",
+        "mango",
+        "melon"
+      ]
+    },
+    {
+      "id": "drinks_british",
+      "label": "Drinks British",
+      "description": "Beverages consumed in Britain.",
+      "examples": [
+        "beer",
+        "beers",
+        "bourbon",
+        "brandy",
+        "coffee",
+        "gin",
+        "ginning",
+        "juice"
+      ]
+    },
+    {
+      "id": "drinks_empire",
+      "label": "Drinks Empire",
+      "description": "Beverages consumed throughout the British Empire.",
+      "examples": [
+        "absinthe",
+        "chai",
+        "chamomile",
+        "firewater",
+        "gin and tonic",
+        "lassi",
+        "snake wine",
+        "tea",
+        "vodka"
+      ]
+    },
+    {
+      "id": "medicine_word",
+      "label": "Medicine Word",
+      "description": "Medicinal preparations and remedies.",
+      "examples": [
+        "balm",
+        "bracer",
+        "brew",
+        "calomel",
+        "calumet",
+        "capsule",
+        "carminative",
+        "conditioner",
+        "cordial",
+        "dose"
+      ]
+    },
+    {
+      "id": "abstract_nouns",
+      "label": "Abstract Nouns",
+      "description": "Intangible concepts, qualities, and states.",
+      "examples": [
+        "anger",
+        "belief",
+        "bereavement",
+        "bravery",
+        "calm",
+        "calumny",
+        "charity",
+        "courage",
+        "dread",
+        "dudgeon",
+        "envy"
+      ]
+    },
+    {
+      "id": "illness_type",
+      "label": "Illness Type",
+      "description": "Physical ailments and minor health conditions.",
+      "examples": [
+        "ache",
+        "ague",
+        "ailment",
+        "allergy",
+        "bunion",
+        "calculi",
+        "cancer",
+        "cirrhosis",
+        "complaint",
+        "complication",
+        "condition",
+        "consumption"
+      ]
+    },
+    {
+      "id": "disease",
+      "label": "Disease",
+      "description": "Serious pathological conditions affecting health.",
+      "examples": [
+        "cancer"
+      ]
+    },
+    {
+      "id": "verbs_position",
+      "label": "Verbs Position",
+      "description": "Actions relating to body posture and placement.",
+      "examples": [
+        "bend",
+        "crawl",
+        "crouch",
+        "jump",
+        "lie",
+        "seat",
+        "sit",
+        "stand"
+      ]
+    },
+    {
+      "id": "verbs_noise",
+      "label": "Verbs Noise",
+      "description": "Actions that produce sounds.",
+      "examples": [
+        "beep",
+        "belch",
+        "bellow",
+        "blip",
+        "burp",
+        "buzz",
+        "cackle",
+        "chat",
+        "chatter",
+        "chime",
+        "chirp",
+        "chitter",
+        "churr",
+        "clatter",
+        "coo",
+        "cough"
+      ]
+    },
+    {
+      "id": "verbs_movement",
+      "label": "Verbs Movement",
+      "description": "Actions involving physical motion or locomotion.",
+      "examples": [
+        "avoid",
+        "beat",
+        "boil",
+        "canter",
+        "chug",
+        "churn",
+        "crawl",
+        "creep",
+        "dither",
+        "dodge",
+        "drag",
+        "drip",
+        "fall",
+        "flow"
+      ]
+    },
+    {
+      "id": "verbs_interaction",
+      "label": "Verbs Interaction",
+      "description": "Actions involving contact with other persons or objects.",
+      "examples": [
+        "alter",
+        "amend",
+        "bash",
+        "beg",
+        "begat",
+        "bite",
+        "break",
+        "chew",
+        "complain",
+        "couple",
+        "devalue",
+        "discourage",
+        "drink",
+        "eat",
+        "embellish"
+      ]
+    },
+    {
+      "id": "verbs_extreme",
+      "label": "Verbs Extreme",
+      "description": "Violent or intense actions with severe consequences.",
+      "examples": [
+        "cannibalise",
+        "collapse",
+        "delete",
+        "destroy",
+        "devour",
+        "die",
+        "fuck",
+        "grope",
+        "kick",
+        "kill",
+        "murder",
+        "pollute",
+        "punch",
+        "rape",
+        "ravish"
+      ]
+    },
+    {
+      "id": "verbs_gentle",
+      "label": "Verbs Gentle",
+      "description": "Soft, delicate, or peaceful actions.",
+      "examples": [
+        "cuddle",
+        "fizzle",
+        "gurgle",
+        "huddle",
+        "ink",
+        "lie",
+        "nuzzle",
+        "rest",
+        "sag",
+        "settle",
+        "stroke",
+        "sun",
+        "unsaddle"
+      ]
+    },
+    {
+      "id": "hedging_adverbs",
+      "label": "Hedging Adverbs",
+      "description": "Words expressing uncertainty or qualified possibility.",
+      "examples": [
+        "concievably",
+        "feasibly",
+        "maybe",
+        "perchance",
+        "perhaps",
+        "possibly",
+        "somehow"
+      ]
+    },
+    {
+      "id": "adverbs_generic_positive",
+      "label": "Adverbs Generic Positive",
+      "description": "Adverbs describing positive manner or character.",
+      "examples": [
+        "bravely",
+        "daringly",
+        "enthusiastically",
+        "excitedly",
+        "happily",
+        "pleasurably",
+        "vigorously"
+      ]
+    },
+    {
+      "id": "adverbs_generic_negative",
+      "label": "Adverbs Generic Negative",
+      "description": "Adverbs describing negative manner or character.",
+      "examples": [
+        "brutally",
+        "cozily",
+        "forcefully",
+        "forcibly",
+        "hazily",
+        "incomparably",
+        "incurably",
+        "lazily",
+        "miserably",
+        "violently"
+      ]
+    },
+    {
+      "id": "adverbs_rare",
+      "label": "Adverbs Rare",
+      "description": "Uncommon or dramatic adverbs for Victorian prose.",
+      "examples": [
+        "devastatingly",
+        "disastrously",
+        "dreadfully",
+        "evilly",
+        "horribly",
+        "poorly",
+        "shockingly",
+        "terribly",
+        "utterly"
+      ]
+    },
+    {
+      "id": "relative_position",
+      "label": "Relative Position",
+      "description": "Prepositions indicating spatial relationships.",
+      "examples": [
+        "above",
+        "across",
+        "after",
+        "among",
+        "around",
+        "before",
+        "behind",
+        "below",
+        "beneath"
+      ]
+    },
+    {
+      "id": "time_of_day",
+      "label": "Time Of Day",
+      "description": "Periods and divisions of the daily cycle.",
+      "examples": [
+        "afternoon",
+        "day",
+        "daylight",
+        "daytime",
+        "dusk",
+        "duskiness",
+        "evening",
+        "midday",
+        "morning",
+        "night",
+        "nightfall",
+        "noon",
+        "noonday"
+      ]
+    },
+    {
+      "id": "mealtimes",
+      "label": "Mealtimes",
+      "description": "Times designated for consuming meals.",
+      "examples": [
+        "breakfast",
+        "dinner",
+        "lunch",
+        "luncheon",
+        "meal",
+        "supper",
+        "suppertime",
+        "tea"
+      ]
+    },
+    {
+      "id": "swearwords",
+      "label": "Swearwords",
+      "description": "Mild oaths and expletives appropriate to Victorian era.",
+      "examples": [
+        "#letters#_#letters#___#letters#__",
+        "God",
+        "b_gger",
+        "bl__dy",
+        "bl__t",
+        "crikey",
+        "d_mn",
+        "f__k",
+        "god d_mn",
+        "p_ss",
+        "s__t"
+      ]
+    },
+    {
+      "id": "measurements",
+      "label": "Measurements",
+      "description": "Units and terms for distance and dimension.",
+      "examples": [
+        "diameter",
+        "fathom",
+        "foot",
+        "furlong",
+        "inch",
+        "league",
+        "mile",
+        "quire",
+        "yard"
+      ]
+    },
+    {
+      "id": "symbol",
+      "label": "Symbol",
+      "description": "Objects carrying symbolic or representative meaning.",
+      "examples": [
+        "bullseye",
+        "circle",
+        "crescent",
+        "cross",
+        "crossbuck",
+        "crown",
+        "diamond",
+        "eye",
+        "finger"
+      ]
+    },
+    {
+      "id": "shape",
+      "label": "Shape",
+      "description": "Geometric forms and outlines.",
+      "examples": [
+        "circle",
+        "cylinder",
+        "globe",
+        "hexagon",
+        "oval",
+        "rectangle",
+        "sphere",
+        "triangle"
+      ]
+    },
+    {
+      "id": "endearment",
+      "label": "Endearment",
+      "description": "Terms of affection and endearment.",
+      "examples": [
+        "angel",
+        "baby",
+        "beloved",
+        "darling",
+        "dear",
+        "dearest",
+        "dearlove",
+        "fondheart",
+        "heart",
+        "honey"
+      ]
+    },
+    {
+      "id": "verb_interaction",
+      "label": "Verb Interaction",
+      "description": "Specific verbs for interpersonal interaction.",
+      "examples": [
+        "chide"
+      ]
+    },
+    {
+      "id": "container",
+      "label": "Container",
+      "description": "Individual objects designed to hold other items.",
+      "examples": [
+        "casket"
+      ]
+    },
+    {
+      "id": "verbs_rare",
+      "label": "Verbs Rare",
+      "description": "Uncommon verbs for sophisticated Victorian narratives.",
+      "examples": [
+        "dazzle"
+      ]
+    },
+    {
+      "id": "adjectives_neutral_negative",
+      "label": "Adjectives Neutral Negative",
+      "description": "Neutral adjectives with negative implications.",
+      "examples": [
+        "leering"
+      ]
+    },
+    {
+      "id": "verbs_cognition",
+      "label": "Verbs Cognition",
+      "description": "Verbs relating to mental processes, perception, and discovery of information.",
+      "examples": [
+        "ascertain",
+        "examine",
+        "decide"
+      ]
+    },
+    {
+      "id": "marks_injuries",
+      "label": "Marks and Injuries",
+      "description": "Physical marks, bruises, welts, and visible injuries on the body",
+      "examples": [
+        "welt"
+      ]
+    },
+    {
+      "id": "insults_derogatory",
+      "label": "Insults and Derogatory Terms",
+      "description": "Pejorative terms and insults for foolish or disreputable persons",
+      "examples": [
+        "dunderhead"
+      ]
+    },
+    {
+      "id": "generic_nouns_person",
+      "label": "Generic Nouns Person",
+      "description": "Neutral, non-role-specific terms for persons and genders that appear frequently in narrative prose",
+      "examples": [
+        "man",
+        "lady",
+        "people",
+        "person",
+        "child",
+        "gentleman",
+        "woman",
+        "boy"
+      ]
+    },
+    {
+      "id": "person_condition",
+      "label": "Person Condition",
+      "description": "Persons defined by their physical or social condition rather than by occupation",
+      "examples": [
+        "sufferer"
+      ]
+    },
+    {
+      "id": "person_role_general",
+      "label": "Person Role General",
+      "description": "Occupational or social roles not specific to empire, country, town or city settings; generic personae that may appear in various contexts.",
+      "examples": [
+        "lodger"
+      ]
+    },
+    {
+      "id": "materials_empire",
+      "label": "Materials Empire",
+      "description": "Exotic, precious, or colonial materials sourced from throughout the British Empire.",
+      "examples": [
+        "coral"
+      ]
+    },
+    {
+      "id": "train_incidents",
+      "label": "Train Incidents",
+      "description": "Accidents and incidents specific to railway operations and train failures.",
+      "examples": [
+        "derailment"
+      ]
+    },
+    {
+      "id": "objects_violent",
+      "label": "Objects Violent",
+      "description": "Objects used in suicide, execution, or inflicting death/severe harm.",
+      "examples": [
+        "noose"
+      ]
+    },
+    {
+      "id": "punishment_penalty",
+      "label": "Punishments and Penalties",
+      "description": "Historical punishments including transportation, penal servitude, and legal consequences from Victorian judicial system.",
+      "examples": [
+        "transportation"
+      ]
+    },
+    {
+      "id": "interior_fixtures",
+      "label": "Interior Fixtures",
+      "description": "Permanent architectural fixtures and structural elements within buildings.",
+      "examples": [
+        "banister"
+      ]
+    },
+    {
+      "id": "language_linguistics",
+      "label": "Language and Linguistics",
+      "description": "Words and concepts relating to language, grammar, speech patterns, and linguistic phenomena.",
+      "examples": [
+        "idiom",
+        "pronoun",
+        "doggerel"
+      ]
+    },
+    {
+      "id": "trade_commerce_terms",
+      "label": "Trade and Commerce Terms",
+      "description": "Terms relating to trade, taxation, tariffs, duties, and commercial exchange in Victorian commerce and colonial contexts.",
+      "examples": [
+        "impost",
+        "tariff"
+      ]
+    },
+    {
+      "id": "person_office_title",
+      "label": "Person Office or Title",
+      "description": "Offices, positions, and titles held by individuals in institutional, religious, administrative, or military roles; includes colonial and feudal ranks.",
+      "examples": [
+        "curacy",
+        "baronetcy",
+        "viceroy",
+        "adjutant",
+        "duchy"
+      ]
+    },
+    {
+      "id": "physical_deformity_damage",
+      "label": "Physical Deformity and Damage",
+      "description": "Physical abnormalities, deformities, injuries, and violent means of bodily harm.",
+      "examples": [
+        "disfigurement",
+        "strangulation",
+        "protrusion",
+        "dentition"
+      ]
+    },
+    {
+      "id": "legal_judicial_terms",
+      "label": "Legal and Judicial Terms",
+      "description": "Terms relating to legal procedures, court processes, and formal judicial/ceremonial actions.",
+      "examples": [
+        "remand",
+        "adjournment",
+        "affidavit",
+        "ordination"
+      ]
+    },
+    {
+      "id": "geological_events",
+      "label": "Geological Events",
+      "description": "Natural geological phenomena and earth movements including landslips, subsidences, and other landscape changes.",
+      "examples": [
+        "landslip"
+      ]
+    },
+    {
+      "id": "chemistry_substances",
+      "label": "Chemistry and Substances",
+      "description": "Chemical compounds, elements, and substances used in Victorian industry, medicine, and science.",
+      "examples": [
+        "alkali",
+        "saltpetre"
+      ]
+    },
+    {
+      "id": "technology_victorian",
+      "label": "Victorian Technology and Innovations",
+      "description": "Scientific instruments, technological innovations, and mechanical devices developed during the Victorian era.",
+      "examples": [
+        "daguerreotype"
+      ]
+    },
+    {
+      "id": "abstract_quality",
+      "label": "Abstract Qualities and States",
+      "description": "Abstract nouns describing qualities, conditions, or inherent states of being; qualities and characteristics that describe manner or nature",
+      "examples": [
+        "unevenness",
+        "easiness",
+        "tidiness",
+        "shamelessness",
+        "crookedness"
+      ]
+    },
+    {
+      "id": "religious_theology_terms",
+      "label": "Religious and Theological Terms",
+      "description": "Terms relating to religious doctrine, theology, sacraments, and ecclesiastical concepts specific to Christian theology and practice.",
+      "examples": [
+        "transubstantiation"
+      ]
+    },
+    {
+      "id": "architectural_sculpture",
+      "label": "Architectural Sculpture and Ornamental Elements",
+      "description": "Decorative sculptural elements and ornamental features used in Victorian architecture and design, visible from external vantage points",
+      "examples": [
+        "caryatid"
+      ]
+    },
+    {
+      "id": "imperial_administrative_legal",
+      "label": "Imperial Administrative and Legal Processes",
+      "description": "Formal processes, bureaucratic procedures, and legal mechanisms of the British Empire including citizenship, permits, administrative actions, and regulatory frameworks governing colonial administration and commerce.",
+      "examples": [
+        "naturalization",
+        "licensing",
+        "maladministration"
+      ]
+    },
+    {
+      "id": "imperial_trade_objects",
+      "label": "Imperial Trade Objects",
+      "description": "Objects, commodities, and trade goods specific to colonial commerce and exchange throughout the British Empire.",
+      "examples": [
+        "cowrie"
+      ]
+    },
+    {
+      "id": "clothes_empire",
+      "label": "Clothes Empire",
+      "description": "Garments and attire from colonial and non-British sources worn during Victorian era, highlighting imperial encounter with foreign dress codes.",
+      "examples": [
+        "pyjama",
+        "sari",
+        "kaftan"
+      ]
+    },
+    {
+      "id": "adverbs_logical_temporal",
+      "label": "Adverbs Logical and Temporal",
+      "description": "Adverbs indicating logical sequence, consequence, timing relationships, and narrative progression.",
+      "examples": [
+        "consequently",
+        "early",
+        "gradually",
+        "accordingly",
+        "directly",
+        "lately",
+        "presently",
+        "constantly",
+        "invariably",
+        "previously",
+        "shortly",
+        "finally",
+        "secondly"
+      ]
+    },
+    {
+      "id": "adverbs_manner_neutral",
+      "label": "Adverbs Manner Neutral",
+      "description": "Adverbs describing manner, frequency, scope, or degree of action without inherent positive or negative emotional valence",
+      "examples": [
+        "openly",
+        "repeatedly",
+        "principally",
+        "subsequently",
+        "totally",
+        "perpetually",
+        "daily",
+        "literally",
+        "effectually",
+        "solely",
+        "essentially",
+        "personally",
+        "recently",
+        "alternately",
+        "barely",
+        "universally",
+        "differently",
+        "habitually",
+        "loudly",
+        "expressly",
+        "independently",
+        "doubly",
+        "unexpectedly",
+        "similarly",
+        "briefly",
+        "materially",
+        "deliberately",
+        "ultimately",
+        "privately",
+        "regularly",
+        "inevitably",
+        "annually",
+        "likely",
+        "involuntarily",
+        "broadly"
+      ]
+    },
+    {
+      "id": "adverbs_manner_attitude",
+      "label": "Adverbs Manner and Attitude",
+      "description": "Adverbs describing the manner, emotional tone, or attitudinal quality of actions and speech; conveys psychological state, intentionality, demeanor, or social stance rather than simple positive/negative evaluation.",
+      "examples": [
+        "haughtily",
+        "contemptuously",
+        "wilfully",
+        "instinctively",
+        "formally",
+        "inwardly",
+        "satirically",
+        "mentally",
+        "obliquely",
+        "wistfully",
+        "scornfully",
+        "visibly",
+        "implicitly",
+        "confidentially",
+        "bodily"
+      ]
+    },
+    {
+      "id": "adverbs_manner_intensity",
+      "label": "Adverbs Manner and Intensity",
+      "description": "Adverbs describing the degree, intensity, or dramatic quality of actions, sensations, and utterances; conveys overwhelming, vivid, or emphatic manner.",
+      "examples": [
+        "sensationally",
+        "gushingly",
+        "bewilderingly"
+      ]
+    },
+    {
+      "id": "verbs_imperial",
+      "label": "Verbs Imperial",
+      "description": "Verbs relating to imperial conquest, colonization, territorial administration, and dispossession of colonial territories and peoples.",
+      "examples": [
+        "colonize",
+        "dispossess"
+      ]
+    },
+    {
+      "id": "comparative_adjectives_descriptive",
+      "label": "Comparative Adjectives Descriptive",
+      "description": "Comparative forms of descriptive adjectives relating to physical qualities, emotional states, and landscape features.",
+      "examples": [
+        "wetter",
+        "bleaker"
+      ]
+    },
+    {
+      "id": "colonial_violence_concepts",
+      "label": "Colonial Violence and Domination Concepts",
+      "description": "Abstract nouns and concepts relating to violent subjugation, humiliation, social domination, and psychological degradation within colonial and imperial contexts.",
+      "examples": [
+        "emasculation",
+        "patriarchate"
+      ]
+    },
+    {
+      "id": "person_role_trade_imperial",
+      "label": "Person Role Trade and Imperial Commerce",
+      "description": "Occupational roles relating to trade, commerce, and mercantile activity within and relating to the British Empire; traders, merchants, and agents of commercial exchange.",
+      "examples": [
+        "exporter"
+      ]
+    },
+    {
+      "id": "imperial_extractive_industries",
+      "label": "Imperial Extractive Industries and Resource Management",
+      "description": "Industries and practices relating to resource extraction, timber harvesting, mining, agricultural production, and landscape exploitation within colonial and imperial contexts; reflects Victorian economic extraction from colonized territories",
+      "examples": [
+        "forestry"
+      ]
+    },
+    {
+      "id": "weather_types_extreme",
+      "label": "Extreme Weather Types",
+      "description": "Severe and violent weather phenomena including cyclones, tornadoes, and dangerous storms beyond typical seasonal conditions",
+      "examples": [
+        "cyclone",
+        "twister"
+      ]
+    },
+    {
+      "id": "railway_structures_components",
+      "label": "Railway Structures and Engineering Components",
+      "description": "Specialized structural and engineering components of railway infrastructure, bridges, and locomotive equipment specific to Victorian railway construction and operation.",
+      "examples": [
+        "cantilever",
+        "detector",
+        "heater",
+        "conveyor",
+        "transformer",
+        "generator"
+      ]
+    },
+    {
+      "id": "microorganisms_microscopic",
+      "label": "Microorganisms and Microscopic Entities",
+      "description": "Microscopic organisms, bacteria, and cellular structures visible only through scientific instrumentation.",
+      "examples": [
+        "coccus"
+      ]
+    },
+    {
+      "id": "adjectives_anatomical",
+      "label": "Adjectives Anatomical",
+      "description": "Adjectives relating to anatomical structures, body parts, and medical/anatomical terminology",
+      "examples": [
+        "atrial",
+        "proximal",
+        "tibial",
+        "metatarsal",
+        "bilateral"
+      ]
+    }
+  ]
+}

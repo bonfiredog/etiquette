@@ -72,7 +72,7 @@ private ObjectPool<GameObject> _pool;
 
         timerMaxOriginal = timerMax;
         timerMinOriginal = timerMin;
-
+            timer = 1;
      
         
         if (myTag == "frontgen" || myTag == "middlegen" || myTag == "sidegen")

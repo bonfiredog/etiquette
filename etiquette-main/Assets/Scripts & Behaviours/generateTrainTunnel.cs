@@ -63,7 +63,7 @@ void Update()
         if (tc.docking == false && tc.docked == false && tc.delaying == false && ss.milesToNextStation > 5) {
 
         var which = Random.Range(0, 100);
-        if (which <= 50) {
+        if (which <= 30) {
             generateTT("train");
         } else {
             generateTT("tunnel");
@@ -144,19 +144,37 @@ void Update()
 
       
 
+if (type == "train") {
+    var thistextrect = thisTT.transform.Find("text").GetComponent<RectTransform>();
+    setWidthOfBox(thistextrect, thistextmesh.preferredWidth, thistextmesh.preferredHeight);
 
-        if (type == "train") {
-        var thistextrect = thisTT.transform.Find("text").GetComponent<RectTransform>();
-        setWidthOfBox(thistextrect, thistextmesh.preferredWidth, thistextmesh.preferredHeight);
 
-        //Set the size of the cube to correspond to the size of the text.
-        var thisCube = thisTT.transform.Find("trainmass");
-        float tmpWidth = thistextrect.sizeDelta.x;
-        Vector3 cubeScale = thisCube.localScale;
-        cubeScale.z = tmpWidth + (tmpWidth / 3);
-        thisCube.localScale = cubeScale;
-        thisTT.transform.position = new Vector3(989f, -5.91f, -9955f);
-        }
+
+
+    var thisCube = thisTT.transform.Find("trainmass");
+    float tmpWidth = thistextrect.sizeDelta.x;
+    Vector3 cubeScale = thisCube.localScale;
+    float padding = 0.5f;
+    cubeScale.z = tmpWidth + padding;// + (tmpWidth / 3);
+    thisCube.localScale = cubeScale;
+
+
+
+
+
+    // Offset cube so its left face stays at the parent's origin
+    Vector3 cubePos = thisCube.localPosition;
+    cubePos.z = cubeScale.z * 0.5f;
+    thisCube.localPosition = cubePos;
+
+var textTransform = thisTT.transform.Find("text");
+Vector3 textPos = textTransform.localPosition;
+textPos.z = cubeScale.z * 0.5f;
+textTransform.localPosition = textPos;
+
+
+    thisTT.transform.position = new Vector3(989f, -5.91f, -9955f);
+}
 
         
     }

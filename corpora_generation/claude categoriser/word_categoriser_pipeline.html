@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lexical Categoriser</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0f0e0c;
+    --surface: #1a1916;
+    --surface2: #242320;
+    --border: #2e2c28;
+    --text: #e8e4dc;
+    --muted: #7a7569;
+    --accent: #c9a84c;
+    --accent2: #7eb89a;
+    --danger: #c96b4c;
+    --new-cat: #a07cdc;
+    --reject: #c96b4c;
+    --fit: #7eb89a;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    padding: 18px 28px 14px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    background: var(--surface);
+  }
+  .header h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--accent);
+    letter-spacing: -0.3px;
+  }
+  .header .sub {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .header-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .status-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--muted);
+    transition: background 0.3s;
+  }
+  .status-dot.running { background: var(--accent); animation: pulse 1.4s infinite; }
+  .status-dot.paused { background: var(--new-cat); }
+  .status-dot.done { background: var(--fit); }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    padding: 0 28px;
+  }
+  .tab {
+    padding: 10px 18px;
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--new-cat);
+    color: #fff;
+    font-size: 9px;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    padding: 0 4px;
+    margin-left: 6px;
+    font-weight: 500;
+  }
+
+  .main { display: flex; flex: 1; overflow: hidden; height: calc(100vh - 97px); }
+
+  .panel { display: none; flex: 1; flex-direction: column; overflow: hidden; }
+  .panel.active { display: flex; }
+
+  .setup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    flex: 1;
+    overflow: hidden;
+  }
+  .setup-col {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .setup-col:last-child { border-right: none; }
+  .col-header {
+    padding: 14px 20px 10px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .col-header h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 14px; color: var(--text); }
+  .col-hint { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  textarea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    padding: 16px 20px;
+  }
+  textarea::placeholder { color: var(--muted); }
+
+  .settings-row {
+    padding: 14px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .setting-group { display: flex; align-items: center; gap: 8px; }
+  .setting-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+  select, input[type=number] {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    outline: none;
+  }
+  select:focus, input:focus { border-color: var(--accent); }
+  input[type=number] { width: 70px; }
+
+  .btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    border: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: all 0.15s;
+  }
+  .btn-primary { background: var(--accent); color: #0f0e0c; font-weight: 500; }
+  .btn-primary:hover { background: #d4b060; }
+  .btn-primary:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-sm { padding: 5px 12px; font-size: 11px; }
+  .btn-approve { background: var(--fit); color: #0f0e0c; }
+  .btn-approve:hover { background: #8fcbac; }
+  .btn-reject-cat { background: transparent; color: var(--reject); border: 1px solid var(--reject); }
+  .btn-reject-cat:hover { background: var(--reject); color: #fff; }
+  .ml-auto { margin-left: auto; }
+
+  .run-layout { display: flex; flex: 1; overflow: hidden; }
+  .results-col { flex: 1; display: flex; flex-direction: column; overflow: hidden; border-right: 1px solid var(--border); }
+  .sidebar { width: 300px; display: flex; flex-direction: column; overflow: hidden; }
+
+  .progress-bar-wrap {
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .progress-track { flex: 1; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.4s ease; }
+  .progress-text { font-size: 11px; color: var(--muted); white-space: nowrap; }
+  .stat-chips { display: flex; gap: 10px; }
+  .chip {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .chip-fit { background: #7eb89a22; color: var(--fit); border: 1px solid #7eb89a44; }
+  .chip-new { background: #a07cdc22; color: var(--new-cat); border: 1px solid #a07cdc44; }
+  .chip-rej { background: #c96b4c22; color: var(--reject); border: 1px solid #c96b4c44; }
+
+  .results-scroll { flex: 1; overflow-y: auto; }
+  .results-scroll::-webkit-scrollbar { width: 6px; }
+  .results-scroll::-webkit-scrollbar-track { background: transparent; }
+  .results-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  table { width: 100%; border-collapse: collapse; }
+  th {
+    position: sticky; top: 0;
+    background: var(--surface2);
+    padding: 10px 16px;
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+  }
+  td { padding: 9px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:hover td { background: var(--surface2); }
+  .word-cell { font-weight: 500; color: var(--text); }
+  .cat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 9px;
+    border-radius: 3px;
+    font-size: 11px;
+  }
+  .cat-badge.fit { background: #7eb89a18; color: var(--fit); }
+  .cat-badge.new-cat { background: #a07cdc18; color: var(--new-cat); }
+  .cat-badge.rejected { background: #c96b4c18; color: var(--reject); }
+  .reason-cell { color: var(--muted); font-size: 11px; font-style: italic; line-height: 1.5; }
+
+  .sidebar-header {
+    padding: 14px 16px 10px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sidebar-header h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 13px; }
+  .sidebar-scroll { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+  .sidebar-scroll::-webkit-scrollbar { width: 4px; }
+  .sidebar-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .cat-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px;
+  }
+  .cat-card.pending { border-color: #a07cdc55; }
+  .cat-card.approved { border-color: #7eb89a55; }
+  .cat-card.declined { border-color: #c96b4c55; opacity: 0.5; }
+  .cat-card-name { font-weight: 500; color: var(--new-cat); font-size: 12px; margin-bottom: 4px; }
+  .cat-card-name input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed var(--new-cat);
+    color: var(--new-cat);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 2px;
+    outline: none;
+    width: 100%;
+  }
+  .cat-card-desc { color: var(--muted); font-size: 11px; line-height: 1.5; margin-bottom: 6px; }
+  .cat-card-words { font-size: 10px; color: var(--accent2); margin-bottom: 10px; }
+  .cat-card-actions { display: flex; gap: 6px; }
+  .cat-card-status { font-size: 10px; text-transform: uppercase; letter-spacing: 0.07em; margin-top: 4px; }
+  .cat-card-status.approved { color: var(--fit); }
+  .cat-card-status.declined { color: var(--reject); }
+
+  .empty-sidebar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+    padding: 20px;
+  }
+  .empty-sidebar .icon { font-size: 28px; opacity: 0.4; }
+
+  .review-layout { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+  .review-toolbar {
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .filter-btn {
+    padding: 5px 12px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.12s;
+  }
+  .filter-btn.active { border-color: var(--accent); color: var(--accent); background: #c9a84c15; }
+
+  .export-layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+  }
+  .export-title { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 300; color: var(--accent); }
+  .export-stats { display: flex; gap: 40px; }
+  .export-stat { text-align: center; }
+  .export-stat-num { font-size: 36px; font-weight: 300; color: var(--text); font-family: 'Fraunces', serif; }
+  .export-stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .export-actions { display: flex; gap: 12px; }
+  pre.export-preview {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+    font-size: 11px;
+    color: var(--text);
+    max-width: 600px;
+    width: 100%;
+    max-height: 200px;
+    overflow: auto;
+    line-height: 1.6;
+  }
+
+  .running-row td { animation: rowIn 0.3s ease; }
+  @keyframes rowIn { from { opacity: 0; transform: translateX(-4px); } to { opacity: 1; } }
+
+  .pause-resume { display: flex; gap: 8px; align-items: center; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Lexical Categoriser</h1>
+  <span class="sub">Batch · Review · Export</span>
+  <div class="header-right">
+    <div class="status-dot" id="statusDot"></div>
+    <span id="statusText" style="font-size:11px;color:var(--muted)">idle</span>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" data-tab="setup">① Setup</div>
+  <div class="tab" data-tab="run">② Run <span class="badge" id="pendingBadge" style="display:none">0</span></div>
+  <div class="tab" data-tab="review">③ Review</div>
+  <div class="tab" data-tab="export">④ Export</div>
+</div>
+
+<div class="main">
+
+  <!-- SETUP TAB -->
+  <div class="panel active" id="tab-setup">
+    <div class="setup-grid">
+      <div class="setup-col">
+        <div class="col-header">
+          <div>
+            <h3>Project Context</h3>
+            <div class="col-hint">Describe the project, goals, what counts as a valid category</div>
+          </div>
+        </div>
+        <textarea id="contextInput" oninput="updateCostEstimate()" placeholder="e.g. This is a grammar of Old English lexical items...
+
+Describe:
+• What the project is about
+• The categorisation logic / rules
+• What makes a word fit or not fit a category
+• How new categories should be formed"></textarea>
+      </div>
+      <div class="setup-col">
+        <div class="col-header">
+          <div>
+            <h3>Grammar (JSON)</h3>
+            <div class="col-hint">Paste your existing category definitions + few-shot examples</div>
+          </div>
+          <div>
+            <button class="btn btn-ghost btn-sm" onclick="loadDemo()">Load demo</button>
+          </div>
+        </div>
+        <textarea id="grammarInput" oninput="updateCostEstimate()" placeholder='{
+  "categories": [
+    {
+      "id": "NOUN_AGENT",
+      "label": "Agent Nouns",
+      "description": "Nouns denoting a person who performs an action",
+      "examples": ["baker", "hunter", "weaver", ...]
+    },
+    ...
+  ]
+}'></textarea>
+      </div>
+    </div>
+    <div class="setup-grid" style="max-height:200px;border-top:1px solid var(--border)">
+      <div class="setup-col">
+        <div class="col-header">
+          <div>
+            <h3>Uncertain Words (JSON)</h3>
+            <div class="col-hint">Array of strings, or [{word, ...}] objects</div>
+          </div>
+        </div>
+        <textarea id="wordsInput" oninput="updateCostEstimate()" placeholder='["word1", "word2", "word3", ...]
+
+or
+
+[{"word": "word1"}, {"word": "word2"}, ...]'></textarea>
+      </div>
+      <div class="setup-col" style="justify-content:center;padding:24px;gap:12px;display:flex;flex-direction:column">
+        <div class="setting-group">
+          <span class="setting-label">Model</span>
+          <select id="modelSelect" onchange="updateCostEstimate()">
+            <option value="claude-haiku-4-5-20251001">Haiku 4.5 — cheapest</option>
+            <option value="claude-sonnet-4-20250514">Sonnet 4 — smarter</option>
+          </select>
+        </div>
+        <div class="setting-group">
+          <span class="setting-label">Batch size</span>
+          <input type="number" id="batchSize" value="50" min="10" max="200" oninput="updateCostEstimate()">
+          <span style="color:var(--muted);font-size:11px">words</span>
+        </div>
+        <div class="setting-group">
+          <span class="setting-label">New cat threshold</span>
+          <input type="number" id="catThreshold" value="3" min="1" max="10">
+          <span style="color:var(--muted);font-size:11px">min words</span>
+        </div>
+        <div class="setting-group">
+          <span class="setting-label">Review every</span>
+          <input type="number" id="reviewEvery" value="500" min="50" max="5000">
+          <span style="color:var(--muted);font-size:11px">words</span>
+        </div>
+        <div id="costEstimate" style="font-size:11px;color:var(--muted);padding:4px 0;min-height:16px"></div>
+        <div style="margin-top:4px">
+          <button class="btn btn-primary" id="startBtn" onclick="startRun()">Start Categorisation →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RUN TAB -->
+  <div class="panel" id="tab-run">
+    <div class="progress-bar-wrap">
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <div class="progress-text" id="progressText">0 / 0</div>
+      <div class="stat-chips">
+        <div class="chip chip-fit">✓ <span id="fitCount">0</span></div>
+        <div class="chip chip-new">✦ <span id="newCount">0</span></div>
+        <div class="chip chip-rej">✕ <span id="rejCount">0</span></div>
+      </div>
+      <div class="pause-resume">
+        <button class="btn btn-ghost btn-sm" id="pauseBtn" onclick="togglePause()">Pause</button>
+        <button class="btn btn-ghost btn-sm" onclick="switchTab('export')">Export</button>
+      </div>
+      <span style="font-size:10px;color:var(--muted)" title="Live view shows last 300 rows. All results are saved and visible in Review tab.">live: last 300 rows</span>
+    </div>
+    <div class="run-layout">
+      <div class="results-col">
+        <div class="results-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:160px">Word</th>
+                <th>Category</th>
+                <th>Reason / Notes</th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <h3>New Categories</h3>
+          <span style="font-size:10px;color:var(--muted)" id="pendingCount">0 pending</span>
+        </div>
+        <div class="sidebar-scroll" id="newCatList">
+          <div class="empty-sidebar">
+            <div class="icon">⬡</div>
+            <div>New categories proposed<br>by Claude will appear here<br>for your approval</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEW TAB -->
+  <div class="panel" id="tab-review">
+    <div class="review-layout">
+      <div class="review-toolbar">
+        <span style="color:var(--muted);font-size:11px">Filter:</span>
+        <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+        <button class="filter-btn" onclick="setFilter('fit', this)">Categorised</button>
+        <button class="filter-btn" onclick="setFilter('new-cat', this)">New Category</button>
+        <button class="filter-btn" onclick="setFilter('rejected', this)">Rejected</button>
+        <span style="margin-left:auto;color:var(--muted);font-size:11px" id="reviewCountLabel">0 results</span>
+      </div>
+      <div class="results-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:160px">Word</th>
+              <th>Category</th>
+              <th>Reason / Notes</th>
+            </tr>
+          </thead>
+          <tbody id="reviewBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPORT TAB -->
+  <div class="panel" id="tab-export">
+    <div class="export-layout">
+      <div class="export-title">Export Results</div>
+      <div class="export-stats" id="exportStats">
+        <div class="export-stat"><div class="export-stat-num" id="ex-fit">0</div><div class="export-stat-label">Categorised</div></div>
+        <div class="export-stat"><div class="export-stat-num" id="ex-new">0</div><div class="export-stat-label">New Categories</div></div>
+        <div class="export-stat"><div class="export-stat-num" id="ex-rej">0</div><div class="export-stat-label">Rejected</div></div>
+        <div class="export-stat"><div class="export-stat-num" id="ex-total">0</div><div class="export-stat-label">Total Processed</div></div>
+      </div>
+      <pre class="export-preview" id="exportPreview">Run the categoriser first to see results here.</pre>
+      <div class="export-actions">
+        <button class="btn btn-primary" onclick="downloadResults()">↓ Download categorised.json</button>
+        <button class="btn btn-ghost" onclick="downloadGrammar()">↓ Download updated grammar.json</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let state = {
+  context: '',
+  grammar: null,
+  words: [],
+  model: 'claude-haiku-4-5-20251001',
+  batchSize: 50,
+  catThreshold: 3,
+  reviewEvery: 500,
+  results: [],
+  approvedCats: [],
+  pendingCats: [],
+  currentIndex: 0,
+  running: false,
+  paused: false,
+  filter: 'all',
+  interBatchDelay: 1500,  // ms between batches — adapts on rate limits
+};
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelector(`[data-tab="${name}"]`).classList.add('active');
+  document.getElementById(`tab-${name}`).classList.add('active');
+  if (name === 'review') renderReview();
+  if (name === 'export') renderExport();
+}
+document.querySelectorAll('.tab').forEach(t => {
+  t.addEventListener('click', () => switchTab(t.dataset.tab));
+});
+
+function loadDemo() {
+  document.getElementById('contextInput').value = `This project categorises uncertain words from a Middle English corpus into grammatical and semantic categories.
+
+Rules:
+- Prefer fitting words into existing categories over creating new ones
+- Create a new category only if 3+ words in the batch share a pattern not covered by existing categories
+- Reject a word only if it is clearly noise, a non-word, or impossible to categorise meaningfully
+- New categories should have a clear grammatical or semantic principle`;
+
+  document.getElementById('grammarInput').value = JSON.stringify({
+    categories: [
+      { id: "NOUN_AGENT", label: "Agent Nouns", description: "Nouns denoting a person performing an action", examples: ["baker", "hunter", "weaver", "fisher", "miller"] },
+      { id: "NOUN_PLACE", label: "Place Nouns", description: "Nouns denoting a location or place", examples: ["field", "grove", "marsh", "ford", "heath"] },
+      { id: "VERB_MOTION", label: "Motion Verbs", description: "Verbs denoting movement", examples: ["walk", "run", "flee", "ride", "swim"] },
+      { id: "ADJ_SIZE", label: "Size Adjectives", description: "Adjectives describing size", examples: ["great", "small", "long", "broad", "deep"] },
+    ]
+  }, null, 2);
+
+  document.getElementById('wordsInput').value = JSON.stringify([
+    "spinner", "dyer", "tanner", "meadow", "fen", "dale", "haul", "drag",
+    "creep", "drift", "wide", "short", "steep", "hollow", "brewer", "sower",
+    "thatcher", "moor", "ridge", "knoll", "leap", "stride", "narrow", "thick"
+  ], null, 2);
+}
+
+// Pricing per million tokens (input/output) as of 2025
+const MODEL_PRICING = {
+  'claude-haiku-4-5-20251001': { input: 0.80, output: 4.00,  label: 'Haiku 4.5' },
+  'claude-sonnet-4-20250514':  { input: 3.00, output: 15.00, label: 'Sonnet 4'  },
+};
+
+function updateCostEstimate() {
+  const grammarRaw = document.getElementById('grammarInput').value.trim();
+  const wordsRaw   = document.getElementById('wordsInput').value.trim();
+  const ctx        = document.getElementById('contextInput').value.trim();
+  const batchSize  = parseInt(document.getElementById('batchSize').value) || 50;
+  const model      = document.getElementById('modelSelect').value;
+  const el         = document.getElementById('costEstimate');
+
+  if (!grammarRaw || !wordsRaw) { el.textContent = ''; return; }
+
+  let wordCount = 0;
+  try {
+    const raw = JSON.parse(wordsRaw);
+    wordCount = Array.isArray(raw) ? raw.length : 0;
+  } catch(e) { el.textContent = ''; return; }
+
+  if (!wordCount) { el.textContent = ''; return; }
+
+  // Rough token estimates
+  const systemTokens = Math.ceil((ctx.length + grammarRaw.length) / 3.5);
+  const batchInputTokens  = batchSize * 4;   // ~4 tokens per word in JSON
+  const batchOutputTokens = batchSize * 20;  // ~20 tokens per result entry
+  const numBatches = Math.ceil(wordCount / batchSize);
+  const totalInput  = numBatches * (systemTokens + batchInputTokens);
+  const totalOutput = numBatches * batchOutputTokens;
+
+  const p = MODEL_PRICING[model] || MODEL_PRICING['claude-haiku-4-5-20251001'];
+  const cost = (totalInput / 1e6 * p.input) + (totalOutput / 1e6 * p.output);
+  const costStr = cost < 0.01 ? '<$0.01' : '$' + cost.toFixed(2);
+
+  el.innerHTML = `<span style="color:var(--accent2)">~${costStr} est.</span> · ${numBatches} batches · ${Math.round(totalInput/1000)}k input tokens`;
+}
+
+
+function startRun() {
+  const ctx = document.getElementById('contextInput').value.trim();
+  const grammarRaw = document.getElementById('grammarInput').value.trim();
+  const wordsRaw = document.getElementById('wordsInput').value.trim();
+
+  if (!ctx || !grammarRaw || !wordsRaw) {
+    alert('Please fill in all three fields before starting.');
+    return;
+  }
+
+  let grammar, words;
+  try { grammar = JSON.parse(grammarRaw); } catch(e) { alert('Grammar JSON invalid: ' + e.message); return; }
+  try {
+    const raw = JSON.parse(wordsRaw);
+    words = Array.isArray(raw) ? raw.map(w => typeof w === 'string' ? w : w.word || w.label || String(w)) : [];
+    if (!words.length) throw new Error('No words found');
+  } catch(e) { alert('Words JSON invalid: ' + e.message); return; }
+
+  state.context = ctx;
+  state.grammar = grammar;
+  state.words = words;
+  state.model = document.getElementById('modelSelect').value;
+  state.batchSize = parseInt(document.getElementById('batchSize').value) || 50;
+  state.catThreshold = parseInt(document.getElementById('catThreshold').value) || 3;
+  state.reviewEvery = parseInt(document.getElementById('reviewEvery').value) || 500;
+  state.results = [];
+  state.approvedCats = [];
+  state.pendingCats = [];
+  state.currentIndex = 0;
+  state.running = true;
+  state.paused = false;
+  state.interBatchDelay = 1500;
+
+  document.getElementById('resultsBody').innerHTML = '';
+  document.getElementById('newCatList').innerHTML = '';
+
+  switchTab('run');
+  setStatus('running', 'running');
+  runNextBatch();
+}
+
+async function runNextBatch() {
+  if (!state.running || state.paused) return;
+  if (state.currentIndex >= state.words.length) {
+    setStatus('done', 'complete');
+    document.getElementById('pauseBtn').textContent = 'Done';
+    return;
+  }
+
+  const batch = state.words.slice(state.currentIndex, state.currentIndex + state.batchSize);
+  const currentGrammar = buildCurrentGrammar();
+
+  const systemPrompt = `You are a lexical categoriser. You will be given a batch of words and must categorise each one.
+
+PROJECT CONTEXT:
+${state.context}
+
+CURRENT GRAMMAR (JSON):
+${JSON.stringify(currentGrammar, null, 2)}
+
+INSTRUCTIONS:
+1. For each word, first try to fit it into an EXISTING category.
+2. If it doesn't fit, consider whether it belongs to a NEW category — but only propose a new category if it applies to ${state.catThreshold} or more words in this batch.
+3. If neither works, mark the word as REJECTED.
+4. For words that fit existing categories: no reasoning needed.
+5. For words in a NEW category or REJECTED: provide a brief reason.
+
+RESPONSE FORMAT — respond with ONLY valid JSON, no markdown, no preamble:
+{
+  "results": [
+    {"word": "...", "type": "fit", "category": "CATEGORY_ID"},
+    {"word": "...", "type": "new-cat", "category": "NEW_CAT_ID", "categoryLabel": "Human Label", "categoryDescription": "...", "reason": "..."},
+    {"word": "...", "type": "rejected", "category": null, "reason": "..."}
+  ],
+  "newCategories": [
+    {"id": "NEW_CAT_ID", "label": "Human Label", "description": "...", "words": ["word1", "word2"]}
+  ]
+}`;
+
+  const userMsg = `Categorise these words:\n${JSON.stringify(batch)}`;
+
+  // interBatchDelay: persistent across batches, escalates on rate limits, recovers on success
+  // retryDelay: local, for within-batch network-error retries only
+  // interBatchDelay escalates ONCE per batch (not per retry attempt within a batch)
+  const maxRetries = 6;
+  let interBatchEscalated = false; // only escalate once per batch call
+
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      const response = await fetch('http://localhost:3131/v1/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: state.model,
+          max_tokens: 4000,
+          system: systemPrompt,
+          messages: [{ role: 'user', content: userMsg }]
+        })
+      });
+
+      // Handle 429 (rate limit) and 529 (API overloaded) — wait and retry
+      if (response.status === 429 || response.status === 529) {
+        const is529 = response.status === 529;
+        const reason = is529 ? 'API overloaded' : 'rate limited';
+
+        // Escalate inter-batch delay at most ONCE per batch, regardless of retry count
+        if (!interBatchEscalated) {
+          state.interBatchDelay = Math.min(state.interBatchDelay * 2, 30000);
+          interBatchEscalated = true;
+        }
+
+        // Within-batch retry wait: honour retry-after header, else use fixed backoff
+        const retryAfter = response.headers.get('retry-after');
+        const fixedWait = is529 ? 20000 : 10000; // 529=20s, 429=10s fixed
+        const waitMs = retryAfter ? parseInt(retryAfter) * 1000 : fixedWait;
+        const waitSec = Math.round(waitMs / 1000);
+
+        setStatus('paused', `${reason} — retrying in ${waitSec}s (attempt ${attempt + 1}/${maxRetries})`);
+        console.warn(`${response.status} ${reason}. Waiting ${waitSec}s. Inter-batch delay: ${state.interBatchDelay}ms.`);
+        await new Promise(r => setTimeout(r, waitMs));
+        setStatus('running', 'running');
+        continue;
+      }
+
+      // Guard: don't try to parse an error body for other non-OK statuses
+      if (!response.ok) {
+        const errText = await response.text().catch(() => '');
+        throw new Error(`HTTP ${response.status}: ${errText.slice(0, 200)}`);
+      }
+
+      const data = await response.json();
+      const text = data.content?.find(b => b.type === 'text')?.text || '';
+      let parsed;
+      try {
+        const clean = text.replace(/```json|```/g, '').trim();
+        parsed = JSON.parse(clean);
+      } catch(e) {
+        console.error('Parse error:', text);
+        state.currentIndex += batch.length;
+        setTimeout(runNextBatch, state.interBatchDelay);
+        return;
+      }
+
+      const batchResults = parsed.results || [];
+      batchResults.forEach(r => {
+        state.results.push(r);
+        appendResultRow(r);
+      });
+
+      const newCats = parsed.newCategories || [];
+      newCats.forEach(cat => {
+        if (!state.pendingCats.find(c => c.id === cat.id) && !state.approvedCats.find(c => c.id === cat.id)) {
+          cat.status = 'pending';
+          state.pendingCats.push(cat);
+          renderNewCatCard(cat);
+          updatePendingBadge();
+        }
+      });
+
+      state.currentIndex += batch.length;
+      updateProgress();
+
+      // Success: slowly recover inter-batch delay toward 1500ms floor (never below)
+      if (interBatchEscalated) {
+        // This batch had a rate limit — don't recover yet, keep the escalated delay
+      } else {
+        state.interBatchDelay = Math.max(1500, Math.round(state.interBatchDelay * 0.85));
+      }
+
+      if (state.currentIndex % state.reviewEvery < state.batchSize && state.currentIndex > 0 && state.pendingCats.some(c => c.status === 'pending')) {
+        pauseForReview();
+        return;
+      }
+
+      const delayLabel = state.interBatchDelay > 1600 ? ` · pacing: ${Math.round(state.interBatchDelay/1000)}s` : '';
+      setStatus('running', `running${delayLabel}`);
+      setTimeout(runNextBatch, state.interBatchDelay);
+      return;
+
+    } catch(err) {
+      if (attempt === maxRetries) {
+        console.error('Max retries exceeded:', err);
+        setStatus('paused', 'error — paused (check console)');
+        state.paused = true;
+        document.getElementById('pauseBtn').textContent = 'Resume';
+        return;
+      }
+      const fixedWait = 8000;
+      setStatus('paused', `network error — retrying in ${fixedWait/1000}s`);
+      await new Promise(r => setTimeout(r, fixedWait));
+      setStatus('running', 'running');
+    }
+  }
+}
+
+function buildCurrentGrammar() {
+  const base = JSON.parse(JSON.stringify(state.grammar));
+  state.approvedCats.forEach(cat => {
+    if (!base.categories.find(c => c.id === cat.id)) {
+      base.categories.push({ id: cat.id, label: cat.label, description: cat.description, examples: cat.words || [] });
+    }
+  });
+  return base;
+}
+
+// Max rows to keep in the live DOM (data is always in state.results)
+const MAX_DOM_ROWS = 300;
+let _scrollScheduled = false;
+
+function appendResultRow(r) {
+  const tbody = document.getElementById('resultsBody');
+  const tr = document.createElement('tr');
+  tr.className = 'running-row';
+  const typeClass = r.type || 'fit';
+  const typeLabel = typeClass === 'fit' ? '✓ ' + r.category : typeClass === 'new-cat' ? '✦ ' + (r.categoryLabel || r.category) : '✕ rejected';
+  tr.innerHTML = `
+    <td class="word-cell">${r.word}</td>
+    <td><span class="cat-badge ${typeClass}">${typeLabel}</span></td>
+    <td class="reason-cell">${r.reason || ''}</td>
+  `;
+  tbody.appendChild(tr);
+
+  // Prune oldest rows from DOM once we exceed the cap
+  while (tbody.rows.length > MAX_DOM_ROWS) {
+    tbody.deleteRow(0);
+  }
+
+  // Debounced scroll — schedule at most once per animation frame
+  if (!_scrollScheduled) {
+    _scrollScheduled = true;
+    requestAnimationFrame(() => {
+      _scrollScheduled = false;
+      const scroll = document.querySelector('.results-scroll');
+      if (scroll) scroll.scrollTop = scroll.scrollHeight;
+    });
+  }
+
+  const fits = state.results.filter(r => r.type === 'fit').length;
+  const news = state.results.filter(r => r.type === 'new-cat').length;
+  const rejs = state.results.filter(r => r.type === 'rejected').length;
+  document.getElementById('fitCount').textContent = fits;
+  document.getElementById('newCount').textContent = news;
+  document.getElementById('rejCount').textContent = rejs;
+}
+
+function updateProgress() {
+  const pct = Math.min(100, Math.round(state.currentIndex / state.words.length * 100));
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = `${state.currentIndex} / ${state.words.length}`;
+}
+
+function renderNewCatCard(cat) {
+  const list = document.getElementById('newCatList');
+  const empty = list.querySelector('.empty-sidebar');
+  if (empty) empty.remove();
+
+  const card = document.createElement('div');
+  card.className = 'cat-card pending';
+  card.id = 'cat-' + cat.id;
+  card.innerHTML = `
+    <div class="cat-card-name">
+      <input type="text" value="${cat.label}" onchange="renameCat('${cat.id}', this.value)" title="Click to rename">
+    </div>
+    <div class="cat-card-desc">${cat.description}</div>
+    <div class="cat-card-words">Words: ${(cat.words || []).join(', ')}</div>
+    <div class="cat-card-actions">
+      <button class="btn btn-approve btn-sm" onclick="approveCat('${cat.id}')">✓ Approve</button>
+      <button class="btn btn-reject-cat btn-sm" onclick="declineCat('${cat.id}')">✕ Decline</button>
+    </div>
+  `;
+  list.appendChild(card);
+  updatePendingBadge();
+}
+
+function updatePendingBadge() {
+  const count = state.pendingCats.filter(c => c.status === 'pending').length;
+  const badge = document.getElementById('pendingBadge');
+  const pendingCount = document.getElementById('pendingCount');
+  badge.textContent = count;
+  badge.style.display = count > 0 ? 'inline-flex' : 'none';
+  pendingCount.textContent = count + ' pending';
+}
+
+function approveCat(id) {
+  const cat = state.pendingCats.find(c => c.id === id);
+  if (!cat) return;
+  cat.status = 'approved';
+  state.approvedCats.push(cat);
+  const card = document.getElementById('cat-' + id);
+  if (card) {
+    card.className = 'cat-card approved';
+    card.querySelector('.cat-card-actions').innerHTML = `<div class="cat-card-status approved">✓ Approved — added to grammar</div>`;
+  }
+  updatePendingBadge();
+}
+
+function declineCat(id) {
+  const cat = state.pendingCats.find(c => c.id === id);
+  if (!cat) return;
+  cat.status = 'declined';
+  const card = document.getElementById('cat-' + id);
+  if (card) {
+    card.className = 'cat-card declined';
+    card.querySelector('.cat-card-actions').innerHTML = `<div class="cat-card-status declined">✕ Declined — re-queuing ${(cat.words||[]).length} words</div>`;
+  }
+  updatePendingBadge();
+
+  // Remove these words from results and re-categorise without new-category option
+  const wordsToRetry = cat.words || [];
+  if (wordsToRetry.length === 0) return;
+
+  // Remove their existing result entries
+  state.results = state.results.filter(r => !wordsToRetry.includes(r.word));
+  // Re-render results table
+  const tbody = document.getElementById('resultsBody');
+  tbody.innerHTML = '';
+  state.results.forEach(r => appendResultRow(r));
+
+  recategoriseWords(wordsToRetry);
+}
+
+async function recategoriseWords(words) {
+  const currentGrammar = buildCurrentGrammar();
+  const systemPrompt = `You are a lexical categoriser. These words had a proposed new category that was REJECTED by the user. Try harder to fit each into an EXISTING category. Do NOT propose new categories. If truly impossible, mark as REJECTED with a reason.
+
+PROJECT CONTEXT:
+${state.context}
+
+CURRENT GRAMMAR (JSON):
+${JSON.stringify(currentGrammar, null, 2)}
+
+RESPONSE FORMAT — ONLY valid JSON, no markdown:
+{
+  "results": [
+    {"word": "...", "type": "fit", "category": "CATEGORY_ID"},
+    {"word": "...", "type": "rejected", "category": null, "reason": "..."}
+  ]
+}`;
+
+  try {
+    setStatus('running', `re-categorising ${words.length} declined words...`);
+    const response = await fetch('http://localhost:3131/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: state.model,
+        max_tokens: 2000,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: `Re-categorise into existing categories only:\n${JSON.stringify(words)}` }]
+      })
+    });
+
+    if (response.status === 429 || response.status === 529) {
+      const retryAfter = response.headers.get('retry-after');
+      const waitMs = retryAfter ? parseInt(retryAfter) * 1000 : (response.status === 529 ? 20000 : 10000);
+      setStatus('paused', `re-cat ${response.status === 529 ? 'overloaded' : 'rate limited'} — retrying in ${Math.round(waitMs/1000)}s`);
+      await new Promise(r => setTimeout(r, waitMs));
+      return recategoriseWords(words);
+    }
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+    const data = await response.json();
+    const text = data.content?.find(b => b.type === 'text')?.text || '';
+    const clean = text.replace(/```json|```/g, '').trim();
+    const parsed = JSON.parse(clean);
+    (parsed.results || []).forEach(r => { state.results.push(r); appendResultRow(r); });
+    setStatus(state.paused ? 'paused' : 'running', state.paused ? 'paused' : 'running');
+  } catch(err) {
+    console.error('Re-categorisation error:', err);
+  }
+}
+
+function renameCat(id, newLabel) {
+  const cat = state.pendingCats.find(c => c.id === id);
+  if (cat) cat.label = newLabel;
+}
+
+function pauseForReview() {
+  state.paused = true;
+  setStatus('paused', 'paused for review');
+  document.getElementById('pauseBtn').textContent = 'Resume';
+}
+
+function togglePause() {
+  if (state.currentIndex >= state.words.length) return;
+  state.paused = !state.paused;
+  if (state.paused) {
+    setStatus('paused', 'paused');
+    document.getElementById('pauseBtn').textContent = 'Resume';
+  } else {
+    setStatus('running', 'running');
+    document.getElementById('pauseBtn').textContent = 'Pause';
+    runNextBatch();
+  }
+}
+
+function setStatus(cls, text) {
+  const dot = document.getElementById('statusDot');
+  dot.className = 'status-dot ' + cls;
+  document.getElementById('statusText').textContent = text;
+}
+
+let currentFilter = 'all';
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderReview();
+}
+
+function renderReview() {
+  const filtered = currentFilter === 'all' ? state.results : state.results.filter(r => r.type === currentFilter);
+  document.getElementById('reviewCountLabel').textContent = filtered.length + ' results';
+  const tbody = document.getElementById('reviewBody');
+  tbody.innerHTML = filtered.map(r => {
+    const typeLabel = r.type === 'fit' ? '✓ ' + r.category : r.type === 'new-cat' ? '✦ ' + (r.categoryLabel || r.category) : '✕ rejected';
+    return `<tr>
+      <td class="word-cell">${r.word}</td>
+      <td><span class="cat-badge ${r.type}">${typeLabel}</span></td>
+      <td class="reason-cell">${r.reason || ''}</td>
+    </tr>`;
+  }).join('');
+}
+
+function renderExport() {
+  const fits = state.results.filter(r => r.type === 'fit').length;
+  const news = state.results.filter(r => r.type === 'new-cat').length;
+  const rejs = state.results.filter(r => r.type === 'rejected').length;
+  document.getElementById('ex-fit').textContent = fits;
+  document.getElementById('ex-new').textContent = news;
+  document.getElementById('ex-rej').textContent = rejs;
+  document.getElementById('ex-total').textContent = state.results.length;
+
+  const preview = {
+    categorised: state.results.filter(r => r.type !== 'rejected').slice(0, 5),
+    rejected: state.results.filter(r => r.type === 'rejected').slice(0, 3),
+    newCategories: state.approvedCats
+  };
+  document.getElementById('exportPreview').textContent = JSON.stringify(preview, null, 2) + '\n...(preview)';
+}
+
+function downloadResults() {
+  const data = {
+    metadata: {
+      totalProcessed: state.results.length,
+      categorised: state.results.filter(r => r.type !== 'rejected').length,
+      rejected: state.results.filter(r => r.type === 'rejected').length,
+      newCategoriesApproved: state.approvedCats.length
+    },
+    results: state.results,
+    newCategories: state.approvedCats
+  };
+  download('categorised.json', JSON.stringify(data, null, 2));
+}
+
+function downloadGrammar() {
+  const grammar = buildCurrentGrammar();
+  download('updated_grammar.json', JSON.stringify(grammar, null, 2));
+}
+
+function download(filename, content) {
+  const a = document.createElement('a');
+  a.href = 'data:application/json;charset=utf-8,' + encodeURIComponent(content);
+  a.download = filename;
+  a.click();
+}
+</script>
+</body>
+</html>

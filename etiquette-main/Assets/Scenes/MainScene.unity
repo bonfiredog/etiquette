@@ -1213,7 +1213,6 @@ GameObject:
   m_Component:
   - component: {fileID: 68817735}
   - component: {fileID: 68817734}
-  - component: {fileID: 68817736}
   m_Layer: 0
   m_Name: trainController
   m_TagString: Untagged
@@ -1249,7 +1248,7 @@ MonoBehaviour:
   braking: 0
   delaying: 0
   secondsToSlowGentle: 300
-  secondsToSlowHard: 3
+  secondsToSlowHard: 5
   scheduler: {fileID: 861740471}
   currentMiles: 0
   delaytype: 
@@ -1272,26 +1271,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1677876990}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &68817736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68817733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 450065921433e0a489bdaaeb1d04afe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monitoredTags:
-  - frontgen
-  - sidegen
-  - middlegen
-  - backgen
-  stationTag: fade
-  updateInterval: 0.5
-  fadeDurationMs: 200
 --- !u!1 &75779317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,7 +1484,7 @@ MonoBehaviour:
   yPosUpperBound: 1624
   fc: {fileID: 2083337607}
   timer: 0
-  timerMulti: 6
+  timerMulti: 3
   showGrammar: 0
   generateAtStart: 0
   numbertoGenerate: 0
@@ -2599,7 +2578,7 @@ MonoBehaviour:
   timerMax: 120
   myTag: backgen
   textgen: {fileID: 2056372327}
-  assignedSpeed: 240
+  assignedSpeed: 210
   assignedSize: 20
   text: {fileID: 6399391411232519584, guid: 88bfd17626aa60e4db8658263f06a3fe, type: 3}
   grammarNameFront: backgrammar
@@ -2611,7 +2590,7 @@ MonoBehaviour:
   yPosUpperBound: 2733
   fc: {fileID: 2083337607}
   timer: 0
-  timerMulti: 12
+  timerMulti: 3
   showGrammar: 0
   generateAtStart: 1
   numbertoGenerate: 2
@@ -5208,7 +5187,7 @@ MonoBehaviour:
   - sidetext
   stationTag: station
   updateInterval: 1
-  fadeDurationMs: 30
+  fadeDuration: 0.2
 --- !u!1 &484068523
 GameObject:
   m_ObjectHideFlags: 0
@@ -8859,7 +8838,7 @@ MonoBehaviour:
   timerMax: 30
   myTag: frontgen
   textgen: {fileID: 2056372327}
-  assignedSpeed: 1000
+  assignedSpeed: 800
   assignedSize: 150
   text: {fileID: 6399391411232519584, guid: 135ba884840cbd048a0048fd7604011b, type: 3}
   grammarNameFront: closegrammar
@@ -8871,7 +8850,7 @@ MonoBehaviour:
   yPosUpperBound: -80
   fc: {fileID: 2083337607}
   timer: 5
-  timerMulti: 30
+  timerMulti: 3
   showGrammar: 0
   generateAtStart: 1
   numbertoGenerate: 3
@@ -11664,8 +11643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19598afccd82c68418bbf7d4d4dc67a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerMin: 240
-  timerMax: 600
+  timerMin: 60
+  timerMax: 300
   textgen: {fileID: 2056372327}
   assignedSpeed: 2500
   assignedSize: 0
@@ -11676,7 +11655,7 @@ MonoBehaviour:
   fontSizeLowerBound: 800
   fontSizeUpperBound: 800
   timer: 0
-  timerMulti: 20
+  timerMulti: 1
   overallChance: 100
   genscript: {fileID: 0}
 --- !u!224 &949585504 stripped
@@ -12525,7 +12504,7 @@ MonoBehaviour:
   timerMax: 45
   myTag: middlegen
   textgen: {fileID: 2056372327}
-  assignedSpeed: 450
+  assignedSpeed: 360
   assignedSize: 60
   text: {fileID: 6399391411232519584, guid: 38790fbb5cfc42243937e17ab09e127c, type: 3}
   grammarNameFront: middlegrammar
@@ -12537,7 +12516,7 @@ MonoBehaviour:
   yPosUpperBound: 800
   fc: {fileID: 2083337607}
   timer: 0
-  timerMulti: 22
+  timerMulti: 3
   showGrammar: 0
   generateAtStart: 1
   numbertoGenerate: 2
@@ -19269,7 +19248,7 @@ MonoBehaviour:
   timerMax: 30
   myTag: frontgen
   textgen: {fileID: 2056372327}
-  assignedSpeed: 1000
+  assignedSpeed: 800
   assignedSize: 150
   text: {fileID: 6399391411232519584, guid: 80b61acb2d2f785469f61c846ac4acf3, type: 3}
   grammarNameFront: closegrammar
@@ -19281,7 +19260,7 @@ MonoBehaviour:
   yPosUpperBound: -468
   fc: {fileID: 2083337607}
   timer: 5
-  timerMulti: 35
+  timerMulti: 3
   showGrammar: 0
   generateAtStart: 1
   numbertoGenerate: 3
@@ -21527,7 +21506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1720443599
 RectTransform:
   m_ObjectHideFlags: 0
