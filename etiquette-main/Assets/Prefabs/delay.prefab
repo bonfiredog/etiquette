@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 8115878934538920824}
   - component: {fileID: 4188674804316158469}
   - component: {fileID: 5730156631100220624}
-  - component: {fileID: 7235064575658383724}
+  - component: {fileID: 4811608992267425772}
+  - component: {fileID: 3016023502134814768}
   m_Layer: 0
   m_Name: delay
-  m_TagString: station
+  m_TagString: fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::textController
   speed: 0
   topspeed: 2300
---- !u!114 &7235064575658383724
+--- !u!114 &4811608992267425772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,17 +206,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 5377013708411105777}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ae173171a5ba74793ea7d15809b561, type: 3}
+  m_Script: {fileID: 11500000, guid: ed0fb69d71a16e57490ab38405ca9288, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::textGenerationControl
+  m_EditorClassIdentifier: Assembly-CSharp::textGenOneShot
   startingGrammarName: delaygrammar
-  IsTimedText: 0
-  timedTextTimerTotal: 0
-  timedTextGrammars: []
   generated: 0
-  oneShotText: 1
   gc: {fileID: 0}
   gcScript: {fileID: 0}
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
   grammarParse: 
+  ss: {fileID: 0}
+  length: 0
+--- !u!114 &3016023502134814768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5377013708411105777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f365c83b1c83e4dea81218b584a3242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'

@@ -32,11 +32,17 @@ public class CombineChildMeshes : MonoBehaviour
             mf.gameObject.SetActive(false);
         }
 
-        Mesh combinedMesh = new Mesh();
-        combinedMesh.name = "Backdrops_Combined";
-        combinedMesh.CombineMeshes(combineList.ToArray(), true, true);
+    Mesh combinedMesh = new Mesh();
+combinedMesh.name = "Backdrops_Combined";
+combinedMesh.CombineMeshes(combineList.ToArray(), true, true);
 
-        GetComponent<MeshFilter>().sharedMesh = combinedMesh;
-        GetComponent<MeshRenderer>().sharedMaterial = sharedMat;
+// Force white vertex colours — some platforms default to black if absent
+Color[] colors = new Color[combinedMesh.vertexCount];
+for (int i = 0; i < colors.Length; i++)
+    colors[i] = Color.white;
+combinedMesh.colors = colors;
+
+GetComponent<MeshFilter>().sharedMesh = combinedMesh;
+GetComponent<MeshRenderer>().sharedMaterial = sharedMat;
     }
 }

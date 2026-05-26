@@ -73,7 +73,7 @@ public class ArchGenerator : MonoBehaviour
         {
 
             spawnedObject.transform.localScale = new Vector3(0.6f,0.6f,0.6f);
-            spawnedObject.transform.localPosition = new Vector3(myx, -0.209f, 0);
+            spawnedObject.transform.localPosition = new Vector3(myx, -0.0489f, 0);
 
         }
 

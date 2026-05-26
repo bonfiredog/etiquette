@@ -29,7 +29,7 @@ public class textGenOneShot : MonoBehaviour
     private static Dictionary<string, TraceryGrammar> grammarCache = new Dictionary<string, TraceryGrammar>();
 
 void Awake() {
-     grammarCache.Clear();
+ //    grammarCache.Clear();
 }
     void Start()
     {

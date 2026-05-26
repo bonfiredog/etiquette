@@ -5,12 +5,12 @@ using UnityEngine;
 public class stationArchGenerate : MonoBehaviour
 {
 
-    private textGenerationControl myTGC;
+    private textGenOneShot myTGC;
     private bool hasSet = false;
     // Start is called before the first frame update
     void Start()
     {
-        myTGC = gameObject.GetComponent<textGenerationControl>();
+        myTGC = gameObject.GetComponent<textGenOneShot>();
 
     }
 
@@ -23,7 +23,7 @@ public class stationArchGenerate : MonoBehaviour
 
             if (chanceToGenerate <= 40 && gameObject.tag != "centralarch")
             {
-                myTGC.generateTextFromGrammar(myTGC.myText);
+                myTGC.GenerateTextFromGrammar(myTGC.myText);
             }
             hasSet = true;
         }

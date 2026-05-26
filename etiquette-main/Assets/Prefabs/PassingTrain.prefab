@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 7976574339026214102}
   m_Layer: 0
   m_Name: trainmass
-  m_TagString: Untagged
+  m_TagString: fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1019, y: 1247.97, z: 1922.8301}
+  m_LocalScale: {x: -1019, y: 1915.6339, z: 1922.8301}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6513994094311325042}
@@ -116,7 +116,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 90a578f2fa68c82b78c043e118896735, type: 2}
+  - {fileID: 2100000, guid: 760651885a1e8de40ba1a1e3f6cb7236, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -171,10 +171,10 @@ GameObject:
   - component: {fileID: 6208887447502269022}
   - component: {fileID: 202083434960128107}
   - component: {fileID: 4491375980543790310}
-  - component: {fileID: 1870529139334495179}
+  - component: {fileID: 8564447750692617367}
   m_Layer: 0
   m_Name: text
-  m_TagString: Untagged
+  m_TagString: fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +195,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 513.4, y: 31.7}
+  m_AnchoredPosition: {x: 523, y: 31.7}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &202083434960128107
@@ -276,8 +276,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288427776
-  m_fontColor: {r: 0, g: 0.21580331, b: 0.6132076, a: 1}
+    rgba: 4289456123
+  m_fontColor: {r: 0.9843137, g: 0.90588236, b: 0.67058825, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 202083434960128107}
   m_maskType: 0
---- !u!114 &1870529139334495179
+--- !u!114 &8564447750692617367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -350,17 +350,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8599170342138937269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ae173171a5ba74793ea7d15809b561, type: 3}
+  m_Script: {fileID: 11500000, guid: ed0fb69d71a16e57490ab38405ca9288, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  startingGrammarName: 
-  IsTimedText: 0
-  timedTextTimerTotal: 0
-  timedTextGrammars: []
+  m_EditorClassIdentifier: Assembly-CSharp::textGenOneShot
+  startingGrammarName: traingrammar
   generated: 0
-  oneShotText: 0
   gc: {fileID: 0}
   gcScript: {fileID: 0}
   myText: {fileID: 0}
   currentGrammarJSON: {fileID: 0}
   grammarParse: 
+  ss: {fileID: 0}
+  length: 0

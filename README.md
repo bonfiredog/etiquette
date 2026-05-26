@@ -1,6 +1,4 @@
-<img src="https://robsherman.co.uk/thegoodlymist/assets/imgs/tur_station.jpg" />
-
-# Bradshaw's Etiquette For Minor Time Travel
+<img src="http://bonfiredog.co.uk/resources/etiquette/ss/legend_itch.png" />
 
 ### Kinetic, Concrete Almost-Narrative Digital Poetry On Broad-Gauge Rails
 
@@ -45,6 +43,16 @@ Inspired by, informed by and in conversation with an interdisciplinary mix of wo
 ---
 
 ### Screenshots
+
+|                                                                                                                                                     |                                                                                                                                                       |
+|:---------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------:|
+| <a href="http://bonfiredog.co.uk/resources/etiquette/ss/poem.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/poem.png" /></a>         | <a href="http://bonfiredog.co.uk/resources/etiquette/ss/fog.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/fog.png" /></a>             |
+| :---------------------------------------------------------------------------------------------------------------------------------------------:     | :-----------------------------------------------------------------------------------------------------------------------------------------:           |
+| <a href="http://bonfiredog.co.uk/resources/etiquette/ss/speech.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/speech.png" /></a>     | <a href="http://bonfiredog.co.uk/resources/etiquette/ss/station1.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/station1.png" /></a>   |
+| :---------------------------------------------------------------------------------------------------------------------------------------------:     | :-----------------------------------------------------------------------------------------------------------------------------------------:           |
+| <a href="http://bonfiredog.co.uk/resources/etiquette/ss/station2.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/station2.png" /></a> | <a href="http://bonfiredog.co.uk/resources/etiquette/ss/timetable.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/timetable.png" /></a> |
+| :---------------------------------------------------------------------------------------------------------------------------------------------:     | :-----------------------------------------------------------------------------------------------------------------------------------------:           |
+| <a href="http://bonfiredog.co.uk/resources/etiquette/ss/title.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/title.png" /></a>       | <a href="http://bonfiredog.co.uk/resources/etiquette/ss/tracks.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/tracks.png" /></a>       |
 
 ---
 

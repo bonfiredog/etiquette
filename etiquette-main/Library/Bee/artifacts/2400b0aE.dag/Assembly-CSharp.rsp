@@ -479,6 +479,7 @@
 "Assets/Scripts & Behaviours/commandConsole.cs"
 "Assets/Scripts & Behaviours/createText.cs"
 "Assets/Scripts & Behaviours/dataTest.cs"
+"Assets/Scripts & Behaviours/delayregister.cs"
 "Assets/Scripts & Behaviours/fixedGenerator.cs"
 "Assets/Scripts & Behaviours/generateStation.cs"
 "Assets/Scripts & Behaviours/generateTrainTunnel.cs"

@@ -1254,7 +1254,7 @@ MonoBehaviour:
   currentMiles: 0
   delaytype: 
   delaytext: {fileID: 0}
-  delayobj: {fileID: 1741245197932575073, guid: 73dd3a9ab7a79834fb58537a4b285813,
+  delayobj: {fileID: 5377013708411105777, guid: 73dd3a9ab7a79834fb58537a4b285813,
     type: 3}
   generatedtrain: 0
 --- !u!4 &68817735
@@ -1289,10 +1289,9 @@ MonoBehaviour:
   - sidegen
   - middlegen
   - backgen
-  - belowgen
-  stationTag: station
-  updateInterval: 1
-  fadeDurationMs: 250
+  stationTag: fade
+  updateInterval: 0.5
+  fadeDurationMs: 200
 --- !u!1 &75779317
 GameObject:
   m_ObjectHideFlags: 0
@@ -16208,7 +16207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1343064637
 Transform:
   m_ObjectHideFlags: 0
@@ -25009,7 +25008,6 @@ GameObject:
   - component: {fileID: 1926281482}
   - component: {fileID: 1926281485}
   - component: {fileID: 1926281484}
-  - component: {fileID: 1926281483}
   m_Layer: 0
   m_Name: === Backdrops ===
   m_TagString: Untagged
@@ -25038,18 +25036,6 @@ Transform:
   - {fileID: 764678882}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1926281483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926281481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ffeb3bd602ac45daa20ccc1b91342a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CombineChildMeshes
 --- !u!33 &1926281484
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -364,7 +364,7 @@ MonoBehaviour:
   initialText: 
   fontAsset: {fileID: 11400000, guid: bc737ba9377135845a9f1b19b5c3478f, type: 2}
   maxFontSize: 2
-  minFontSize: 0.4
+  minFontSize: 0.9
   fitIterations: 12
 --- !u!114 &8265321374226661719
 MonoBehaviour:

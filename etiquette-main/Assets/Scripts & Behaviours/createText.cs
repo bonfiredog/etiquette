@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Pool;
 
 public class createText : MonoBehaviour
 { 
@@ -27,7 +28,9 @@ public class createText : MonoBehaviour
     public int numbertoGenerate;
     public float generateGap;
     private float generateBound;
-
+    
+    
+private ObjectPool<GameObject> _pool;
 
     public Vector3 mypos;
     private TrainControl tc;
@@ -38,6 +41,8 @@ public class createText : MonoBehaviour
     private StationScheduler ss;
     public float xBuffer = 50f;
     public string textType;
+   public static GameObject delayGen;
+   private float lastUrbanDensity = -1f;
 
     private float modifier = 250;
     
@@ -53,6 +58,16 @@ public class createText : MonoBehaviour
         shouldgenerate = true;
         assignedSpeed = (assignedSpeed / 100) * modifier;
         generateBound = (generateGap / 10);
+
+
+          _pool = new ObjectPool<GameObject>(
+        createFunc: () => Instantiate(text),
+        actionOnGet: obj => obj.SetActive(true),
+        actionOnRelease: obj => obj.SetActive(false),
+        actionOnDestroy: obj => Destroy(obj),
+        defaultCapacity: 10,
+        maxSize: 50
+    );
         
 
         timerMaxOriginal = timerMax;
@@ -69,7 +84,7 @@ public class createText : MonoBehaviour
 
 
         //At the start...
-        if (generateAtStart) {
+       if (generateAtStart) {
             for (int i = 0; i < numbertoGenerate; i++) {
                 float NZ = 0;
                 if (myTag != "trackgen") {
@@ -87,7 +102,7 @@ public class createText : MonoBehaviour
                     //Vector2 currentSize = thistextrect.sizeDelta;
                     //thistextrect.sizeDelta = new Vector2(20000f, currentSize.y);
                 } else {
-                    var thistrack = generateMyText(NZ, "loadup");
+                    //var thistrack = generateMyText(NZ, "loadup");
                 }
             }
         }
@@ -105,15 +120,24 @@ public class createText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+     
+
         //Update timer max if necessary.
         if (myTag == "frontgen" || myTag == "middlegen" || myTag == "sidegen")
         {
-            timerMin = timerMinOriginal + (timerMinOriginal / 100) * (100 - ss.currentUrbanDensity);
-            timerMax = timerMaxOriginal + (timerMaxOriginal / 100) * (100 - ss.currentUrbanDensity);
+           if (ss.currentUrbanDensity != lastUrbanDensity) {
+        lastUrbanDensity = ss.currentUrbanDensity;
+        timerMin = timerMinOriginal + (timerMinOriginal / 100) * (100 - ss.currentUrbanDensity);
+        timerMax = timerMaxOriginal + (timerMaxOriginal / 100) * (100 - ss.currentUrbanDensity);
+    }
         }
 
         //Count down this generator's timer, based on the train's current speed. So if the train's speed is 0, the timer won't go down.
-        if (tc.delaying == false) {
+        
+      
+
+        
         if (timer > 0)
         {
             timer -= ((1 / tc.trainTopSpeed) * tc.trainCurrentSpeed) * timerMulti * Time.deltaTime;
@@ -124,13 +148,19 @@ public class createText : MonoBehaviour
             
             //First of all, check whether you should generate a text:
             //- Are we currently docked?
-
-            if (tc.docked == false) {
+              //Also only generate if the delay is either non-existent, or it has passed a certain z value. Also not while delaying.
+            if (myTag != "trackgen") {
+            if (tc.docked == false && tc.trainCurrentSpeed > 0 && (delayGen == null || (delayGen != null && delayGen.transform.position.z > -3000)) && tc.delaying == false) {
                     generateMyText(mypos.z, myTag);
             }
 
          //Finally, reset the timer to a random total.
           timer = Random.Range(timerMin, timerMax);
+        } else {
+            if (tc.docked == false && tc.trainCurrentSpeed > 0) {
+                     generateMyText(mypos.z, myTag);
+            }
+            timer = Random.Range(timerMin, timerMax);
         }
         }
         }
@@ -143,7 +173,10 @@ public class createText : MonoBehaviour
                 mypos = transform.position;
            
                 //Create a new text object, and give it a tag so we know which generator it came from.
-                var thistext = Instantiate(text);
+                //var thistext = Instantiate(text);
+                var thistext = _pool.Get();
+
+
                 thistext.tag = myTag;
 
                 if (myTag == "sidegen")
@@ -165,6 +198,7 @@ thisTextGenerator2.generateTextFromGrammar(thistextmesh2, ss);
                     var thistextscript = thistext.gameObject.GetComponent<textControllerSide>();
                     thistextscript.speed = assignedSpeed;
                     thistextscript.topspeed = assignedSpeed;
+                    thistextscript.onRelease = () => _pool.Release(thistext); 
 
                     thistextmesh1.fontSize = Random.Range(fontSizeLowerBound,fontSizeUpperBound);
                     thistextmesh2.fontSize = Random.Range(fontSizeLowerBound, fontSizeUpperBound);
@@ -180,6 +214,7 @@ thisTextGenerator2.generateTextFromGrammar(thistextmesh2, ss);
                     var thistextscript = thistext.gameObject.GetComponent<textController>();
                     thistextscript.speed = assignedSpeed;
                     thistextscript.topspeed = assignedSpeed;
+                    thistextscript.onRelease = () => _pool.Release(thistext); // add this line
                    
                     //Set its position to the generator.
                     var thistextrect = thistext.GetComponent<RectTransform>();

@@ -6,7 +6,6 @@
 		<type fullname="border" preserve="nothing"/>
 		<type fullname="buttonFunctions" preserve="nothing"/>
 		<type fullname="cameraControl" preserve="nothing"/>
-		<type fullname="CombineChildMeshes" preserve="nothing"/>
 		<type fullname="commandConsole" preserve="nothing"/>
 		<type fullname="createText" preserve="nothing"/>
 		<type fullname="CursorManager" preserve="nothing"/>

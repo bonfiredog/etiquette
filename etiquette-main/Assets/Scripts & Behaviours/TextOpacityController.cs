@@ -12,10 +12,10 @@ public class TextOpacityController : MonoBehaviour
     public string stationTag = "fade";
 
     [Header("Update Interval (Seconds)")]
-    public float updateInterval = 1f;
+    public float updateInterval = 0.5f;
 
     [Header("Fade Duration (Milliseconds)")]
-    public float fadeDurationMs = 250f;
+    public float fadeDurationMs = 200f;
 
     private class TextData
     {

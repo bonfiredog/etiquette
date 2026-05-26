@@ -136,9 +136,10 @@ public class TrainControl : MonoBehaviour
                             if (ss.delayTimer > 0) {
                                 ss.delayTimer -= 1 * Time.deltaTime;
 
-                                if (ss.delayTimer == 20 && generatedtrain == false && ss.delay == "train") {
+                                if (ss.delayTimer <= 20 && generatedtrain == false && ss.delay == "train") {
                                     gtt.generateTT("train");
                                     generatedtrain = true;
+                                    ss.delay = "";
                                 }
 
 
@@ -151,7 +152,8 @@ public class TrainControl : MonoBehaviour
                                 ss.deleteTexts();
                                 generatedtrain = false;
                                 if (ss.delay == "accident") {
-                                GameObject delayobject = Instantiate(delayobj, new Vector3(1156,-387,-7000), Quaternion.identity);
+                                GameObject delayobject = Instantiate(delayobj, new Vector3(1156, -387, -7000), Quaternion.Euler(0, 90, 0));
+delayobject.transform.localScale = new Vector3(15, 15, 15);
                                 }
 
 

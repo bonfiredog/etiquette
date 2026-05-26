@@ -516,7 +516,7 @@ public float timediff;
         timediscrepMod = ((System.Math.Abs(tc.currentLong * 4)) / 25) * 100;
 
         //We can only TRY to delay the train if it is between stations (with a good buffer), and it is not already delaying.
-         if (milesToNextStation > (nextStationMilesTotal * 0.1f) && tc.docked == false && tc.docking == false && tc.delaying == false && checkingdelay == false && delayTestToggle == false)
+         if (milesToNextStation > (nextStationMilesTotal * 0.3f) && milesToNextStation > 500 && tc.docked == false && tc.docking == false && tc.delaying == false && checkingdelay == false && delayTestToggle == false)
         {
         //Reduce the timer.
             if (nextStationDelayTimer > 0) {
@@ -801,6 +801,10 @@ public void delayDecide(bool autoDelay) {
     
  Debug.Log("1 Delaying attempt...");
 
+
+if (createText.delayGen == null) {
+
+
 if (autoDelay == false) {
 
  // We first of all determine if there is a chance of a train...
@@ -922,6 +926,10 @@ if (autoDelay == false) {
                         delay = "accident";
                        checkingdelay = false;
                        delayTimer = UnityEngine.Random.Range(25, 200);
+}
+} else {
+    //Don't delay if another delaygen exists
+    Debug.Log("Delay attempt cancelled, as delaygen exists.");
 }
 
             }

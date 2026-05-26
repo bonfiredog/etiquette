@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2554623094971831845}
   m_Layer: 0
   m_Name: Quad
-  m_TagString: station
+  m_TagString: fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 6378119869124297262}
   m_Layer: 0
   m_Name: station_name_text
-  m_TagString: Untagged
+  m_TagString: fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 5475297661016397178}
   m_Layer: 0
   m_Name: stationflagging
-  m_TagString: station
+  m_TagString: fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 201756384718610289}
   m_Layer: 0
   m_Name: Quad (1)
-  m_TagString: Untagged
+  m_TagString: fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 880225263836913121}
   m_Layer: 0
   m_Name: stationawning
-  m_TagString: station
+  m_TagString: fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -844,7 +844,7 @@ GameObject:
   - component: {fileID: 5085912560428348164}
   m_Layer: 0
   m_Name: AWN
-  m_TagString: station
+  m_TagString: fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1021,6 +1021,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: clockface
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156352544261783525, guid: cd04df4127387da4f8dd19fa3f384c09,
+        type: 3}
+      propertyPath: m_TagString
+      value: fade
       objectReference: {fileID: 0}
     - target: {fileID: 3156352544261783529, guid: cd04df4127387da4f8dd19fa3f384c09,
         type: 3}

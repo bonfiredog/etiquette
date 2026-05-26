@@ -38,6 +38,8 @@ namespace UnityTracery {
             { "louse",      "lice"       },
             { "man",        "men"        },
             { "woman",      "women"      },
+             { "old man",        "old men"        },
+            { "old woman",      "old women"      },
             { "child",      "children"   },
             { "foot",       "feet"       },
             { "tooth",      "teeth"      },

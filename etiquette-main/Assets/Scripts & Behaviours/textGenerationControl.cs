@@ -35,7 +35,7 @@ public class textGenerationControl : MonoBehaviour
 
 
 void Awake() {
-     grammarCache.Clear();
+     //grammarCache.Clear();
 }
 
     void Start()

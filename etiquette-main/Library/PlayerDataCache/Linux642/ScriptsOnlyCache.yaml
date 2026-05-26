@@ -4,7 +4,6 @@ ScriptsOnlyBuild:
     - ArchGenerator
     - BendyTextAnimator
     - BendyTextPath
-    - CombineChildMeshes
     - CursorManager
     - DisableCulling
     - DynamicCursor
@@ -145,97 +144,95 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 18448}
+    - Class: 114
       Script: {instanceID: 18450}
     - Class: 114
       Script: {instanceID: 18452}
     - Class: 114
-      Script: {instanceID: 18454}
+      Script: {instanceID: 25426}
     - Class: 114
-      Script: {instanceID: 25428}
+      Script: {instanceID: 25458}
     - Class: 114
-      Script: {instanceID: 25460}
+      Script: {instanceID: 25508}
     - Class: 114
-      Script: {instanceID: 25510}
+      Script: {instanceID: 25664}
     - Class: 114
-      Script: {instanceID: 25666}
+      Script: {instanceID: 25674}
     - Class: 114
-      Script: {instanceID: 25676}
+      Script: {instanceID: 25748}
     - Class: 114
-      Script: {instanceID: 25750}
+      Script: {instanceID: 25826}
     - Class: 114
-      Script: {instanceID: 25828}
+      Script: {instanceID: 25838}
     - Class: 114
-      Script: {instanceID: 25840}
+      Script: {instanceID: 25934}
     - Class: 114
-      Script: {instanceID: 25936}
+      Script: {instanceID: 26050}
     - Class: 114
-      Script: {instanceID: 26052}
+      Script: {instanceID: 26420}
     - Class: 114
-      Script: {instanceID: 26422}
+      Script: {instanceID: 26636}
     - Class: 114
-      Script: {instanceID: 26638}
+      Script: {instanceID: 26788}
     - Class: 114
-      Script: {instanceID: 26790}
+      Script: {instanceID: 27074}
     - Class: 114
-      Script: {instanceID: 27076}
+      Script: {instanceID: 27350}
     - Class: 114
-      Script: {instanceID: 27352}
+      Script: {instanceID: 27472}
     - Class: 114
-      Script: {instanceID: 27474}
+      Script: {instanceID: 27540}
     - Class: 114
-      Script: {instanceID: 27542}
+      Script: {instanceID: 27594}
     - Class: 114
-      Script: {instanceID: 27596}
+      Script: {instanceID: 27644}
     - Class: 114
-      Script: {instanceID: 27646}
+      Script: {instanceID: 27712}
     - Class: 114
-      Script: {instanceID: 27714}
+      Script: {instanceID: 27756}
     - Class: 114
-      Script: {instanceID: 27758}
+      Script: {instanceID: 27982}
     - Class: 114
-      Script: {instanceID: 27984}
+      Script: {instanceID: 28012}
     - Class: 114
-      Script: {instanceID: 28014}
+      Script: {instanceID: 28448}
     - Class: 114
-      Script: {instanceID: 28218}
+      Script: {instanceID: 28478}
     - Class: 114
-      Script: {instanceID: 28450}
+      Script: {instanceID: 28482}
     - Class: 114
-      Script: {instanceID: 28480}
+      Script: {instanceID: 28710}
     - Class: 114
-      Script: {instanceID: 28484}
+      Script: {instanceID: 28758}
     - Class: 114
-      Script: {instanceID: 28712}
+      Script: {instanceID: 29060}
     - Class: 114
-      Script: {instanceID: 28760}
+      Script: {instanceID: 29192}
     - Class: 114
-      Script: {instanceID: 29062}
+      Script: {instanceID: 29232}
     - Class: 114
-      Script: {instanceID: 29194}
+      Script: {instanceID: 29270}
     - Class: 114
-      Script: {instanceID: 29234}
+      Script: {instanceID: 29332}
     - Class: 114
-      Script: {instanceID: 29272}
+      Script: {instanceID: 29446}
     - Class: 114
-      Script: {instanceID: 29334}
+      Script: {instanceID: 29458}
     - Class: 114
-      Script: {instanceID: 29448}
+      Script: {instanceID: 29512}
     - Class: 114
-      Script: {instanceID: 29460}
+      Script: {instanceID: 29636}
     - Class: 114
-      Script: {instanceID: 29514}
+      Script: {instanceID: 29934}
     - Class: 114
-      Script: {instanceID: 29638}
+      Script: {instanceID: 29978}
     - Class: 114
-      Script: {instanceID: 29936}
+      Script: {instanceID: 29996}
     - Class: 114
-      Script: {instanceID: 29980}
+      Script: {instanceID: 30082}
     - Class: 114
-      Script: {instanceID: 29998}
-    - Class: 114
-      Script: {instanceID: 30084}
-    - Class: 114
-      Script: {instanceID: 30314}
+      Script: {instanceID: 30312}
     - Class: 114
       Script: {instanceID: 30662}
     - Class: 114
@@ -263,11 +260,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 32262}
     - Class: 114
-      Script: {instanceID: 32350}
+      Script: {instanceID: 32336}
     - Class: 114
-      Script: {instanceID: 32868}
+      Script: {instanceID: 32338}
     - Class: 114
-      Script: {instanceID: 32872}
+      Script: {instanceID: 32342}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -295,7 +292,7 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 0cc496153888607f8d4b484d413e09ce
+      Hash: d53b2dd95e15e582dd171e4a26d62d1c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: StationScheduler
@@ -1105,7 +1102,7 @@ ScriptsOnlyBuild:
     className: AnimatorMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 13a2db8ea907648e7cbdffe828dc8ddf
+      Hash: 98cceda03ec7aa5648dde3a787a7cf73
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: buttonFunctions
@@ -1484,4 +1481,4 @@ ScriptsOnlyBuild:
   platform: 24
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: /home/rob/pith/current-projects/Etiquette/Project Builds/devbuild2.x86_64
+  playerPath: /home/rob/pith/current-projects/Etiquette/Project Builds/devbuild6.x86_64

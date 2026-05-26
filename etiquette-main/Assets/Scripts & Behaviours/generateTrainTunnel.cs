@@ -54,7 +54,7 @@ void Update()
 
         timer -= speedRatio * timerMulti * Time.deltaTime;
         return;
-    }
+    } else {
 
     // timer expired — fire ONCE
     var chance = Random.Range(0, 100);
@@ -69,21 +69,22 @@ void Update()
             generateTT("tunnel");
         }
         
-    } else {
-generateTT("tunnel");
+    } 
+
     }
+     timer = Random.Range(timerMin, timerMax);
+}
     // reset and EXIT
-    timer = Random.Range(timerMin, timerMax);
- 
+   
 }
-}
+
 
 
     public void generateTT(string type)
     {
         TextMeshPro thistextmesh = null; 
-        textGenerationControl thisTextGenerator = null; 
-        textGenerationControl thisTextGeneratorName = null;
+        textGenOneShot thisTextGenerator = null; 
+        textGenOneShot thisTextGeneratorName = null;
 
         Debug.Log("Generating a " + type + "! ================================|");
         if (type == "train") {
@@ -91,10 +92,10 @@ generateTT("tunnel");
         var correctGrammar = type + "grammar";
         //Generate the text randomly based on a Tracery grammar.
         thistextmesh = thisTT.transform.Find("text").GetComponent<TextMeshPro>();
-        thisTextGenerator = thisTT.transform.Find("text").GetComponent<textGenerationControl>();
+        thisTextGenerator = thisTT.transform.Find("text").GetComponent<textGenOneShot>();
         //Make sure the grammars are correct for each one, and generate some text. 
-        thisTextGenerator.setGrammarForObject(correctGrammar);
-        thisTextGenerator.generateTextFromGrammar(thistextmesh);
+        thisTextGenerator.SetGrammarForObject(correctGrammar);
+        thisTextGenerator.GenerateTextFromGrammar(thistextmesh);
 
               //Assign a speed and fontSize, based on the generator, to the text object.
         var thistextscript = thisTT.gameObject.GetComponent<tunnelController>();
@@ -107,15 +108,15 @@ generateTT("tunnel");
   
         
         thisTT = Instantiate(genObjectTunnel);
-      genscript = thisTT.transform.Find("tunnel name").GetComponent<textGenOneShot>();
+        genscript = thisTT.transform.Find("tunnel name").GetComponent<textGenOneShot>();
         var correctGrammar = type + "grammar";
         var correctGrammarTunnelName = "tunnelnamegrammar";
                 
         thistextmesh = thisTT.transform.Find("text").GetComponent<TextMeshPro>();
-        thisTextGenerator = thisTT.transform.Find("text").GetComponent<textGenerationControl>();
+        thisTextGenerator = thisTT.transform.Find("text").GetComponent<textGenOneShot>();
 
         var thistextmeshname = thisTT.transform.Find("tunnel name").GetComponent<TextMeshPro>();
-        thisTextGeneratorName = thisTT.transform.Find("tunnel name").GetComponent<textGenerationControl>();
+        thisTextGeneratorName = thisTT.transform.Find("tunnel name").GetComponent<textGenOneShot>();
         
               //Set the width of the tunnel randomly.
         genscript.length = Random.Range(1,8);
@@ -132,10 +133,10 @@ generateTT("tunnel");
         thistextscript.topspeed = assignedSpeed;
         thistextscript.type = type;
       
-        thisTextGenerator.setGrammarForObject(correctGrammar);
-        thisTextGeneratorName.setGrammarForObject(correctGrammarTunnelName);
-        thisTextGenerator.generateTextFromGrammar(thistextmesh);
-        thisTextGeneratorName.generateTextFromGrammar(thistextmeshname);
+        thisTextGenerator.SetGrammarForObject(correctGrammar);
+        thisTextGeneratorName.SetGrammarForObject(correctGrammarTunnelName);
+        thisTextGenerator.GenerateTextFromGrammar(thistextmesh);
+        thisTextGeneratorName.GenerateTextFromGrammar(thistextmeshname);
 
         }                  
 
