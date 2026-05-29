@@ -27,6 +27,7 @@ ScriptsOnlyBuild:
     - commandConsole
     - createText
     - dataTest
+    - delayregister
     - fixedGenerator
     - generateStation
     - generateTrainTunnel
@@ -144,127 +145,129 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 18448}
+      Script: {instanceID: 18446}
     - Class: 114
       Script: {instanceID: 18450}
     - Class: 114
       Script: {instanceID: 18452}
     - Class: 114
-      Script: {instanceID: 25426}
+      Script: {instanceID: 25428}
     - Class: 114
-      Script: {instanceID: 25458}
+      Script: {instanceID: 25460}
     - Class: 114
-      Script: {instanceID: 25508}
+      Script: {instanceID: 25510}
     - Class: 114
-      Script: {instanceID: 25664}
+      Script: {instanceID: 25666}
     - Class: 114
-      Script: {instanceID: 25674}
+      Script: {instanceID: 25676}
     - Class: 114
-      Script: {instanceID: 25748}
+      Script: {instanceID: 25750}
     - Class: 114
-      Script: {instanceID: 25826}
+      Script: {instanceID: 25828}
     - Class: 114
-      Script: {instanceID: 25838}
+      Script: {instanceID: 25840}
     - Class: 114
-      Script: {instanceID: 25934}
+      Script: {instanceID: 25936}
     - Class: 114
-      Script: {instanceID: 26050}
+      Script: {instanceID: 26052}
     - Class: 114
-      Script: {instanceID: 26420}
+      Script: {instanceID: 26422}
     - Class: 114
-      Script: {instanceID: 26636}
+      Script: {instanceID: 26638}
     - Class: 114
-      Script: {instanceID: 26788}
+      Script: {instanceID: 26790}
     - Class: 114
-      Script: {instanceID: 27074}
+      Script: {instanceID: 27076}
     - Class: 114
-      Script: {instanceID: 27350}
+      Script: {instanceID: 27352}
     - Class: 114
-      Script: {instanceID: 27472}
+      Script: {instanceID: 27474}
     - Class: 114
-      Script: {instanceID: 27540}
+      Script: {instanceID: 27542}
     - Class: 114
-      Script: {instanceID: 27594}
+      Script: {instanceID: 27596}
     - Class: 114
-      Script: {instanceID: 27644}
+      Script: {instanceID: 27646}
     - Class: 114
-      Script: {instanceID: 27712}
+      Script: {instanceID: 27714}
     - Class: 114
-      Script: {instanceID: 27756}
+      Script: {instanceID: 27758}
     - Class: 114
-      Script: {instanceID: 27982}
+      Script: {instanceID: 27984}
     - Class: 114
-      Script: {instanceID: 28012}
+      Script: {instanceID: 28014}
     - Class: 114
-      Script: {instanceID: 28448}
+      Script: {instanceID: 28450}
     - Class: 114
-      Script: {instanceID: 28478}
+      Script: {instanceID: 28480}
     - Class: 114
-      Script: {instanceID: 28482}
+      Script: {instanceID: 28484}
     - Class: 114
-      Script: {instanceID: 28710}
+      Script: {instanceID: 28712}
     - Class: 114
-      Script: {instanceID: 28758}
+      Script: {instanceID: 28760}
     - Class: 114
-      Script: {instanceID: 29060}
+      Script: {instanceID: 29062}
     - Class: 114
-      Script: {instanceID: 29192}
+      Script: {instanceID: 29194}
     - Class: 114
-      Script: {instanceID: 29232}
+      Script: {instanceID: 29234}
     - Class: 114
-      Script: {instanceID: 29270}
+      Script: {instanceID: 29272}
     - Class: 114
-      Script: {instanceID: 29332}
+      Script: {instanceID: 29334}
     - Class: 114
-      Script: {instanceID: 29446}
+      Script: {instanceID: 29448}
     - Class: 114
-      Script: {instanceID: 29458}
+      Script: {instanceID: 29460}
     - Class: 114
-      Script: {instanceID: 29512}
+      Script: {instanceID: 29514}
     - Class: 114
-      Script: {instanceID: 29636}
+      Script: {instanceID: 29638}
     - Class: 114
-      Script: {instanceID: 29934}
+      Script: {instanceID: 29936}
     - Class: 114
-      Script: {instanceID: 29978}
+      Script: {instanceID: 29980}
     - Class: 114
-      Script: {instanceID: 29996}
+      Script: {instanceID: 29998}
     - Class: 114
-      Script: {instanceID: 30082}
+      Script: {instanceID: 30084}
     - Class: 114
-      Script: {instanceID: 30312}
+      Script: {instanceID: 30314}
     - Class: 114
-      Script: {instanceID: 30662}
+      Script: {instanceID: 30664}
     - Class: 114
-      Script: {instanceID: 30732}
+      Script: {instanceID: 30734}
     - Class: 114
-      Script: {instanceID: 30980}
+      Script: {instanceID: 30982}
     - Class: 114
-      Script: {instanceID: 31004}
+      Script: {instanceID: 31006}
     - Class: 114
-      Script: {instanceID: 31064}
+      Script: {instanceID: 31066}
     - Class: 114
-      Script: {instanceID: 31136}
+      Script: {instanceID: 31138}
     - Class: 114
-      Script: {instanceID: 31190}
+      Script: {instanceID: 31192}
     - Class: 114
-      Script: {instanceID: 31304}
+      Script: {instanceID: 31306}
     - Class: 114
-      Script: {instanceID: 31368}
+      Script: {instanceID: 31370}
     - Class: 114
-      Script: {instanceID: 31426}
+      Script: {instanceID: 31428}
     - Class: 114
-      Script: {instanceID: 31540}
+      Script: {instanceID: 31542}
     - Class: 114
-      Script: {instanceID: 31638}
+      Script: {instanceID: 31640}
     - Class: 114
-      Script: {instanceID: 32262}
+      Script: {instanceID: 31866}
     - Class: 114
-      Script: {instanceID: 32336}
+      Script: {instanceID: 32266}
     - Class: 114
-      Script: {instanceID: 32338}
+      Script: {instanceID: 32340}
     - Class: 114
       Script: {instanceID: 32342}
+    - Class: 114
+      Script: {instanceID: 32346}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -310,7 +313,7 @@ ScriptsOnlyBuild:
     className: createText
   - hash:
       serializedVersion: 2
-      Hash: ee0be33c7c014d2ebd0e0f7dabf47f4a
+      Hash: d6da3312d863d6f1271406b537ecbf06
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: TextOpacityController
@@ -1402,6 +1405,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseOverMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 2dcedf3409bcc9ee47a26d031b819242
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: delayregister
+  - hash:
+      serializedVersion: 2
       Hash: 83cfda82082c233d96cc677c19f57e07
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1481,4 +1490,4 @@ ScriptsOnlyBuild:
   platform: 24
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: /home/rob/pith/current-projects/Etiquette/Project Builds/devbuild6.x86_64
+  playerPath: /home/rob/pith/current-projects/Etiquette/Project Builds/etiquette_linux_v1.1.x86_64

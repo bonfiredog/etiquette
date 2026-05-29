@@ -72,13 +72,15 @@ private ObjectPool<GameObject> _pool;
 
         timerMaxOriginal = timerMax;
         timerMinOriginal = timerMin;
-            timer = 1;
+            timer = 0.01f;
      
         
         if (myTag == "frontgen" || myTag == "middlegen" || myTag == "sidegen")
         {
-            timerMin = timerMinOriginal + (timerMinOriginal / 100) * (100 - ss.currentUrbanDensity);
-            timerMax = timerMaxOriginal + (timerMaxOriginal / 100) * (100 - ss.currentUrbanDensity);
+
+            //COME BACK TO THIS LATER
+           // timerMin = timerMinOriginal + (timerMinOriginal / 100) * (100 - ss.currentUrbanDensity);
+           // timerMax = timerMaxOriginal + (timerMaxOriginal / 100) * (100 - ss.currentUrbanDensity);
         }
 
 
@@ -128,8 +130,8 @@ private ObjectPool<GameObject> _pool;
         {
            if (ss.currentUrbanDensity != lastUrbanDensity) {
         lastUrbanDensity = ss.currentUrbanDensity;
-        timerMin = timerMinOriginal + (timerMinOriginal / 100) * (100 - ss.currentUrbanDensity);
-        timerMax = timerMaxOriginal + (timerMaxOriginal / 100) * (100 - ss.currentUrbanDensity);
+        //timerMin = timerMinOriginal + (timerMinOriginal / 100) * (100 - ss.currentUrbanDensity);
+        //timerMax = timerMaxOriginal + (timerMaxOriginal / 100) * (100 - ss.currentUrbanDensity);
     }
         }
 

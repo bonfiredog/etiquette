@@ -10,6 +10,7 @@
 		<type fullname="createText" preserve="nothing"/>
 		<type fullname="CursorManager" preserve="nothing"/>
 		<type fullname="dataTest" preserve="nothing"/>
+		<type fullname="delayregister" preserve="nothing"/>
 		<type fullname="DisableCulling" preserve="nothing"/>
 		<type fullname="DynamicCursor" preserve="nothing"/>
 		<type fullname="fixedGenerator" preserve="nothing"/>

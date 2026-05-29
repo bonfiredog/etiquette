@@ -88,6 +88,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "delayregister",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "DisableCulling",
             "moduleName": "",
             "usedInScenes": []
@@ -3579,8 +3586,6 @@
     "forceIncludeModules": [],
     "forceExcludeModules": [
         "AMD",
-        "AR",
-        "Insights",
         "NVIDIA"
     ]
 }

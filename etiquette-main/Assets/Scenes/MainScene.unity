@@ -1468,8 +1468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745d7a5e52c06b54ca3a724f15247b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerMin: 500
-  timerMax: 1000
+  timerMin: 45
+  timerMax: 120
   myTag: fargen
   textgen: {fileID: 2056372327}
   assignedSpeed: 180
@@ -2574,11 +2574,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745d7a5e52c06b54ca3a724f15247b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerMin: 20
-  timerMax: 120
+  timerMin: 30
+  timerMax: 75
   myTag: backgen
   textgen: {fileID: 2056372327}
-  assignedSpeed: 210
+  assignedSpeed: 230
   assignedSize: 20
   text: {fileID: 6399391411232519584, guid: 88bfd17626aa60e4db8658263f06a3fe, type: 3}
   grammarNameFront: backgrammar
@@ -12504,7 +12504,7 @@ MonoBehaviour:
   timerMax: 45
   myTag: middlegen
   textgen: {fileID: 2056372327}
-  assignedSpeed: 360
+  assignedSpeed: 300
   assignedSize: 60
   text: {fileID: 6399391411232519584, guid: 38790fbb5cfc42243937e17ab09e127c, type: 3}
   grammarNameFront: middlegrammar

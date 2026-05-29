@@ -51,6 +51,8 @@ Inspired by, informed by and in conversation with an interdisciplinary mix of wo
 | <a href="http://bonfiredog.co.uk/resources/etiquette/ss/station2.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/station2.png" /></a> | <a href="http://bonfiredog.co.uk/resources/etiquette/ss/timetable.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/timetable.png" /></a> |
 | :---------------------------------------------------------------------------------------------------------------------------------------------:     | :-----------------------------------------------------------------------------------------------------------------------------------------:           |
 | <a href="http://bonfiredog.co.uk/resources/etiquette/ss/title.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/title.png" /></a>       | <a href="http://bonfiredog.co.uk/resources/etiquette/ss/tracks.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/tracks.png" /></a>       |
+| :---------------------------------------------------------------------------------------------------------------------------------------------:     | :-----------------------------------------------------------------------------------------------------------------------------------------:           |
+| <a href="http://bonfiredog.co.uk/resources/etiquette/sstation3.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/station3.png" /></a>   | <a href="http://bonfiredog.co.uk/resources/etiquette/ss/out.png"><img src="http://bonfiredog.co.uk/resources/etiquette/ss/out.png" /></a>             |
 
 ---
 
@@ -63,6 +65,16 @@ Inspired by, informed by and in conversation with an interdisciplinary mix of wo
 - NLP scripts, categoriser code and other corpora generation material in `/corpora_generation`
 
 - Latest builds also available in `/builds`
+
+---
+
+### Using The Application
+
+- Look around with the mouse/trackpad, click with either mouse button or tap. 
+
+- Click, hold and drag the window handle to lean out.
+
+- Click and hold the timetable to peruse.
 
 ---
 
