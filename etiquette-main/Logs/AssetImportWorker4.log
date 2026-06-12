@@ -1,0 +1,650 @@
+Unity Editor version:    6000.2.5f1 (43d04cd1df69)
+Branch:                  6000.2/staging
+Build type:              Release
+Batch mode:              YES
+System name:             Linux
+Distro version:          #1 SMP PREEMPT_DYNAMIC Sun, 17 May 2026 20:29:59 +0000
+Kernel version:          6.12.90-1-MANJARO
+Architecture:            x86_64
+Available memory:        31451 MB
+Date:                    2026-06-09T10:09:54Z
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rob" at "2026-06-09T10:09:54.006915Z"
+[SignatureVerifier] Application signature verification not supported on this platform.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              97ef9ea9f980455596f09ccb238358aa
+  Correlation Id:          ef0c4a609720531f02d61f4ac7002d44
+  External correlation Id: 1966388302668326111
+  Machine Id:              Zkygl3yxU1pAziy40zPDnRx5sRM=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-rob" (connect: 0.00s, validation: 0.00s, handshake: 0.00s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rob-notifications" at "2026-06-09T10:09:54.00849Z"
+[Licensing::Module] Licensing Background thread has ended after 0.00s
+Selected window backend: (null) 
+Gtk-Message: 11:09:54.039: Failed to load module "xapp-gtk3-module"
+Gtk-Message: 11:09:54.039: Failed to load module "canberra-gtk-module"
+Desktop is 5040 x 2160 @ 60 Hz
+Initialize udev device monitor.
+
+COMMAND LINE ARGUMENTS:
+Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+/home/rob/pith/current-projects/Etiquette/Unity Project/etiquette/etiquette-main
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+46515
+-licensingIpc
+LicenseClient-rob
+-job-worker-count
+10
+-background-job-worker-count
+8
+-gc-helper-count
+1
+Successfully changed project path to: /home/rob/pith/current-projects/Etiquette/Unity Project/etiquette/etiquette-main
+
+(Unity:2466): Gtk-CRITICAL **: 11:09:54.195: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
+
+(Unity:2466): Gtk-CRITICAL **: 11:09:54.195: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
+/home/rob/pith/current-projects/Etiquette/Unity Project/etiquette/etiquette-main
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [139985726986816]  Target information:
+
+Player connection [139985726986816]  * "[IP] 172.18.0.1 [Port] 0 [Flags] 2 [Guid] 3411905044 [EditorId] 3411905044 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.243) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+
+Player connection [139985726986816]  * "[IP] 172.17.0.1 [Port] 0 [Flags] 2 [Guid] 3411905044 [EditorId] 3411905044 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.243) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+
+Player connection [139985726986816]  * "[IP] 192.168.1.243 [Port] 0 [Flags] 2 [Guid] 3411905044 [EditorId] 3411905044 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.243) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+
+Player connection [139985726986816] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [139985726986816] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 10
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 1.09 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.2.5f1 (43d04cd1df69)
+[Subsystems] Discovering subsystems at path /home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /home/rob/pith/current-projects/Etiquette/Unity Project/etiquette/etiquette-main/Assets
+kGfxThreadingModeNonThreaded is not supported on OpenGL Core. Reverting to kGfxThreadingModeDirect instead.
+GfxDevice: creating device client; kGfxThreadingModeDirect
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_INTEL_swap_event GLX_MESA_copy_sub_buffer GLX_MESA_gl_interop GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_swap_control GLX_SGI_video_sync 
+Renderer: Mesa Intel(R) Arc(tm) Graphics (MTL)
+Vendor:   Intel
+Version:  4.6 (Core Profile) Mesa 26.0.4 (git-d9e5e36b19)
+GLES:     0
+ GL_AMD_conservative_depth GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_gpu_shader_int64 GL_AMD_multi_draw_indirect GL_AMD_performance_monitor GL_AMD_query_buffer_object GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trinary_minmax GL_AMD_texture_texture4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_derivative_control GL_ARB_direct_s
+tate_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_dep
+th_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_objec
+t GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_filter_minmax GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_view
+port_array GL_ATI_blend_equation_separate GL_ATI_texture_float GL_EXT_EGL_image_storage GL_EXT_EGL_image_storage_compression GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_debug_label GL_EXT_demote_to_helper_invocation GL_EXT_depth_bounds_test GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_clock GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT_text
+ure_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_INTEL_conservative_rasterization GL_INTEL_performance_query GL_INTEL_shader_atomic_float_minmax GL_INTEL_shader_integer_functions2 GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_shader_subgroup GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_const_bandwidth GL_MESA_texture_signed_rgba GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_N
+V_depth_clamp GL_NV_fragment_shader_interlock GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle -1893301568
+Initialize mono
+Mono path[0] = '/home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/Managed'
+Mono path[1] = '/home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
+Mono config path = '/home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56466
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-BSHN-T64M-D87Z-3BHX-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 5272876-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Register platform support module: /home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-BSHN-T64M-D87Z-3BHX-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 5272876-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Register platform support module: /home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: /home/rob/programs/Unity/Hub/Editor/6000.2.5f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.003243 seconds.
+- Loaded All Assemblies, in  0.258 seconds
+Native extension for LinuxStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.299 seconds
+Domain Reload Profiling: 557ms
+	BeginReloadAssembly (61ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (122ms)
+		LoadAssemblies (62ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (119ms)
+			TypeCache.Refresh (118ms)
+				TypeCache.ScanAssembly (109ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (299ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (268ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (76ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (50ms)
+			ProcessInitializeOnLoadAttributes (84ms)
+			ProcessInitializeOnLoadMethodAttributes (53ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-BSHN-T64M-D87Z-3BHX-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 5272876-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+- Loaded All Assemblies, in  0.450 seconds
+Refreshing native plugins compatible for Editor in 0.15 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.358 seconds
+Domain Reload Profiling: 808ms
+	BeginReloadAssembly (124ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (264ms)
+		LoadAssemblies (212ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (100ms)
+			TypeCache.Refresh (76ms)
+				TypeCache.ScanAssembly (66ms)
+			BuildScriptInfoCaches (18ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (358ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (267ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (65ms)
+			ProcessInitializeOnLoadAttributes (171ms)
+			ProcessInitializeOnLoadMethodAttributes (17ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+AutoLocale: current locale expects 'C' but got 'en_GB.UTF-8'Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3474 unused Assets / (1.0 MB). Loaded Objects now: 4063.
+Memory consumption went from 88.9 MB to 87.9 MB.
+Total: 9.351510 ms (FindLiveObjects: 0.274394 ms CreateObjectMapping: 0.156106 ms MarkObjects: 6.653458 ms  DeleteObjects: 2.266514 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 646367.774097 seconds.
+  path: Assets/Materials/color_gwr.mat
+  artifactKey: Guid(760651885a1e8de40ba1a1e3f6cb7236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/color_gwr.mat using Guid(760651885a1e8de40ba1a1e3f6cb7236) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e346fca59d4b83e5f54885636cd14ecc') in 0.091024244 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.751912 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Triangle/Wood_Triangle_normal.png
+  artifactKey: Guid(91a69e9cef94a8041931a28ad5867a1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Triangle/Wood_Triangle_normal.png using Guid(91a69e9cef94a8041931a28ad5867a1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c81b786d4ac1e83b345af087b813025f') in 0.027262394 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.211902 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Triangle/Wood_Triangle_height.png
+  artifactKey: Guid(cff2f85e0a34f84418366fd235a87a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Triangle/Wood_Triangle_height.png using Guid(cff2f85e0a34f84418366fd235a87a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '11bfff1035de9f27697c471c742af1ad') in 0.00817563 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.034712 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Triangle/Wood_Triangle_ambientocclusion.png
+  artifactKey: Guid(7817cf35fe435504b89e659ead31711f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Triangle/Wood_Triangle_ambientocclusion.png using Guid(7817cf35fe435504b89e659ead31711f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd673e6264c8df8ef5a999d9c3ffbc798') in 0.009134658 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.174224 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Square/Wood_Square_metallic.png
+  artifactKey: Guid(afb727857a3537445b102d9e816bd11d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Square/Wood_Square_metallic.png using Guid(afb727857a3537445b102d9e816bd11d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3012b84b240ff23c3d46626fca5c9f82') in 0.00647775 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.040176 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Square/Wood_Square_basecolor.png
+  artifactKey: Guid(dc71b8e9c1c2dfc44a3078207aa60d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Square/Wood_Square_basecolor.png using Guid(dc71b8e9c1c2dfc44a3078207aa60d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a97b413ff26b2fad70805c4c48edf247') in 0.015037329 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015428 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Planks/Wood_Planks_normal.png
+  artifactKey: Guid(741c8af1a7ae1f34dae1e370d8b60933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Planks/Wood_Planks_normal.png using Guid(741c8af1a7ae1f34dae1e370d8b60933) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3a2b8aee33ccf518d8c451dcc3e3d84c') in 0.013502371 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018774 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Planks/Wood_Planks_height.png
+  artifactKey: Guid(3623063cbfe883141939161b36eca79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Planks/Wood_Planks_height.png using Guid(3623063cbfe883141939161b36eca79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1ab30bb81ed55e271b5e9dc4a769138a') in 0.009786871 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.286868 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Planks/Wood_Planks_ambientocclusion.png
+  artifactKey: Guid(85a567c972364f747b395624dd04d027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Planks/Wood_Planks_ambientocclusion.png using Guid(85a567c972364f747b395624dd04d027) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '78d7d8aaec44024b67468f0a665545e0') in 0.006085126 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.025627 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Panels/Wood_Panels_metallic.png
+  artifactKey: Guid(59a6a3fd41f33ae4fa79c2a39578769f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Panels/Wood_Panels_metallic.png using Guid(59a6a3fd41f33ae4fa79c2a39578769f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1fc713d1e3df7f676b2a3284bde8b41e') in 0.009030362 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002798 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Panels/Wood_Panels_basecolor.png
+  artifactKey: Guid(8265db1be23ddd34da9ab7c02440424d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Panels/Wood_Panels_basecolor.png using Guid(8265db1be23ddd34da9ab7c02440424d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e220e0ed2d5503af6e9fa20f3add329c') in 0.006797194 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.193860 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Herringbone/Wood_Herringbone_normal.png
+  artifactKey: Guid(4911c6fe3949b1e48a31009db1beb0da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Herringbone/Wood_Herringbone_normal.png using Guid(4911c6fe3949b1e48a31009db1beb0da) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd4ee5488aff6567d5edb5aeacc2af08a') in 0.007218854 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.032493 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Herringbone/Wood_Herringbone_height.png
+  artifactKey: Guid(9a3539e3543e8b64e90c260236fa0bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Herringbone/Wood_Herringbone_height.png using Guid(9a3539e3543e8b64e90c260236fa0bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a52f61a84654910fb8498b0cd815475b') in 0.006712328 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004206 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Herringbone/Wood_Herringbone_ambientocclusion.png
+  artifactKey: Guid(15af74a8c7f695440b3c413547a7fac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Herringbone/Wood_Herringbone_ambientocclusion.png using Guid(15af74a8c7f695440b3c413547a7fac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f036a32b996778265d1e118b1e12edd0') in 0.009281615 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021015 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Chevron/Wood_Chevron_metallic.png
+  artifactKey: Guid(57d94ae7b197caf49b442cd728891118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Chevron/Wood_Chevron_metallic.png using Guid(57d94ae7b197caf49b442cd728891118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f1a056df193aa4932fb38080e7647a4f') in 0.011954578 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.620433 seconds.
+  path: Assets/Materials/Stylized Wood Textures/Textures/Chevron/Wood_Chevron_ambientocclusion.png
+  artifactKey: Guid(8dd9c2bc57ce783439889e0202d79d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Stylized Wood Textures/Textures/Chevron/Wood_Chevron_ambientocclusion.png using Guid(8dd9c2bc57ce783439889e0202d79d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b9c31715caf6276766b482956bc25dca') in 0.00570076 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021042 seconds.
+  path: Assets/Models/suitcase/lp_phong1_AO.png
+  artifactKey: Guid(750650ab69982da4c9a39e4a1c1a6d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/suitcase/lp_phong1_AO.png using Guid(750650ab69982da4c9a39e4a1c1a6d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '15a6d4aaf11ee6f80c2974a66f84ff83') in 0.014455887 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001531 seconds.
+  path: Assets/Models/newspaper/Newspaper_Base_Color.png
+  artifactKey: Guid(0182bec99c7a2b24289de60fad0dcd75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/newspaper/Newspaper_Base_Color.png using Guid(0182bec99c7a2b24289de60fad0dcd75) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ac36f7b4cefaa2e43666a5033854db0a') in 0.015765917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016300 seconds.
+  path: Assets/flockaroo/Aquarelle/howto.png
+  artifactKey: Guid(3d07ffb2263ef4d39a2e6ee152650897) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/flockaroo/Aquarelle/howto.png using Guid(3d07ffb2263ef4d39a2e6ee152650897) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '36ff1d18277b75c37508e9a6cf39ff24') in 0.007996629 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/flockaroo/VanGogh/howto_urp.png
+  artifactKey: Guid(6ba4d65f95b4c0fb4aae9bff239f0db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/flockaroo/VanGogh/howto_urp.png using Guid(6ba4d65f95b4c0fb4aae9bff239f0db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '399f5317abbbc8766c0752c2bb3fc8f9') in 0.003977039 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/Admin/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(deeb8b209d007d541af3f8fb45f526e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Admin/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(deeb8b209d007d541af3f8fb45f526e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ef099af461ef5bd5230fe5752b3bebf0') in 0.028593772 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.181728 seconds.
+  path: Assets/Models/timetable_ui.png
+  artifactKey: Guid(62c240bf1ee230d43bac19994853705a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/timetable_ui.png using Guid(62c240bf1ee230d43bac19994853705a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f9cd685e2e454f53f6acd3f4b8cd9130') in 0.025041224 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.039469 seconds.
+  path: Assets/Scenes/TestScene/ReflectionProbe-0.exr
+  artifactKey: Guid(ab38cda174700e14798efc93c9164168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TestScene/ReflectionProbe-0.exr using Guid(ab38cda174700e14798efc93c9164168) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8824375e20754e784aa6d1c074153b09') in 0.025088296 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000886 seconds.
+  path: Assets/Fonts/Didot LT Std Bold.otf
+  artifactKey: Guid(57dcfa610c6f45f48b0950568018a4f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Didot LT Std Bold.otf using Guid(57dcfa610c6f45f48b0950568018a4f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dfc52df8aecdc67e75fd7d202d0e119b') in 0.011849425 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005334 seconds.
+  path: Assets/flockaroo/VanGogh/howto.png
+  artifactKey: Guid(78130cd4b9a1255b4ad9ff1ff788089a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/flockaroo/VanGogh/howto.png using Guid(78130cd4b9a1255b4ad9ff1ff788089a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '241545e726e661bcd92efe337398415e') in 0.00753188 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018272 seconds.
+  path: Assets/Fonts/GravitasOne-Regular.ttf
+  artifactKey: Guid(51893aed34fe71a2290b97886f153739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/GravitasOne-Regular.ttf using Guid(51893aed34fe71a2290b97886f153739) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '610191f107d78954e95efa20c99ac1cf') in 0.007976851 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028829 seconds.
+  path: Assets/Admin/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(a2a410de6858afe449bd3366f6831cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Admin/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(a2a410de6858afe449bd3366f6831cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1ac76400ff440f9ca12d33b0d8975b2b') in 0.014175997 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020177 seconds.
+  path: Assets/Admin/TextMesh Pro/Sprites/EmojiOne.png
+  artifactKey: Guid(13bab56ba6ca4844fbdc2c3de22c6b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Admin/TextMesh Pro/Sprites/EmojiOne.png using Guid(13bab56ba6ca4844fbdc2c3de22c6b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '70948866bcebc0fbb56b2f55d1996506') in 0.00669015 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.081941 seconds.
+  path: Assets/Admin/Plugins/TextMesh Pro/Sprites/EmojiOne.png
+  artifactKey: Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Admin/Plugins/TextMesh Pro/Sprites/EmojiOne.png using Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f6a28c6f0371d174ec217924726ad9f1') in 0.003978601 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.011873 seconds.
+  path: Assets/Admin/TotalJSON/Internal/Editor/window-icon.png
+  artifactKey: Guid(7de077ad9b723ed40b5ae6d8a8320274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Admin/TotalJSON/Internal/Editor/window-icon.png using Guid(7de077ad9b723ed40b5ae6d8a8320274) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bdd444c59bc980992efdf39e2593a64a') in 0.005038647 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.451920 seconds.
+  path: Assets/Images/signtext.png
+  artifactKey: Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/signtext.png using Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8e9d9b0e18be81d1b8cfa158638c5ea6') in 0.007990641 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 87.699055 seconds.
+  path: Assets/Images/signtext.png
+  artifactKey: Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/signtext.png using Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '22cb9e37e33af614b6f9f7838f1dcf8b') in 0.003989189 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 106.030492 seconds.
+  path: Assets/Images/signtext.png
+  artifactKey: Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/signtext.png using Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '01b7155626054ea6c0cd688b51906e76') in 0.011549128 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 124.592372 seconds.
+  path: Assets/Images/signtext.png
+  artifactKey: Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/signtext.png using Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9050ca411bf0dc5467a2ffac0c8975b4') in 0.007039536 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 228.095048 seconds.
+  path: Assets/Images/signtext.png
+  artifactKey: Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/signtext.png using Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '965bc957a0fa31604cd4d73308846dd9') in 0.00979446 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 260.644075 seconds.
+  path: Assets/Images/signtext.png
+  artifactKey: Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/signtext.png using Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3245fa0ce4679ee100b2438c533d7c8b') in 0.008412649 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 781.125455 seconds.
+  path: Assets/Images/signtext.png
+  artifactKey: Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/signtext.png using Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4f0f6c4f8a89a15ae2a45b6e8ed57864') in 0.015159112 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 61.426175 seconds.
+  path: Assets/Images/signtext.png
+  artifactKey: Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/signtext.png using Guid(d7072a49eca22a5fa94d7c71576f6fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '82b5c124dfe90e26543b3796fbedbe1b') in 0.008020174 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-BSHN-T64M-D87Z-3BHX-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 5272876-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+- Loaded All Assemblies, in  0.431 seconds
+Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.393 seconds
+Domain Reload Profiling: 827ms
+	BeginReloadAssembly (151ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (59ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (224ms)
+		LoadAssemblies (195ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (79ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (68ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (393ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (293ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (181ms)
+			ProcessInitializeOnLoadMethodAttributes (21ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3472 unused Assets / (0.9 MB). Loaded Objects now: 4123.
+Memory consumption went from 92.4 MB to 91.6 MB.
+Total: 5.285530 ms (FindLiveObjects: 0.329704 ms CreateObjectMapping: 0.144326 ms MarkObjects: 4.030143 ms  DeleteObjects: 0.779747 ms)
+
+Prepare: number of updated asset objects reloaded= 0

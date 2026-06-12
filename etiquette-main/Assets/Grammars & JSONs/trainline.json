@@ -31,8 +31,8 @@
   "2": {
     "stationName": "St. Erth",
     "distanceFromLastStation": 1500,
-    "minStationStay": 20,
-    "maxStationStay": 50,
+    "minStationStay": 30,
+    "maxStationStay": 60,
     "stationSize": 3,
     "urbanDensity": 5,
     "terrain": "woods",
